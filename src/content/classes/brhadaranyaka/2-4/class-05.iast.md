@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
 date: "2026-05-04"
-coverage: "Bhāṣyam on 2.4.5; 'ātmā vā are draṣṭavyaḥ' — the ātmā alone is to be seen/known; idaṁ sarvaṁ yadayamātmā — everything is nothing but ātmā; Vārttikakāra's analysis."
+coverage: "Why another brāhmaṇa after neti neti? Vārtikakāra Sureśvara's additional reasons; recap of mūrta-amūrta brāhmaṇa — brahman is neither mūrta nor amūrta; the problem is a reality problem — one reality appears as many; resolving adhyāsa; a Sanskrit-free overview class connecting all the threads of the introduction."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_ref: "Bṛhad. 2.4.5 bhāṣyam"
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
 

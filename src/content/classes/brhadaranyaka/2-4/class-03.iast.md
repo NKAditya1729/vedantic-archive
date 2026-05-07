@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 3
 date: "2026-04-27"
-coverage: "Continuation of Bhāṣyam on 2.4.2; Maitreyī's vairāgya and mumukṣutva; teaching begins — ātmā vā are draṣṭavyaḥ; śravaṇa-manana-nididhyāsana triad."
+coverage: "Continued discussion on the purpose of the Maitreyī Brāhmaṇa; saṁnyāsa debate — Janaka did not take saṁnyāsa yet was a jīvanmukta; Vārtikakāra's perspective; vitta-nindā — censuring attachment to wealth as a means; varṇāśrama-vyavasthā-nindā — you don't belong to any varṇa in reality; discussion on women and karma-saṁnyāsa; karma-saṁnyāsa as the subject matter of this section."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_ref: "Bṛhad. 2.4.2–3 bhāṣyam"
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
 

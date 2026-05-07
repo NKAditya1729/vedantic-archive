@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
 date: "2026-04-30"
-coverage: "भाष्यम् on 2.4.3–4; प्रियत्व analysis — why is आत्मा the dearest; पत्नी, पुत्र, वित्त — all loved for the sake of आत्मा; आत्मनस्तु कामाय सर्वं प्रियं भवति."
+coverage: "Continuation of the introduction; role of आख्यायिका (story) in श्रुति as a teaching device; संन्यास is not the cause of मोक्ष but a facilitator of ज्ञानम् — ज्ञानादेव कैवल्यम्; वैराग्य arises naturally from understanding, not from a शास्त्रिक injunction (विधिशास्त्र); if freedom depends on संन्यास, it becomes पुरुषतन्त्रम्; the distinction between विद्वत्संन्यास and विविदिषासंन्यास."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
-source_ref: "बृहद् २.४.३–४ भाष्यम्"
+source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---
 

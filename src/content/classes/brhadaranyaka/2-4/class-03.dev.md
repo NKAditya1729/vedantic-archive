@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 3
 date: "2026-04-27"
-coverage: "Continuation of भाष्यम् on 2.4.2; मैत्रेयी's वैराग्य and मुमुक्षुत्व; teaching begins — आत्मा वा अरे द्रष्टव्यः; श्रवण-मनन-निदिध्यासन triad."
+coverage: "Continued discussion on the purpose of the मैत्रेयीब्राह्मण; संन्यास debate — जनक did not take संन्यास yet was a जीवन्मुक्त; वार्तिककार's perspective; वित्तनिन्दा — censuring attachment to wealth as a means; वर्णाश्रमव्यवस्थानिन्दा — you don't belong to any वर्ण in reality; discussion on women and कर्मसंन्यास; कर्मसंन्यास as the subject matter of this section."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
-source_ref: "बृहद् २.४.२–३ भाष्यम्"
+source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---
 

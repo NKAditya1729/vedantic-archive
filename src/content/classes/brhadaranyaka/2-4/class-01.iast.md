@@ -6,7 +6,7 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
 date: "2026-04-20"
-coverage: "Bhāṣyakāra's sambandha-bhāṣya connecting the Maitreyī Brāhmaṇa to the preceding chapters; review of vidyā-sūtra (1.4.7) and avidyā-sūtra (1.4.10); saṁnyāsa as aṅga for brahmavidyā."
+coverage: "Bhāṣyakāra's introductory sambandha-bhāṣya for the Maitreyī Brāhmaṇa; review of vidyā-sūtra (ātmetyevopāsīta, 1.4.7) and avidyā-sūtra (anyo'sāvanyo'hamasmīti, 1.4.10); summary of chapters 1–3 — sṛṣṭi, nāma-rūpa-karma, neti neti; sarva-viśeṣa-śūnyam brahma established through aśeṣa-bhūta-dharma-pratiṣedha; why the 4th brāhmaṇa — to present saṁnyāsa as aṅga for brahmavidyā; Yājñavalkya seeking Maitreyī's permission to leave."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"

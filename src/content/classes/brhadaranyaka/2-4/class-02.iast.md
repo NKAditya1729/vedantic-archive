@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
 date: "2026-04-23"
-coverage: "Yājñavalkya's announcement of pravrajyā to Maitreyī; her pivotal question — 'yena na amṛtā syām kimahaṁ tena kuryām'; Bhāṣyam on amṛtatvasya tu nāśāsti vittena."
+coverage: "Continuation of introductory bhāṣyam; recap of vidyā-sūtra and avidyā-sūtra; discussion on saṁnyāsa — is it necessary? Gītā 18th chapter on saṁnyāsa and tyāga; comparison with Naciketa, Śvetaketu, and Arjuna as different adhikārīs; karma and jñāna cannot go together (samuccaya-niṣedha); saṁnyāsa as accompaniment of jñānam, not its cause."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_ref: "Bṛhad. 2.4.1–2 bhāṣyam"
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
 

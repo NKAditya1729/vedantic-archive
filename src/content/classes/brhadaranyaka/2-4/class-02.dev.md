@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
 date: "2026-04-23"
-coverage: "याज्ञवल्क्य's announcement of प्रव्रज्या to मैत्रेयी; her pivotal question — 'येन न अमृता स्यां किमहं तेन कुर्याम्'; भाष्यम् on अमृतत्वस्य तु नाशास्ति वित्तेन."
+coverage: "Continuation of introductory भाष्यम्; recap of विद्यासूत्र and अविद्यासूत्र; discussion on संन्यास — is it necessary? गीता 18th chapter on संन्यास and त्याग; comparison with नचिकेता, श्वेतकेतु, and अर्जुन as different अधिकारीs; कर्म and ज्ञान cannot go together (समुच्चयनिषेध); संन्यास as accompaniment of ज्ञानम्, not its cause."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
-source_ref: "बृहद् २.४.१–२ भाष्यम्"
+source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---
 

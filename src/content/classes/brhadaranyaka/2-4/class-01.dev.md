@@ -6,7 +6,7 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
 date: "2026-04-20"
-coverage: "भाष्यकार's सम्बन्धभाष्य connecting the मैत्रेयीब्राह्मण to the preceding chapters; review of विद्यासूत्र (1.4.7) and अविद्यासूत्र (1.4.10); संन्यास as अङ्ग for ब्रह्मविद्या."
+coverage: "भाष्यकार's introductory सम्बन्धभाष्य for the मैत्रेयीब्राह्मण; review of विद्यासूत्र (आत्मेत्येवोपासीत, 1.4.7) and अविद्यासूत्र (अन्योऽसावन्योऽहमस्मीति, 1.4.10); summary of chapters 1–3 — सृष्टि, नामरूपकर्म, नेति नेति; सर्वविशेषशून्यं ब्रह्म established through अशेषभूतधर्मप्रतिषेध; why the 4th ब्राह्मण — to present संन्यास as अङ्ग for ब्रह्मविद्या; याज्ञवल्क्य seeking मैत्रेयी's permission to leave."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"

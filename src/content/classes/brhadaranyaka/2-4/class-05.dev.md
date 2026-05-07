@@ -6,12 +6,12 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
 date: "2026-05-04"
-coverage: "भाष्यम् on 2.4.5; 'आत्मा वा अरे द्रष्टव्यः' — the आत्मा alone is to be seen/known; इदं सर्वं यदयमात्मा — everything is nothing but आत्मा; वार्त्तिककार's analysis."
+coverage: "Why another ब्राह्मण after नेति नेति? वार्तिककार सुरेश्वर's additional reasons; recap of मूर्तामूर्तब्राह्मण — ब्रह्मन् is neither मूर्त nor अमूर्त; the problem is a reality problem — one reality appears as many; resolving अध्यास; a Sanskrit-free overview class connecting all the threads of the introduction."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
-source_ref: "बृहद् २.४.५ भाष्यम्"
+source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---
 
