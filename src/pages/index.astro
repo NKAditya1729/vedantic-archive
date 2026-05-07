@@ -57,7 +57,7 @@ const series = Array.from(seriesMap.values());
       <h2 class="page-section__heading">Series</h2>
 
       {series.map(s => (
-        <a href={`/${s.slug}/`} class="series-card" id={`series-${s.slug}`}>
+        <a href={`${import.meta.env.BASE_URL}/${s.slug}/`} class="series-card" id={`series-${s.slug}`}>
           <span class="series-card__icon" aria-hidden="true">🕉</span>
           <div class="series-card__title">{s.title}</div>
           <div class="series-card__subtitle">with Śāṅkara Bhāṣya</div>
@@ -76,7 +76,7 @@ const series = Array.from(seriesMap.values());
       <h2 class="page-section__heading">How These Notes Are Prepared</h2>
       <p>
         These notes are transcribed from video recordings, processed through multiple review stages, and carefully edited for accuracy. Each class undergoes review by the editor before publication.
-        <a href={`${import.meta.env.BASE_URL}about/#process`}>Read more about the process →</a>
+        <a href={`${import.meta.env.BASE_URL}/about/#process`}>Read more about the process →</a>
       </p>
     </section>
 

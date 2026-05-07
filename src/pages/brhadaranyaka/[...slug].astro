@@ -77,7 +77,7 @@ function formatDate(dateStr: string) {
 }
 
 function classUrl(cls: any) {
-  return `${import.meta.env.BASE_URL}brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`;
+  return `${import.meta.env.BASE_URL}/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`;
 }
 
 const prevLink = prevClass ? { label: `Class ${prevClass.data.class_number}`, href: classUrl(prevClass) } : undefined;
@@ -90,9 +90,9 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
 >
   <article class="container" style="padding-top: 2rem; padding-bottom: 2rem;" data-pagefind-body>
     <Breadcrumb items={[
-      { label: 'Home', href: import.meta.env.BASE_URL },
-      { label: 'Bṛhadāraṇyaka', href: `${import.meta.env.BASE_URL}brhadaranyaka/` },
-      { label: `${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`, href: `${import.meta.env.BASE_URL}brhadaranyaka/#class-${data.adhyaya}-${data.brahmana}-1` },
+      { label: 'Home', href: `${import.meta.env.BASE_URL}/` },
+      { label: 'Bṛhadāraṇyaka', href: `${import.meta.env.BASE_URL}/brhadaranyaka/` },
+      { label: `${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`, href: `${import.meta.env.BASE_URL}/brhadaranyaka/#class-${data.adhyaya}-${data.brahmana}-1` },
       { label: `Class ${data.class_number}` },
     ]} />
 
@@ -210,7 +210,7 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       prev={prevLink}
       next={nextLink}
       backLabel={`${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`}
-      backHref={`${import.meta.env.BASE_URL}brhadaranyaka/`}
+      backHref={`${import.meta.env.BASE_URL}/brhadaranyaka/`}
       audioUrl={data.video_url || data.audio_url || undefined}
     />
 
