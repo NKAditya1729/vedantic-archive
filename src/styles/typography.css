@@ -1,0 +1,206 @@
+/* ============================================================
+   TYPOGRAPHY.CSS — Font faces, type scale, verse blocks
+   Vedantic Study Archive
+   ============================================================ */
+
+/* --- Font Families --- */
+:root {
+  --font-body: 'Gentium Plus', 'Cardo', 'Times New Roman', serif;
+  --font-devanagari: 'Noto Serif Devanagari', 'Sanskrit 2003', serif;
+  --font-heading: 'Gentium Plus', 'Cardo', 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* --- Body Typography --- */
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;  /* 18px */
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.75rem;  /* 28px */
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.5rem;  /* 24px */
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;  /* 20px */
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Paragraphs --- */
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Strong / Bold --- */
+strong, b {
+  font-weight: 600;
+}
+
+/* --- Devanagari text --- */
+.devanagari,
+[lang="sa"] {
+  font-family: var(--font-devanagari);
+}
+
+/* Bold Devanagari — use semibold (600) not bold (700) to avoid visual heaviness */
+.devanagari strong,
+.devanagari b,
+[lang="sa"] strong,
+[lang="sa"] b {
+  font-weight: 600;
+}
+
+/* --- Verse / Citation Blocks --- */
+.verse,
+blockquote.verse {
+  font-size: 1.05em;  /* 1.05× body */
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  padding-left: 1.75rem;
+  background-color: var(--bg-verse);
+  border-left: 3px solid var(--border-verse);
+  border-radius: 0 4px 4px 0;
+  font-weight: 400;  /* NEVER bold */
+  font-style: normal;
+}
+
+.verse p,
+blockquote.verse p {
+  margin-bottom: 0.5rem;
+  font-weight: 400;  /* Enforce non-bold */
+}
+
+.verse p:last-child,
+blockquote.verse p:last-child {
+  margin-bottom: 0;
+}
+
+/* Standard blockquotes (non-verse) */
+blockquote:not(.verse) {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  padding-left: 1.75rem;
+  border-left: 3px solid var(--border);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* --- Lists --- */
+ul, ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+li::marker {
+  color: var(--text-secondary);
+}
+
+/* --- Horizontal Rule --- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 2rem 0;
+}
+
+/* --- Small / Meta --- */
+.meta,
+.text-sm {
+  font-size: 0.875rem;  /* 14px */
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.text-xs {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.4;
+  color: var(--text-tertiary);
+}
+
+/* --- UI text (navigation, buttons) --- */
+.ui-text {
+  font-family: var(--font-ui);
+}
+
+/* --- Daṇḍa and double daṇḍa styling --- */
+/* Ensure proper spacing around daṇḍas */
+
+/* --- Code (if used in notes) --- */
+code {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.875em;
+  background-color: var(--bg-surface);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  border: 1px solid var(--border-light);
+}
+
+pre {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;  /* 16px on mobile */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .verse,
+  blockquote.verse {
+    padding-left: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

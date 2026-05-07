@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allClasses = await getCollection('classes');
+// Only IAST versions for listing (avoid duplicates)
+const iastClasses = allClasses
+  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
+  .sort((a, b) => {
+    // Sort by adhyaya, brahmana, class_number
+    if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
+    if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
+    return a.data.class_number - b.data.class_number;
+  });
+
+// Group by adhyaya then brahmana
+type ClassEntry = typeof iastClasses[0];
+const tree: Map<number, Map<number, { name: string; classes: ClassEntry[] }>> = new Map();
+
+for (const cls of iastClasses) {
+  if (!tree.has(cls.data.adhyaya)) {
+    tree.set(cls.data.adhyaya, new Map());
+  }
+  const adhyayaMap = tree.get(cls.data.adhyaya)!;
+  if (!adhyayaMap.has(cls.data.brahmana)) {
+    adhyayaMap.set(cls.data.brahmana, { name: cls.data.brahmana_name, classes: [] });
+  }
+  adhyayaMap.get(cls.data.brahmana)!.classes.push(cls);
+}
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  title="Bṛhadāraṇyaka Upaniṣad"
+  description="Class notes on the Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya — organized by adhyāya and brāhmaṇa."
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <Breadcrumb items={[
+      { label: 'Home', href: '/' },
+      { label: 'Bṛhadāraṇyaka Upaniṣad' },
+    ]} />
+
+    <h1>Bṛhadāraṇyaka Upaniṣad</h1>
+    <p class="meta" style="margin-bottom: 0.5rem; font-style: italic;">
+      with Śāṅkara Bhāṣya
+    </p>
+
+    <p style="margin-bottom: 0.75rem;">
+      The Bṛhadāraṇyaka Upaniṣad is the largest and among the most important of the principal Upaniṣads. Belonging to the Śukla Yajurveda, it forms the concluding portion (āraṇyaka) of the Śatapatha Brāhmaṇa. The text is studied here with Śrī Śaṅkarācārya's bhāṣya, supplemented by Sureśvarācārya's Vārttika, as taught by <strong>Pūjya Swami Shankarananda</strong>.
+    </p>
+    <p style="margin-bottom: 0.75rem; font-size: 0.9375rem;">
+      <a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a> ·
+      <a href="https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA" target="_blank" rel="noopener noreferrer">📄 Class Materials (Google Drive)</a>
+    </p>
+    <p style="margin-bottom: 2rem; font-size: 0.875rem; color: var(--text-secondary);">
+      <strong style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary);">Source Texts (Advaita Sharada)</strong><br>
+      <a href="https://advaitasharada.sringeri.net/display/bhashya/Brha/devanagari" target="_blank" rel="noopener noreferrer">Śāṅkara Bhāṣya</a> ·
+      <a href="https://advaitasharada.sringeri.net/display/vyakhya/brihadaranyakabhashya-vartika/devanagari" target="_blank" rel="noopener noreferrer">Sureśvara Vārttika</a> ·
+      <a href="https://advaitasharada.sringeri.net/display/vyakhya/anandagiri-Brha/devanagari" target="_blank" rel="noopener noreferrer">Ānandagiri Ṭīkā</a> ·
+      <a href="https://advaitasharada.sringeri.net/ग्रन्थाः/" target="_blank" rel="noopener noreferrer">All Śruti Texts</a>
+    </p>
+
+    <div class="tree">
+      {Array.from(tree.entries()).sort(([a], [b]) => a - b).map(([adhyaya, brahmanas]) => (
+        <div class="tree__adhyaya">
+          <h2 class="tree__heading">Adhyāya {adhyaya}</h2>
+          {Array.from(brahmanas.entries()).sort(([a], [b]) => a - b).map(([brahmana, data]) => (
+            <div class="tree__brahmana">
+              <h3 class="tree__brahmana-name">
+                {adhyaya}.{brahmana} — {data.name}
+              </h3>
+              <div>
+                {data.classes.map(cls => (
+                  <a
+                    href={`/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`}
+                    class="class-item"
+                    id={`class-${cls.data.adhyaya}-${cls.data.brahmana}-${cls.data.class_number}`}
+                  >
+                    <div class="class-item__header">
+                      <span class="class-item__number">Class {cls.data.class_number}</span>
+                      <span class="class-item__date">{formatDate(cls.data.date)}</span>
+                    </div>
+                    <div class="class-item__coverage">{cls.data.coverage}</div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

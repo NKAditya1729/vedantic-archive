@@ -1,0 +1,91 @@
+/* ============================================================
+   PRINT.CSS — Print-optimized layout
+   Vedantic Study Archive
+   ============================================================ */
+
+@media print {
+  /* Force light mode */
+  :root {
+    --bg: #ffffff;
+    --bg-surface: #f8f8f8;
+    --bg-verse: #f5f3ee;
+    --text: #000000;
+    --text-secondary: #444444;
+    --text-tertiary: #666666;
+    --accent: #333333;
+    --border: #cccccc;
+    --border-light: #dddddd;
+    --border-verse: #999999;
+  }
+
+  /* Hide non-essential elements */
+  .site-nav,
+  .hamburger,
+  .mobile-nav,
+  .theme-toggle,
+  .script-toggle,
+  .class-nav,
+  .site-footer__links,
+  .search-page,
+  .filters,
+  .audio-link,
+  #search {
+    display: none !important;
+  }
+
+  /* Adjust layout */
+  body {
+    font-size: 11pt;
+    line-height: 1.6;
+    max-width: none;
+    padding: 0;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Show both script versions */
+  .script-panel {
+    display: block !important;
+  }
+
+  .script-panel::before {
+    content: attr(data-script-label);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .verse,
+  blockquote.verse {
+    page-break-inside: avoid;
+  }
+
+  /* Show URLs */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #666;
+  }
+
+  /* Adjust margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Footer info */
+  .site-footer {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+raw-notes/epub-extract/
+raw-notes/markdown/

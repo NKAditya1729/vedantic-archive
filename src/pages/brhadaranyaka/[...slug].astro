@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import ClassNav from '../../components/ClassNav.astro';
+import { getCollection, render } from 'astro:content';
+
+// Generate all class page routes
+export async function getStaticPaths() {
+  const allClasses = await getCollection('classes');
+
+  // Group by series/adhyaya/brahmana/class_number to pair dev+iast
+  const classMap = new Map<string, { dev?: any; iast?: any }>();
+
+  for (const cls of allClasses) {
+    const key = `${cls.data.series}/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}`;
+    if (!classMap.has(key)) {
+      classMap.set(key, {});
+    }
+    const pair = classMap.get(key)!;
+    if (cls.data.script === 'devanagari') pair.dev = cls;
+    if (cls.data.script === 'iast') pair.iast = cls;
+  }
+
+  // Get all IAST classes sorted for prev/next navigation
+  const iastClasses = allClasses
+    .filter(c => c.data.script === 'iast')
+    .sort((a, b) => {
+      if (a.data.series !== b.data.series) return a.data.series.localeCompare(b.data.series);
+      if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
+      if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
+      return a.data.class_number - b.data.class_number;
+    });
+
+  const paths = [];
+
+  for (const [key, pair] of classMap.entries()) {
+    if (!pair.iast) continue;
+    const cls = pair.iast;
+    const slug = `${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}`;
+
+    // Find prev/next in the same series
+    const seriesClasses = iastClasses.filter(c => c.data.series === cls.data.series);
+    const idx = seriesClasses.findIndex(
+      c => c.data.adhyaya === cls.data.adhyaya &&
+           c.data.brahmana === cls.data.brahmana &&
+           c.data.class_number === cls.data.class_number
+    );
+
+    const prev = idx > 0 ? seriesClasses[idx - 1] : null;
+    const next = idx < seriesClasses.length - 1 ? seriesClasses[idx + 1] : null;
+
+    paths.push({
+      params: { slug },
+      props: {
+        devEntry: pair.dev || null,
+        iastEntry: pair.iast,
+        prevClass: prev,
+        nextClass: next,
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { devEntry, iastEntry, prevClass, nextClass } = Astro.props;
+const data = iastEntry.data;
+
+// Render markdown content
+const { Content: IastContent } = await render(iastEntry);
+const devResult = devEntry ? await render(devEntry) : null;
+const DevContent = devResult?.Content ?? null;
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+}
+
+function classUrl(cls: any) {
+  return `/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`;
+}
+
+const prevLink = prevClass ? { label: `Class ${prevClass.data.class_number}`, href: classUrl(prevClass) } : undefined;
+const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, href: classUrl(nextClass) } : undefined;
+---
+
+<BaseLayout
+  title={`${data.brahmana_name} — Class ${data.class_number}`}
+  description={data.coverage}
+>
+  <article class="container" style="padding-top: 2rem; padding-bottom: 2rem;" data-pagefind-body>
+    <Breadcrumb items={[
+      { label: 'Home', href: '/' },
+      { label: 'Bṛhadāraṇyaka', href: '/brhadaranyaka/' },
+      { label: `${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`, href: `/brhadaranyaka/#class-${data.adhyaya}-${data.brahmana}-1` },
+      { label: `Class ${data.class_number}` },
+    ]} />
+
+    <!-- Class Header -->
+    <header class="class-header">
+      <div class="class-header__series" data-pagefind-meta="series">{data.series_title}</div>
+      <h1 class="class-header__title">
+        {data.brahmana_name} ({data.adhyaya}.{data.brahmana}) — Class {data.class_number}
+      </h1>
+      <div class="class-header__date" data-pagefind-meta="date">{formatDate(data.date)}</div>
+      <div class="class-header__coverage">
+        <strong style="font-size: 0.8125rem; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary);">Coverage</strong><br>
+        {data.coverage}
+      </div>
+    </header>
+
+    <!-- Script Toggle -->
+    <div class="script-toggle" role="tablist" aria-label="Script selection">
+      <button
+        class="script-toggle__btn is-active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-iast"
+        id="tab-iast"
+        data-script="iast"
+      >
+        IAST
+      </button>
+      {DevContent && (
+        <button
+          class="script-toggle__btn"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-devanagari"
+          id="tab-devanagari"
+          data-script="devanagari"
+        >
+          Devanagari
+        </button>
+      )}
+    </div>
+
+    <!-- IAST Panel -->
+    <div
+      class="script-panel is-visible"
+      id="panel-iast"
+      role="tabpanel"
+      aria-labelledby="tab-iast"
+      data-script-label="IAST Version"
+    >
+      <div class="class-body">
+        <IastContent />
+      </div>
+    </div>
+
+    <!-- Devanagari Panel -->
+    {DevContent && (
+      <div
+        class="script-panel devanagari"
+        id="panel-devanagari"
+        role="tabpanel"
+        aria-labelledby="tab-devanagari"
+        data-script-label="Devanagari Version"
+        lang="sa"
+      >
+        <div class="class-body">
+          <DevContent />
+        </div>
+      </div>
+    )}
+
+    <!-- Source Text Accordion -->
+    {(data.source_ref || data.related_verses) && (
+      <div class="accordion">
+        <button
+          class="accordion__trigger"
+          aria-expanded="false"
+          id="source-trigger"
+        >
+          <span>Source Text Covered</span>
+          <span class="accordion__icon" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion__content" id="source-content">
+          {data.source_ref && (
+            <p><strong>Primary source:</strong> {data.source_ref}</p>
+          )}
+          {data.related_verses && (
+            <p><strong>Related verses:</strong> {data.related_verses}</p>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Class Resources -->
+    <div class="class-resources" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem;">
+      {data.video_url && (
+        <a href={data.video_url} class="audio-link" target="_blank" rel="noopener noreferrer">
+          📺 Watch class video
+        </a>
+      )}
+      {data.materials_url && (
+        <a href={data.materials_url} class="audio-link" target="_blank" rel="noopener noreferrer">
+          📄 Class materials
+        </a>
+      )}
+      {data.audio_url && (
+        <a href={data.audio_url} class="audio-link" target="_blank" rel="noopener noreferrer">
+          🔊 Listen to audio
+        </a>
+      )}
+    </div>
+
+    <!-- Prev/Next Navigation -->
+    <ClassNav
+      prev={prevLink}
+      next={nextLink}
+      backLabel={`${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`}
+      backHref="/brhadaranyaka/"
+      audioUrl={data.video_url || data.audio_url || undefined}
+    />
+
+    <!-- Last updated -->
+    <p class="text-xs" style="text-align: center; margin-top: 1.5rem;">
+      Last updated: {new Date().toISOString().split('T')[0]}
+    </p>
+  </article>
+
+  <script>
+    // Script toggle
+    function initScriptToggle() {
+      const tabs = document.querySelectorAll('.script-toggle__btn');
+      const panels = document.querySelectorAll('.script-panel');
+
+      // Restore preference
+      const savedScript = localStorage.getItem('preferred-script') || 'iast';
+      setActiveScript(savedScript);
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const script = (tab as HTMLElement).dataset.script;
+          if (script) {
+            setActiveScript(script);
+            localStorage.setItem('preferred-script', script);
+          }
+        });
+      });
+
+      function setActiveScript(script: string) {
+        const scrollY = window.scrollY;
+
+        tabs.forEach(tab => {
+          const isActive = (tab as HTMLElement).dataset.script === script;
+          tab.classList.toggle('is-active', isActive);
+          tab.setAttribute('aria-selected', String(isActive));
+        });
+
+        panels.forEach(panel => {
+          const panelScript = panel.id.replace('panel-', '');
+          panel.classList.toggle('is-visible', panelScript === script);
+        });
+
+        // Preserve scroll position
+        requestAnimationFrame(() => window.scrollTo(0, scrollY));
+      }
+    }
+
+    // Accordion
+    function initAccordion() {
+      const trigger = document.getElementById('source-trigger');
+      const content = document.getElementById('source-content');
+      if (!trigger || !content) return;
+
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.contains('is-open');
+        content.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+
+    initScriptToggle();
+    initAccordion();
+  </script>
+</BaseLayout>

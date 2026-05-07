@@ -1,0 +1,29 @@
+---
+---
+
+<div class="search-wrapper" id="search-wrapper">
+  <div id="search"></div>
+</div>
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    // Only initialize if pagefind assets exist (post-build)
+    const script = document.createElement('script');
+    script.src = '/pagefind/pagefind-ui.js';
+    script.onload = () => {
+      new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+        resetStyles: false,
+      });
+    };
+    script.onerror = () => {
+      document.getElementById('search').innerHTML =
+        '<p class="meta" style="padding: 1rem;">Search is available after building the site. Run <code>npm run build</code> to enable search.</p>';
+    };
+    document.head.appendChild(script);
+  });
+</script>

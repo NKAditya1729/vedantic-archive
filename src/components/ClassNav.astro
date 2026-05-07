@@ -1,0 +1,47 @@
+---
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  prev?: NavLink;
+  next?: NavLink;
+  backLabel: string;
+  backHref: string;
+  audioUrl?: string;
+}
+
+const { prev, next, backLabel, backHref, audioUrl } = Astro.props;
+---
+
+<nav class="class-nav" aria-label="Class navigation">
+  {prev ? (
+    <a href={prev.href} class="class-nav__link class-nav__link--prev">
+      <span class="class-nav__label">← Previous</span>
+      <span class="class-nav__title">{prev.label}</span>
+    </a>
+  ) : (
+    <div></div>
+  )}
+
+  {next ? (
+    <a href={next.href} class="class-nav__link class-nav__link--next">
+      <span class="class-nav__label">Next →</span>
+      <span class="class-nav__title">{next.label}</span>
+    </a>
+  ) : (
+    <div></div>
+  )}
+
+  <div class="class-nav__back">
+    <a href={backHref}>← Back to {backLabel}</a>
+    {audioUrl && (
+      <span style="margin-left: 1.5rem;">
+        <a href={audioUrl} class="audio-link" target="_blank" rel="noopener noreferrer">
+          🔊 Audio
+        </a>
+      </span>
+    )}
+  </div>
+</nav>

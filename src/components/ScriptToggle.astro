@@ -1,0 +1,97 @@
+---
+interface Props {
+  devContent: string;
+  iastContent: string;
+}
+
+const { devContent, iastContent } = Astro.props;
+---
+
+<div class="script-toggle-wrapper">
+  <div class="script-toggle" role="tablist" aria-label="Script selection">
+    <button
+      class="script-toggle__btn is-active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-iast"
+      id="tab-iast"
+      data-script="iast"
+    >
+      IAST
+    </button>
+    <button
+      class="script-toggle__btn"
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-devanagari"
+      id="tab-devanagari"
+      data-script="devanagari"
+    >
+      Devanagari
+    </button>
+  </div>
+
+  <div
+    class="script-panel is-visible"
+    id="panel-iast"
+    role="tabpanel"
+    aria-labelledby="tab-iast"
+    data-script-label="IAST Version"
+  >
+    <div class="class-body" set:html={iastContent} />
+  </div>
+
+  <div
+    class="script-panel devanagari"
+    id="panel-devanagari"
+    role="tabpanel"
+    aria-labelledby="tab-devanagari"
+    data-script-label="Devanagari Version"
+    lang="sa"
+  >
+    <div class="class-body" set:html={devContent} />
+  </div>
+</div>
+
+<script>
+  // Script toggle handler
+  function initScriptToggle() {
+    const tabs = document.querySelectorAll('.script-toggle__btn');
+    const panels = document.querySelectorAll('.script-panel');
+
+    // Restore preference
+    const savedScript = localStorage.getItem('preferred-script') || 'iast';
+    setActiveScript(savedScript);
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const script = (tab as HTMLElement).dataset.script;
+        if (script) {
+          setActiveScript(script);
+          localStorage.setItem('preferred-script', script);
+        }
+      });
+    });
+
+    function setActiveScript(script: string) {
+      const scrollY = window.scrollY;
+
+      tabs.forEach(tab => {
+        const isActive = (tab as HTMLElement).dataset.script === script;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+      });
+
+      panels.forEach(panel => {
+        const panelScript = panel.id.replace('panel-', '');
+        const isVisible = panelScript === script;
+        panel.classList.toggle('is-visible', isVisible);
+      });
+
+      // Preserve scroll position
+      window.scrollTo(0, scrollY);
+    }
+  }
+
+  initScriptToggle();
+</script>

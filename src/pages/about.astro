@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="About the Vedantic Study Archive — lineage acknowledgement, how these notes are prepared, and disclaimer."
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <Breadcrumb items={[
+      { label: 'Home', href: '/' },
+      { label: 'About' },
+    ]} />
+
+    <h1>About This Archive</h1>
+
+    <section class="about-section">
+      <h2>Lineage Acknowledgement</h2>
+      <p>
+        These class notes are prepared from teachings given by <strong>Pūjya Swami Shankarananda</strong>, a disciple of <strong>Pūjya Swami Dayananda Saraswati</strong>, founder of Arsha Vidya Gurukulam. The teaching lineage (guru-śiṣya-paramparā) traces back through Śrī Śaṅkarācārya to the Vedic ṛṣis themselves.
+      </p>
+      <p>
+        Swami Shankarananda studied in the 3-year residential course in Vedānta & Sanskrit at Arsha Vijñāna Gurukulam, Nagpur, under Pūjya Swamiji and Swāminī Brahmaprakāsānanda. He was blessed with teaching assignments in long-term Vedānta & Sanskrit courses at Arsha Vidya Gurukulam, Anaikatti. Swamiji presently teaches online classes on Vedānta & Sanskrit along with retreats at the Gurukulam.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        <a href="https://www.youtube.com/@shankaranandaswami" target="_blank" rel="noopener noreferrer">📺 Swami Shankarananda's YouTube Channel</a>
+      </p>
+      <p>
+        We offer our namaskāra to this unbroken lineage of teachers:
+      </p>
+      <blockquote class="verse" lang="sa">
+        <p>
+          सदाशिवसमारम्भां शङ्कराचार्यमध्यमाम् ।<br>
+          अस्मदाचार्यपर्यन्तां वन्दे गुरुपरम्पराम् ॥
+        </p>
+      </blockquote>
+    </section>
+
+    <section class="about-section">
+      <h2>Class Resources</h2>
+      <p>
+        All class videos and materials are available at the following links:
+      </p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+        <li><a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">Bṛhadāraṇyaka Upaniṣad 2.4 — YouTube Playlist</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA" target="_blank" rel="noopener noreferrer">Class Materials — Google Drive</a> (Swami's files: mūlam, bhāṣyam, sambandha-bhāṣyam in both scripts)</li>
+      </ul>
+      <p style="margin-top: 0.5rem;"><strong>Source Texts (Advaita Sharada, Sringeri):</strong></p>
+      <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+        <li><a href="https://advaitasharada.sringeri.net/display/bhashya/Brha/devanagari" target="_blank" rel="noopener noreferrer">Bṛhadāraṇyaka — Śāṅkara Bhāṣya</a></li>
+        <li><a href="https://advaitasharada.sringeri.net/display/vyakhya/brihadaranyakabhashya-vartika/devanagari" target="_blank" rel="noopener noreferrer">Bṛhadāraṇyaka — Sureśvara Vārttika</a></li>
+        <li><a href="https://advaitasharada.sringeri.net/display/vyakhya/anandagiri-Brha/devanagari" target="_blank" rel="noopener noreferrer">Bṛhadāraṇyaka — Ānandagiri Ṭīkā</a></li>
+        <li><a href="https://advaitasharada.sringeri.net/ग्रन्थाः/" target="_blank" rel="noopener noreferrer">All Śruti Texts (Advaita Sharada)</a></li>
+      </ul>
+    </section>
+
+    <section class="about-section" id="process">
+      <h2>How These Notes Are Prepared</h2>
+      <p>
+        Each class undergoes a careful multi-stage process to ensure accuracy and readability:
+      </p>
+      <div class="process-step">
+        <span class="process-step__number">1</span>
+        <span class="process-step__text">
+          <strong>Video recording</strong> — The live class is recorded and published on Swamiji's YouTube channel.
+        </span>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">2</span>
+        <span class="process-step__text">
+          <strong>Initial transcription</strong> — Audio is processed through MacWhisper to generate a raw transcript.
+        </span>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">3</span>
+        <span class="process-step__text">
+          <strong>AI-assisted cleanup</strong> — The raw transcript is cleaned for grammar, structure, and Sanskrit accuracy using AI tools.
+        </span>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">4</span>
+        <span class="process-step__text">
+          <strong>Audio review</strong> — The editor listens to the original audio while reading the cleaned transcript, correcting any errors and ensuring fidelity to the teaching.
+        </span>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">5</span>
+        <span class="process-step__text">
+          <strong>Verification</strong> — The final notes are reviewed against source texts (mūla, bhāṣya, vārttika) for accuracy of citations.
+        </span>
+      </div>
+      <div class="process-step">
+        <span class="process-step__number">6</span>
+        <span class="process-step__text">
+          <strong>Publication</strong> — Notes are published in both Devanagari and IAST versions, with proper verse formatting and source references.
+        </span>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Disclaimer</h2>
+      <p>
+        These are <strong>study notes</strong> prepared by students — they are not authorized publications of the teaching tradition. While every effort is made to accurately represent the teachings, errors in understanding or transcription may exist.
+      </p>
+      <p>
+        <strong>These notes are not a substitute for direct study under a qualified ācārya.</strong> The Vedāntic teaching tradition emphasizes the importance of <em>guru-mukha-śravaṇa</em> (hearing from the mouth of the teacher) — these notes are offered as a supplementary aid for review and reflection.
+      </p>
+      <p>
+        If you notice any errors, please reach out so we can correct them promptly.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Contact & Corrections</h2>
+      <p>
+        For corrections, suggestions, or questions about these notes, please open an issue on the <a href="#">GitHub repository</a> or contact the editor directly.
+      </p>
+      <p>
+        Corrections to Sanskrit citations are especially welcome — accuracy in representing the bhāṣya and mūla texts is our highest priority.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

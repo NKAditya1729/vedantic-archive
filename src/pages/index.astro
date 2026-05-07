@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Search from '../components/Search.astro';
+import { getCollection } from 'astro:content';
+
+const allClasses = await getCollection('classes');
+// Get unique IAST classes (avoid double-counting dev + iast)
+const iastClasses = allClasses.filter(c => c.data.script === 'iast');
+const totalClasses = iastClasses.length;
+const latestDate = iastClasses
+  .map(c => c.data.date)
+  .sort()
+  .reverse()[0];
+
+// Group by series
+const seriesMap = new Map();
+for (const cls of iastClasses) {
+  const key = cls.data.series;
+  if (!seriesMap.has(key)) {
+    seriesMap.set(key, {
+      slug: cls.data.series,
+      title: cls.data.series_title,
+      count: 0,
+      latestDate: '',
+    });
+  }
+  const s = seriesMap.get(key);
+  s.count++;
+  if (cls.data.date > s.latestDate) s.latestDate = cls.data.date;
+}
+const series = Array.from(seriesMap.values());
+---
+
+<BaseLayout title="" description="An archive of Vedāntic class notes from the teachings of Pūjya Swami Shankarananda — Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya.">
+  <div class="container" style="padding-top: 3rem; padding-bottom: 3rem;">
+
+    <!-- About section -->
+    <section class="page-section">
+      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Vedantic Study Archive</h1>
+      <p class="meta" style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-size: 1.0625rem; font-style: italic; color: var(--text-secondary);">
+        शास्त्रयोनित्वात् — "Because Brahman is known through the śāstra"
+      </p>
+      <p>
+        This archive contains detailed class notes from an ongoing study of the principal Upaniṣads and Vedāntic texts, taught by <strong><a href="https://www.youtube.com/@shankaranandaswami" target="_blank" rel="noopener noreferrer">Pūjya Swami Shankarananda</a></strong>, a disciple of Pūjya Swami Dayananda Saraswati (Arsha Vidya Gurukulam).
+      </p>
+      <p>
+        Each class is available in both <strong>Devanagari</strong> script and <strong>IAST</strong> (Roman with diacritics), and can be toggled at any time. The notes are prepared from video recordings, reviewed against the original class, and offered as a study aid for fellow seekers.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        <a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a> ·
+        <a href="https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA" target="_blank" rel="noopener noreferrer">📄 Class Materials (Google Drive)</a>
+      </p>
+    </section>
+
+    <!-- Series listing -->
+    <section class="page-section">
+      <h2 class="page-section__heading">Series</h2>
+
+      {series.map(s => (
+        <a href={`/${s.slug}/`} class="series-card" id={`series-${s.slug}`}>
+          <span class="series-card__icon" aria-hidden="true">🕉</span>
+          <div class="series-card__title">{s.title}</div>
+          <div class="series-card__subtitle">with Śāṅkara Bhāṣya</div>
+          <div class="series-card__meta">
+            {s.count} {s.count === 1 ? 'class' : 'classes'} · Latest: {s.latestDate}
+          </div>
+          <div class="series-card__arrow">
+            Explore notes →
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <!-- Process link -->
+    <section class="page-section">
+      <h2 class="page-section__heading">How These Notes Are Prepared</h2>
+      <p>
+        These notes are transcribed from video recordings, processed through multiple review stages, and carefully edited for accuracy. Each class undergoes review by the editor before publication.
+        <a href="/about/#process">Read more about the process →</a>
+      </p>
+    </section>
+
+    <!-- Search -->
+    <section class="page-section">
+      <h2 class="page-section__heading">Search the Archive</h2>
+      <Search />
+    </section>
+
+  </div>
+</BaseLayout>
