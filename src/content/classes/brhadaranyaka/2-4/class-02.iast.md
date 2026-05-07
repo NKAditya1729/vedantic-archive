@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
-date: "2025-05-01"
+date: "2026-04-23"
 coverage: "Yājñavalkya's announcement of pravrajyā to Maitreyī; her pivotal question — 'yena na amṛtā syām kimahaṁ tena kuryām'; Bhāṣyam on amṛtatvasya tu nāśāsti vittena."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

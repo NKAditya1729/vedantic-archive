@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 3
-date: "2025-05-06"
+date: "2026-04-27"
 coverage: "Continuation of भाष्यम् on 2.4.2; मैत्रेयी's वैराग्य and मुमुक्षुत्व; teaching begins — आत्मा वा अरे द्रष्टव्यः; श्रवण-मनन-निदिध्यासन triad."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

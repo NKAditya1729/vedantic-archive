@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
-date: "2025-05-08"
+date: "2026-04-30"
 coverage: "भाष्यम् on 2.4.3–4; प्रियत्व analysis — why is आत्मा the dearest; पत्नी, पुत्र, वित्त — all loved for the sake of आत्मा; आत्मनस्तु कामाय सर्वं प्रियं भवति."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

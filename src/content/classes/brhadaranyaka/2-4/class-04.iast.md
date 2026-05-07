@@ -5,8 +5,8 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
-date: "2025-05-08"
-coverage: "Bhāṣyam on 2.4.3–4; priyatva analysis — why is ātmā the dearest; patnī, putra, vitta — all loved for the sake of ātmā; ātmanastu kāmāya sarvaṁ priyam bhavati."
+date: "2026-04-30"
+coverage: "Bhāṣyam on 2.4.3–4; priyatva analysis — why is ātmā excessive dearest; patnī, putra, vitta — all loved for the sake of ātmā; ātmanastu kāmāya sarvaṁ priyam bhavati."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"

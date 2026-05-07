@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
-date: "2025-05-13"
+date: "2026-05-04"
 coverage: "Bhāṣyam on 2.4.5; 'ātmā vā are draṣṭavyaḥ' — the ātmā alone is to be seen/known; idaṁ sarvaṁ yadayamātmā — everything is nothing but ātmā; Vārttikakāra's analysis."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

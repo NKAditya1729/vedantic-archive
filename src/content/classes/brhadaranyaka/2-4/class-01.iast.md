@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
-date: "2025-04-29"
+date: "2026-04-20"
 coverage: "Bhāṣyakāra's sambandha-bhāṣya connecting the Maitreyī Brāhmaṇa to the preceding chapters; review of vidyā-sūtra (1.4.7) and avidyā-sūtra (1.4.10); saṁnyāsa as aṅga for brahmavidyā."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

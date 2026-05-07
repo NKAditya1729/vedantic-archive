@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
-date: "2025-05-13"
+date: "2026-05-04"
 coverage: "भाष्यम् on 2.4.5; 'आत्मा वा अरे द्रष्टव्यः' — the आत्मा alone is to be seen/known; इदं सर्वं यदयमात्मा — everything is nothing but आत्मा; वार्त्तिककार's analysis."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
-date: "2025-05-01"
+date: "2026-04-23"
 coverage: "याज्ञवल्क्य's announcement of प्रव्रज्या to मैत्रेयी; her pivotal question — 'येन न अमृता स्यां किमहं तेन कुर्याम्'; भाष्यम् on अमृतत्वस्य तु नाशास्ति वित्तेन."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"

@@ -15,7 +15,7 @@ from dev_to_iast import convert_markdown_dev_to_iast
 CLASSES = [
     {
         'number': 1,
-        'date': '2025-04-29',
+        'date': '2026-04-20',
         'video_url': 'https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn',
         'coverage': "Bhāṣyakāra's sambandha-bhāṣya connecting the Maitreyī Brāhmaṇa to the preceding chapters; review of vidyā-sūtra (1.4.7) and avidyā-sūtra (1.4.10); saṁnyāsa as aṅga for brahmavidyā.",
         'coverage_dev': "भाष्यकार's सम्बन्धभाष्य connecting the मैत्रेयीब्राह्मण to the preceding chapters; review of विद्यासूत्र (1.4.7) and अविद्यासूत्र (1.4.10); संन्यास as अङ्ग for ब्रह्मविद्या.",
@@ -24,7 +24,7 @@ CLASSES = [
     },
     {
         'number': 2,
-        'date': '2025-05-01',
+        'date': '2026-04-23',
         'video_url': 'https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn',
         'coverage': "Yājñavalkya's announcement of pravrajyā to Maitreyī; her pivotal question — 'yena na amṛtā syām kimahaṁ tena kuryām'; Bhāṣyam on amṛtatvasya tu nāśāsti vittena.",
         'coverage_dev': "याज्ञवल्क्य's announcement of प्रव्रज्या to मैत्रेयी; her pivotal question — 'येन न अमृता स्यां किमहं तेन कुर्याम्'; भाष्यम् on अमृतत्वस्य तु नाशास्ति वित्तेन.",
@@ -33,7 +33,7 @@ CLASSES = [
     },
     {
         'number': 3,
-        'date': '2025-05-06',
+        'date': '2026-04-27',
         'video_url': 'https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn',
         'coverage': "Continuation of Bhāṣyam on 2.4.2; Maitreyī's vairāgya and mumukṣutva; teaching begins — ātmā vā are draṣṭavyaḥ; śravaṇa-manana-nididhyāsana triad.",
         'coverage_dev': "Continuation of भाष्यम् on 2.4.2; मैत्रेयी's वैराग्य and मुमुक्षुत्व; teaching begins — आत्मा वा अरे द्रष्टव्यः; श्रवण-मनन-निदिध्यासन triad.",
@@ -42,7 +42,7 @@ CLASSES = [
     },
     {
         'number': 4,
-        'date': '2025-05-08',
+        'date': '2026-04-30',
         'video_url': 'https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn',
         'coverage': "Bhāṣyam on 2.4.3–4; priyatva analysis — why is ātmā excessive dearest; patnī, putra, vitta — all loved for the sake of ātmā; ātmanastu kāmāya sarvaṁ priyam bhavati.",
         'coverage_dev': "भाष्यम् on 2.4.3–4; प्रियत्व analysis — why is आत्मा the dearest; पत्नी, पुत्र, वित्त — all loved for the sake of आत्मा; आत्मनस्तु कामाय सर्वं प्रियं भवति.",
@@ -51,7 +51,7 @@ CLASSES = [
     },
     {
         'number': 5,
-        'date': '2025-05-13',
+        'date': '2026-05-04',
         'video_url': 'https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn',
         'coverage': "Bhāṣyam on 2.4.5; 'ātmā vā are draṣṭavyaḥ' — the ātmā alone is to be seen/known; idaṁ sarvaṁ yadayamātmā — everything is nothing but ātmā; Vārttikakāra's analysis.",
         'coverage_dev': "भाष्यम् on 2.4.5; 'आत्मा वा अरे द्रष्टव्यः' — the आत्मा alone is to be seen/known; इदं सर्वं यदयमात्मा — everything is nothing but आत्मा; वार्त्तिककार's analysis.",

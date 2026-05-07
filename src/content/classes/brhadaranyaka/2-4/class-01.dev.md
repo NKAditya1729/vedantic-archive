@@ -5,7 +5,7 @@ adhyaya: 2
 brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
-date: "2025-04-29"
+date: "2026-04-20"
 coverage: "भाष्यकार's सम्बन्धभाष्य connecting the मैत्रेयीब्राह्मण to the preceding chapters; review of विद्यासूत्र (1.4.7) and अविद्यासूत्र (1.4.10); संन्यास as अङ्ग for ब्रह्मविद्या."
 audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
