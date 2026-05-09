@@ -27,6 +27,7 @@ const classes = defineCollection({
     materials_url: z.string().optional().default(''),
     script: z.enum(['devanagari', 'iast']),
     source_ref: z.string().optional().default(''),
+    source_text_content: z.string().optional().default(''),
     related_verses: z.string().optional().default(''),
   }),
 });
