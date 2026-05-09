@@ -135,12 +135,12 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       <details class="accordion source-accordion" style="margin-bottom: 2rem;">
         <summary style="font-weight: 600; padding: 1rem; background: var(--surface-2); cursor: pointer; border-radius: 4px;">Source Text Covered in This Class</summary>
         <div class="accordion-content" style="padding: 1rem; border: 1px solid var(--surface-2); border-top: none;">
-          <p style="margin-bottom: 1rem; color: #555;"><strong>Primary source:</strong> <span set:html={autoLinkReferences(data.source_ref)} /></p>
+          <p style="margin-bottom: 1rem; color: #555;"><strong>Primary source:</strong> {data.source_ref}</p>
           
           {data.source_text_content && (
             <div class="source-text-block" style="background: #f9f6ef; padding: 1.5rem; border-left: 4px solid var(--primary-color); border-radius: 4px; font-size: 1.1rem; line-height: 1.8;">
               {data.source_text_content.split('<br>').map((line: string) => (
-                <p style="margin-bottom: 0.5rem;" set:html={autoLinkReferences(line)} />
+                <p style="margin-bottom: 0.5rem;">{line}</p>
               ))}
             </div>
           )}
