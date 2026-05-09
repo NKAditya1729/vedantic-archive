@@ -11,7 +11,15 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_text_content: "सम्बन्धभाष्यम्"
+source_text_content: "ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — ‘tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat’ (bṛ. u. 1 | 4 | 10) iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |
+
+avidyāyāśca viṣayaḥ — ‘anyo'sāvanyo'hamasmīti na sa veda’ (bṛ. u. 1 | 4 | 10) ityārabhya cāturvarṇya-pravibhāgādi-nimitta-pāṅktakarma-sādhya-sādhana-lakṣaṇaḥ bījāṅkuravat vyākṛtāvyākṛtasvabhāvaḥ nāma-rūpa-karmātmakaḥ saṃsāraḥ ‘trayaṃ vā idaṃ nāma rūpaṃ karma’ (bṛ. u. 1 | 6 | 1) ityupasaṃhṛtaḥ
+
+śāstrīya utkarṣalakṣaṇo brahmalokāntaḥ, adhobhāvaśca sthāvarānto'śāstrīyaḥ, pūrvameva pradarśitaḥ — ‘dvayā ha’ (bṛ. u. 1 | 3 | 1) ityādinā | etasmādavidyāviṣayādviraktasya pratyagātma-viṣaya-brahmavidyāyām adhikāraḥ kathaṃ nāma syāditi — tṛtīye'dhyāye upasaṃhṛtaḥ samasto'vidyāviṣayaḥ |
+
+caturthe tu brahmavidyāviṣayaṃ pratyagātmānam ‘brahma te bravāṇi’ (bṛ. u. 2 | 1 | 1) iti ‘brahma jñapayiṣyāmi’ (bṛ. u. 2 | 1 | 1) iti ca prastutya, tat brahma ekam advayaṃ sarvaviśeṣaśūnyaṃ kriyā-kāraka-phala-svabhāva-satya-śabda-vācya-aśeṣa-bhūtadharma-pratiṣedha-dvāreṇa ‘neti neti’ (bṛ. u. 2 | 3 | 6) iti jñāpitam |
+
+asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ;"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
 ---

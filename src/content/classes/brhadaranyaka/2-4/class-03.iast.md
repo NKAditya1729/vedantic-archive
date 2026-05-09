@@ -11,7 +11,19 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_text_content: "sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti | neti hovāca yājñavalkyaḥ | yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syāt | amṛtatvasya tu nāśāsti vitteneti || 2 ||<br><br>sā hovāca maitreyī | yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryām | yadeva bhagavānveda tadeva me brūhīti || 3 ||<br><br>sa hovāca yājñavalkyaḥ | priyā batāre naḥ satī priyaṃ bhāṣase | ehyāssva vyākhyāsyāmi te | vyācakṣāṇasya tu me nididhyāsasveti || 4 ||"
+source_text_content: "kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |
+
+‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca |
+
+kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||
+
+etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —
+
+‘karmaṇā badhyate janturvidyayā ca堇yayā ca vimucyate |
+
+tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)
+
+ityevamādi — virodhaḥ pradarśitaḥ | tasmāt na sādhanāntara-sahitā brahmavidyā puruṣārtha-sādhanam , sarvavirodhāt , sādhananirapekṣaiva puruṣārthasādhanam — iti pārivrājyaṃ sarvasādhana-sannyāsa-lakṣaṇam aṅgatvena vidhitsyate ; etāvadeva amṛtatva-sādhanamityavadhāraṇāt , ṣaṣṭhasamāptau, liṅgācca — karmī sanyājñavalkyaḥ pravavrājeti | maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā |"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---

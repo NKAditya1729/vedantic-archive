@@ -11,7 +11,22 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_text_content: "sa hovāca | na vā are patyuḥ kāmāya patiḥ priyo bhavati | ātmanastu kāmāya patiḥ priyo bhavati | na vā are jāyāyai kāmāya jāyā priyā bhavati | ātmanastu kāmāya jāyā priyā bhavati | na vā are putrāṇāṃ kāmāya putrāḥ priyā bhavanti | ātmanastu kāmāya putrāḥ priyā bhavanti | na vā are vittasya kāmāya vittaṃ priyaṃ bhavati | ātmanastu kāmāya vittaṃ priyaṃ bhavati |"
+source_text_content: "maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā | karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — ‘brahma taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ‘kṣatraṃ taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||
+ 
+ātmetyeveti sūtrasya vyākhyeyaṃ prastutā sphuṭā ||
+brahma te'haṃ bravāṇīti prārabhyā''pūrṇavākyataḥ || BV 2.4.1 ||
+nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān ||
+niḥśeṣakarmahetūtthaphalasāvadyadhīstataḥ || BV 2.4.2 ||
+virakta āgrajātso'yaṃ tatsāvadyasamīkṣaṇāt ||
+saṃsāraduḥkhasaṃskārasmṛtibhiḥ preryamāṇadhīḥ || BV 2.4.3 ||
+udbhūtatajjihāsaḥ saṃstaddhāne sādhanaspṛhaḥ ||
+tyaktāśeṣaiṣaṇaḥ so'tha pratyagyāthātmyaniścayaḥ || BV 2.4.4 ||
+vastuvṛttātmasaṃbodhadhvastasaṃsārakāraṇaḥ ||
+vyāviddhāśeṣasaṃsāro vimukto nā vimucyate || BV 2.4.5 ||
+yāvatkiṃcidavidyāyāḥ kāryaṃ vairāgyakāraṇam ||
+tatsaṃnyāso viraktatvātsvata eva na śāstrataḥ || BV 2.4.6 ||
+brahmayāthātmyavijñānasādhanatvaṃ vinā''gamāt ||
+saṃnyāsasya na vijñātaṃ tacchāstreṇeha bodhyate || BV 2.4.7 ||"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---

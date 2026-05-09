@@ -11,7 +11,19 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
-source_text_content: "maitreyīti hovāca yājñavalkyaḥ | udyāsyanvā are'hamasmātsthānādasmi | hanta te'nayā kātyāyanyāntaṃ karvāṇīti || 1 ||"
+source_text_content: "asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ; anyasādhanaṃ hi anyasmai phalasādhanāya prayujyamānaṃ pratikūlaṃ bhavati ; na hi bubhukṣā-pipāsā-nivṛttyarthaṃ dhāvanaṃ gamanaṃ vā sādhanam ; manuṣyaloka-pitṛloka-devaloka-sādhanatvena hi putrādi-sādhanāni śrutāni, na ātma-prāpti-sādhanatvena, viśeṣitatvācca ; na ca brahmavido vihitāni, kāmyatva-śravaṇāt — ‘etāvānvai kāmaḥ’ (bṛ. u. 1 | 4 | 17) iti, brahmavidaśca āpta-kāmatvāt āptakāmasya kāmānupapatteḥ, ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) iti ca śruteḥ |
+
+kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |
+
+‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca |
+
+kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||
+
+etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —
+
+‘karmaṇā badhyate janturvidyayā ca vimucyate |
+
+tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
