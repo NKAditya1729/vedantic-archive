@@ -19,7 +19,7 @@ kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 |
 
 etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —
 
-‘karmaṇā badhyate janturvidyayā ca堇yayā ca vimucyate |
+‘karmaṇā badhyate janturvidyayā ca vimucyate |
 
 tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)
 
