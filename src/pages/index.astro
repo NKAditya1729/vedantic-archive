@@ -41,10 +41,26 @@ const series = Array.from(seriesMap.values());
         शास्त्रयोनित्वात् — "Because Brahman is known through the śāstra"
       </p>
       <p>
-        This archive contains detailed class notes from an ongoing study of the principal Upaniṣads and Vedāntic texts, taught by <strong><a href="https://www.youtube.com/@shankaranandaswami" target="_blank" rel="noopener noreferrer">Pūjya Swami Shankarananda</a></strong>, a disciple of Pūjya Swami Dayananda Saraswati (Arsha Vidya Gurukulam).
+        This archive contains detailed class notes from an ongoing study of the principal Upaniṣads and Vedāntic texts, taught by <strong><a href="https://arshavidya.in/teachers/swami-shankarananda-saraswati/" target="_blank" rel="noopener noreferrer">Pūjya Swami Shankarananda Saraswati</a></strong>.
       </p>
-      <p>
-        Each class is available in both <strong>Devanagari</strong> script and <strong>IAST</strong> (Roman with diacritics), and can be toggled at any time. The notes are prepared from video recordings, reviewed against the original class, and offered as a study aid for fellow seekers.
+
+      <div style="margin-top: 2rem; background: var(--surface-2); padding: 1.5rem; border-radius: 8px;">
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.25rem;">
+          <li>A student-prepared study aid based on faithful class notes.</li>
+          <li>Intended for revision, reflection, and continuity of study.</li>
+        </ul>
+
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is NOT</h3>
+        <ul style="padding-left: 1.25rem;">
+          <li>Not an official publication of Pūjya Swami Shankarananda Saraswati.</li>
+          <li>Not a substitute for direct śravaṇa (listening to the classes).</li>
+          <li>Not an independent commentary on the śāstra.</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 2rem;">
+        Each class is available in both <strong>Devanagari</strong> script and <strong>IAST</strong> (Roman with diacritics), and can be toggled at any time.
       </p>
       <p style="margin-top: 0.75rem;">
         <a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a> ·
@@ -54,7 +70,7 @@ const series = Array.from(seriesMap.values());
 
     <!-- Series listing -->
     <section class="page-section">
-      <h2 class="page-section__heading">Series</h2>
+      <h2 class="page-section__heading">Current Series</h2>
 
       {series.map(s => (
         <a href={`${import.meta.env.BASE_URL}/${s.slug}/`} class="series-card" id={`series-${s.slug}`}>
@@ -69,6 +85,22 @@ const series = Array.from(seriesMap.values());
           </div>
         </a>
       ))}
+    </section>
+
+    <!-- Latest Updates -->
+    <section class="page-section">
+      <h2 class="page-section__heading">Latest Updates</h2>
+      <ul style="list-style: none; padding: 0;">
+        {iastClasses.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 3).map(cls => (
+          <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+            <a href={`${import.meta.env.BASE_URL}/${cls.data.series}/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`} style="text-decoration: none;">
+              <strong>{cls.data.brahmana_name} — Class {cls.data.class_number}</strong>
+            </a>
+            <br>
+            <span style="font-size: 0.875rem; color: var(--text-tertiary);">{cls.data.date}</span>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <!-- Process link -->

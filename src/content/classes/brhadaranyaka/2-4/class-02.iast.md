@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
+source_text_content: "maitreyīti hovāca yājñavalkyaḥ | udyāsyanvā are'hamasmātsthānādasmi | hanta te'nayā kātyāyanyāntaṃ karvāṇīti || 1 ||"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
@@ -105,7 +106,7 @@ Therefore, this giving up is not by choice. So **saṁnyāsa** by choice is only
 
 So why am I saying all this? **śaṅkara** is not saying all that. He is only saying **saṁnyāsa** is a limb, and he is proving here that **saṁnyāsa** is necessary, in a way — in a way — because **yājñavalkya **who knew so much took **saṁnyāsa**. What does it indicate? It indicates something. But I have said, if you give another example — suppose you take the example of **naciketā** and you say he didn't take **saṁnyāsa**, then what? An example cannot be a means of knowing. You should know this — an example is not a **pramāṇa**. An example only supports a given point. This is very important for us to understand. Because people give an example and try to show you something is not right. Because in general, the **nyāya** rule is what? For anything, you have to give a logic and you should give an example. That is how vyavahāra works. Right?
 
-So he says, iti śruteḥ — therefore, because of all these reasons, what is it? brahma-vidyāyā: aṅgatvena saṁnyāso vidhitsitaḥ। Understand why all this is being said? To show that when you have no kāma, saṁnyāsa is the consequence anyway. So saṁnyāsa, when you understood that karma phala is not what you are interested in — even for a mumukṣu, saṁnyāsa is a choice as a lifestyle. śamaḥ kāraṇam ucyate — ārurukṣormuneryogaṁ karma kāraṇamucyate ।yogārūḍhasya tasyaiva śamaḥ kāraṇamucyate | - Bhagavad Gita 6.3. Only when you are able to be by yourself, then śama is the kāraṇa for you, not when you depend on things.
+So he says, iti śruteḥ — therefore, because of all these reasons, what is it? brahma-vidyāyā: aṅgatvena saṁnyāso vidhitsitaḥ। Understand why all this is being said? To show that when you have no kāma, saṁnyāsa is the consequence anyway. So saṁnyāsa, when you understood that karma phala is not what you are interested in — even for a mumukṣu, saṁnyāsa is a choice as a lifestyle. śamaḥ kāraṇam ucyate — ārurukṣormuneryogaṁ karma kāraṇamucyate ।yogārūḍhasya tasyaiva śamaḥ kāraṇamucyate | - [Bhagavad Gita 6.3](https://advaitasharada.sringeri.net/display/bhashya/Gita/devanagari?chapter=6&verse=3). Only when you are able to be by yourself, then śama is the kāraṇa for you, not when you depend on things.
 
 Right? So what is this **etāvān vai kāmaḥ** — I said we will look into it, just so we remember. So this is that section, **etāvān vai kāmaḥ**, 1.4.17. What does **etāvān** mean? “This much alone”. You know, so if I say, "Okay, I am going to buy this house," how big is this house? I show — “this much alone”. Not the next house, not the road, not the part behind it — this much alone - **etāvān **so this** tāvān, yāvān** — those words in Sanskrit are doing a **paricchedaḥ**. This much alone. **etāvān vai kāmaḥ** — this much alone is **kāmaḥ**. That is why he says, **etāvad viṣaya paricchinna:**
 

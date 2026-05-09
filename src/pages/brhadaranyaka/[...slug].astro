@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import ClassNav from '../../components/ClassNav.astro';
 import { getCollection, render } from 'astro:content';
+import audioManifest from '../../content/audio_manifest.json';
 
 // Generate all class page routes
 export async function getStaticPaths() {
@@ -66,6 +67,9 @@ export async function getStaticPaths() {
 const { devEntry, iastEntry, prevClass, nextClass } = Astro.props;
 const data = iastEntry.data;
 
+const classId = `${data.series}.${data.adhyaya}-${data.brahmana}.class-${String(data.class_number).padStart(2, '0')}`;
+const audioInfo = audioManifest[classId] || null;
+
 // Render markdown content
 const { Content: IastContent } = await render(iastEntry);
 const devResult = devEntry ? await render(devEntry) : null;
@@ -107,7 +111,59 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
         <strong style="font-size: 0.8125rem; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary);">Coverage</strong><br>
         {data.coverage}
       </div>
+      
+      <!-- Metadata Block -->
+      <div class="class-metadata text-xs meta" style="margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <div><strong>Status:</strong> Audio-reviewed and Editor-corrected</div>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><a href={`mailto:corrections@vedanticarchive.org?subject=Correction for ${data.brahmana_name} Class ${data.class_number}`}>Report Error / Feedback</a></div>
+      </div>
     </header>
+
+    <!-- Audio Player -->
+    {audioInfo && audioInfo.localPath && (
+      <div class="audio-player" style="margin-bottom: 2rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
+        <strong style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem;">Listen to Class Audio</strong>
+        <audio controls src={audioInfo.localPath} style="width: 100%;">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    )}
+
+    <!-- Source Text Accordion (Moved above notes) -->
+    {(data.source_ref || data.related_verses) && (
+      <details class="accordion source-accordion" style="margin-bottom: 2rem;">
+        <summary style="font-weight: 600; padding: 1rem; background: var(--surface-2); cursor: pointer; border-radius: 4px;">Source Text Covered in This Class</summary>
+        <div class="accordion-content" style="padding: 1rem; border: 1px solid var(--surface-2); border-top: none;">
+          <p style="margin-bottom: 1rem; color: #555;"><strong>Primary source:</strong> <span set:html={autoLinkReferences(data.source_ref)} /></p>
+          
+          {data.source_text_content && (
+            <div class="source-text-block" style="background: #f9f6ef; padding: 1.5rem; border-left: 4px solid var(--primary-color); border-radius: 4px; font-size: 1.1rem; line-height: 1.8;">
+              {data.source_text_content.split('<br>').map((line: string) => (
+                <p style="margin-bottom: 0.5rem;" set:html={autoLinkReferences(line)} />
+              ))}
+            </div>
+          )}
+          {data.related_verses && (
+            <p><strong>Related verses:</strong> {data.related_verses}</p>
+          )}
+        </div>
+      </details>
+    )}
+
+    <!-- Class Resources (Moved above notes) -->
+    <div class="class-resources" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+      {data.video_url && (
+        <a href={data.video_url} class="audio-link" target="_blank" rel="noopener noreferrer">
+          📺 Watch class video on YouTube
+        </a>
+      )}
+      {data.materials_url && (
+        <a href={data.materials_url} class="audio-link" target="_blank" rel="noopener noreferrer">
+          📄 View class materials (PDF)
+        </a>
+      )}
+    </div>
 
     <!-- Script Toggle -->
     <div class="script-toggle" role="tablist" aria-label="Script selection">
@@ -164,46 +220,6 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       </div>
     )}
 
-    <!-- Source Text Accordion -->
-    {(data.source_ref || data.related_verses) && (
-      <div class="accordion">
-        <button
-          class="accordion__trigger"
-          aria-expanded="false"
-          id="source-trigger"
-        >
-          <span>Source Text Covered</span>
-          <span class="accordion__icon" aria-hidden="true">▼</span>
-        </button>
-        <div class="accordion__content" id="source-content">
-          {data.source_ref && (
-            <p><strong>Primary source:</strong> {data.source_ref}</p>
-          )}
-          {data.related_verses && (
-            <p><strong>Related verses:</strong> {data.related_verses}</p>
-          )}
-        </div>
-      </div>
-    )}
-
-    <!-- Class Resources -->
-    <div class="class-resources" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem;">
-      {data.video_url && (
-        <a href={data.video_url} class="audio-link" target="_blank" rel="noopener noreferrer">
-          📺 Watch class video
-        </a>
-      )}
-      {data.materials_url && (
-        <a href={data.materials_url} class="audio-link" target="_blank" rel="noopener noreferrer">
-          📄 Class materials
-        </a>
-      )}
-      {data.audio_url && (
-        <a href={data.audio_url} class="audio-link" target="_blank" rel="noopener noreferrer">
-          🔊 Listen to audio
-        </a>
-      )}
-    </div>
 
     <!-- Prev/Next Navigation -->
     <ClassNav
@@ -259,20 +275,9 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       }
     }
 
-    // Accordion
-    function initAccordion() {
-      const trigger = document.getElementById('source-trigger');
-      const content = document.getElementById('source-content');
-      if (!trigger || !content) return;
-
-      trigger.addEventListener('click', () => {
-        const isOpen = content.classList.contains('is-open');
-        content.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-
-    initScriptToggle();
-    initAccordion();
+    // Initialize scripts
+    document.addEventListener('DOMContentLoaded', () => {
+      initScriptToggle();
+    });
   </script>
 </BaseLayout>

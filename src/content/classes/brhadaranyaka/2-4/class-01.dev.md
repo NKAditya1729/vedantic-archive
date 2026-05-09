@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
+source_text_content: "सम्बन्धभाष्यम्"
 source_ref: "बृहद् २.४ सम्बन्धभाष्यम्"
 related_verses: ""
 ---

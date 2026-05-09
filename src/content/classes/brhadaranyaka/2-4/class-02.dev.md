@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
+source_text_content: "मैत्रेयीति होवाच याज्ञवल्क्यः । उद्यास्यन्वा अरेऽहमस्मात्स्थानादस्मि । हन्त तेऽनया कात्यायन्यान्तं करवाणीति ॥ १ ॥"
 source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---
@@ -105,7 +106,7 @@ Therefore, this giving up is not by choice. So **संन्यास** by choi
 
 So why am I saying all this? **शङ्कर** is not saying all that. He is only saying **संन्यास** is a limb, and he is proving here that **संन्यास** is necessary, in a way — in a way — because **याज्ञवल्क्य **who knew so much took **संन्यास**. What does it indicate? It indicates something. But I have said, if you give another example — suppose you take the example of **नचिकेता** and you say he didn't take **संन्यास**, then what? An example cannot be a means of knowing. You should know this — an example is not a **प्रमाण**. An example only supports a given point. This is very important for us to understand. Because people give an example and try to show you something is not right. Because in general, the **न्याय** rule is what? For anything, you have to give a logic and you should give an example. That is how व्यवहार works. Right?
 
-So he says, इति श्रुतेः — therefore, because of all these reasons, what is it? ब्रह्म-विद्याया: अङ्गत्वेन संन्यासो विधित्सितः। Understand why all this is being said? To show that when you have no काम, संन्यास is the consequence anyway. So संन्यास, when you understood that कर्म फल is not what you are interested in — even for a मुमुक्षु, संन्यास is a choice as a lifestyle. शमः कारणम् उच्यते — आरुरुक्षोर्मुनेर्योगं कर्म कारणमुच्यते ।योगारूढस्य तस्यैव शमः कारणमुच्यते | - Bhagavad Gita 6.3. Only when you are able to be by yourself, then शम is the कारण for you, not when you depend on things.
+So he says, इति श्रुतेः — therefore, because of all these reasons, what is it? ब्रह्म-विद्याया: अङ्गत्वेन संन्यासो विधित्सितः। Understand why all this is being said? To show that when you have no काम, संन्यास is the consequence anyway. So संन्यास, when you understood that कर्म फल is not what you are interested in — even for a मुमुक्षु, संन्यास is a choice as a lifestyle. शमः कारणम् उच्यते — आरुरुक्षोर्मुनेर्योगं कर्म कारणमुच्यते ।योगारूढस्य तस्यैव शमः कारणमुच्यते | - [Bhagavad Gita 6.3](https://advaitasharada.sringeri.net/display/bhashya/Gita/devanagari?chapter=6&verse=3). Only when you are able to be by yourself, then शम is the कारण for you, not when you depend on things.
 
 Right? So what is this **एतावान् वै कामः** — I said we will look into it, just so we remember. So this is that section, **एतावान् वै कामः**, 1.4.17. What does **एतावान्** mean? “This much alone”. You know, so if I say, "Okay, I am going to buy this house," how big is this house? I show — “this much alone”. Not the next house, not the road, not the part behind it — this much alone - **एतावान् **so this** तावान्, यावान्** — those words in Sanskrit are doing a **परिच्छेदः**. This much alone. **एतावान् वै कामः** — this much alone is **कामः**. That is why he says, **एतावद् विषय परिच्छिन्न:**
 

@@ -92,6 +92,18 @@
   height: 1.25rem;
 }
 
+.hamburger .close-icon {
+  display: none;
+}
+
+.hamburger[aria-expanded="true"] .menu-icon {
+  display: none;
+}
+
+.hamburger[aria-expanded="true"] .close-icon {
+  display: block;
+}
+
 .mobile-nav {
   display: none;
   position: fixed;

@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
+source_text_content: "na vā are brahmaṇaḥ kāmāya brahma priyaṃ bhavati | ātmanastu kāmāya brahma priyaṃ bhavati | na vā are kṣatrasya kāmāya kṣatraṃ priyaṃ bhavati | ātmanastu kāmāya kṣatraṃ priyaṃ bhavati | na vā are lokānāṃ kāmāya lokāḥ priyā bhavanti | ātmanastu kāmāya lokāḥ priyā bhavanti | na vā are devānāṃ kāmāya devāḥ priyā bhavanti | ātmanastu kāmāya devāḥ priyā bhavanti | na vā are bhūtānāṃ kāmāya bhūtāni priyāṇi bhavanti | ātmanastu kāmāya bhūtāni priyāṇi bhavanti | na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavati | ātmanastu kāmāya sarvaṃ priyaṃ bhavati | ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyi | ātmano vā are darśanena śravaṇena matyā vijñānenedaṃ sarvaṃ viditam || 5 ||"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---

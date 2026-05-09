@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
+source_text_content: "स होवाच । न वा अरे पत्युः कामाय पतिः प्रियो भवति । आत्मनस्तु कामाय पतिः प्रियो भवति । न वा अरे जायायै कामाय जाया प्रिया भवति । आत्मनस्तु कामाय जाया प्रिया भवति । न वा अरे पुत्राणां कामाय पुत्राः प्रिया भवन्ति । आत्मनस्तु कामाय पुत्राः प्रिया भवन्ति । न वा अरे वित्तस्य कामाय वित्तं प्रियं भवति । आत्मनस्तु कामाय वित्तं प्रियं भवति । (पूर्वभागः)"
 source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---

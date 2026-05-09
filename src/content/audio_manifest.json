@@ -1,0 +1,52 @@
+{
+  "brhadaranyaka.2-4.class-01": {
+    "classNumber": 1,
+    "mp3Filename": "Brhad_2-4_Class_01.mp3",
+    "localPath": "/assets/audio/Brhad_2-4_Class_01.mp3",
+    "productionUrl": null,
+    "durationSeconds": null,
+    "syncLevel": "section",
+    "chapterMarkers": [
+      {
+        "label": "Opening",
+        "start": 0
+      }
+    ]
+  },
+  "brhadaranyaka.2-4.class-02": {
+    "classNumber": 2,
+    "mp3Filename": "Brhad_2-4_Class_02.mp3",
+    "localPath": "/assets/audio/Brhad_2-4_Class_02.mp3",
+    "productionUrl": null,
+    "durationSeconds": null,
+    "syncLevel": "section",
+    "chapterMarkers": []
+  },
+  "brhadaranyaka.2-4.class-03": {
+    "classNumber": 3,
+    "mp3Filename": "Brhad_2-4_Class_03.mp3",
+    "localPath": "/assets/audio/Brhad_2-4_Class_03.mp3",
+    "productionUrl": null,
+    "durationSeconds": null,
+    "syncLevel": "section",
+    "chapterMarkers": []
+  },
+  "brhadaranyaka.2-4.class-04": {
+    "classNumber": 4,
+    "mp3Filename": "Brhad_2-4_Class_04.mp3",
+    "localPath": "/assets/audio/Brhad_2-4_Class_04.mp3",
+    "productionUrl": null,
+    "durationSeconds": null,
+    "syncLevel": "section",
+    "chapterMarkers": []
+  },
+  "brhadaranyaka.2-4.class-05": {
+    "classNumber": 5,
+    "mp3Filename": "Brhad_2-4_Class_05.mp3",
+    "localPath": "/assets/audio/Brhad_2-4_Class_05.mp3",
+    "productionUrl": null,
+    "durationSeconds": null,
+    "syncLevel": "section",
+    "chapterMarkers": []
+  }
+}

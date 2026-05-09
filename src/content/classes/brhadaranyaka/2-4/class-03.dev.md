@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
+source_text_content: "सा होवाच मैत्रेयी । यन्नु म इयं भगोः सर्वा पृथिवी वित्तेन पूर्णा स्यात्कथं तेनामृता स्यामिति । नेति होवाच याज्ञवल्क्यः । यथैवोपकरणवतां जीवितं तथैव ते जीवितं स्यात् । अमृतत्वस्य तु नाशास्ति वित्तेनेति ॥ २ ॥<br><br>सा होवाच मैत्रेयी । येनाहं नामृता स्यां किमहं तेन कुर्याम् । यदेव भगवान्वेद तदेव मे ब्रूहीति ॥ ३ ॥<br><br>स होवाच याज्ञवल्क्यः । प्रिया बतारे नः सती प्रियं भाषसे । एह्यास्स्व व्याख्यास्यामि ते । व्याचक्षाणस्य तु मे निदिध्यासस्वेति ॥ ४ ॥"
 source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
 related_verses: ""
 ---

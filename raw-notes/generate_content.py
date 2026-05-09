@@ -5,6 +5,7 @@ Creates 10 files: 5 .dev.md + 5 .iast.md in the Astro content directory.
 """
 
 import sys
+import re
 from pathlib import Path
 
 # Import the transliteration module
@@ -101,6 +102,42 @@ related_verses: ""
 """
 
 
+def auto_link_references(text):
+    """
+    Parses and auto-links philosophical references in the markdown text.
+    Avoids double-linking if already in a markdown link.
+    """
+    # 1. Bhagavad Gita
+    # Matches: Gita 2.10, Bhagavad Gita 18.66, BG 4.34, Gītā 2.10
+    # Negative lookbehind to prevent matching inside existing markdown brackets
+    gita_pattern = r'(?<!\[)(?:Bhagavad\s*)?(?:Gita|Gītā|BG)\s+(\d+)\.(\d+)'
+    gita_repl = r'[\g<0>](https://advaitasharada.sringeri.net/display/bhashya/Gita/devanagari?chapter=\1&verse=\2)'
+    text = re.sub(gita_pattern, gita_repl, text, flags=re.IGNORECASE)
+
+    # 2. Pāṇini / Ashtadhyayi
+    # Matches: Panini 1.4.7, Pāṇini 1.1.1, Ashtadhyayi 8.4.68, Aṣṭādhyāyī 1.2.3, Sutra 1.4.7
+    panini_pattern = r'(?<!\[)(?:P[aā]?[nṇ]ini|A[sṣ][tṭ][aā]dhy[aā]y[iī]|S[uū]tra)\s+(\d+)\.(\d+)\.(\d+)'
+    panini_repl = r'[\g<0>](https://ashtadhyayi.com/sutraani/\1/\2/\3)'
+    text = re.sub(panini_pattern, panini_repl, text, flags=re.IGNORECASE)
+
+    # 3. Bṛhadāraṇyaka Upanishad
+    # Matches: Brhad. 2.4.6, Bṛhadāraṇyaka 1.4.10, Br. Up. 2.4.5
+    brhad_pattern = r'(?<!\[)(?:B[rṛ]had[aā]ra[nṇ]yaka|B[rṛ]had\.|B[rṛ]\.\s*Up\.)\s+(\d+)\.(\d+)(?:\.(\d+))?'
+    def brhad_repl(match):
+        adhyaya = str(match.group(1)).zfill(2)
+        brahmana = str(match.group(2)).zfill(2)
+        verse = match.group(3)
+        
+        anchor = f"BR_C{adhyaya}_S{brahmana}"
+        if verse:
+            anchor += f"_V{str(verse).zfill(2)}"
+            
+        return f"[{match.group(0)}](https://advaitasharada.sringeri.net/display/bhashya/Brha/devanagari#{anchor})"
+
+    text = re.sub(brhad_pattern, lambda m: brhad_repl(m), text, flags=re.IGNORECASE)
+
+    return text
+
 def main():
     raw_dir = Path(__file__).parent / 'markdown'
     content_dir = Path('/Users/aditya_nistala/.gemini/antigravity/scratch/vedantic-archive/src/content/classes/brhadaranyaka/2-4')
@@ -122,6 +159,10 @@ def main():
         # Generate IAST content
         print(f"Transliterating class {num} to IAST...")
         iast_content = convert_markdown_dev_to_iast(dev_content)
+
+        # Apply Auto-Linking
+        dev_content = auto_link_references(dev_content)
+        iast_content = auto_link_references(iast_content)
 
         # Write .dev.md
         dev_frontmatter = DEV_FRONTMATTER.format(

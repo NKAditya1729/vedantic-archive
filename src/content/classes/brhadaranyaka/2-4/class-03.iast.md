@@ -11,6 +11,7 @@ audio_url: ""
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
+source_text_content: "sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti | neti hovāca yājñavalkyaḥ | yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syāt | amṛtatvasya tu nāśāsti vitteneti || 2 ||<br><br>sā hovāca maitreyī | yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryām | yadeva bhagavānveda tadeva me brūhīti || 3 ||<br><br>sa hovāca yājñavalkyaḥ | priyā batāre naḥ satī priyaṃ bhāṣase | ehyāssva vyākhyāsyāmi te | vyācakṣāṇasya tu me nididhyāsasveti || 4 ||"
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
 related_verses: ""
 ---
