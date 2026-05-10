@@ -8,7 +8,7 @@ class_number: 6
 date: "2026-05-07"
 coverage: "Introduction to the maitreyī brāhmaṇa; establishing the importance of saṃnyāsa for both gain and abidance in knowledge; perspectives from bhāṣyakāra (Śaṅkara) and vārtikakāra (Sureśvara) on the negation of the sāṅkhya view of neti neti; the symmetrical equation: starting with brahman to find ātmā (2.1) vs. starting with ātmā to find brahman (2.4); story of yājñavalkya departing from gārhasthya to pārivrajya; grammatical analysis of mantra 2.4.1, specifically the vocative (sambodhana) forms and future participles (udyāsyan); the division of wealth (vitta) and its limitation; maitreyī’s inquiry into the impossibility of attaining amṛtatva through wealth; standardizing human happiness via comparison with taittirīya-ānanda-mīmāṃsā and the state of arjuna in the bhagavadgītā (2.8)."
 audio_url: ""
-video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
+video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: iast
 source_text_content: "Bṛhadāraṇyaka Upaniṣad 2.4.1

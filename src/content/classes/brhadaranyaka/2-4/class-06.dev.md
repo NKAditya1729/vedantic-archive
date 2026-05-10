@@ -8,7 +8,7 @@ class_number: 6
 date: "2026-05-07"
 coverage: "Introduction to the मैत्रेयी ब्राह्मण; establishng the importance of संन्यास for both gain and abidance in knowledge; perspectives from भाष्यकार (Śaṅkara) and वार्तिककार (Sureśvara) on the negation of the साङ्ख्य view of नेति नेति; the symmetrical equation: starting with ब्रह्मन् to find आत्मा (2.1) vs. starting with आत्मा to find ब्रह्मन् (2.4); story of याज्ञवल्क्य departing from गार्हस्थ्य to पारिव्रज्य; grammatical analysis of मन्त्र 2.4.1, specifically the vocative (सम्बोधन) forms and future participles (उद्यास्यन्); the division of wealth (वित्त) and its limitation; मैत्रेयी’s inquiry into the impossibility of attaining अमृतत्व through wealth; standardizing human happiness via comparison with तैत्तिरीय-आनन्द-मीमांसा and the state of अर्जुन in the भगवद्गीता (2.8)."
 audio_url: ""
-video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
+video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
 materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
 script: devanagari
 source_text_content: "बृहदारण्यक उपनिषद् २-४-१
