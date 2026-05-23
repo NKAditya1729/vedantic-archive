@@ -1,21 +1,226 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const emailAddress = "nistala.aditya@gmail.com";
+const emailSubject = "Vedantic Archive Feedback & Suggestions";
+
+const questionnaireText = `Vedāntic Study Archive — Website Feedback Questionnaire
+
+1. What is your primary goal when visiting the archive?
+   [ ] Read class notes
+   [ ] Look up Sanskrit terms (Glossary)
+   [ ] Study source texts (Mūlam/Bhāṣyam/Vārttikam)
+   [ ] Stream class audio/video
+
+2. How has your experience been with the IAST / Devanagari script toggle?
+   [ ] Excellent
+   [ ] Good, but could be improved
+   [ ] I have not used it
+
+3. How useful do you find the floating source text panel?
+   [ ] Highly useful (I use it often)
+   [ ] Somewhat useful
+   [ ] Not useful / distracting
+
+4. Sanskrit Text Corrections (please specify Class Number, line/section, and corrected text):
+   Answer:
+
+5. What features or additions would you most like to see in future updates?
+   [ ] PDF downloads of notes
+   [ ] Search functionality improvements
+   [ ] More classes from other Upanishads
+   [ ] Other:
+
+6. General feedback, suggestions, or comments:
+   Answer:`;
+
+const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(questionnaireText)}`;
 ---
 
-<BaseLayout title="Feedback and Suggestions" description="Share corrections, suggestions, and questions about the archive.">
-  <div class="container page-pad">
-    <h1>Feedback and Suggestions</h1>
-    <p>This archive is continuously improving. If you have suggestions for the site, corrections to Sanskrit citations, questions about how to use the archive, or requests for additional features, please share them below.</p>
+<BaseLayout title="Feedback and Suggestions" description="Help improve the archive by sharing feedback, suggestions, or Sanskrit text corrections.">
+  <div class="container page-pad" style="padding-top: 2rem; padding-bottom: 4rem; max-width: 800px;">
+    <Breadcrumb items={[
+      { label: 'Home', href: `${import.meta.env.BASE_URL}/` },
+      { label: 'Feedback' },
+    ]} />
 
-    <div class="form-placeholder">
-      <!-- REPLACE THIS URL WITH YOUR GOOGLE FORM EMBED URL -->
-      <iframe src="YOUR_GOOGLE_FORM_EMBED_URL"
-              width="100%" height="800"
-              frameborder="0" marginheight="0" marginwidth="0">
-        Loading form...
-      </iframe>
+    <h1 style="margin-bottom: 1.5rem;">Feedback & Website Improvement</h1>
+    
+    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">
+      Thank you for helping us improve the archive. Below is a structured questionnaire designed to gather feedback on usability, features, and text accuracy. You can copy the template or directly email your feedback.
+    </p>
+
+    <!-- Card layout for the questionnaire preview -->
+    <div class="feedback-card">
+      <div class="feedback-card__header">
+        <h2>Website Questionnaire</h2>
+        <span class="badge">Feedback Template</span>
+      </div>
+      
+      <div class="feedback-card__body">
+        <pre class="template-box" id="template-box">{questionnaireText}</pre>
+      </div>
+      
+      <div class="feedback-card__actions">
+        <button class="feedback-btn feedback-btn--primary" id="copy-btn" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <span id="copy-btn-text">Copy Template to Clipboard</span>
+        </button>
+        
+        <a href={mailtoLink} class="feedback-btn feedback-btn--secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email Responses Directly
+        </a>
+      </div>
     </div>
 
-    <p>Alternatively, email directly: <a href="mailto:nistala.aditya@gmail.com?subject=Vedantic%20Archive%20%E2%80%94%20%5Byour%20topic%5D">nistala.aditya@gmail.com</a> with subject line <strong>Vedāntic Archive — [your topic]</strong>.</p>
+    <!-- Alternative manual details -->
+    <div style="margin-top: 3rem; padding: 1.5rem; background: var(--surface-2); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+      <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.1rem;">Alternative Submission</h3>
+      <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+        If you prefer not to use the template, feel free to email your comments, feature requests, or Sanskrit typo reports directly to <a href={`mailto:${emailAddress}?subject=Vedantic%20Archive%20Feedback`}>{emailAddress}</a>.
+      </p>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .feedback-card {
+    background: var(--surface-1);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .feedback-card__header {
+    background: var(--surface-2);
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .feedback-card__header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .badge {
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .feedback-card__body {
+    padding: 1.5rem;
+  }
+
+  .template-box {
+    background: var(--surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 0;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    color: var(--text-primary);
+  }
+
+  .feedback-card__actions {
+    background: var(--surface-2);
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .feedback-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-ui, sans-serif);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+  }
+
+  .feedback-btn--primary {
+    background: var(--primary-color);
+    color: white !important;
+  }
+
+  .feedback-btn--primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+
+  .feedback-btn--secondary {
+    background: var(--surface-1);
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color);
+  }
+
+  .feedback-btn--secondary:hover {
+    background: var(--border-color);
+    transform: translateY(-1px);
+  }
+
+  /* Dark mode adaptations */
+  [data-theme="dark"] .feedback-btn--secondary {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+  [data-theme="dark"] .feedback-btn--secondary:hover {
+    background: #333;
+  }
+</style>
+
+<script>
+  function setupFeedback() {
+    const copyBtn = document.getElementById('copy-btn');
+    const copyText = document.getElementById('copy-btn-text');
+    const templateBox = document.getElementById('template-box');
+
+    if (copyBtn && copyText && templateBox) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(templateBox.textContent || '');
+          const originalText = copyText.textContent;
+          copyText.textContent = "Copied!";
+          copyBtn.style.background = "#2e7d32"; // Success green
+          
+          setTimeout(() => {
+            copyText.textContent = originalText;
+            copyBtn.style.background = ""; // Restore CSS default
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', setupFeedback);
+</script>
