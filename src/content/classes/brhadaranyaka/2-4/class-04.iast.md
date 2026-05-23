@@ -15,7 +15,15 @@ source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā | karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — ‘brahma taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ‘kṣatraṃ taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||</p>
+    <p class="src-bhashyam">maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā | karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — ‘<span class="src-pratika">brahma taṃ parādāt</span>’ (bṛ. u. 2 | 4 | 6) ‘<span class="src-pratika">kṣatraṃ taṃ parādāt</span>’ (bṛ. u. 2 | 4 | 6) ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||</p>
+    <p class="src-bhashyam">Verses from vartika</p>
+    <p class="src-bhashyam">ātmetyeveti sūtrasya vyākhyeyaṃ prastutā sphuṭā || brahma te'<span class="src-pratika">haṃ bravāṇīti prārabhyā</span>''pūrṇavākyataḥ || BV 2.4. ||</p>
+    <p class="src-bhashyam">nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān || niḥśeṣakarmahetūtthaphalasāvadyadhīstataḥ || BV 2.4. ||</p>
+    <p class="src-bhashyam">virakta āgrajātso'yaṃ tatsāvadyasamīkṣaṇāt || saṃsāraduḥkhasaṃskārasmṛtibhiḥ preryamāṇadhīḥ || BV 2.4. ||</p>
+    <p class="src-bhashyam">udbhūtatajjihāsaḥ saṃstaddhāne sādhanaspṛhaḥ || tyaktāśeṣaiṣaṇaḥ so'tha pratyagyāthātmyaniścayaḥ || BV 2.4. ||</p>
+    <p class="src-bhashyam">vastuvṛttātmasaṃbodhadhvastasaṃsārakāraṇaḥ || vyāviddhāśeṣasaṃsāro vimukto nā vimucyate || BV 2.4. ||</p>
+    <p class="src-bhashyam">yāvatkiṃcidavidyāyāḥ kāryaṃ vairāgyakāraṇam || tatsaṃnyāso viraktatvātsvata eva na śāstrataḥ || BV 2.4. ||</p>
+    <p class="src-bhashyam">brahmayāthātmyavijñānasādhanatvaṃ vinā''gamāt || saṃnyāsasya na vijñātaṃ tacchāstreṇeha bodhyate || BV 2.4. ||</p>
   </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""

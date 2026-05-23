@@ -14,8 +14,17 @@ script: iast
 source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4.1, 2.4.2</p>
+    <p class="src-label mulam-label">॥ Mūlam ॥</p>
+    <p class="src-mulam">maitreyīti hovāca yājñavalkya ; udyāsyanvā are'hamasmātsthānādasmi;  hanta te'nayā kātyāyanyāntaṃ karavāṇīti || 2-4-1 ||</p>
+    <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="source-ref-line">Bṛhadāraṇyaka Upaniṣad 2.4.1</p>
+    <p class="src-bhashyam">maitreyīti hovāca yājñavalkyaḥ — maitreyīṃ svabhāryāmāmantritavān yājñavalkyo nāma ṛṣiḥ ; udyāsyan ūrdhvaṃ yāsyan pārivrājyākhyamāśramāntaram vai ; ‘<span class="src-pratika">are</span>’ iti sambodhanam ; aham , asmāt gārhasthyāt , sthānāt āśramāt , ūrdhvaṃ gantumicchan asmi bhavāmi ; ataḥ hanta anumatiṃ prārthayāmi te tava ; kiñcānyat — te tava anayā dvitīyayā bhāryayā kātyāyanyā antaṃ vicchedaṃ karavāṇi ; patidvāreṇa yuvayormayā sambadhyamānayoryaḥ sambandha āsīt , tasya sambandhasya vicchedaṃ karavāṇi dravyavibhāgaṃ kṛtvā ; vittena saṃvibhajya yuvāṃ gamiṣyāmi ||</p>
+    <hr class="src-divider">
+    <p class="src-label mulam-label">॥ Mūlam ॥</p>
+    <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
+    <hr class="src-divider">
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">sā evamuktā ha uvāca — yat yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
   </div>
 source_ref: "Bṛhad. 2.4.1, 2.4.2"
 related_verses: ""

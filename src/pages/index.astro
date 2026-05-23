@@ -16,7 +16,10 @@ const latestClasses = [...iastClasses]
   .slice(0, 3);
 const mantraRefs = new Set(
   iastClasses
-    .flatMap(c => (c.data.source_ref || '').match(/(?:Bṛhad\\.\\s*)?2[.-]4[.-]\\d+/g) || [])
+    .flatMap(c => {
+      const text = `${c.data.source_ref || ''} ${c.data.source_text_content || ''}`;
+      return text.match(/(?:Bṛhad\.\s*)?2[.-]4[.-]\d+/g) || [];
+    })
     .map(ref => ref.replace('Bṛhad.', '').trim().replace(/-/g, '.'))
 );
 const teachingHours = Math.round(totalClasses * 1.5);

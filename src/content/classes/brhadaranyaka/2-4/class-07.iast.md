@@ -18,7 +18,7 @@ source_text_content: |
     <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">sā evamuktā ha uvāca — yat yadi, ‘nu’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
+    <p class="src-bhashyam">sā evamuktā ha uvāca — yat yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
     <p class="src-bhashyam">pratyuvāca yājñavalkyaḥ — kathamiti yadyākṣepārtham, anumodanam — neti hovāca yājñavalkya iti ; praśnaścet prativacanārtham ; naiva syāḥ amṛtā, kiṃ tarhi yathaiva loke upakaraṇavatāṃ sādhanavatāṃ jīvitaṃ sukhopāya-bhoga-sampannam , tathaiva tadvadeva tava jīvitaṃ syāt ; amṛtatvasya tu na āśā manasāpi asti vittena vitta-sādhyena karmaṇeti ||</p>
     <hr class="src-divider">
     <p class="src-label vartika-label">॥ Vārttikam ॥</p>

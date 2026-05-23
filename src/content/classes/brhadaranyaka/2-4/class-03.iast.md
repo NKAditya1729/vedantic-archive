@@ -15,7 +15,13 @@ source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
+    <p class="src-bhashyam">kecittu brahmavido'<span class="src-pratika">pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no</span>'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘<span class="src-pratika">kiṃ prajayā kariṣyāmaḥ</span>’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
+    <p class="src-bhashyam">‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca |</p>
+    <p class="src-bhashyam">kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||</p>
+    <p class="src-bhashyam">etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —</p>
+    <p class="src-bhashyam">‘karmaṇā badhyate janturvidyayā ca vimucyate |</p>
+    <p class="src-bhashyam">tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)</p>
+    <p class="src-bhashyam">ityevamādi — virodhaḥ pradarśitaḥ | tasmāt na sādhanāntara-sahitā brahmavidyā puruṣārtha-sādhanam , sarvavirodhāt , sādhananirapekṣaiva puruṣārthasādhanam — iti pārivrājyaṃ sarvasādhana-sannyāsa-lakṣaṇam aṅgatvena vidhitsyate ; etāvadeva amṛtatva-sādhanamityavadhāraṇāt , ṣaṣṭhasamāptau, liṅgācca — karmī sanyājñavalkyaḥ pravavrājeti | maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā |</p>
   </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""

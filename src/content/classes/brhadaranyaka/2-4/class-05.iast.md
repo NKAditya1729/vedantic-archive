@@ -15,7 +15,15 @@ source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt ||</p>
+    <p class="src-bhashyam">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt || niṣiddhaṃ neti netīti mūrtāmūrtādi vastu yat || BV 2.4.||</p>
+    <p class="src-bhashyam">kiṃ tadbrahmānugaṃ sarvaṃ kiṃ vā tasmādvivicyate || yadi brahmānugaṃ brahma syādanarthātmakaṃ tadā || BV 2.4.||</p>
+    <p class="src-bhashyam">abhāvaniṣṭaṃ taccetsyānmukhyaṃ brahma na sidhyati || abhāvasya tato'nyatvādanvayavyatirekataḥ || BV 2.4.||</p>
+    <p class="src-bhashyam">netītyapi niṣedhoktistathā sati virudhyate ||  vaidikaśca prayāso'yaṃ sarvaḥ syāttuṣakaṇḍanam || BV 2.4.||</p>
+    <p class="src-bhashyam">vivicyate brahmaṇaścenmaivaṃ doṣastathā'pi hi || brahmatvaṃ brahmaṇo na syādvitīye sati vastuni || BV 2.4.||</p>
+    <p class="src-bhashyam">avyāvṛttānanugataṃ vastu brahmatvamaśnute || etacca durlabhaṃ tasya dvitīye sati lakṣaṇam || BV 2.4.||</p>
+    <p class="src-bhashyam">anvayādiniṣedhāya sarvamātmeti vākyataḥ || maitreyāītyādiko granthastasmādārabhyate paraḥ || BV 2.4.||</p>
+    <p class="src-bhashyam">sarvābrahmaniṣedhena tadartho veha niścitaḥ || tasya saṃsiddhiviṣayamaikātmyamadhunotyate || BV 2.4.||</p>
+    <p class="src-bhashyam">netīti brahmaṇo'nyatra mūrtāmūrtavyavasthitau || prasakte sāṃkhyasiddhānte sarvamātmeti vocyate || BV 2.4.||</p>
   </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""

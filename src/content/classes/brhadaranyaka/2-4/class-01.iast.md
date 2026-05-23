@@ -15,7 +15,11 @@ source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — ‘tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat’ (bṛ. u. 1 | 4 | 10) iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |</p>
+    <p class="src-bhashyam">ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — ‘<span class="src-pratika">tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat</span>’ (bṛ. u. 1 | 4 | 10) iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |</p>
+    <p class="src-bhashyam">avidyāyāśca viṣayaḥ — ‘<span class="src-pratika">anyo</span>'sāvanyo'<span class="src-pratika">hamasmīti na sa veda</span>’ (bṛ. u. 1 | 4 | 10) ityārabhya cāturvarṇya-pravibhāgādi-nimitta-pāṅktakarma-sādhya-sādhana-lakṣaṇaḥ bījāṅkuravat vyākṛtāvyākṛtasvabhāvaḥ nāma-rūpa-karmātmakaḥ saṃsāraḥ ‘<span class="src-pratika">trayaṃ vā idaṃ nāma rūpaṃ karma</span>’ (bṛ. u. 1 | 6 | 1) ityupasaṃhṛtaḥ</p>
+    <p class="src-bhashyam">śāstrīya utkarṣalakṣaṇo brahmalokāntaḥ, adhobhāvaśca sthāvarānto'<span class="src-pratika">śāstrīyaḥ, pūrvameva pradarśitaḥ — ‘dvayā ha</span>’ (bṛ. u. 1 | 3 | 1) ityādinā | etasmādavidyāviṣayādviraktasya pratyagātma-viṣaya-brahmavidyāyām adhikāraḥ kathaṃ nāma syāditi — tṛtīye'<span class="src-pratika">dhyāye upasaṃhṛtaḥ samasto</span>'vidyāviṣayaḥ |</p>
+    <p class="src-bhashyam">caturthe tu brahmavidyāviṣayaṃ pratyagātmānam ‘<span class="src-pratika">brahma te bravāṇi</span>’ (bṛ. u. 2 | 1 | 1) iti ‘<span class="src-pratika">brahma jñapayiṣyāmi</span>’ (bṛ. u. 2 | 1 | 1) iti ca prastutya, tat brahma ekam advayaṃ sarvaviśeṣaśūnyaṃ kriyā-kāraka-phala-svabhāva-satya-śabda-vācya-aśeṣa-bhūtadharma-pratiṣedha-dvāreṇa ‘<span class="src-pratika">neti neti</span>’ (bṛ. u. 2 | 3 | 6) iti jñāpitam |</p>
+    <p class="src-bhashyam">asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ;</p>
   </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
