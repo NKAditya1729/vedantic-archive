@@ -3,39 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
 const emailAddress = "nistala.aditya@gmail.com";
-const emailSubject = "Vedantic Archive Feedback & Suggestions";
-
-const questionnaireText = `Vedāntic Study Archive — Website Feedback Questionnaire
-
-1. What is your primary goal when visiting the archive?
-   [ ] Read class notes
-   [ ] Look up Sanskrit terms (Glossary)
-   [ ] Study source texts (Mūlam/Bhāṣyam/Vārttikam)
-   [ ] Stream class audio/video
-
-2. How has your experience been with the IAST / Devanagari script toggle?
-   [ ] Excellent
-   [ ] Good, but could be improved
-   [ ] I have not used it
-
-3. How useful do you find the floating source text panel?
-   [ ] Highly useful (I use it often)
-   [ ] Somewhat useful
-   [ ] Not useful / distracting
-
-4. Sanskrit Text Corrections (please specify Class Number, line/section, and corrected text):
-   Answer:
-
-5. What features or additions would you most like to see in future updates?
-   [ ] PDF downloads of notes
-   [ ] Search functionality improvements
-   [ ] More classes from other Upanishads
-   [ ] Other:
-
-6. General feedback, suggestions, or comments:
-   Answer:`;
-
-const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(questionnaireText)}`;
 ---
 
 <BaseLayout title="Feedback and Suggestions" description="Help improve the archive by sharing feedback, suggestions, or Sanskrit text corrections.">
@@ -47,180 +14,212 @@ const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(emailSub
 
     <h1 style="margin-bottom: 1.5rem;">Feedback & Website Improvement</h1>
     
-    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">
-      Thank you for helping us improve the archive. Below is a structured questionnaire designed to gather feedback on usability, features, and text accuracy. You can copy the template or directly email your feedback.
+    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2.5rem;">
+      Thank you for helping us improve the archive. Please fill in the details below. Once you click "Submit Feedback", your email client will open with all the form details pre-filled.
     </p>
 
-    <!-- Card layout for the questionnaire preview -->
-    <div class="feedback-card">
-      <div class="feedback-card__header">
-        <h2>Website Questionnaire</h2>
-        <span class="badge">Feedback Template</span>
+    <!-- Interactive HTML Form -->
+    <form id="feedback-form" class="feedback-form">
+      <div class="form-group">
+        <label for="feedback-type">Type of Feedback <span class="required">*</span></label>
+        <select id="feedback-type" required>
+          <option value="">-- Select Feedback Type --</option>
+          <option value="Sanskrit Text Correction">Correction to Sanskrit text</option>
+          <option value="Suggestion for Improvement">Suggestion for improvement</option>
+          <option value="Question about the Archive">Question about the archive</option>
+          <option value="Request for new feature">Request for new feature</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
-      
-      <div class="feedback-card__body">
-        <pre class="template-box" id="template-box">{questionnaireText}</pre>
-      </div>
-      
-      <div class="feedback-card__actions">
-        <button class="feedback-btn feedback-btn--primary" id="copy-btn" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-          <span id="copy-btn-text">Copy Template to Clipboard</span>
-        </button>
-        
-        <a href={mailtoLink} class="feedback-btn feedback-btn--secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Email Responses Directly
-        </a>
-      </div>
-    </div>
 
-    <!-- Alternative manual details -->
-    <div style="margin-top: 3rem; padding: 1.5rem; background: var(--surface-2); border-radius: 8px; border-left: 4px solid var(--primary-color);">
-      <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.1rem;">Alternative Submission</h3>
-      <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-        If you prefer not to use the template, feel free to email your comments, feature requests, or Sanskrit typo reports directly to <a href={`mailto:${emailAddress}?subject=Vedantic%20Archive%20Feedback`}>{emailAddress}</a>.
-      </p>
-    </div>
+      <div class="form-group">
+        <label for="class-number">Class Number (if relevant)</label>
+        <input type="number" id="class-number" min="1" max="10" placeholder="e.g. 1" />
+      </div>
+
+      <div class="form-group">
+        <label>What is your primary goal when visiting the archive?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="goal" value="Read class notes" /> Read class notes</label>
+          <label><input type="radio" name="goal" value="Look up Sanskrit terms (Glossary)" /> Look up Sanskrit terms (Glossary)</label>
+          <label><input type="radio" name="goal" value="Study source texts" /> Study source texts (Mūlam/Bhāṣyam/Vārttikam)</label>
+          <label><input type="radio" name="goal" value="Stream class audio/video" /> Stream class audio/video</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>How has your experience been with the script toggle (IAST / Devanagari)?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="toggle-exp" value="Excellent" /> Excellent</label>
+          <label><input type="radio" name="toggle-exp" value="Good, but could be improved" /> Good, but could be improved</label>
+          <label><input type="radio" name="toggle-exp" value="I have not used it" /> I have not used it</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>How useful do you find the floating source text panel?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="panel-exp" value="Highly useful" /> Highly useful</label>
+          <label><input type="radio" name="panel-exp" value="Somewhat useful" /> Somewhat useful</label>
+          <label><input type="radio" name="panel-exp" value="Not useful" /> Not useful / distracting</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="feedback-message">Your Feedback / Detailed Corrections <span class="required">*</span></label>
+        <textarea id="feedback-message" rows="6" placeholder="Provide details about the correction, feature request, or suggestion..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Submit Feedback via Email
+      </button>
+    </form>
   </div>
 </BaseLayout>
 
 <style>
-  .feedback-card {
+  .feedback-form {
     background: var(--surface-1);
     border: 1px solid var(--border-color);
+    padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    overflow: hidden;
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
   }
 
-  .feedback-card__header {
-    background: var(--surface-2);
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .form-group {
+    margin-bottom: 1.75rem;
   }
 
-  .feedback-card__header h2 {
-    margin: 0;
-    font-size: 1.25rem;
+  .form-group label {
+    display: block;
+    font-family: var(--font-ui, sans-serif);
     font-weight: 600;
-  }
-
-  .badge {
-    background: var(--primary-color);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.6rem;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .feedback-card__body {
-    padding: 1.5rem;
-  }
-
-  .template-box {
-    background: var(--surface-2);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.25rem;
-    margin: 0;
-    font-family: var(--font-mono, monospace);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    max-height: 400px;
-    overflow-y: auto;
-    white-space: pre-wrap;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
   }
 
-  .feedback-card__actions {
-    background: var(--surface-2);
-    padding: 1.25rem 1.5rem;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  .required {
+    color: #c92a2a;
+    margin-left: 0.15rem;
   }
 
-  .feedback-btn {
+  .form-group select,
+  .form-group input[type="number"],
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--surface-2);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-group select:focus,
+  .form-group input[type="number"]:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(181, 69, 16, 0.15);
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .radio-group label {
+    font-weight: 400;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .radio-group input[type="radio"] {
+    accent-color: var(--primary-color);
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .submit-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: var(--primary-color);
+    color: white;
     font-family: var(--font-ui, sans-serif);
-    font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.6rem 1.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
-    text-decoration: none;
-    border: none;
+    width: 100%;
   }
 
-  .feedback-btn--primary {
-    background: var(--primary-color);
-    color: white !important;
-  }
-
-  .feedback-btn--primary:hover {
+  .submit-btn:hover {
     filter: brightness(1.1);
     transform: translateY(-1px);
   }
 
-  .feedback-btn--secondary {
-    background: var(--surface-1);
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-color);
-  }
-
-  .feedback-btn--secondary:hover {
-    background: var(--border-color);
-    transform: translateY(-1px);
-  }
-
-  /* Dark mode adaptations */
-  [data-theme="dark"] .feedback-btn--secondary {
+  /* Dark mode specific fixes */
+  [data-theme="dark"] .form-group select,
+  [data-theme="dark"] .form-group input[type="number"],
+  [data-theme="dark"] .form-group textarea {
     background: #2a2a2a;
     border-color: #444;
   }
-  [data-theme="dark"] .feedback-btn--secondary:hover {
-    background: #333;
-  }
 </style>
 
-<script>
-  function setupFeedback() {
-    const copyBtn = document.getElementById('copy-btn');
-    const copyText = document.getElementById('copy-btn-text');
-    const templateBox = document.getElementById('template-box');
+<script define:vars={{ emailAddress }}>
+  function setupForm() {
+    const form = document.getElementById('feedback-form');
+    if (!form) return;
 
-    if (copyBtn && copyText && templateBox) {
-      copyBtn.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(templateBox.textContent || '');
-          const originalText = copyText.textContent;
-          copyText.textContent = "Copied!";
-          copyBtn.style.background = "#2e7d32"; // Success green
-          
-          setTimeout(() => {
-            copyText.textContent = originalText;
-            copyBtn.style.background = ""; // Restore CSS default
-          }, 2000);
-        } catch (err) {
-          console.error('Failed to copy text: ', err);
-        }
-      });
-    }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const type = document.getElementById('feedback-type').value;
+      const classNum = document.getElementById('class-number').value;
+      
+      const goalRadio = document.querySelector('input[name="goal"]:checked');
+      const goal = goalRadio ? goalRadio.value : 'Not specified';
+      
+      const toggleRadio = document.querySelector('input[name="toggle-exp"]:checked');
+      const toggleExp = toggleRadio ? toggleRadio.value : 'Not specified';
+      
+      const panelRadio = document.querySelector('input[name="panel-exp"]:checked');
+      const panelExp = panelRadio ? panelRadio.value : 'Not specified';
+      
+      const message = document.getElementById('feedback-message').value;
+
+      const bodyText = `Vedāntic Study Archive Feedback Form Details:
+
+1. Feedback Type: ${type}
+2. Class Number (if relevant): ${classNum || 'N/A'}
+3. Primary goal when visiting: ${goal}
+4. Script toggle experience: ${toggleExp}
+5. Floating panel utility: ${panelExp}
+
+Detailed Feedback/Corrections:
+${message}`;
+
+      const subject = `Feedback: ${type} ${classNum ? `(Class ${classNum})` : ''}`;
+      const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      
+      window.location.href = mailtoUrl;
+    });
   }
 
-  document.addEventListener('DOMContentLoaded', setupFeedback);
+  document.addEventListener('DOMContentLoaded', setupForm);
 </script>
