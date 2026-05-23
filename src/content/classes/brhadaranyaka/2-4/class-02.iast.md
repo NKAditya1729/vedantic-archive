@@ -17,12 +17,7 @@ source_text_content: |
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
     <p class="src-bhashyam">asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ; anyasādhanaṃ hi anyasmai phalasādhanāya prayujyamānaṃ pratikūlaṃ bhavati ; na hi bubhukṣā-pipāsā-nivṛttyarthaṃ dhāvanaṃ gamanaṃ vā sādhanam ; manuṣyaloka-pitṛloka-devaloka-sādhanatvena hi putrādi-sādhanāni śrutāni, na ātma-prāpti-sādhanatvena, viśeṣitatvācca ; na ca brahmavido vihitāni, kāmyatva-śravaṇāt — *<span class="src-pratika">‘etāvānvai kāmaḥ’ (bṛ. u. 1 | 4 | 17)</span> iti, brahmavidaśca āpta-kāmatvāt āptakāmasya kāmānupapatteḥ, *<span class="src-pratika">‘yeṣāṃ no&#x27;yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> iti ca śruteḥ |</p>
     <p class="src-bhashyam">kecittu brahmavido&#x27;pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — *<span class="src-pratika">‘yeṣāṃ no&#x27;yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
-    <p class="src-bhashyam">‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca |</p>
-    <hr class="src-divider">
-    <p class="src-label mulam-label">॥ Mūlam ॥</p>
-    <p class="src-mulam">kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||</p>
-    <hr class="src-divider">
-    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca | kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||</p>
     <p class="src-bhashyam">etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —</p>
     <p class="src-bhashyam">‘karmaṇā badhyate janturvidyayā ca vimucyate |</p>
     <p class="src-bhashyam">tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)</p>
