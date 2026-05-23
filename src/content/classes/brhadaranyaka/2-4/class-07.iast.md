@@ -8,43 +8,43 @@ class_number: 7
 date: "2026-05-11"
 coverage: "Mantra 2.4.2 and Maitreyī's question; pṛthivī full of vitta and karma-sādhana; katham as ākṣepa or praśna; upakaraṇavatām jīvitam; no āśā for amṛtatva through vitta-sādhya karma; Vārtika verses on vitta and jñānam."
 audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_07"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=K2ab17DOz2A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4.2</p>
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
-    <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
+    <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">sā evamuktā ha uvāca — yat yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
-    <p class="src-bhashyam">pratyuvāca yājñavalkyaḥ — kathamiti yadyākṣepārtham, anumodanam — neti hovāca yājñavalkya iti ; praśnaścet prativacanārtham ; naiva syāḥ amṛtā, kiṃ tarhi yathaiva loke upakaraṇavatāṃ sādhanavatāṃ jīvitaṃ sukhopāya-bhoga-sampannam , tathaiva tadvadeva tava jīvitaṃ syāt ; amṛtatvasya tu na āśā manasāpi asti vittena vitta-sādhyena karmaṇeti ||</p>
+    <p class="src-bhashyam"><span class="src-pratika">sā</span> evamuktā <span class="src-pratika">ha uvāca </span>— <span class="src-pratika">yat</span> yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, <span class="src-pratika">me</span> mama <span class="src-pratika">iyaṃ pṛthivī</span>, <span class="src-pratika">bhagoḥ</span> bhagavan , <span class="src-pratika">sarvā</span> sāgaraparikṣiptā <span class="src-pratika">vittena</span> dhanena <span class="src-pratika">pūrṇā</span> <span class="src-pratika">syāt</span> ; <span class="src-pratika">katham</span> ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
+    <p class="src-bhashyam"><span class="src-pratika">pratyuvāca</span> <span class="src-pratika">yājñavalkyaḥ</span> — kathamiti yadyākṣepārtham, anumodanam — <span class="src-pratika">neti hovāca yājñavalkya</span> iti ; praśnaścet prativacanārtham ; <span class="src-pratika">naiva syāḥ amṛtā</span>, kiṃ tarhi <span class="src-pratika">yathaiva</span> <span class="src-pratika">loke upakaraṇavatāṃ </span>sādhanavatāṃ <span class="src-pratika">jīvitaṃ</span> sukhopāya-bhoga-sampannam , <span class="src-pratika">tathaiva</span> tadvadeva <span class="src-pratika">tava jīvitaṃ syāt </span>; <span class="src-pratika">amṛtatvasya tu na āśā </span>manasāpi <span class="src-pratika">asti</span> <span class="src-pratika">vittena</span> vitta-sādhyena karmaṇeti ||</p>
     <hr class="src-divider">
     <p class="src-label vartika-label">॥ Vārttikam ॥</p>
-    <p class="src-vartika">mahānubhāvasaṃparkaḥ kasya nonnatikāraṇam || aśucyapi payaḥ prāpya gaṅgāṃ yāti pavitratām ||  ||</p>
-    <p class="src-vartika">bhagavatsaṃgaternānyaḥ puruṣārtho'mṛtatvataḥ || pṛcchāmyato'mṛtatvasya sādhanaṃ syātkathaṃ dhanam ||  ||</p>
-    <p class="src-vartika">sāreṇa yadi nāmeyaṃ pūrṇā syādvasunā mahī || tāvatā'pyamṛtā'haṃ syāṃ kiṃvā netyucyatāṃ yathā ||  ||</p>
-    <p class="src-vartika">sattāmātropakāriṇi dhanāni dhanināṃ na hi || kriyādvāropakārīṇi yato'taḥ pṛcchyate kriyā ||  ||</p>
-    <p class="src-vartika">pratyāha pṛṣṭaḥ svāṃ jāyāṃ nāmṛtatvaṃ dhanāditi ||  || vittaṃ cennāmṛtatvāya kasmādditsati tadbhavān || iti pṛṣṭo'bravīdvittasādhanasya prayojanam ||  ||</p>
-    <p class="src-vartika">kṣayiṣṇusādhanādhīnaṃ jīvitaṃ syādyathā nṛṇām || tathaiva tava vittena jīvitaṃ nāmṛtātmatā ||  ||</p>
-    <p class="src-vartika">avidyāmātravidhvaṃsājjñānādevāmṛtaṃ yataḥ || amṛtatvasya nā''śā'pi vittasādhyena karmaṇā ||  ||</p>
-    <p class="src-vartika">kuto'mṛtatvasaṃprāptirjñānamātraikahetunā || na karma kāraṇaṃ mukternāgnistāpasya bheṣajam || karmabhyo janma niyataṃ janma cennirvṛtiḥ kutaḥ ||  ||</p>
-    <p class="src-vartika">svabhāvādeva sādhūnāṃ pravṛttirupakāriṇī || apakāriṇyapi jane kimu bhaktajanaṃ prati ||  ||</p>
-    <p class="src-vartika">nūnaṃ mamāparādho'yaṃ yadbhavanto'pi māṃ prati || pratilomaṃ cikīrṣanti ko'nyaḥ syāddhitakṛnmama ||  ||</p>
-    <p class="src-vartika">anuraktāṃ priyāṃ sādhvīṃ baddhvā vittena māṃ katham || kāmocchittimakṛtvā ca saṃnyasanti bhavadvidhāḥ ||  ||</p>
-    <p class="src-vartika">vittāccedamṛtatvaṃ syāttattityakṣā na yujyate || vittāccennāmṛtatvaṃ syādvada tena mamāpi kim ||  ||</p>
-    <p class="src-vartika">yadyastyanujighṛkṣaivaṃ karuṇā vā mayīṣyate ||  yadeva bhagavānveda tena saṃvibhajasva mām ||  ||</p>
-    <p class="src-vartika">yadvijñānātparityajya niḥśeṣaṃ vittasādhanam || svārājyamīpsati bhavāṃstadeva vasu dehi me ||  ||</p>
-    <p class="src-vartika">nā''dirnānto na madhyaṃ vā yasya vittasya vidyate || bhoge na ca kṣayaṃ yāti tadeva vasu dīyatām ||  ||</p>
-    <p class="src-vartika">anantavitto hi bhavānantavaddīyate kutaḥ || asataḥ kīdṛśaṃ dānaṃ sadevātaḥ pradīyatām ||  ||</p>
-    <p class="src-vartika">saṃsārapuruṣārthebhyo yato nāvyutthitātmane || muktyekasādhanaṃ jñānaṃ dātuṃ śakyamidaṃ mayā ||  ||</p>
-    <p class="src-vartika">amumukṣutvamāśaṅkya bhavatyai tatpraditsitam || saṃsārāccedviraktā'si gṛhāṇānuttamāmṛtam ||  ||</p>
-    <p class="src-vartika">strīṇāṃ yaducitaṃ vākyaṃ pratilomaṃ na bhāṣase || pūrvavattvanukūlaṃ tvamidānīmapi bhāṣase ||  ||</p>
-    <p class="src-vartika">mokṣaṃ yāntaṃ naraṃ sarve muñcanti sahajā api || atibhaktitayā māṃ tvaṃ mokṣe'pi na jihāsasi ||  ||</p>
-    <p class="src-vartika">vibhāgamasahantīva madatisnehakāraṇāt || muktāvanuyiyāsi tvaṃ madaikātmyaparīpsayā ||  ||</p>
-    <p class="src-vartika">atisnehā'pakṛṣṭomā dehārdhaṃ śūlinaḥ śritā ||  tvaṃ tu sarvātmanā''tmānaṃ kṛtsnaṃ māmāptumicchasi ||  ||</p>
-    <p class="src-vartika">yata evamatastubhyaṃ vakṣyāmyamṛtasādhanam || nididhyāsasva ceto'to vyācakṣāṇasya tanmama ||  ||</p>
+    <p class="src-vartika">mahānubhāvasaṃparkaḥ kasya nonnatikāraṇam ||<br>aśucyapi payaḥ prāpya gaṅgāṃ yāti pavitratām ||  ||</p>
+    <p class="src-vartika">bhagavatsaṃgaternānyaḥ puruṣārtho&#x27;mṛtatvataḥ ||<br>pṛcchāmyato&#x27;mṛtatvasya sādhanaṃ syātkathaṃ dhanam ||  ||</p>
+    <p class="src-vartika">sāreṇa yadi nāmeyaṃ pūrṇā syādvasunā mahī ||<br>tāvatā&#x27;pyamṛtā&#x27;haṃ syāṃ kiṃvā netyucyatāṃ yathā ||  ||</p>
+    <p class="src-vartika">sattāmātropakāriṇi dhanāni dhanināṃ na hi ||<br>kriyādvāropakārīṇi yato&#x27;taḥ pṛcchyate kriyā ||  ||</p>
+    <p class="src-vartika">pratyāha pṛṣṭaḥ svāṃ jāyāṃ nāmṛtatvaṃ dhanāditi ||  ||<br>vittaṃ cennāmṛtatvāya kasmādditsati tadbhavān ||<br>iti pṛṣṭo&#x27;bravīdvittasādhanasya prayojanam ||  ||</p>
+    <p class="src-vartika">kṣayiṣṇusādhanādhīnaṃ jīvitaṃ syādyathā nṛṇām ||<br>tathaiva tava vittena jīvitaṃ nāmṛtātmatā ||  ||</p>
+    <p class="src-vartika">avidyāmātravidhvaṃsājjñānādevāmṛtaṃ yataḥ ||<br>amṛtatvasya nā&#x27;&#x27;śā&#x27;pi vittasādhyena karmaṇā ||  ||</p>
+    <p class="src-vartika">kuto&#x27;mṛtatvasaṃprāptirjñānamātraikahetunā ||<br>na karma kāraṇaṃ mukternāgnistāpasya bheṣajam ||<br>karmabhyo janma niyataṃ janma cennirvṛtiḥ kutaḥ ||  ||</p>
+    <p class="src-vartika">svabhāvādeva sādhūnāṃ pravṛttirupakāriṇī ||<br>apakāriṇyapi jane kimu bhaktajanaṃ prati ||  ||</p>
+    <p class="src-vartika">nūnaṃ mamāparādho&#x27;yaṃ yadbhavanto&#x27;pi māṃ prati ||<br>pratilomaṃ cikīrṣanti ko&#x27;nyaḥ syāddhitakṛnmama ||  ||</p>
+    <p class="src-vartika">anuraktāṃ priyāṃ sādhvīṃ baddhvā vittena māṃ katham ||<br>kāmocchittimakṛtvā ca saṃnyasanti bhavadvidhāḥ ||  ||</p>
+    <p class="src-vartika">vittāccedamṛtatvaṃ syāttattityakṣā na yujyate ||<br>vittāccennāmṛtatvaṃ syādvada tena mamāpi kim ||  ||</p>
+    <p class="src-vartika">yadyastyanujighṛkṣaivaṃ karuṇā vā mayīṣyate || <br>yadeva bhagavānveda tena saṃvibhajasva mām ||  ||</p>
+    <p class="src-vartika">yadvijñānātparityajya niḥśeṣaṃ vittasādhanam ||<br>svārājyamīpsati bhavāṃstadeva vasu dehi me ||  ||</p>
+    <p class="src-vartika">nā&#x27;&#x27;dirnānto na madhyaṃ vā yasya vittasya vidyate ||<br>bhoge na ca kṣayaṃ yāti tadeva vasu dīyatām ||  ||</p>
+    <p class="src-vartika">anantavitto hi bhavānantavaddīyate kutaḥ ||<br>asataḥ kīdṛśaṃ dānaṃ sadevātaḥ pradīyatām ||  ||</p>
+    <p class="src-vartika">saṃsārapuruṣārthebhyo yato nāvyutthitātmane ||<br>muktyekasādhanaṃ jñānaṃ dātuṃ śakyamidaṃ mayā ||  ||</p>
+    <p class="src-vartika">amumukṣutvamāśaṅkya bhavatyai tatpraditsitam ||<br>saṃsārāccedviraktā&#x27;si gṛhāṇānuttamāmṛtam ||  ||</p>
+    <p class="src-vartika">strīṇāṃ yaducitaṃ vākyaṃ pratilomaṃ na bhāṣase ||<br>pūrvavattvanukūlaṃ tvamidānīmapi bhāṣase ||  ||</p>
+    <p class="src-vartika">mokṣaṃ yāntaṃ naraṃ sarve muñcanti sahajā api ||<br>atibhaktitayā māṃ tvaṃ mokṣe&#x27;pi na jihāsasi ||  ||</p>
+    <p class="src-vartika">vibhāgamasahantīva madatisnehakāraṇāt ||<br>muktāvanuyiyāsi tvaṃ madaikātmyaparīpsayā ||  ||</p>
+    <p class="src-vartika">atisnehā&#x27;pakṛṣṭomā dehārdhaṃ śūlinaḥ śritā || <br>tvaṃ tu sarvātmanā&#x27;&#x27;tmānaṃ kṛtsnaṃ māmāptumicchasi ||  ||</p>
+    <p class="src-vartika">yata evamatastubhyaṃ vakṣyāmyamṛtasādhanam ||<br>nididhyāsasva ceto&#x27;to vyācakṣāṇasya tanmama ||  ||</p>
   </div>
 source_ref: "Bṛhad. 2.4.2"
 related_verses: ""

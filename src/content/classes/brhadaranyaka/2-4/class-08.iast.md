@@ -8,7 +8,7 @@ class_number: 8
 date: "2026-05-14"
 coverage: "Mantras 2.4.3 and 2.4.4; Maitreyī rejecting vitta without amṛtatva; yadeva bhagavān veda tadeva me brūhi; Yājñavalkya pleased by svābhiprāya-sampatti; ehi āssva and vyākhyāsyāmi; nididhyāsasva as attentive dwelling on vākyārtha."
 audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_08"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=oVgIPwwzuN8&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |
@@ -18,18 +18,16 @@ source_text_content: |
     <p class="src-mulam">sā hovāca maitreyī yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryāṃ yadeva bhagavānveda tadeva me brūhīti || 2-4-3 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">sā hovāca maitreyī | evamuktā pratyuvāca maitreyī — yadyevaṃ yenāhaṃ nāmṛtā syām , kimahaṃ tena vittena kuryām ? yadeva bhagavān kevalam amṛtatva-sādhanaṃ veda, tadeva amṛtatva-sādhanaṃ me mahyaṃ brūhi ||</p>
+    <p class="src-bhashyam"><span class="src-pratika">sā hovāca maitreyī</span> | evamuktā pratyuvāca maitreyī — yadyevaṃ <span class="src-pratika">yenāhaṃ nāmṛtā syām , kimahaṃ tena</span> vittena <span class="src-pratika">kuryām</span> ? <span class="src-pratika">yadeva</span> bhagavān kevalam amṛtatva-sādhanaṃ <span class="src-pratika">veda</span>, <span class="src-pratika">tadeva</span> amṛtatva-sādhanaṃ <span class="src-pratika">me</span> mahyaṃ <span class="src-pratika">brūhi</span> ||</p>
     <hr class="src-divider">
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
     <p class="src-mulam">sa hovāca yājñavalkyaḥ priyā batāre naḥ satī priyaṃ bhāṣasa ehyāssva vyākhyāsyāmi te vyācakṣāṇasya tu me nididhyāsasveti || 2-4-4 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">sa hovāca yājñavalkyaḥ | evaṃ vitta-sādhye'mṛtatva-sādhane pratyākhyāte, yājñavalkyaḥ svābhiprāya-sampattau tuṣṭa āha — sa hovāca — priyā iṣṭā, bata ityanukampyāha, are maitreyi, na asmākaṃ pūrvamapi priyā satī bhavantī idānīṃ priyameva cittānukūlaṃ bhāṣase | ataḥ ehi āssva upaviśa vyākhyāsyāmi — yat te tava iṣṭam amṛtatva-sādhanamātma-jñānam kathayiṣyāmi | vyācakṣāṇasya tu me mama vyākhyānaṃ kurvataḥ, nididhyāsasva vākyāni arthato niścayena dhyātumiccheti ||</p>
+    <p class="src-bhashyam">sa hovāca yājñavalkyaḥ | evaṃ vitta-sādhye&#x27;mṛtatva-sādhane pratyākhyāte, yājñavalkyaḥ svābhiprāya-sampattau tuṣṭa āha — <span class="src-pratika">sa hovāca</span> — <span class="src-pratika">priyā</span> iṣṭā, <span class="src-pratika">bata </span>ityanukampyāha, <span class="src-pratika">are</span> maitreyi, <span class="src-pratika">na</span> asmākaṃ <span class="src-pratika">pūrvamapi priyā satī </span>bhavantī idānīṃ <span class="src-pratika">priyame</span>va cittānukūlaṃ <span class="src-pratika">bhāṣase</span> | ataḥ <span class="src-pratika">ehi āssva </span>upaviśa <span class="src-pratika">vyākhyāsyāmi</span> — yat <span class="src-pratika">te </span>tava iṣṭam amṛtatva-sādhanamātma-jñānam kathayiṣyāmi | <span class="src-pratika">vyācakṣāṇasya</span> tu me mama vyākhyānaṃ kurvataḥ, <span class="src-pratika">nididhyāsasva</span> vākyāni arthato niścayena dhyātumiccheti ||</p>
     <hr class="src-divider">
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
-    <p class="src-mulam">sa hovāca na vā are patyuḥ kāmāya patiḥ priyo bhavatyātmanastu kāmāya patiḥ priyo bhavati | na vā are jāyāyai kāmāya jāyā priyā bhavatyātmanastu kāmāya jāyā priyā bhavati | na vā are putrāṇāṃ kāmāya putrāḥ priyā bhavantyātmanastu kāmāya putrāḥ priyā bhavanti | na vā are vittasya kāmāya vittaṃ priyaṃ bhavatyātmanastu kāmāya vittaṃ priyaṃ bhavati | na vā are brahmaṇaḥ kāmāya brahma priyaṃ bhavatyātmanastu kāmāya brahma priyaṃ bhavati | na vā are kṣatrasya kāmāya kṣatraṃ priyaṃ bhavatyātmanastu kāmāya kṣatraṃ priyaṃ bhavati | na vā are lokānāṃ kāmāya lokāḥ priyā bhavantyātmanastu kāmāya lokāḥ priyā bhavanti | na vā are devānāṃ kāmāya devāḥ priyā bhavantyātmanastu kāmāya devāḥ priyā bhavanti | na vā are bhūtānāṃ kāmāya bhūtāni priyāṇi bhavantyātmanastu kāmāya bhūtāni priyāṇi bhavanti | na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavatyātmanastu kāmāya sarvaṃ priyaṃ bhavati | ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyyātmano vā are darśanena śravaṇena matyā vijñānenedaṃ sarvaṃ viditam || 2-4-5 ||</p>
-    <hr class="src-divider">
-    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-mulam">sa hovāca na vā are patyuḥ kāmāya patiḥ priyo bhavatyātmanastu kāmāya patiḥ priyo bhavati | na vā are jāyāyai kāmāya jāyā priyā bhavatyātmanastu kāmāya jāyā priyā bhavati | na vā are putrāṇāṃ kāmāya putrāḥ priyā bhavantyātmanastu kāmāya putrāḥ priyā bhavanti | na vā are vittasya kāmāya vittaṃ priyaṃ bhavatyātmanastu kāmāya vittaṃ priyaṃ bhavati | na vā are brahmaṇaḥ kāmāya brahma priyaṃ bhavatyātmanastu kāmāya brahma priyaṃ bhavati | na vā are kṣatrasya kāmāya kṣatraṃ priyaṃ bhavatyātmanastu kāmāya kṣatraṃ priyaṃ bhavati | na vā are lokānāṃ kāmāya lokāḥ priyā bhavantyātmanastu kāmāya lokāḥ priyā bhavanti | na vā are devānāṃ kāmāya devāḥ priyā bhavantyātmanastu kāmāya devāḥ priyā bhavanti | na vā are bhūtānāṃ kāmāya bhūtāni priyāṇi bhavantyātmanastu kāmāya bhūtāni priyāṇi bhavanti | na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavatyātmanastu kāmāya sarvaṃ priyaṃ bhavati | ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyyātmano vā are darśanena śravaṇena matyā vijñānenedaṃ sarvaṃ viditam || 2-4-5 ||</p>
   </div>
 source_ref: "Bṛhad. 2.4.3-2.4.5"
 related_verses: ""

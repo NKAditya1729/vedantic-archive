@@ -8,23 +8,23 @@ class_number: 6
 date: "2026-05-07"
 coverage: "Entry into Maitreyī Brāhmaṇa; saṃnyāsa for gain and abidance in jñānam; Śaṅkara and Sureśvara on Sāṅkhya reading of neti neti; brahman-to-ātmā and ātmā-to-brahman equation; Yājñavalkya's departure to pārivrājya; 2.4.1 and 2.4.2 with vitta and amṛtatva."
 audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
-video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
+video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4.1, 2.4.2</p>
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
-    <p class="src-mulam">maitreyīti hovāca yājñavalkya ; udyāsyanvā are'hamasmātsthānādasmi;  hanta te'nayā kātyāyanyāntaṃ karavāṇīti || 2-4-1 ||</p>
+    <p class="src-mulam">maitreyīti hovāca yājñavalkya ; udyāsyanvā are&#x27;hamasmātsthānādasmi;  hanta te&#x27;nayā kātyāyanyāntaṃ karavāṇīti || 2-4-1 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">maitreyīti hovāca yājñavalkyaḥ — maitreyīṃ svabhāryāmāmantritavān yājñavalkyo nāma ṛṣiḥ ; udyāsyan ūrdhvaṃ yāsyan pārivrājyākhyamāśramāntaram vai ; ‘<span class="src-pratika">are</span>’ iti sambodhanam ; aham , asmāt gārhasthyāt , sthānāt āśramāt , ūrdhvaṃ gantumicchan asmi bhavāmi ; ataḥ hanta anumatiṃ prārthayāmi te tava ; kiñcānyat — te tava anayā dvitīyayā bhāryayā kātyāyanyā antaṃ vicchedaṃ karavāṇi ; patidvāreṇa yuvayormayā sambadhyamānayoryaḥ sambandha āsīt , tasya sambandhasya vicchedaṃ karavāṇi dravyavibhāgaṃ kṛtvā ; vittena saṃvibhajya yuvāṃ gamiṣyāmi ||</p>
+    <p class="src-bhashyam"><span class="src-pratika">maitreyīti hovāca yājñavalkyaḥ</span> — maitreyīṃ svabhāryāmāmantritavān yājñavalkyo nāma ṛṣiḥ ; <span class="src-pratika">udyāsyan</span> ūrdhvaṃ yāsyan pārivrājyākhyamāśramāntaram <span class="src-pratika">vai</span> ; ‘<span class="src-pratika">are</span>’ iti sambodhanam ; <span class="src-pratika">aham</span> , <span class="src-pratika">asmāt</span> gārhasthyāt , <span class="src-pratika">sthānāt</span> āśramāt , ūrdhvaṃ gantumicchan <span class="src-pratika">asmi</span> bhavāmi ; ataḥ <span class="src-pratika">hanta</span> anumatiṃ prārthayāmi <span class="src-pratika">te</span> tava ; kiñcānyat — te tava <span class="src-pratika">anayā</span> dvitīyayā bhāryayā <span class="src-pratika">kātyāyanyā</span> <span class="src-pratika">antaṃ</span> vicchedaṃ <span class="src-pratika">karavāṇi</span> ; patidvāreṇa yuvayormayā sambadhyamānayoryaḥ sambandha āsīt , tasya sambandhasya vicchedaṃ karavāṇi dravyavibhāgaṃ kṛtvā ; vittena saṃvibhajya yuvāṃ gamiṣyāmi ||</p>
     <hr class="src-divider">
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
-    <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
+    <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">sā evamuktā ha uvāca — yat yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
+    <p class="src-bhashyam"><span class="src-pratika">sā</span> evamuktā <span class="src-pratika">ha uvāca </span>— <span class="src-pratika">yat</span> yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, <span class="src-pratika">me</span> mama <span class="src-pratika">iyaṃ pṛthivī</span>, <span class="src-pratika">bhagoḥ</span> bhagavan , <span class="src-pratika">sarvā</span> sāgaraparikṣiptā <span class="src-pratika">vittena</span> dhanena <span class="src-pratika">pūrṇā</span> <span class="src-pratika">syāt</span> ; <span class="src-pratika">katham</span> ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
   </div>
 source_ref: "Bṛhad. 2.4.1, 2.4.2"
 related_verses: ""

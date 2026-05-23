@@ -8,23 +8,23 @@ class_number: 6
 date: "2026-05-07"
 coverage: "Entry into मैत्रेयीब्राह्मण; संन्यास for gain and abidance in ज्ञानम्; शङ्कर and सुरेश्वर on साङ्ख्य reading of नेति नेति; ब्रह्मन्-to-आत्मा and आत्मा-to-ब्रह्मन् equation; याज्ञवल्क्य's departure to पारिव्राज्य; २.४.१ and २.४.२ with वित्त and अमृतत्व."
 audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
-video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
+video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari
 source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: बृहद् २.४.१, २.४.२</p>
     <p class="src-label mulam-label">॥ मूलम् ॥</p>
-    <p class="src-mulam">मैत्रेयीति होवाच याज्ञवल्क्य ; उद्यास्यन्वा अरेऽहमस्मात्स्थानादस्मि;  हन्त तेऽनया कात्यायन्यान्तं करवाणीति ॥ 2-4-1 ॥</p>
+    <p class="src-mulam">मैत्रेयीति होवाच याज्ञवल्क्य ; उद्यास्यन्वा अरेऽहमस्मात्स्थानादस्मि;  हन्त तेऽनया कात्यायन्यान्तं करवाणीति ॥ 2-4-1 ॥</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
-    <p class="src-bhashyam">मैत्रेयीति होवाच याज्ञवल्क्यः — मैत्रेयीं स्वभार्यामामन्त्रितवान् याज्ञवल्क्यो नाम ऋषिः ; उद्यास्यन् ऊर्ध्वं यास्यन् पारिव्राज्याख्यमाश्रमान्तरम् वै ; ‘<span class="src-pratika">अरे</span>’ इति सम्बोधनम् ; अहम् , अस्मात् गार्हस्थ्यात् , स्थानात् आश्रमात् , ऊर्ध्वं गन्तुमिच्छन् अस्मि भवामि ; अतः हन्त अनुमतिं प्रार्थयामि ते तव ; किञ्चान्यत् — ते तव अनया द्वितीयया भार्यया कात्यायन्या अन्तं विच्छेदं करवाणि ; पतिद्वारेण युवयोर्मया सम्बध्यमानयोर्यः सम्बन्ध आसीत् , तस्य सम्बन्धस्य विच्छेदं करवाणि द्रव्यविभागं कृत्वा ; वित्तेन संविभज्य युवां गमिष्यामि ॥</p>
+    <p class="src-bhashyam"><span class="src-pratika">मैत्रेयीति होवाच याज्ञवल्क्यः</span> — मैत्रेयीं स्वभार्यामामन्त्रितवान् याज्ञवल्क्यो नाम ऋषिः ; <span class="src-pratika">उद्यास्यन्</span> ऊर्ध्वं यास्यन् पारिव्राज्याख्यमाश्रमान्तरम् <span class="src-pratika">वै</span> ; ‘<span class="src-pratika">अरे</span>’ इति सम्बोधनम् ; <span class="src-pratika">अहम्</span> , <span class="src-pratika">अस्मात्</span> गार्हस्थ्यात् , <span class="src-pratika">स्थानात्</span> आश्रमात् , ऊर्ध्वं गन्तुमिच्छन् <span class="src-pratika">अस्मि</span> भवामि ; अतः <span class="src-pratika">हन्त</span> अनुमतिं प्रार्थयामि <span class="src-pratika">ते</span> तव ; किञ्चान्यत् — ते तव <span class="src-pratika">अनया</span> द्वितीयया भार्यया <span class="src-pratika">कात्यायन्या</span> <span class="src-pratika">अन्तं</span> विच्छेदं <span class="src-pratika">करवाणि</span> ; पतिद्वारेण युवयोर्मया सम्बध्यमानयोर्यः सम्बन्ध आसीत् , तस्य सम्बन्धस्य विच्छेदं करवाणि द्रव्यविभागं कृत्वा ; वित्तेन संविभज्य युवां गमिष्यामि ॥</p>
     <hr class="src-divider">
     <p class="src-label mulam-label">॥ मूलम् ॥</p>
-    <p class="src-mulam">सा होवाच मैत्रेयी । यन्नु म इयं भगोः सर्वा पृथिवी वित्तेन पूर्णा स्यात्कथं तेनामृता स्यामिति ; नेति होवाच याज्ञवल्क्यो ; यथैवोपकरणवतां जीवितं तथैव ते जीवितं स्याद् ; अमृतत्वस्य तु नाशास्ति वित्तेनेति ॥ 2-4-2 ॥</p>
+    <p class="src-mulam">सा होवाच मैत्रेयी । यन्नु म इयं भगोः सर्वा पृथिवी वित्तेन पूर्णा स्यात्कथं तेनामृता स्यामिति ; नेति होवाच याज्ञवल्क्यो ; यथैवोपकरणवतां जीवितं तथैव ते जीवितं स्याद् ; अमृतत्वस्य तु नाशास्ति वित्तेनेति ॥ 2-4-2 ॥</p>
     <hr class="src-divider">
     <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
-    <p class="src-bhashyam">सा एवमुक्ता ह उवाच — यत् यदि, ‘<span class="src-pratika">नु</span>’ इति वितर्के, मे मम इयं पृथिवी, भगोः भगवन् , सर्वा सागरपरिक्षिप्ता वित्तेन धनेन पूर्णा स्यात् ; कथम् ? न कथञ्चनेत्याक्षेपार्थः, प्रश्नार्थो वा, तेन पृथिवीपूर्णवित्तसाध्येन कर्मणा अग्निहोत्रादिना — अमृता किं स्यामिति व्यवहितेन सम्बन्धः ।</p>
+    <p class="src-bhashyam"><span class="src-pratika">सा</span> एवमुक्ता <span class="src-pratika">ह उवाच </span>— <span class="src-pratika">यत्</span> यदि, ‘<span class="src-pratika">नु</span>’ इति वितर्के, <span class="src-pratika">मे</span> मम <span class="src-pratika">इयं पृथिवी</span>, <span class="src-pratika">भगोः</span> भगवन् , <span class="src-pratika">सर्वा</span> सागरपरिक्षिप्ता <span class="src-pratika">वित्तेन</span> धनेन <span class="src-pratika">पूर्णा</span> <span class="src-pratika">स्यात्</span> ; <span class="src-pratika">कथम्</span> ? न कथञ्चनेत्याक्षेपार्थः, प्रश्नार्थो वा, तेन पृथिवीपूर्णवित्तसाध्येन कर्मणा अग्निहोत्रादिना — अमृता किं स्यामिति व्यवहितेन सम्बन्धः ।</p>
   </div>
 source_ref: "बृहद् २.४.१, २.४.२"
 related_verses: ""

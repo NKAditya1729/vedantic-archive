@@ -8,7 +8,7 @@ class_number: 10
 date: "2026-05-21"
 coverage: "Ātmanas tu kāmāya continued; pleased self as what is really loved; rāga-dveṣa and objectivity toward relationships; happiness as not in object or mind; sleep and relief from wanting; ānanda as unproduced and not an event."
 audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_10"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=LQRCZfNYD8E&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |
@@ -16,8 +16,6 @@ source_text_content: |
     <p class="source-ref-line">Covered: Bṛhad. 2.4.5</p>
     <p class="src-label mulam-label">॥ Mūlam ॥</p>
     <p class="src-mulam">sa hovāca na vā are patyuḥ kāmāya patiḥ priyo bhavatyātmanastu kāmāya patiḥ priyo bhavati | na vā are jāyāyai kāmāya jāyā priyā bhavatyātmanastu kāmāya jāyā priyā bhavati | na vā are putrāṇāṃ kāmāya putrāḥ priyā bhavantyātmanastu kāmāya putrāḥ priyā bhavanti | na vā are vittasya kāmāya vittaṃ priyaṃ bhavatyātmanastu kāmāya vittaṃ priyaṃ bhavati | na vā are brahmaṇaḥ kāmāya brahma priyaṃ bhavatyātmanastu kāmāya brahma priyaṃ bhavati | na vā are kṣatrasya kāmāya kṣatraṃ priyaṃ bhavatyātmanastu kāmāya kṣatraṃ priyaṃ bhavati | na vā are lokānāṃ kāmāya lokāḥ priyā bhavantyātmanastu kāmāya lokāḥ priyā bhavati | na vā are devānāṃ kāmāya devāḥ priyā bhavantyātmanastu kāmāya devāḥ priyā bhavati | na vā are bhūtānāṃ kāmāya bhūtāni priyāṇi bhavantyātmanastu kāmāya bhūtāni priyāṇi bhavati | na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavatyātmanastu kāmāya sarvaṃ priyaṃ bhavati | ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyyātmano vā are darśanena śravaṇena matyā vijñānenedaṃ sarvaṃ viditam || 2-4-5 ||</p>
-    <hr class="src-divider">
-    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
   </div>
 source_ref: "Bṛhad. 2.4.5"
 related_verses: ""

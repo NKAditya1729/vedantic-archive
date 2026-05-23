@@ -8,7 +8,7 @@ class_number: 9
 date: "2026-05-18"
 coverage: "Opening of 2.4.5; na vā are patyuḥ kāmāya; everything loved for ātmanas tu kāmāya; vairāgyam as amṛtatva-sādhana-sādhanam; puruṣārtha-viveka and mumukṣutvam; yathābhūta-darśanam as basis for virāga."
 audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_09"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=oy-MM39V7oQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |

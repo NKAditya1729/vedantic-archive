@@ -8,22 +8,22 @@ class_number: 5
 date: "2026-05-04"
 coverage: "Why another brāhmaṇa after neti neti; Vārtikakāra Sureśvara's additional reasons; mūrta-amūrta brāhmaṇa recap; brahman neither mūrta nor amūrta; one reality appearing as many; adhyāsa and the introduction's threads."
 audio_url: "/assets/audio/Brhad_2-4_Class_05.mp3"
-video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
+video_url: "https://www.youtube.com/watch?v=c8HircUgM_o&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast
 source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
-    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt || niṣiddhaṃ neti netīti mūrtāmūrtādi vastu yat || BV 2.4.||</p>
-    <p class="src-bhashyam">kiṃ tadbrahmānugaṃ sarvaṃ kiṃ vā tasmādvivicyate || yadi brahmānugaṃ brahma syādanarthātmakaṃ tadā || BV 2.4.||</p>
-    <p class="src-bhashyam">abhāvaniṣṭaṃ taccetsyānmukhyaṃ brahma na sidhyati || abhāvasya tato'nyatvādanvayavyatirekataḥ || BV 2.4.||</p>
-    <p class="src-bhashyam">netītyapi niṣedhoktistathā sati virudhyate ||  vaidikaśca prayāso'yaṃ sarvaḥ syāttuṣakaṇḍanam || BV 2.4.||</p>
-    <p class="src-bhashyam">vivicyate brahmaṇaścenmaivaṃ doṣastathā'pi hi || brahmatvaṃ brahmaṇo na syādvitīye sati vastuni || BV 2.4.||</p>
-    <p class="src-bhashyam">avyāvṛttānanugataṃ vastu brahmatvamaśnute || etacca durlabhaṃ tasya dvitīye sati lakṣaṇam || BV 2.4.||</p>
-    <p class="src-bhashyam">anvayādiniṣedhāya sarvamātmeti vākyataḥ || maitreyāītyādiko granthastasmādārabhyate paraḥ || BV 2.4.||</p>
-    <p class="src-bhashyam">sarvābrahmaniṣedhena tadartho veha niścitaḥ || tasya saṃsiddhiviṣayamaikātmyamadhunotyate || BV 2.4.||</p>
-    <p class="src-bhashyam">netīti brahmaṇo'nyatra mūrtāmūrtavyavasthitau || prasakte sāṃkhyasiddhānte sarvamātmeti vocyate || BV 2.4.||</p>
+    <p class="src-label vartika-label">॥ Vārttikam ॥</p>
+    <p class="src-vartika">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt ||<br>niṣiddhaṃ neti netīti mūrtāmūrtādi vastu yat || BV 2.4.||</p>
+    <p class="src-vartika">kiṃ tadbrahmānugaṃ sarvaṃ kiṃ vā tasmādvivicyate ||<br>yadi brahmānugaṃ brahma syādanarthātmakaṃ tadā || BV 2.4.||</p>
+    <p class="src-vartika">abhāvaniṣṭaṃ taccetsyānmukhyaṃ brahma na sidhyati ||<br>abhāvasya tato&#x27;nyatvādanvayavyatirekataḥ || BV 2.4.||</p>
+    <p class="src-vartika">netītyapi niṣedhoktistathā sati virudhyate || <br>vaidikaśca prayāso&#x27;yaṃ sarvaḥ syāttuṣakaṇḍanam || BV 2.4.||</p>
+    <p class="src-vartika">vivicyate brahmaṇaścenmaivaṃ doṣastathā&#x27;pi hi ||<br>brahmatvaṃ brahmaṇo na syādvitīye sati vastuni || BV 2.4.||</p>
+    <p class="src-vartika">avyāvṛttānanugataṃ vastu brahmatvamaśnute ||<br>etacca durlabhaṃ tasya dvitīye sati lakṣaṇam || BV 2.4.||</p>
+    <p class="src-vartika">anvayādiniṣedhāya sarvamātmeti vākyataḥ ||<br>maitreyāītyādiko granthastasmādārabhyate paraḥ || BV 2.4.||</p>
+    <p class="src-vartika">sarvābrahmaniṣedhena tadartho veha niścitaḥ ||<br>tasya saṃsiddhiviṣayamaikātmyamadhunotyate || BV 2.4.||</p>
+    <p class="src-vartika">netīti brahmaṇo&#x27;nyatra mūrtāmūrtavyavasthitau ||<br>prasakte sāṃkhyasiddhānte sarvamātmeti vocyate || BV 2.4.||</p>
   </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
