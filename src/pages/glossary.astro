@@ -92,9 +92,21 @@ function slug(term: string, classNumber: number) {
 <BaseLayout title="Glossary" description="Sanskrit terms explained in the class notes, organised by class.">
   <div class="container container--wide page-pad">
     <h1>Glossary</h1>
-    <div class="glossary-index">
-      {terms.map(item => <a href={`#${slug(item.term, item.classNumber)}`}>{item.term}</a>)}
-    </div>
+
+    <details class="glossary-index-container" style="margin: 1.5rem 0 2.5rem; border: 1px solid var(--border-light); border-radius: 8px; background: var(--bg-surface); overflow: hidden;">
+      <summary style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600; color: var(--accent); cursor: pointer; user-select: none; list-style: none;">
+        <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Browse All Terms ({terms.length})
+        </span>
+        <svg class="details-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s ease;"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <div style="border-top: 1px solid var(--border-light); padding: 1.25rem; background: var(--bg);">
+        <div class="glossary-index" style="margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          {terms.map(item => <a href={`#${slug(item.term, item.classNumber)}`}>{item.term}</a>)}
+        </div>
+      </div>
+    </details>
 
     {classSections.map(section => (
       <section class="glossary-section">
@@ -123,4 +135,16 @@ function slug(term: string, classNumber: number) {
     )}
   </div>
 </BaseLayout>
+
+<style>
+  .glossary-index-container summary::-webkit-details-marker {
+    display: none;
+  }
+  .glossary-index-container summary {
+    list-style: none;
+  }
+  .glossary-index-container[open] .details-chevron {
+    transform: rotate(180deg);
+  }
+</style>
 
