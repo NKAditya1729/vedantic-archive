@@ -1,87 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const desktopVideoId = "DESKTOP_VIDEO_ID"; 
-const mobileVideoId = "MOBILE_VIDEO_ID";
-
-const hasDesktopVideo = desktopVideoId && desktopVideoId !== "" && desktopVideoId !== "DESKTOP_VIDEO_ID";
-const hasMobileVideo = mobileVideoId && mobileVideoId !== "" && mobileVideoId !== "MOBILE_VIDEO_ID";
 ---
 
 <BaseLayout title="How to Use This Archive" description="A guide to navigating the Vedāntic Study Archive.">
   <div class="container page-pad">
     <h1>How to Use This Archive</h1>
-
-    <section class="video-tours" style="margin-bottom: 3rem;">
-      <h2>Video Guides</h2>
-      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
-        📹 Video tour guides are being prepared and will appear here. The layout structure is ready below.
-      </p>
-
-      <div style="margin-bottom: 2rem;">
-        <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">
-          Desktop Tour (1 min)
-        </h3>
-        {hasDesktopVideo ? (
-          <div style="position:relative; padding-bottom:56.25%;
-            height:0; overflow:hidden; border-radius:8px; background: var(--bg-surface); border: 1px solid var(--border-light);">
-            <iframe
-              src={`https://www.youtube.com/embed/${desktopVideoId}`}
-              style="position:absolute;top:0;left:0;
-                width:100%;height:100%;border:0;"
-              allow="accelerometer; autoplay; clipboard-write;
-                encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        ) : (
-          <div class="video-placeholder" style="aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; border-radius: 8px; background: var(--bg-surface); border: 1px dashed var(--border); text-align: center; color: var(--text-secondary);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent); opacity: 0.8;">
-              <path d="m22 8-6 4 6 4V8Z" />
-              <rect width="14" height="12" x="2" y="6" rx="2" ry="2" />
-            </svg>
-            <div>
-              <p style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">Desktop tour video is being prepared</p>
-              <p style="font-size: 0.85rem; opacity: 0.8;">It will appear here shortly to guide you through the desktop interface.</p>
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div>
-        <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">
-          Mobile Tour (50 sec)
-        </h3>
-        <div style="max-width: 360px;">
-          {hasMobileVideo ? (
-            <div style="position:relative; padding-bottom:177.78%;
-              height:0; overflow:hidden; border-radius:8px; background: var(--bg-surface); border: 1px solid var(--border-light);">
-              <iframe
-                src={`https://www.youtube.com/embed/${mobileVideoId}`}
-                style="position:absolute;top:0;left:0;
-                  width:100%;height:100%;border:0;"
-                allow="accelerometer; autoplay; clipboard-write;
-                  encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-          ) : (
-            <div class="video-placeholder" style="aspect-ratio: 9/16; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; border-radius: 8px; background: var(--bg-surface); border: 1px dashed var(--border); text-align: center; color: var(--text-secondary);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent); opacity: 0.8;">
-                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-                <path d="M12 18h.01" />
-              </svg>
-              <div>
-                <p style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">Mobile tour video is being prepared</p>
-                <p style="font-size: 0.85rem; opacity: 0.8;">It will appear here shortly to guide you through the mobile interface.</p>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
 
     <h2>Who This Archive Is For</h2>
     <p>Students attending Swami Shankarananda's classes on Bṛhadāraṇyaka Upaniṣad. Also accessible to serious students of Advaita Vedānta with some familiarity with Sanskrit.</p>
