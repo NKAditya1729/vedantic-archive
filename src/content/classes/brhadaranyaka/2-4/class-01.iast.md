@@ -6,20 +6,17 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
 date: "2026-04-20"
-coverage: "Bhāṣyakāra's introductory sambandha-bhāṣya for the Maitreyī Brāhmaṇa; review of vidyā-sūtra (ātmetyevopāsīta, 1.4.7) and avidyā-sūtra (anyo'sāvanyo'hamasmīti, 1.4.10); summary of chapters 1–3 — sṛṣṭi, nāma-rūpa-karma, neti neti; sarva-viśeṣa-śūnyam brahma established through aśeṣa-bhūta-dharma-pratiṣedha; why the 4th brāhmaṇa — to present saṁnyāsa as aṅga for brahmavidyā; Yājñavalkya seeking Maitreyī's permission to leave."
-audio_url: ""
+coverage: "Saṃbandha-bhāṣya for Maitreyī Brāhmaṇa; vidyā-sūtra and avidyā-sūtra reviewed; sṛṣṭi, nāma-rūpa-karma, neti neti; sarva-viśeṣa-śūnyam brahma; saṃnyāsa as aṅga for brahmavidyā; Yājñavalkya seeking Maitreyī's permission."
+audio_url: "/assets/audio/Brhad_2-4_Class_01.mp3"
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: iast
-source_text_content: "ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — ‘tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat’ (bṛ. u. 1 | 4 | 10) iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |
-
-avidyāyāśca viṣayaḥ — ‘anyo'sāvanyo'hamasmīti na sa veda’ (bṛ. u. 1 | 4 | 10) ityārabhya cāturvarṇya-pravibhāgādi-nimitta-pāṅktakarma-sādhya-sādhana-lakṣaṇaḥ bījāṅkuravat vyākṛtāvyākṛtasvabhāvaḥ nāma-rūpa-karmātmakaḥ saṃsāraḥ ‘trayaṃ vā idaṃ nāma rūpaṃ karma’ (bṛ. u. 1 | 6 | 1) ityupasaṃhṛtaḥ
-
-śāstrīya utkarṣalakṣaṇo brahmalokāntaḥ, adhobhāvaśca sthāvarānto'śāstrīyaḥ, pūrvameva pradarśitaḥ — ‘dvayā ha’ (bṛ. u. 1 | 3 | 1) ityādinā | etasmādavidyāviṣayādviraktasya pratyagātma-viṣaya-brahmavidyāyām adhikāraḥ kathaṃ nāma syāditi — tṛtīye'dhyāye upasaṃhṛtaḥ samasto'vidyāviṣayaḥ |
-
-caturthe tu brahmavidyāviṣayaṃ pratyagātmānam ‘brahma te bravāṇi’ (bṛ. u. 2 | 1 | 1) iti ‘brahma jñapayiṣyāmi’ (bṛ. u. 2 | 1 | 1) iti ca prastutya, tat brahma ekam advayaṃ sarvaviśeṣaśūnyaṃ kriyā-kāraka-phala-svabhāva-satya-śabda-vācya-aśeṣa-bhūtadharma-pratiṣedha-dvāreṇa ‘neti neti’ (bṛ. u. 2 | 3 | 6) iti jñāpitam |
-
-asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ;"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — ‘tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat’ (bṛ. u. 1 | 4 | 10) iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |</p>
+  </div>
 source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
 ---

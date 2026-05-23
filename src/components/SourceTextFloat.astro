@@ -1,0 +1,109 @@
+---
+interface Props {
+  iastSourceText?: string;
+  devSourceText?: string;
+}
+
+const { iastSourceText = '', devSourceText = '' } = Astro.props;
+---
+
+{(iastSourceText || devSourceText) && (
+  <div class="source-float" data-source-float>
+    <button class="source-float__button" type="button" aria-label="Open source text" aria-expanded="false">
+      <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+      </svg>
+    </button>
+    <aside class="source-float__panel" aria-label="Source text reference" aria-hidden="true">
+      <div class="source-float__header">
+        <div>
+          <div class="source-float__title">Source Text</div>
+          <div class="source-float__legend" aria-label="Source text colour legend">
+            <span><b class="legend-box legend-box--mulam"></b>Mūlam</span>
+            <span><b class="legend-box legend-box--bhashyam"></b>Bhāṣyam</span>
+            <span><b class="legend-box legend-box--pratika"></b>Pratīka</span>
+            <span><b class="legend-box legend-box--vartika"></b>Vārttika</span>
+          </div>
+        </div>
+        <button class="source-float__close" type="button" aria-label="Close source text">×</button>
+      </div>
+      <div class="source-float__content" data-source-content="iast" set:html={iastSourceText} />
+      <div class="source-float__content" data-source-content="devanagari" set:html={devSourceText || iastSourceText} />
+    </aside>
+    <div class="source-float__scrim" data-source-scrim></div>
+  </div>
+)}
+
+<script>
+  function initSourceTextFloat() {
+    const root = document.querySelector('[data-source-float]');
+    if (!root) return;
+
+    const button = root.querySelector('.source-float__button');
+    const close = root.querySelector('.source-float__close');
+    const scrim = root.querySelector('[data-source-scrim]');
+    const contents = root.querySelectorAll('[data-source-content]');
+    const panel = root.querySelector('.source-float__panel');
+
+    function setScript(script) {
+      contents.forEach((content) => {
+        const active = content.getAttribute('data-source-content') === script;
+        content.classList.toggle('is-active', active);
+      });
+    }
+
+    function currentScript() {
+      return localStorage.getItem('preferred-script') || 'iast';
+    }
+
+    function openPanel() {
+      setScript(currentScript());
+      root.classList.add('is-open');
+      button?.setAttribute('aria-expanded', 'true');
+      panel?.setAttribute('aria-hidden', 'false');
+    }
+
+    function closePanel() {
+      root.classList.remove('is-open');
+      button?.setAttribute('aria-expanded', 'false');
+      panel?.setAttribute('aria-hidden', 'true');
+    }
+
+    button?.addEventListener('click', () => {
+      root.classList.contains('is-open') ? closePanel() : openPanel();
+    });
+    close?.addEventListener('click', closePanel);
+    scrim?.addEventListener('click', closePanel);
+
+    document.querySelectorAll('.script-toggle__btn').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const script = tab.getAttribute('data-script') || 'iast';
+        setScript(script);
+      });
+    });
+
+    setScript(currentScript());
+
+    const accordions = document.querySelectorAll('.source-accordion');
+    if ('IntersectionObserver' in window && accordions.length) {
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries.some((entry) => entry.isIntersecting);
+        root.classList.toggle('has-passed-source', !visible);
+      }, { threshold: 0.05 });
+      accordions.forEach((accordion) => observer.observe(accordion));
+    } else {
+      root.classList.add('has-passed-source');
+    }
+
+    const mobileFallback = () => {
+      if (window.matchMedia('(max-width: 640px)').matches && window.scrollY > 420) {
+        root.classList.add('has-passed-source');
+      }
+    };
+    mobileFallback();
+    document.addEventListener('scroll', mobileFallback, { passive: true });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSourceTextFloat);
+</script>

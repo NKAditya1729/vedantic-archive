@@ -6,30 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
 date: "2026-05-04"
-coverage: "Why another ब्राह्मण after नेति नेति? वार्तिककार सुरेश्वर's additional reasons; recap of मूर्तामूर्तब्राह्मण — ब्रह्मन् is neither मूर्त nor अमूर्त; the problem is a reality problem — one reality appears as many; resolving अध्यास; a Sanskrit-free overview class connecting all the threads of the introduction."
-audio_url: ""
+coverage: "Why another ब्राह्मण after नेति नेति; वार्तिककार सुरेश्वर's reasons; मूर्तामूर्तब्राह्मण recap; ब्रह्मन् neither मूर्त nor अमूर्त; one reality appearing as many; अध्यास and the introduction's threads."
+audio_url: "/assets/audio/Brhad_2-4_Class_05.mp3"
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: devanagari
-source_text_content: "तत्रैतच्छङ्क्यते चोद्यं ब्रह्मत्वसिद्धिदोषकृत् ।।
-निषिद्धं नेति नेतीति मूर्तामूर्तादि वस्तु यत् ।। BV 2.4.९ ।।
-किं तद्ब्रह्मानुगं सर्वं किं वा तस्माद्विविच्यते ।।
-यदि ब्रह्मानुगं ब्रह्म स्यादनर्थात्मकं तदा ।। BV 2.4.१० ।।
-अभावनिष्टं तच्चेत्स्यान्मुख्यं ब्रह्म न सिध्यति ।।
-अभावस्य ततोऽन्यत्वादन्वयव्यतिरेकतः ।। BV 2.4.११ ।।
-नेतीत्यपि निषेधोक्तिस्तथा सति विरुध्यते ।।
-वैदिकश्च प्रयासोऽयं सर्वः स्यात्तुषकण्डनम् ।। BV 2.4.१२ ।।
-विविच्यते ब्रह्मणश्चेन्मैवं दोषस्तथाऽपि hi ।।
-ब्रह्मत्वं ब्रह्मणो न स्याद्वितीये सति वस्तुनि ।। BV 2.4.१३ ।।
-अव्यावृत्ताननुगतं वस्तु ब्रह्मत्वमश्नुते ।।
-एतच्च दुर्लभं तस्य द्वितीये सति लक्षणम् ।। BV 2.4.१४ ।।
-अन्वयादिनिषेधाय सर्वमात्मेति वाक्यतः ।।
-मैत्रेयाीत्यादिको ग्रन्थस्तस्मादारभ्यते परः ।। BV 2.4.१८ ।।
-सर्वाब्रह्मनिषेधेन तदर्थो वेह निश्चितः ।।
-तस्य संसिद्धिविषयमैकात्म्यमधुनोत्यते ।। BV 2.4.१९ ।।
-नेतीति ब्रह्मणोऽन्यत्र मूर्तामूर्तव्यवस्थितौ ।।
-प्रसक्ते सांख्यसिद्धान्ते सर्वमात्मेति वोच्यते ।। BV 2.4.२० ।।"
-source_ref: "बृहद् २.४ सम्बन्धभाष्यम् (contd.)"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: बृहद् २.४ सम्बन्धभाष्यम्</p>
+    <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+    <p class="src-bhashyam">तत्रैतच्छङ्क्यते चोद्यं ब्रह्मत्वसिद्धिदोषकृत् ।।</p>
+  </div>
+source_ref: "बृहद् २.४ सम्बन्धभाष्यम्"
 related_verses: ""
 ---
 

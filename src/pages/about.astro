@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
 <BaseLayout
   title="About"
-  description="About the Vedantic Study Archive — lineage acknowledgement, how these notes are prepared, and disclaimer."
+  description="About the Vedāntic Study Archive — lineage acknowledgement, how these notes are prepared, and disclaimer."
 >
   <div class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
     <Breadcrumb items={[
@@ -125,7 +125,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     <section class="about-section">
       <h2>Contact & Corrections</h2>
       <p>
-        For corrections, suggestions, or questions about these notes, please <a href="mailto:nistala.aditya@gmail.com?subject=Corrections - Vedantic Study Archive">send an email</a> to report the issue.
+        For corrections, suggestions, or questions about these notes, please use the <a href={`${import.meta.env.BASE_URL}/feedback/`}>Feedback page</a> or <a href="mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive">send an email</a> to report the issue.
       </p>
       <p>
         Corrections to Sanskrit citations are especially welcome — accuracy in representing the bhāṣya and mūla texts is our highest priority.

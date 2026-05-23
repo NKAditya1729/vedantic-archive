@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Introduction to the Maitreyī Brāhmaṇa" description="Orientation to the Maitreyī Brāhmaṇa as taught in the class notes.">
+  <div class="container page-pad">
+    <Breadcrumb items={[
+      { label: 'Home', href: `${import.meta.env.BASE_URL}/` },
+      { label: 'Bṛhadāraṇyaka', href: `${import.meta.env.BASE_URL}/brhadaranyaka/` },
+      { label: 'Maitreyī Brāhmaṇa Introduction' },
+    ]} />
+    <h1>Introduction to the Maitreyī Brāhmaṇa</h1>
+
+    <h2>What is the Bṛhadāraṇyaka Upaniṣad?</h2>
+    <p>The Bṛhadāraṇyaka Upaniṣad belongs to the Śukla Yajurveda and is connected with the Śatapatha Brāhmaṇa. Swamiji repeatedly presents it as a text in which the central teaching is unfolded with great depth, with earlier sections culminating in teachings such as neti neti.</p>
+
+    <h2>What is the Śāṅkara Bhāṣya?</h2>
+    <p>The Śāṅkara Bhāṣya is Śrī Śaṅkarācārya's commentary. In these classes, Swamiji follows Bhāṣyakāra closely to understand the saṃbandha, prayojana, and precise intent of the Upaniṣad.</p>
+
+    <h2>What is the Sureśvara Vārtika?</h2>
+    <p>Sureśvarācārya's Vārtika expands the Bhāṣya in metrical form. Swamiji uses Vārtikakāra's verses to bring out additional reasons for this brāhmaṇa and to remove possible misunderstandings.</p>
+
+    <h2>The Maitreyī Brāhmaṇa — 2.4</h2>
+    <p>The section opens with Yājñavalkya preparing to leave gārhasthya and take saṃnyāsa. He calls Maitreyī, speaks of dividing the wealth, and she asks whether wealth can give amṛtatva. Her response becomes the doorway to the teaching: if wealth cannot give immortality, she asks for what Yājñavalkya knows.</p>
+
+    <h2>The Central Question of Amṛtatva</h2>
+    <p>Swamiji explains that amṛtatva here is mokṣa, freedom from all sense of lack. Vitta can support a comfortable life and karma, but there is not even āśā for amṛtatva through vitta-sādhya karma. Jñānam alone is presented as the means.</p>
+
+    <h2>Structure of the Teaching</h2>
+    <p>The teaching proceeds through Bhāṣyakāra's saṃbandha-bhāṣya, the mantras, the bhāṣyam, and the Vārtika verses. Swamiji shows why the story is not incidental: it prepares the mind through vairāgya and then points to ātmā vā are draṣṭavyaḥ.</p>
+  </div>
+</BaseLayout>

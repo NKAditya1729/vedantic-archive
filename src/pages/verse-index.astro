@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const classes = (await getCollection('classes'))
+  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
+  .sort((a, b) => a.data.class_number - b.data.class_number);
+
+function stripHtml(html: string) {
+  return html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+}
+function classHref(cls: any) {
+  return `${import.meta.env.BASE_URL}/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`;
+}
+const mantras = [];
+const vartikas = [];
+for (const cls of classes) {
+  const text = stripHtml(cls.data.source_text_content || '');
+  const refs = [...new Set((text.match(/2-4-\d+|2\.4\.\d+/g) || []).map(r => r.replace(/-/g, '.')))];
+  for (const ref of refs) {
+    const idx = text.indexOf(ref.replace(/\./g, '-')) >= 0 ? text.indexOf(ref.replace(/\./g, '-')) : text.indexOf(ref);
+    const firstWords = text.slice(Math.max(0, idx - 140), idx).split(/\s+/).slice(-5).join(' ');
+    mantras.push({ ref, firstWords: firstWords || cls.data.source_ref, cls });
+  }
+  const bvRefs = [...new Set(text.match(/BV\s*2\.4\.\d+|\|\|\s*\d+\s*\|\|/g) || [])];
+  for (const ref of bvRefs) {
+    const clean = ref.startsWith('BV') ? ref : `BV ${ref.replace(/[|]/g, '').trim()}`;
+    const idx = text.indexOf(ref);
+    const firstWords = text.slice(Math.max(0, idx - 120), idx).split(/\s+/).slice(-5).join(' ');
+    vartikas.push({ ref: clean, firstWords, cls });
+  }
+}
+---
+
+<BaseLayout title="Verse Index — Maitreyī Brāhmaṇa" description="Index of mantras and Vārtika verses covered in the class notes.">
+  <div class="container container--wide page-pad">
+    <h1>Verse Index — Maitreyī Brāhmaṇa (2.4)</h1>
+
+    <h2>Mantras</h2>
+    <table class="index-table">
+      <thead><tr><th>Mantra Reference</th><th>First Words</th><th>Class</th></tr></thead>
+      <tbody>
+        {mantras.map(item => (
+          <tr>
+            <td><a href={classHref(item.cls)}>{item.ref}</a></td>
+            <td>{item.firstWords}</td>
+            <td>Class {item.cls.data.class_number}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>Vārtika Verses</h2>
+    <table class="index-table">
+      <thead><tr><th>BV Reference</th><th>First Words</th><th>Class</th></tr></thead>
+      <tbody>
+        {vartikas.map(item => (
+          <tr>
+            <td><a href={classHref(item.cls)}>{item.ref}</a></td>
+            <td>{item.firstWords}</td>
+            <td>Class {item.cls.data.class_number}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>

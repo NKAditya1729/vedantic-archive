@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import ClassNav from '../../components/ClassNav.astro';
+import SourceTextFloat from '../../components/SourceTextFloat.astro';
 import { getCollection, render } from 'astro:content';
-import audioManifest from '../../content/audio_manifest.json';
 
 // Generate all class page routes
 export async function getStaticPaths() {
@@ -67,9 +67,6 @@ export async function getStaticPaths() {
 const { devEntry, iastEntry, prevClass, nextClass } = Astro.props;
 const data = iastEntry.data;
 
-const classId = `${data.series}.${data.adhyaya}-${data.brahmana}.class-${String(data.class_number).padStart(2, '0')}`;
-const audioInfo = audioManifest[classId] || null;
-
 // Render markdown content
 const { Content: IastContent } = await render(iastEntry);
 const devResult = devEntry ? await render(devEntry) : null;
@@ -84,14 +81,42 @@ function classUrl(cls: any) {
   return `${import.meta.env.BASE_URL}/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`;
 }
 
+function extractVideoId(url: string) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes('youtu.be')) return parsed.pathname.replace('/', '');
+    return parsed.searchParams.get('v') || '';
+  } catch {
+    const match = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{6,})/);
+    return match?.[1] || '';
+  }
+}
+
+function usableAudioUrl(url?: string) {
+  if (!url) return '';
+  if (url.startsWith('INTERNET_ARCHIVE') || url.startsWith('PENDING_INTERNET_ARCHIVE')) return '';
+  if (url.startsWith('/')) return `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}${url.replace(/^\//, '')}`;
+  return url;
+}
+
 const prevLink = prevClass ? { label: `Class ${prevClass.data.class_number}`, href: classUrl(prevClass) } : undefined;
 const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, href: classUrl(nextClass) } : undefined;
+const canonicalURL = new URL(`${import.meta.env.BASE_URL}/brhadaranyaka/${data.adhyaya}-${data.brahmana}/class-${String(data.class_number).padStart(2, '0')}/`, Astro.site || Astro.url.origin).toString();
+const classMetaTitle = `${data.brahmana_name} — Class ${data.class_number} | Vedāntic Study Archive`;
+const audioUrl = usableAudioUrl(data.audio_url);
+const videoId = data.video_url ? extractVideoId(data.video_url) : '';
 ---
 
 <BaseLayout
   title={`${data.brahmana_name} — Class ${data.class_number}`}
   description={data.coverage}
+  canonicalURL={canonicalURL}
+  ogTitle={classMetaTitle}
+  ogDescription={data.coverage}
+  ogType="article"
+  ogUrl={canonicalURL}
 >
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
   <article class="container" style="padding-top: 2rem; padding-bottom: 2rem;" data-pagefind-body>
     <Breadcrumb items={[
       { label: 'Home', href: `${import.meta.env.BASE_URL}/` },
@@ -116,35 +141,34 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       <div class="class-metadata text-xs meta" style="margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
         <div><strong>Status:</strong> Audio-reviewed and Editor-corrected</div>
         <div><strong>Version:</strong> 1.0</div>
-        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedantic Study Archive - ${data.brahmana_name} Class ${data.class_number}`}>Report Error / Feedback</a></div>
+        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive - ${data.brahmana_name} Class ${data.class_number}`}>Report Error / Feedback</a></div>
       </div>
     </header>
 
+    {videoId && (
+      <div class="video-embed" style="margin-bottom: 2rem;">
+        <strong style="display:block; margin-bottom:0.5rem; font-size:0.875rem;">Watch Class Video</strong>
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}`}
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          />
+        </div>
+      </div>
+    )}
+
     <!-- Audio Player -->
-    {audioInfo && audioInfo.localPath && (
+    {audioUrl && (
       <div class="audio-player" style="margin-bottom: 2rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
         <strong style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem;">Listen to Class Audio</strong>
-        <audio controls src={`${import.meta.env.BASE_URL}${audioInfo.localPath}`} style="width: 100%;">
+        <audio controls src={audioUrl} style="width: 100%;">
           Your browser does not support the audio element.
         </audio>
       </div>
     )}
-
-
-
-    <!-- Class Resources (Moved above notes) -->
-    <div class="class-resources" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-      {data.video_url && (
-        <a href={data.video_url} class="audio-link" target="_blank" rel="noopener noreferrer">
-          📺 Watch class video on YouTube
-        </a>
-      )}
-      {data.materials_url && (
-        <a href={data.materials_url} class="audio-link" target="_blank" rel="noopener noreferrer">
-          📄 View class materials (PDF)
-        </a>
-      )}
-    </div>
 
     <!-- Script Toggle -->
     <div class="script-toggle" role="tablist" aria-label="Script selection">
@@ -188,9 +212,7 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
             
             {iastEntry.data.source_text_content && (
               <div class="source-text-block" style="background: var(--surface-1); border: 1px solid var(--border-color); padding: 1.5rem; border-left: 4px solid var(--primary-color); border-radius: 4px; font-size: 1.1rem; line-height: 1.8;">
-                {iastEntry.data.source_text_content.split('<br>').map((line: string) => (
-                  <p style="margin-bottom: 0.5rem;">{line}</p>
-                ))}
+                <div set:html={iastEntry.data.source_text_content} />
               </div>
             )}
             {iastEntry.data.related_verses && (
@@ -222,9 +244,7 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
               
               {devEntry.data.source_text_content && (
                 <div class="source-text-block" style="background: var(--surface-1); border: 1px solid var(--border-color); padding: 1.5rem; border-left: 4px solid var(--primary-color); border-radius: 4px; font-size: 1.1rem; line-height: 1.8;">
-                  {devEntry.data.source_text_content.split('<br>').map((line: string) => (
-                    <p style="margin-bottom: 0.5rem;">{line}</p>
-                  ))}
+                  <div set:html={devEntry.data.source_text_content} />
                 </div>
               )}
               {devEntry.data.related_verses && (
@@ -246,7 +266,12 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
       next={nextLink}
       backLabel={`${data.adhyaya}.${data.brahmana} ${data.brahmana_name}`}
       backHref={`${import.meta.env.BASE_URL}/brhadaranyaka/`}
-      audioUrl={data.video_url || data.audio_url || undefined}
+      audioUrl={data.video_url || audioUrl || undefined}
+    />
+
+    <SourceTextFloat
+      iastSourceText={iastEntry.data.source_text_content}
+      devSourceText={devEntry?.data.source_text_content}
     />
 
     <!-- Last updated -->
@@ -297,6 +322,18 @@ const nextLink = nextClass ? { label: `Class ${nextClass.data.class_number}`, hr
     // Initialize scripts
     document.addEventListener('DOMContentLoaded', () => {
       initScriptToggle();
+
+      const progress = document.getElementById('reading-progress');
+      if (progress) {
+        const updateProgress = () => {
+          const doc = document.documentElement;
+          const max = doc.scrollHeight - doc.clientHeight;
+          const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+          progress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+        };
+        updateProgress();
+        document.addEventListener('scroll', updateProgress, { passive: true });
+      }
     });
   </script>
 </BaseLayout>

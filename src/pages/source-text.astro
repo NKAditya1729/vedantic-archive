@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allClasses = await getCollection('classes');
+const iastClasses = allClasses
+  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
+  .sort((a, b) => a.data.class_number - b.data.class_number);
+const devClasses = allClasses
+  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'devanagari')
+  .sort((a, b) => a.data.class_number - b.data.class_number);
+const latest = iastClasses[iastClasses.length - 1];
+---
+
+<BaseLayout title="Source Text Covered" description="Source text covered in the Maitreyī Brāhmaṇa classes so far.">
+  <div class="container container--wide page-pad">
+    <h1>Source Text Covered — Maitreyī Brāhmaṇa (2.4)</h1>
+    <p class="meta">Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya and Sureśvara Vārtika</p>
+    {latest && <p>This page reflects text covered through Class {latest.data.class_number}. Last updated: {latest.data.date}.</p>}
+
+    <div class="script-toggle" role="tablist" aria-label="Script selection">
+      <button class="script-toggle__btn is-active" role="tab" aria-selected="true" aria-controls="source-iast" id="source-tab-iast" data-script="iast">IAST</button>
+      <button class="script-toggle__btn" role="tab" aria-selected="false" aria-controls="source-devanagari" id="source-tab-devanagari" data-script="devanagari">Devanagari</button>
+    </div>
+
+    <section class="script-panel is-visible" id="source-iast" role="tabpanel" aria-labelledby="source-tab-iast">
+      {iastClasses.map(cls => (
+        <article class="source-class-section">
+          <h2>Class {cls.data.class_number}</h2>
+          <div set:html={cls.data.source_text_content} />
+        </article>
+      ))}
+    </section>
+
+    <section class="script-panel devanagari" id="source-devanagari" role="tabpanel" aria-labelledby="source-tab-devanagari" lang="sa">
+      {devClasses.map(cls => (
+        <article class="source-class-section">
+          <h2>Class {cls.data.class_number}</h2>
+          <div set:html={cls.data.source_text_content} />
+        </article>
+      ))}
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.script-toggle__btn');
+      const panels = document.querySelectorAll('.script-panel');
+      function setActive(script) {
+        tabs.forEach(tab => {
+          const active = tab.getAttribute('data-script') === script;
+          tab.classList.toggle('is-active', active);
+          tab.setAttribute('aria-selected', String(active));
+        });
+        panels.forEach(panel => panel.classList.toggle('is-visible', panel.id.endsWith(script)));
+        localStorage.setItem('preferred-script', script);
+      }
+      setActive(localStorage.getItem('preferred-script') || 'iast');
+      tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.getAttribute('data-script') || 'iast')));
+    });
+  </script>
+</BaseLayout>

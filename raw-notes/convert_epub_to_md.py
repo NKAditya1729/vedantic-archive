@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Convert EPUB XHTML class notes to Markdown for the Vedantic Study Archive.
+Convert EPUB XHTML class notes to Markdown for the Vedāntic Study Archive.
 
 Key insight from analyzing the EPUBs:
 - Class 1: prayers = p2 (no spans), teaching = p3 (with c1/c2 spans)

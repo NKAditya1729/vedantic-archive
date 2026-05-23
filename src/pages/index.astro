@@ -11,6 +11,15 @@ const latestDate = iastClasses
   .map(c => c.data.date)
   .sort()
   .reverse()[0];
+const latestClasses = [...iastClasses]
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
+const mantraRefs = new Set(
+  iastClasses
+    .flatMap(c => (c.data.source_ref || '').match(/(?:Bṛhad\\.\\s*)?2[.-]4[.-]\\d+/g) || [])
+    .map(ref => ref.replace('Bṛhad.', '').trim().replace(/-/g, '.'))
+);
+const teachingHours = Math.round(totalClasses * 1.5);
 
 // Group by series
 const seriesMap = new Map();
@@ -36,7 +45,7 @@ const series = Array.from(seriesMap.values());
 
     <!-- About section -->
     <section class="page-section">
-      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Vedantic Study Archive</h1>
+      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Vedāntic Study Archive</h1>
       <p class="meta" style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-size: 1.0625rem; font-style: italic; color: var(--text-secondary);">
         शास्त्रयोनित्वात् — "Because Brahman is known through the śāstra"
       </p>
@@ -63,9 +72,29 @@ const series = Array.from(seriesMap.values());
         Each class is available in both <strong>Devanagari</strong> script and <strong>IAST</strong> (Roman with diacritics), and can be toggled at any time.
       </p>
       <p style="margin-top: 0.75rem;">
+        <a href={`${import.meta.env.BASE_URL}/how-to-use/`}>How to use this archive →</a>
+      </p>
+      <p style="margin-top: 0.75rem;">
         <a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a> ·
         <a href="https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA" target="_blank" rel="noopener noreferrer">📄 Class Materials (Google Drive)</a>
       </p>
+    </section>
+
+    <section class="page-section">
+      <div class="stats-grid" aria-label="Archive statistics">
+        <div class="stat-box">
+          <span class="stat-box__value">{totalClasses}</span>
+          <span class="stat-box__label">Classes completed</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__value">{mantraRefs.size}</span>
+          <span class="stat-box__label">Mantras covered</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__value">approx. {teachingHours}</span>
+          <span class="stat-box__label">Teaching hours</span>
+        </div>
+      </div>
     </section>
 
     <!-- Series listing -->
@@ -91,7 +120,7 @@ const series = Array.from(seriesMap.values());
     <section class="page-section">
       <h2 class="page-section__heading">Latest Updates</h2>
       <ul style="list-style: none; padding: 0;">
-        {iastClasses.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 3).map(cls => (
+        {latestClasses.map(cls => (
           <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
             <a href={`${import.meta.env.BASE_URL}/${cls.data.series}/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`} style="text-decoration: none;">
               <strong>{cls.data.brahmana_name} — Class {cls.data.class_number}</strong>

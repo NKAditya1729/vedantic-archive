@@ -11,7 +11,7 @@ slide = prs.slides.add_slide(slide_layout)
 title = slide.shapes.title
 subtitle = slide.placeholders[1]
 
-title.text = "Vedantic Study Archive"
+title.text = "Vedāntic Study Archive"
 subtitle.text = "A repository of Vedāntic study materials\nFeaturing Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya"
 
 # Slide 2: Platform Overview

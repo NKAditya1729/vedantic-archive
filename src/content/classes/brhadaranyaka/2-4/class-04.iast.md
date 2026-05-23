@@ -6,28 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
 date: "2026-04-30"
-coverage: "Continuation of the introduction; role of ākhyāyikā (story) in śruti as a teaching device; saṁnyāsa is not the cause of mokṣa but a facilitator of jñānam — jñānādeva kaivalyam; vairāgya arises naturally from understanding, not from a śāstric injunction (vidhiśāstra); if freedom depends on saṁnyāsa, it becomes puruṣatantram; the distinction between vidvat-saṁnyāsa and vividiṣā-saṁnyāsa."
-audio_url: ""
+coverage: "Ākhyāyikā in śruti as teaching device; saṃnyāsa as facilitator, not cause, of mokṣa; jñānādeva kaivalyam; vairāgya and vidhiśāstra; freedom not puruṣatantram; vidvat-saṃnyāsa and vividiṣā-saṃnyāsa."
+audio_url: "/assets/audio/Brhad_2-4_Class_04.mp3"
 video_url: "https://www.youtube.com/watch?v=OiJLJWK-XhI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: iast
-source_text_content: "maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā | karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — ‘brahma taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ‘kṣatraṃ taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||
- 
-ātmetyeveti sūtrasya vyākhyeyaṃ prastutā sphuṭā ||
-brahma te'haṃ bravāṇīti prārabhyā''pūrṇavākyataḥ || BV 2.4.1 ||
-nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān ||
-niḥśeṣakarmahetūtthaphalasāvadyadhīstataḥ || BV 2.4.2 ||
-virakta āgrajātso'yaṃ tatsāvadyasamīkṣaṇāt ||
-saṃsāraduḥkhasaṃskārasmṛtibhiḥ preryamāṇadhīḥ || BV 2.4.3 ||
-udbhūtatajjihāsaḥ saṃstaddhāne sādhanaspṛhaḥ ||
-tyaktāśeṣaiṣaṇaḥ so'tha pratyagyāthātmyaniścayaḥ || BV 2.4.4 ||
-vastuvṛttātmasaṃbodhadhvastasaṃsārakāraṇaḥ ||
-vyāviddhāśeṣasaṃsāro vimukto nā vimucyate || BV 2.4.5 ||
-yāvatkiṃcidavidyāyāḥ kāryaṃ vairāgyakāraṇam ||
-tatsaṃnyāso viraktatvātsvata eva na śāstrataḥ || BV 2.4.6 ||
-brahmayāthātmyavijñānasādhanatvaṃ vinā''gamāt ||
-saṃnyāsasya na vijñātaṃ tacchāstreṇeha bodhyate || BV 2.4.7 ||"
-source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā | karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — ‘brahma taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ‘kṣatraṃ taṃ parādāt’ (bṛ. u. 2 | 4 | 6) ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||</p>
+  </div>
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
 ---
 

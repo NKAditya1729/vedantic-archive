@@ -6,25 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 3
 date: "2026-04-27"
-coverage: "Continued discussion on the purpose of the Maitreyī Brāhmaṇa; saṁnyāsa debate — Janaka did not take saṁnyāsa yet was a jīvanmukta; Vārtikakāra's perspective; vitta-nindā — censuring attachment to wealth as a means; varṇāśrama-vyavasthā-nindā — you don't belong to any varṇa in reality; discussion on women and karma-saṁnyāsa; karma-saṁnyāsa as the subject matter of this section."
-audio_url: ""
+coverage: "Purpose of the Maitreyī Brāhmaṇa; saṃnyāsa debate and Janaka as jīvanmukta; Vārtikakāra's perspective; vitta-nindā; varṇāśrama-vyavasthā-nindā; women and karma-saṃnyāsa."
+audio_url: "/assets/audio/Brhad_2-4_Class_03.mp3"
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: iast
-source_text_content: "kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |
-
-‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca |
-
-kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||
-
-etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —
-
-‘karmaṇā badhyate janturvidyayā ca vimucyate |
-
-tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)
-
-ityevamādi — virodhaḥ pradarśitaḥ | tasmāt na sādhanāntara-sahitā brahmavidyā puruṣārtha-sādhanam , sarvavirodhāt , sādhananirapekṣaiva puruṣārthasādhanam — iti pārivrājyaṃ sarvasādhana-sannyāsa-lakṣaṇam aṅgatvena vidhitsyate ; etāvadeva amṛtatva-sādhanamityavadhāraṇāt , ṣaṣṭhasamāptau, liṅgācca — karmī sanyājñavalkyaḥ pravavrājeti | maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā |"
-source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — ‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22) ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
+  </div>
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
 ---
 

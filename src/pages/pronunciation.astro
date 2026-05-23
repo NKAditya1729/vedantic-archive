@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const groups = [
+  { title: 'Vowels', rows: [['अ','a','(but)'],['आ','ā','(father)'],['इ','i','(it)'],['ई','ī','(beat)'],['उ','u','(ull)'],['ऊ','ū','(pool)'],['ऋ','ṛ','(rhythm)'],['ॠ','ṝ','(marine)'],['ऌ','ḷ','(revelry)'],['ए','e','(play)'],['ऐ','ai','(aisle)'],['ओ','o','(go)'],['औ','au','(loud)']] },
+  { title: 'Guttural (pronounced from throat)', rows: [['क','ka','(seek)'],['ख','kha','(blockhead)*'],['ग','ga','(get)'],['घ','gha','(log hut)*'],['ङ','ṅa','(sing)']] },
+  { title: 'Palatal (pronounced from palate)', rows: [['च','ca','(chunk)'],['छ','cha','(catch him)*'],['ज','ja','(jump)'],['झ','jha','(hedgehog)*'],['ञ','ña','(bunch)']] },
+  { title: 'Lingual (pronounced from cerebrum)', rows: [['ट','ṭa','(true)*'],['ठ','ṭha','(anthill)*'],['ड','ḍa','(drum)*'],['ढ','ḍha','(godhead)*'],['ण','ṇa','(under)*']] },
+  { title: 'Dental (pronounced from teeth)', rows: [['त','ta','(path)*'],['थ','tha','(thunder)*'],['द','da','(that)*'],['ध','dha','(breathe)*'],['न','na','(nut)*']] },
+  { title: 'Labial (pronounced from lips)', rows: [['प','pa','(put)'],['फ','pha','(loophole)*'],['ब','ba','(bin)'],['भ','bha','(abhor)*'],['म','ma','(much)']] },
+  { title: 'Semi-vowels and Sibilants', rows: [['य','ya','(loyal)'],['र','ra','(red)'],['ल','la','(luck)'],['व','va','(vase)'],['श','śa','(sure)'],['ष','ṣa','(shun)'],['स','sa','(so)'],['ह','ha','(hum)']] },
+  { title: 'Special Characters', rows: [['·','ṁ','anusvāra — nasalisation of preceding vowel'],['ः','ḥ','visarga — aspiration of preceding vowel'],['*','—','No exact English equivalents for these letters']] },
+];
+---
+
+<BaseLayout title="Pronunciation Guide" description="Key to transliteration and pronunciation of Sanskrit letters.">
+  <div class="container container--wide page-pad">
+    <h1>Key to Transliteration and Pronunciation of Sanskrit Letters</h1>
+    <p>Sanskrit is a highly phonetic language and hence accuracy in articulation of the letters is important. For those unfamiliar with the Devanāgari script, the international transliteration is a guide to the proper pronunciation of Sanskrit letters.</p>
+
+    <table class="pronunciation-table">
+      <thead>
+        <tr><th>Devanagari character</th><th>IAST transliteration</th><th>English pronunciation example</th></tr>
+      </thead>
+      <tbody>
+        {groups.map(group => (
+          <>
+            <tr class="pronunciation-table__group"><th colspan="3">{group.title}</th></tr>
+            {group.rows.map(row => (
+              <tr>
+                <td class="dev-char" data-label="Devanagari">{row[0]}</td>
+                <td data-label="IAST">{row[1]}</td>
+                <td data-label="Example">{row[2]}</td>
+              </tr>
+            ))}
+          </>
+        ))}
+      </tbody>
+    </table>
+
+    <p class="meta">The 5th letter of each of the above groups — called nasals — are also pronounced nasally.</p>
+
+    <h2>Mouth Position Reference</h2>
+    <table class="compact-table">
+      <tbody>
+        <tr><td>1. Guttural</td><td>Pronounced from throat</td></tr>
+        <tr><td>2. Palatal</td><td>Pronounced from palate</td></tr>
+        <tr><td>3. Lingual</td><td>Pronounced from cerebrum</td></tr>
+        <tr><td>4. Dental</td><td>Pronounced from teeth</td></tr>
+        <tr><td>5. Labial</td><td>Pronounced from lips</td></tr>
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>

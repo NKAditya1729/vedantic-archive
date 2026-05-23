@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Devanagari → IAST transliteration for the Vedantic Study Archive.
+Devanagari → IAST transliteration for the Vedāntic Study Archive.
 
 Converts Devanagari text to IAST (International Alphabet of Sanskrit Transliteration).
 Used to generate .iast.md files from .dev.md files.

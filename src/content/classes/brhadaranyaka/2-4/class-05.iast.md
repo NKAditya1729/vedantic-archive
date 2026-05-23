@@ -6,30 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
 date: "2026-05-04"
-coverage: "Why another brāhmaṇa after neti neti? Vārtikakāra Sureśvara's additional reasons; recap of mūrta-amūrta brāhmaṇa — brahman is neither mūrta nor amūrta; the problem is a reality problem — one reality appears as many; resolving adhyāsa; a Sanskrit-free overview class connecting all the threads of the introduction."
-audio_url: ""
+coverage: "Why another brāhmaṇa after neti neti; Vārtikakāra Sureśvara's additional reasons; mūrta-amūrta brāhmaṇa recap; brahman neither mūrta nor amūrta; one reality appearing as many; adhyāsa and the introduction's threads."
+audio_url: "/assets/audio/Brhad_2-4_Class_05.mp3"
 video_url: "https://www.youtube.com/watch?v=TnVE-AXUz8A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: iast
-source_text_content: "tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt ||
-niṣiddhaṃ neti netīti mūrtāmūrtādi vastu yat || BV 2.4.9 ||
-kiṃ tadbrahmānugaṃ sarvaṃ kiṃ vā tasmādvivicyate ||
-yadi brahmānugaṃ brahma syādanarthātmakaṃ tadā || BV 2.4.10 ||
-abhāvaniṣṭaṃ taccetsyānmukhyaṃ brahma na sidhyati ||
-abhāvasya tato'nyatvādanvayavyatirekataḥ || BV 2.4.11 ||
-netītyapi niṣedhoktistathā sati virudhyate ||
-vaidikaśca prayāso'yaṃ sarvaḥ syāttuṣakaṇḍanam || BV 2.4.12 ||
-vivicyate brahmaṇaścenmaivaṃ doṣastathā'pi hi ||
-brahmatvaṃ brahmaṇo na syādvitīye sati vastuni || BV 2.4.13 ||
-avyāvṛttānanugataṃ vastu brahmatvamaśnute ||
-etacca durlabhaṃ tasya dvitīye sati lakṣaṇam || BV 2.4.14 ||
-anvayādiniṣedhāya sarvamātmeti vākyataḥ ||
-maitreyāītyādiko granthastasmādārabhyate paraḥ || BV 2.4.18 ||
-sarvābrahmaniṣedhena tadartho veha niścitaḥ ||
-tasya saṃsiddhiviṣayamaikātmyamadhunotyate || BV 2.4.19 ||
-netīti brahmaṇo'nyatra mūrtāmūrtavyavasthitau ||
-prasakte sāṃkhyasiddhānte sarvamātmeti vocyate || BV 2.4.20 ||"
-source_ref: "Bṛhad. 2.4 sambandha-bhāṣya (contd.)"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="src-bhashyam">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt ||</p>
+  </div>
+source_ref: "Bṛhad. 2.4 sambandha-bhāṣya"
 related_verses: ""
 ---
 

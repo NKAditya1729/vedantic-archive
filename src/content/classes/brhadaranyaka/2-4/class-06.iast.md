@@ -6,22 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 6
 date: "2026-05-07"
-coverage: "Introduction to the maitreyī brāhmaṇa; establishing the importance of saṃnyāsa for both gain and abidance in knowledge; perspectives from bhāṣyakāra (Śaṅkara) and vārtikakāra (Sureśvara) on the negation of the sāṅkhya view of neti neti; the symmetrical equation: starting with brahman to find ātmā (2.1) vs. starting with ātmā to find brahman (2.4); story of yājñavalkya departing from gārhasthya to pārivrajya; grammatical analysis of mantra 2.4.1, specifically the vocative (sambodhana) forms and future participles (udyāsyan); the division of wealth (vitta) and its limitation; maitreyī’s inquiry into the impossibility of attaining amṛtatva through wealth; standardizing human happiness via comparison with taittirīya-ānanda-mīmāṃsā and the state of arjuna in the bhagavadgītā (2.8)."
-audio_url: ""
+coverage: "Entry into Maitreyī Brāhmaṇa; saṃnyāsa for gain and abidance in jñānam; Śaṅkara and Sureśvara on Sāṅkhya reading of neti neti; brahman-to-ātmā and ātmā-to-brahman equation; Yājñavalkya's departure to pārivrājya; 2.4.1 and 2.4.2 with vitta and amṛtatva."
+audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
 video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: iast
-source_text_content: "Bṛhadāraṇyaka Upaniṣad 2.4.1
-Mantra (Kaṇḍikā):
-maitreyīti hovāca yājñavalkya ; udyāsyanvā are'hamasmātsthānādasmi; hanta te'nayā kātyāyanyāntaṃ karavāṇīti || 2-4-1 ||
-Bhāṣyam:
-maitreyīti hovāca yājñavalkyaḥ — maitreyīṃ svabhāryāmāmantritavān yājñavalkyo nāma ṛṣiḥ ; udyāsyan ūrdhvaṃ yāsyan pārivrājyākhyamāśramāntaram vai ; ‘are’ iti sambodhanam ; aham , asmāt gārhasthyāt , sthānāt āśramāt , ūrdhvaṃ gantumicchan asmi bhavāmi ; ataḥ hanta anumatiṃ prārthayāmi te tava ; kiñcānyat — te tava anayā dvitīyayā bhāryayā kātyāyanyā antaṃ vicchedaṃ karavāṇi ; patidvāreṇa yuvayormayā sambadhyamānayoryaḥ sambandha āsīt , tasya sambandhasya vicchedaṃ karavāṇi dravyavibhāgaṃ kṛtvā ; vittena saṃvibhajya yuvāṃ gamiṣyāmi ||
-Bṛhadāraṇyaka Upaniṣad 2.4.2
-Mantra (Kaṇḍikā):
-sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||
-Bhāṣyam:
-sā evamuktā ha uvāca — yat yadi, ‘nu’ iti vitarke, me mama iyaṃ pṛthivī, bhagoḥ bhagavan , sarvā sāgaraparikṣiptā vittena dhanena pūrṇā syāt ; katham ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ ."
-source_ref: "Bṛhad. 2-4-1, 2-4-2"
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: Bṛhad. 2.4.1, 2.4.2</p>
+    <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+    <p class="source-ref-line">Bṛhadāraṇyaka Upaniṣad 2.4.1</p>
+  </div>
+source_ref: "Bṛhad. 2.4.1, 2.4.2"
 related_verses: ""
 ---
 

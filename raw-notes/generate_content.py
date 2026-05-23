@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate final content files for the Vedantic Study Archive.
+Generate final content files for the Vedāntic Study Archive.
 Creates 10 files: 5 .dev.md + 5 .iast.md in the Astro content directory.
 """
 

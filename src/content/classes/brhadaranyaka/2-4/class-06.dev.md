@@ -6,22 +6,18 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 6
 date: "2026-05-07"
-coverage: "Introduction to the मैत्रेयी ब्राह्मण; establishng the importance of संन्यास for both gain and abidance in knowledge; perspectives from भाष्यकार (Śaṅkara) and वार्तिककार (Sureśvara) on the negation of the साङ्ख्य view of नेति नेति; the symmetrical equation: starting with ब्रह्मन् to find आत्मा (2.1) vs. starting with आत्मा to find ब्रह्मन् (2.4); story of याज्ञवल्क्य departing from गार्हस्थ्य to पारिव्रज्य; grammatical analysis of मन्त्र 2.4.1, specifically the vocative (सम्बोधन) forms and future participles (उद्यास्यन्); the division of wealth (वित्त) and its limitation; मैत्रेयी’s inquiry into the impossibility of attaining अमृतत्व through wealth; standardizing human happiness via comparison with तैत्तिरीय-आनन्द-मीमांसा and the state of अर्जुन in the भगवद्गीता (2.8)."
-audio_url: ""
+coverage: "Entry into मैत्रेयीब्राह्मण; संन्यास for gain and abidance in ज्ञानम्; शङ्कर and सुरेश्वर on साङ्ख्य reading of नेति नेति; ब्रह्मन्-to-आत्मा and आत्मा-to-ब्रह्मन् equation; याज्ञवल्क्य's departure to पारिव्राज्य; २.४.१ and २.४.२ with वित्त and अमृतत्व."
+audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
 video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn&index=1"
-materials_url: "https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA"
+materials_url: ""
 script: devanagari
-source_text_content: "बृहदारण्यक उपनिषद् २-४-१
-मन्त्र (कण्डिका):
-मैत्रेयीति होवाच याज्ञवल्क्य ; उद्यास्यन्वा अरेऽहमस्मात्स्थानादस्मि; हन्त तेऽनया कात्यायन्यान्तं करवाणीति ॥ २-४-१ ॥
-भाष्यम्:
-मैत्रेयीति होवाच याज्ञवल्क्यः — मैत्रेयीं स्वभार्यामामन्त्रितवान् याज्ञवल्क्यो नाम ऋषिः ; उद्यास्यन् ऊर्ध्वं यास्यन् पारिव्राज्याख्यमाश्रमान्तरम् वै ; ‘अरे’ इति सम्बोधनम् ; अहम् , अस्मात् गार्हस्थ्यात् , स्थानात् आश्रमात् , ऊर्ध्वं गन्तुमिच्छन् अस्मि भवामि ; अतः हन्त अनुमतिं प्रार्थयामि ते तव ; किञ्चान्यत् — ते तव अनया द्वितीयया भार्यया कात्यायन्या अन्तं विच्छेदं करवाणि ; पतिद्वारेण युवयोर्मया सम्बध्यमानयोर्यः सम्बन्ध आसीत् , तस्य सम्बन्धस्य विच्छेदं करवाणि द्रव्यविभागं कृत्वा ; वित्तेन संविभज्य युवां गमिष्यामि ॥
-बृहदारण्यक उपनिषद् २-४-२
-मन्त्र (कण्डिका):
-सा होवाच मैत्रेयी । यन्नु म इयं भगोः सर्वा पृथिवी वित्तेन पूर्णा स्यात्कथं तेनामृता स्यामिति ; नेति होवाच याज्ञवल्क्यो ; यथैवोपकरणवतां जीवितं तथैव ते जीवितं स्याद् ; अमृतत्वस्य तु नाशास्ति वित्तेनेति ॥ २-४-२ ॥
-भाष्यम्:
-सा एवमुक्ता ह उवाच — यत् यदि, ‘नु’ इति वितर्के, मे मम इयं पृथिवी, भगोः भगवन् , सर्वा सागरपरिक्षिप्ता वित्तेन धनेन पूर्णा स्यात् ; कथम् ? न कथञ्चनेत्याक्षेपार्थः, प्रश्नार्थो वा, तेन पृथिवीपूर्णवित्तसाध्येन कर्मणा अग्निहोत्रादिना — अमृता किं स्यामिति व्यवहितेन सम्बन्धः ।"
-source_ref: "बृहद् २-४-१, २-४-२ "
+source_text_content: |
+  <div class="source-text-structured">
+    <p class="source-ref-line">Covered: बृहद् २.४.१, २.४.२</p>
+    <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+    <p class="src-bhashyam">बृहदारण्यक उपनिषद् २-४-१</p>
+  </div>
+source_ref: "बृहद् २.४.१, २.४.२"
 related_verses: ""
 ---
 

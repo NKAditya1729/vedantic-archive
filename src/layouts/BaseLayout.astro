@@ -3,10 +3,25 @@ interface Props {
   title: string;
   description?: string;
   canonicalURL?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogUrl?: string;
 }
 
-const { title, description = 'An archive of Vedāntic class notes — Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya', canonicalURL } = Astro.props;
-const fullTitle = title ? `${title} — Vedantic Study Archive` : 'Vedantic Study Archive';
+const {
+  title,
+  description = 'An archive of Vedāntic class notes — Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya',
+  canonicalURL,
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogUrl,
+} = Astro.props;
+const siteName = 'Vedāntic Study Archive';
+const fullTitle = title ? `${title} — ${siteName}` : siteName;
+const metaTitle = ogTitle || fullTitle;
+const metaDescription = ogDescription || description;
 
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
@@ -23,7 +38,7 @@ import '../styles/print.css';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
-  <meta name="description" content={description} />
+  <meta name="description" content={metaDescription} />
 
   <!-- Prevent flash of wrong theme -->
   <script is:inline>
@@ -49,14 +64,15 @@ import '../styles/print.css';
   <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
-  
-  <title>{title ? `${title} | Vedantic Study Archive` : 'Vedantic Study Archive'}</title>
-  <meta name="description" content={description || "A repository of Vedāntic study materials, classes, and transliterated notes."} />
-  
+
   <!-- SEO -->
-  <meta property="og:title" content={title ? `${title} | Vedantic Study Archive` : 'Vedantic Study Archive'} />
-  <meta property="og:description" content={description || "A repository of Vedāntic study materials, classes, and transliterated notes."} />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:description" content={metaDescription} />
+  <meta property="og:type" content={ogType} />
+  {ogUrl && <meta property="og:url" content={ogUrl} />}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={metaTitle} />
+  <meta name="twitter:description" content={metaDescription} />
   
   <link rel="sitemap" href={`${import.meta.env.BASE_URL}/sitemap-index.xml`} />
 

@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  {
+    classNumber: 1,
+    date: '2026-04-20',
+    terms: [
+      ['Vidyā-sūtra (विद्यासूत्र)', 'Swamiji identifies ātmetyevopāsīta as the vidyā-sūtra and explains upāsīta here as vicāra, enquiry into ātmā with the help of āgama-vākya.'],
+      ['Avidyā-sūtra (अविद्यासूत्र)', 'Anyo\'sāvanyo\'hamasmīti is called the avidyā-sūtra: taking brahman as different and oneself as different depends on limiting oneself to the body-mind-sense complex.'],
+      ['Pāṅkta-karma (पाङ्क्तकर्म)', 'Swamiji explains pāṅkta-karma as karma involving the structure of sādhya, sādhana, kriyā, kāraka, and phala within saṃsāra.'],
+      ['Saṃnyāsa (संन्यास)', 'In this context, saṃnyāsa is presented by Bhāṣyakāra as an aṅga for brahmavidyā, showing that jāyā-putra-vittādi karma is not ātma-prāpti-sādhanam.'],
+    ],
+  },
+  {
+    classNumber: 2,
+    date: '2026-04-23',
+    terms: [
+      ['Samuccaya-niṣedha (समुच्चयनिषेध)', 'Swamiji says karma and brahma-jñāna cannot be combined as parallel means, because jñānam reveals everything as brahman.'],
+      ['Tyāga (त्याग)', 'From Gītā usage, Swamiji highlights karmaphala-tyāga: doing what is to be done without commitment to the outcome.'],
+      ['Adhikārī (अधिकारी)', 'Karma has value because it prepares the person and gives adhikāritvam; once its purpose is served, it is no longer the direct means.'],
+    ],
+  },
+  {
+    classNumber: 3,
+    date: '2026-04-27',
+    terms: [
+      ['Jīvanmukta (जीवन्मुक्त)', 'Janaka is discussed as a jīvanmukta who did not take formal saṃnyāsa, raising the question of how saṃnyāsa is to be understood.'],
+      ['Vitta-nindā (वित्तनिन्दा)', 'Swamiji presents vitta-nindā as censuring dependence on wealth as a means for amṛtatva, not denying its ordinary usefulness.'],
+      ['Karma-saṃnyāsa (कर्मसंन्यास)', 'The section is taken as dealing with karma-saṃnyāsa: giving up dependence on karma and karmaphala for freedom.'],
+    ],
+  },
+  {
+    classNumber: 4,
+    date: '2026-04-30',
+    terms: [
+      ['Ākhyāyikā (आख्यायिका)', 'The story is not decorative; Swamiji says Upaniṣad uses story to indicate something that must be understood.'],
+      ['Vidvat-saṃnyāsa (विद्वत्संन्यास)', 'Vidvat-saṃnyāsa is for one who knows; Swamiji says such a life is already saṃnyāsa in essence.'],
+      ['Vividiṣā-saṃnyāsa (विविदिषासंन्यास)', 'Vividiṣā-saṃnyāsa is for one who wants to know or gain niṣṭhā, avoiding roles that reinforce identification.'],
+    ],
+  },
+  {
+    classNumber: 5,
+    date: '2026-05-04',
+    terms: [
+      ['Mūrta (मूर्त)', 'In the mūrta-amūrta discussion, mūrta is part of the field negated by neti neti and cannot be the final nature of brahman.'],
+      ['Amūrta (अमूर्त)', 'Amūrta too is not the final truth; brahman is not captured by either mūrta or amūrta categories.'],
+      ['Adhyāsa (अध्यास)', 'Swamiji connects the problem to taking one reality as many through superimposition.'],
+    ],
+  },
+  {
+    classNumber: 6,
+    date: '2026-05-07',
+    terms: [
+      ['Pratīka (प्रतीक)', 'Swamiji explains pratīka as words of the mūlam brought into the bhāṣyam for explanation.'],
+      ['Pārivrājya (पारिव्राज्य)', 'Pārivrājya is the saṃnyāsa āśrama: the life of one who does not have a place called his own.'],
+      ['Vitta (वित्त)', 'Vitta can give economic freedom and a comfortable life, but Swamiji stresses it cannot give amṛtatva.'],
+    ],
+  },
+  {
+    classNumber: 7,
+    date: '2026-05-11',
+    terms: [
+      ['Ākṣepa (आक्षेप)', 'Katham may be taken as ākṣepārtha, a rhetorical dismissal where the answer is already known.'],
+      ['Upakaraṇavatām jīvitam (उपकरणवतां जीवितम्)', 'Swamiji explains this as the lifestyle of those endowed with resources and supports that make life comfortable.'],
+      ['Vitta-sādhya karma (वित्तसाध्य कर्म)', 'Wealth is useful as a secondary means for karma; it must be spent or used to produce any result.'],
+    ],
+  },
+  {
+    classNumber: 8,
+    date: '2026-05-14',
+    terms: [
+      ['Svābhiprāya-sampatti (स्वाभिप्रायसम्पत्ति)', 'Yājñavalkya is pleased because Maitreyī\'s understanding matches his own view that karma and wealth will not deliver mokṣa.'],
+      ['Patnī (पत्नी)', 'Swamiji explains patnī through yajñasaṃyoga: one joined through yajña for the sake of yajña.'],
+      ['Nididhyāsasva (निदिध्यासस्व)', 'Here Swamiji explains it as listening attentively, grasping the vākyārtha, and staying with the meaning.'],
+    ],
+  },
+  {
+    classNumber: 9,
+    date: '2026-05-18',
+    terms: [
+      ['Vairāgyam (वैराग्यम्)', 'Vairāgyam is not dislike; Swamiji calls it objectivity, seeing a thing as it is.'],
+      ['Puruṣārtha-viveka (पुरुषार्थविवेक)', 'The section makes one examine what one is really after, so the pursuit becomes centered on mokṣa.'],
+      ['Mumukṣutvam (मुमुक्षुत्वम्)', 'When one recognises that the pleased self is what one is really seeking, that person is a mumukṣu.'],
+    ],
+  },
+  {
+    classNumber: 10,
+    date: '2026-05-21',
+    terms: [
+      ['Ātmanas tu kāmāya (आत्मनस्तु कामाय)', 'Swamiji repeatedly explains that everything is loved for one\'s own sake, for the pleased self.'],
+      ['Rāga-dveṣa (रागद्वेष)', 'Likes and dislikes are based on what seems to make the pleased self appear or disappear.'],
+      ['Ānanda (आनन्द)', 'Swamiji distinguishes experienced happiness as an event from ānanda as what is not produced and not away from oneself.'],
+    ],
+  },
+];
+
+const terms = sections.flatMap(section => section.terms.map(term => ({ term: term[0], classNumber: section.classNumber })))
+  .sort((a, b) => a.term.localeCompare(b.term));
+function slug(term: string, classNumber: number) {
+  return `class-${classNumber}-${term.toLowerCase().replace(/[^a-z0-9āīūṛṝḷṅñṭḍṇśṣṃḥ]+/g, '-')}`;
+}
+---
+
+<BaseLayout title="Glossary" description="Sanskrit terms explained in the class notes, organised by class.">
+  <div class="container container--wide page-pad">
+    <h1>Glossary</h1>
+    <div class="glossary-index">
+      {terms.map(item => <a href={`#${slug(item.term, item.classNumber)}`}>{item.term}</a>)}
+    </div>
+
+    {sections.map(section => (
+      <section class="glossary-section">
+        <h2>Class {section.classNumber} — {section.date}</h2>
+        {section.terms.map(term => (
+          <article class="glossary-term" id={slug(term[0], section.classNumber)}>
+            <h3>{term[0]}</h3>
+            <p>{term[1]}</p>
+            <p class="meta">Class {section.classNumber}</p>
+          </article>
+        ))}
+      </section>
+    ))}
+  </div>
+</BaseLayout>

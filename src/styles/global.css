@@ -1,6 +1,6 @@
 /* ============================================================
    GLOBAL.CSS — Design tokens, reset, base styles
-   Vedantic Study Archive
+   Vedāntic Study Archive
    ============================================================ */
 
 /* --- Reset --- */
@@ -27,6 +27,7 @@ html {
   --text-secondary: #6b5e4d;
   --text-tertiary: #8a7e6e;
   --accent: #8b6914;
+  --primary-color: #8b6914;
   --accent-hover: #a67c1a;
   --accent-muted: rgba(139, 105, 20, 0.1);
   --border: #d4c9b5;
@@ -49,6 +50,7 @@ html {
   --text-secondary: #a89880;
   --text-tertiary: #8a7e6e;
   --accent: #d4a843;
+  --primary-color: #d4a843;
   --accent-hover: #e8bc57;
   --accent-muted: rgba(212, 168, 67, 0.1);
   --border: #3d3529;

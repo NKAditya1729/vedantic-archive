@@ -1,4 +1,4 @@
-# Vedantic Study Archive
+# Vedāntic Study Archive
 
 A static site hosting class notes on Vedāntic texts, starting with the **Bṛhadāraṇyaka Upaniṣad** with Śāṅkara Bhāṣya.
 
@@ -174,4 +174,4 @@ vedantic-archive/
 
 ## License
 
-Content © Vedantic Study Archive. All rights reserved.
+Content © Vedāntic Study Archive. All rights reserved.
