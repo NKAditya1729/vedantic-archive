@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 6
 date: "2026-05-07"
 coverage: "Entry into मैत्रेयीब्राह्मण; संन्यास for gain and abidance in ज्ञानम्; शङ्कर and सुरेश्वर on साङ्ख्य reading of नेति नेति; ब्रह्मन्-to-आत्मा and आत्मा-to-ब्रह्मन् equation; याज्ञवल्क्य's departure to पारिव्राज्य; २.४.१ and २.४.२ with वित्त and अमृतत्व."
-audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-06/Brhad_2-4_Class_06.mp3"
 video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

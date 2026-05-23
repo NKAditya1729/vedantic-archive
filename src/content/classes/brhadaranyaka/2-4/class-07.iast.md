@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 7
 date: "2026-05-11"
 coverage: "Mantra 2.4.2 and Maitreyī's question; pṛthivī full of vitta and karma-sādhana; katham as ākṣepa or praśna; upakaraṇavatām jīvitam; no āśā for amṛtatva through vitta-sādhya karma; Vārtika verses on vitta and jñānam."
-audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_07"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-07/Brhad_2-4_Class_07.mp3"
 video_url: "https://www.youtube.com/watch?v=K2ab17DOz2A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

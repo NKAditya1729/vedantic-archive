@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 7
 date: "2026-05-11"
 coverage: "मन्त्र २.४.२ and मैत्रेयी's question; पृथिवी full of वित्त and कर्मसाधन; कथम् as आक्षेप or प्रश्न; उपकरणवतां जीवितम्; no आशा for अमृतत्व through वित्तसाध्य कर्म; वार्तिक verses on वित्त and ज्ञानम्."
-audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_07"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-07/Brhad_2-4_Class_07.mp3"
 video_url: "https://www.youtube.com/watch?v=K2ab17DOz2A&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

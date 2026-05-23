@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
 date: "2026-04-30"
 coverage: "आख्यायिका in श्रुति as teaching device; संन्यास as facilitator, not cause, of मोक्ष; ज्ञानादेव कैवल्यम्; वैराग्य and विधिशास्त्र; freedom not पुरुषतन्त्रम्; विद्वत्संन्यास and विविदिषासंन्यास."
-audio_url: "/assets/audio/Brhad_2-4_Class_04.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-04/Brhad_2-4_Class_04.mp3"
 video_url: "https://www.youtube.com/watch?v=_AI3aIq4SCY&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

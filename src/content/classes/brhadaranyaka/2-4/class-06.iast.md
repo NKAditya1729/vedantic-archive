@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 6
 date: "2026-05-07"
 coverage: "Entry into Maitreyī Brāhmaṇa; saṃnyāsa for gain and abidance in jñānam; Śaṅkara and Sureśvara on Sāṅkhya reading of neti neti; brahman-to-ātmā and ātmā-to-brahman equation; Yājñavalkya's departure to pārivrājya; 2.4.1 and 2.4.2 with vitta and amṛtatva."
-audio_url: "/assets/audio/Brhad_2-4_Class_06.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-06/Brhad_2-4_Class_06.mp3"
 video_url: "https://www.youtube.com/watch?v=49an96B2wF4&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

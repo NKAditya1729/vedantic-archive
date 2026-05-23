@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
 date: "2026-04-20"
 coverage: "Saṃbandha-bhāṣya for Maitreyī Brāhmaṇa; vidyā-sūtra and avidyā-sūtra reviewed; sṛṣṭi, nāma-rūpa-karma, neti neti; sarva-viśeṣa-śūnyam brahma; saṃnyāsa as aṅga for brahmavidyā; Yājñavalkya seeking Maitreyī's permission."
-audio_url: "/assets/audio/Brhad_2-4_Class_01.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-01/Brhad_2-4_Class_01.mp3"
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

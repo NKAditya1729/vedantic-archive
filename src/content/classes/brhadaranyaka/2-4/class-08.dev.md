@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 8
 date: "2026-05-14"
 coverage: "मन्त्रs २.४.३ and २.४.४; मैत्रेयी rejecting वित्त without अमृतत्व; यदेव भगवान् वेद तदेव मे ब्रूहि; याज्ञवल्क्य pleased by स्वाभिप्रायसम्पत्ति; एहि आस्स्व and व्याख्यास्यामि; निदिध्यासस्व as attentive dwelling on वाक्यार्थ."
-audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_08"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-08/Brhad_2-4_Class_08.mp3"
 video_url: "https://www.youtube.com/watch?v=oVgIPwwzuN8&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

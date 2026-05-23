@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
 date: "2026-04-23"
 coverage: "Continuation of saṃbandha-bhāṣya; vidyā-sūtra and avidyā-sūtra recap; saṃnyāsa and tyāga in Gītā 18; Naciketa, Śvetaketu, Arjuna as adhikārīs; samuccaya-niṣedha of karma and jñāna; saṃnyāsa as accompaniment of jñānam."
-audio_url: "/assets/audio/Brhad_2-4_Class_02.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-02/Brhad_2-4_Class_02.mp3"
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

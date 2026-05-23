@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 9
 date: "2026-05-18"
 coverage: "Opening of २.४.५; न वा अरे पत्युः कामाय; everything loved for आत्मनस्तु कामाय; वैराग्यम् as अमृतत्वसाधनसाधनम्; पुरुषार्थविवेक and मुमुक्षुत्वम्; यथाभूतदर्शनम् as basis for विराग."
-audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_09"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-09/Brhad_2-4_Class_09.mp3"
 video_url: "https://www.youtube.com/watch?v=oy-MM39V7oQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

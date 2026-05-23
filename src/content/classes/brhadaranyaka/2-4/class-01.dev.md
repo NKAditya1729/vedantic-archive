@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 1
 date: "2026-04-20"
 coverage: "मैत्रेयीब्राह्मण सम्बन्धभाष्यम्; विद्यासूत्र and अविद्यासूत्र reviewed; सृष्टि, नामरूपकर्म, नेति नेति; सर्वविशेषशून्यं ब्रह्म; संन्यास as अङ्ग for ब्रह्मविद्या; याज्ञवल्क्य seeking मैत्रेयी's permission."
-audio_url: "/assets/audio/Brhad_2-4_Class_01.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-01/Brhad_2-4_Class_01.mp3"
 video_url: "https://www.youtube.com/watch?v=4VXBsHjhoqI&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

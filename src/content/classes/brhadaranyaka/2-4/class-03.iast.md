@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 3
 date: "2026-04-27"
 coverage: "Purpose of the Maitreyī Brāhmaṇa; saṃnyāsa debate and Janaka as jīvanmukta; Vārtikakāra's perspective; vitta-nindā; varṇāśrama-vyavasthā-nindā; women and karma-saṃnyāsa."
-audio_url: "/assets/audio/Brhad_2-4_Class_03.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-03/Brhad_2-4_Class_03.mp3"
 video_url: "https://www.youtube.com/watch?v=Vhw1cmv7zSA&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

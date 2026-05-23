@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 4
 date: "2026-04-30"
 coverage: "Ākhyāyikā in śruti as teaching device; saṃnyāsa as facilitator, not cause, of mokṣa; jñānādeva kaivalyam; vairāgya and vidhiśāstra; freedom not puruṣatantram; vidvat-saṃnyāsa and vividiṣā-saṃnyāsa."
-audio_url: "/assets/audio/Brhad_2-4_Class_04.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-04/Brhad_2-4_Class_04.mp3"
 video_url: "https://www.youtube.com/watch?v=_AI3aIq4SCY&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 2
 date: "2026-04-23"
 coverage: "सम्बन्धभाष्यम् continuation; विद्यासूत्र and अविद्यासूत्र recap; संन्यास and त्याग in Gītā 18; नचिकेता, श्वेतकेतु, अर्जुन as अधिकारीs; समुच्चयनिषेध of कर्म and ज्ञान; संन्यास as accompaniment of ज्ञानम्."
-audio_url: "/assets/audio/Brhad_2-4_Class_02.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-02/Brhad_2-4_Class_02.mp3"
 video_url: "https://www.youtube.com/watch?v=FqglbqZ6RKQ&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari

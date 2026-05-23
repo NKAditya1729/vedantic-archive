@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 8
 date: "2026-05-14"
 coverage: "Mantras 2.4.3 and 2.4.4; Maitreyī rejecting vitta without amṛtatva; yadeva bhagavān veda tadeva me brūhi; Yājñavalkya pleased by svābhiprāya-sampatti; ehi āssva and vyākhyāsyāmi; nididhyāsasva as attentive dwelling on vākyārtha."
-audio_url: "PENDING_INTERNET_ARCHIVE_CLASS_08"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-08/Brhad_2-4_Class_08.mp3"
 video_url: "https://www.youtube.com/watch?v=oVgIPwwzuN8&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: iast

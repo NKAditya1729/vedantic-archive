@@ -7,7 +7,7 @@ brahmana_name: Maitreyī Brāhmaṇa
 class_number: 5
 date: "2026-05-04"
 coverage: "Why another ब्राह्मण after नेति नेति; वार्तिककार सुरेश्वर's reasons; मूर्तामूर्तब्राह्मण recap; ब्रह्मन् neither मूर्त nor अमूर्त; one reality appearing as many; अध्यास and the introduction's threads."
-audio_url: "/assets/audio/Brhad_2-4_Class_05.mp3"
+audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-05/Brhad_2-4_Class_05.mp3"
 video_url: "https://www.youtube.com/watch?v=c8HircUgM_o&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
 materials_url: ""
 script: devanagari
