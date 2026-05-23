@@ -1,0 +1,369 @@
+{
+  "mantras": [
+    {
+      "ref": "2.4.1",
+      "first_words_iast": "maitrey\u012bti hov\u0101ca y\u0101j\u00f1avalkya ; udy\u0101syan...",
+      "first_words_dev": "\u092e\u0948\u0924\u094d\u0930\u0947\u092f\u0940\u0924\u093f \u0939\u094b\u0935\u093e\u091a \u092f\u093e\u091c\u094d\u091e\u0935\u0932\u094d\u0915\u094d\u092f ; \u0909\u0926\u094d\u092f\u093e\u0938\u094d\u092f\u0928\u094d...",
+      "classes": [
+        6
+      ]
+    },
+    {
+      "ref": "2.4.2",
+      "first_words_iast": "s\u0101 hov\u0101ca maitrey\u012b | yannu ma iya\u1e43 bhago\u1e25...",
+      "first_words_dev": "\u0938\u093e \u0939\u094b\u0935\u093e\u091a \u092e\u0948\u0924\u094d\u0930\u0947\u092f\u0940 \u0964 \u092f\u0928\u094d\u0928\u0941 \u092e \u0907\u092f\u0902 \u092d\u0917\u094b\u0903...",
+      "classes": [
+        6,
+        7
+      ]
+    },
+    {
+      "ref": "2.4.3",
+      "first_words_iast": "s\u0101 hov\u0101ca maitrey\u012b yen\u0101ha\u1e43 n\u0101m\u1e5bt\u0101 sy\u0101\u1e43...",
+      "first_words_dev": "\u0938\u093e \u0939\u094b\u0935\u093e\u091a \u092e\u0948\u0924\u094d\u0930\u0947\u092f\u0940 \u092f\u0947\u0928\u093e\u0939\u0902 \u0928\u093e\u092e\u0943\u0924\u093e \u0938\u094d\u092f\u093e\u0902...",
+      "classes": [
+        8
+      ]
+    },
+    {
+      "ref": "2.4.4",
+      "first_words_iast": "sa hov\u0101ca y\u0101j\u00f1avalkya\u1e25 priy\u0101 bat\u0101re na\u1e25 sat\u012b...",
+      "first_words_dev": "\u0938 \u0939\u094b\u0935\u093e\u091a \u092f\u093e\u091c\u094d\u091e\u0935\u0932\u094d\u0915\u094d\u092f\u0903 \u092a\u094d\u0930\u093f\u092f\u093e \u092c\u0924\u093e\u0930\u0947 \u0928\u0903 \u0938\u0924\u0940...",
+      "classes": [
+        8
+      ]
+    },
+    {
+      "ref": "2.4.5",
+      "first_words_iast": "sa hov\u0101ca na v\u0101 are patyu\u1e25 k\u0101m\u0101ya pati\u1e25...",
+      "first_words_dev": "\u0938 \u0939\u094b\u0935\u093e\u091a \u0928 \u0935\u093e \u0905\u0930\u0947 \u092a\u0924\u094d\u092f\u0941\u0903 \u0915\u093e\u092e\u093e\u092f \u092a\u0924\u093f\u0903...",
+      "classes": [
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "vartikas": [
+    {
+      "ref": "BV 2.4.1",
+      "first_words_dev": "\u0906\u0924\u094d\u092e\u0947\u0924\u094d\u092f\u0947\u0935\u0947\u0924\u093f \u0938\u0942\u0924\u094d\u0930\u0938\u094d\u092f \u0935\u094d\u092f\u093e\u0916\u094d\u092f\u0947\u092f\u0902 \u092a\u094d\u0930\u0938\u094d\u0924\u0941\u0924\u093e \u0938\u094d\u092b\u0941\u091f\u093e \u0964\u0964",
+      "first_words_iast": "\u0101tmetyeveti s\u016btrasya vy\u0101khyeya\u1e43 prastut\u0101 sphu\u1e6d\u0101 ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.2",
+      "first_words_dev": "\u0928\u093f\u0924\u094d\u092f\u0915\u0930\u094d\u092e\u093e\u0926\u094d\u092f\u0928\u0941\u0937\u094d\u0920\u093e\u0928\u0938\u0902\u0936\u0941\u0926\u094d\u0927\u0927\u093f\u0937\u0923\u0903 \u092a\u0941\u092e\u093e\u0928\u094d \u0964\u0964",
+      "first_words_iast": "nityakarm\u0101dyanu\u1e63\u1e6dh\u0101nasa\u1e43\u015buddhadhi\u1e63a\u1e47a\u1e25 pum\u0101n ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.3",
+      "first_words_dev": "\u0935\u093f\u0930\u0915\u094d\u0924 \u0906\u0917\u094d\u0930\u091c\u093e\u0924\u094d\u0938\u094b\u093d\u092f\u0902 \u0924\u0924\u094d\u0938\u093e\u0935\u0926\u094d\u092f\u0938\u092e\u0940\u0915\u094d\u0937\u0923\u093e\u0924\u094d \u0964\u0964",
+      "first_words_iast": "virakta \u0101graj\u0101tso'ya\u1e43 tats\u0101vadyasam\u012bk\u1e63a\u1e47\u0101t ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.4",
+      "first_words_dev": "\u0909\u0926\u094d\u092d\u0942\u0924\u0924\u091c\u094d\u091c\u093f\u0939\u093e\u0938\u0903 \u0938\u0902\u0938\u094d\u0924\u0926\u094d\u0927\u093e\u0928\u0947 \u0938\u093e\u0927\u0928\u0938\u094d\u092a\u0943\u0939\u0903 \u0964\u0964",
+      "first_words_iast": "udbh\u016btatajjih\u0101sa\u1e25 sa\u1e43staddh\u0101ne s\u0101dhanasp\u1e5bha\u1e25 ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.5",
+      "first_words_dev": "\u0935\u0938\u094d\u0924\u0941\u0935\u0943\u0924\u094d\u0924\u093e\u0924\u094d\u092e\u0938\u0902\u092c\u094b\u0927\u0927\u094d\u0935\u0938\u094d\u0924\u0938\u0902\u0938\u093e\u0930\u0915\u093e\u0930\u0923\u0903 \u0964\u0964",
+      "first_words_iast": "vastuv\u1e5btt\u0101tmasa\u1e43bodhadhvastasa\u1e43s\u0101rak\u0101ra\u1e47a\u1e25 ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.6",
+      "first_words_dev": "\u092f\u093e\u0935\u0924\u094d\u0915\u093f\u0902\u091a\u093f\u0926\u0935\u093f\u0926\u094d\u092f\u093e\u092f\u093e\u0903 \u0915\u093e\u0930\u094d\u092f\u0902 \u0935\u0948\u0930\u093e\u0917\u094d\u092f\u0915\u093e\u0930\u0923\u092e\u094d \u0964\u0964",
+      "first_words_iast": "y\u0101vatki\u1e43cidavidy\u0101y\u0101\u1e25 k\u0101rya\u1e43 vair\u0101gyak\u0101ra\u1e47am ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.7",
+      "first_words_dev": "\u092c\u094d\u0930\u0939\u094d\u092e\u092f\u093e\u0925\u093e\u0924\u094d\u092e\u094d\u092f\u0935\u093f\u091c\u094d\u091e\u093e\u0928\u0938\u093e\u0927\u0928\u0924\u094d\u0935\u0902 \u0935\u093f\u0928\u093e\u093d\u093d\u0917\u092e\u093e\u0924\u094d \u0964\u0964",
+      "first_words_iast": "brahmay\u0101th\u0101tmyavij\u00f1\u0101nas\u0101dhanatva\u1e43 vin\u0101''gam\u0101t ||",
+      "classes": [
+        4
+      ]
+    },
+    {
+      "ref": "BV 2.4.9",
+      "first_words_dev": "\u0924\u0924\u094d\u0930\u0948\u0924\u091a\u094d\u091b\u0919\u094d\u0915\u094d\u092f\u0924\u0947 \u091a\u094b\u0926\u094d\u092f\u0902 \u092c\u094d\u0930\u0939\u094d\u092e\u0924\u094d\u0935\u0938\u093f\u0926\u094d\u0927\u093f\u0926\u094b\u0937\u0915\u0943\u0924\u094d \u0964\u0964",
+      "first_words_iast": "tatraitaccha\u1e45kyate codya\u1e43 brahmatvasiddhido\u1e63ak\u1e5bt ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.10",
+      "first_words_dev": "\u0915\u093f\u0902 \u0924\u0926\u094d\u092c\u094d\u0930\u0939\u094d\u092e\u093e\u0928\u0941\u0917\u0902 \u0938\u0930\u094d\u0935\u0902 \u0915\u093f\u0902 \u0935\u093e \u0924\u0938\u094d\u092e\u093e\u0926\u094d\u0935\u093f\u0935\u093f\u091a\u094d\u092f\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "ki\u1e43 tadbrahm\u0101nuga\u1e43 sarva\u1e43 ki\u1e43 v\u0101 tasm\u0101dvivicyate ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.11",
+      "first_words_dev": "\u0905\u092d\u093e\u0935\u0928\u093f\u0937\u094d\u091f\u0902 \u0924\u091a\u094d\u091a\u0947\u0924\u094d\u0938\u094d\u092f\u093e\u0928\u094d\u092e\u0941\u0916\u094d\u092f\u0902 \u092c\u094d\u0930\u0939\u094d\u092e \u0928 \u0938\u093f\u0927\u094d\u092f\u0924\u093f \u0964\u0964",
+      "first_words_iast": "abh\u0101vani\u1e63\u1e6da\u1e43 taccetsy\u0101nmukhya\u1e43 brahma na sidhyati ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.12",
+      "first_words_dev": "\u0928\u0947\u0924\u0940\u0924\u094d\u092f\u092a\u093f \u0928\u093f\u0937\u0947\u0927\u094b\u0915\u094d\u0924\u093f\u0938\u094d\u0924\u0925\u093e \u0938\u0924\u093f \u0935\u093f\u0930\u0941\u0927\u094d\u092f\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "net\u012btyapi ni\u1e63edhoktistath\u0101 sati virudhyate ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.13",
+      "first_words_dev": "\u0935\u093f\u0935\u093f\u091a\u094d\u092f\u0924\u0947 \u092c\u094d\u0930\u0939\u094d\u092e\u0923\u0936\u094d\u091a\u0947\u0928\u094d\u092e\u0948\u0935\u0902 \u0926\u094b\u0937\u0938\u094d\u0924\u0925\u093e\u093d\u092a\u093f \u0939\u093f \u0964\u0964",
+      "first_words_iast": "vivicyate brahma\u1e47a\u015bcenmaiva\u1e43 do\u1e63astath\u0101'pi hi ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.14",
+      "first_words_dev": "\u0905\u0935\u094d\u092f\u093e\u0935\u0943\u0924\u094d\u0924\u093e\u0928\u0928\u0941\u0917\u0924\u0902 \u0935\u0938\u094d\u0924\u0941 \u092c\u094d\u0930\u0939\u094d\u092e\u0924\u094d\u0935\u092e\u0936\u094d\u0928\u0941\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "avy\u0101v\u1e5btt\u0101nanugata\u1e43 vastu brahmatvama\u015bnute ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.18",
+      "first_words_dev": "\u0905\u0928\u094d\u0935\u092f\u093e\u0926\u093f\u0928\u093f\u0937\u0947\u0927\u093e\u092f \u0938\u0930\u094d\u0935\u092e\u093e\u0924\u094d\u092e\u0947\u0924\u093f \u0935\u093e\u0915\u094d\u092f\u0924\u0903 \u0964\u0964",
+      "first_words_iast": "anvay\u0101dini\u1e63edh\u0101ya sarvam\u0101tmeti v\u0101kyata\u1e25 ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.19",
+      "first_words_dev": "\u0938\u0930\u094d\u0935\u093e\u092c\u094d\u0930\u0939\u094d\u092e\u0928\u093f\u0937\u0947\u0927\u0947\u0928 \u0924\u0926\u0930\u094d\u0925\u094b \u0935\u0947\u0939 \u0928\u093f\u0936\u094d\u091a\u093f\u0924\u0903 \u0964\u0964",
+      "first_words_iast": "sarv\u0101brahmani\u1e63edhena tadartho veha ni\u015bcita\u1e25 ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "BV 2.4.20",
+      "first_words_dev": "\u0928\u0947\u0924\u0940\u0924\u093f \u092c\u094d\u0930\u0939\u094d\u092e\u0923\u094b\u093d\u0928\u094d\u092f\u0924\u094d\u0930 \u092e\u0942\u0930\u094d\u0924\u093e\u092e\u0942\u0930\u094d\u0924\u0935\u094d\u092f\u0935\u0938\u094d\u0925\u093f\u0924\u094c \u0964\u0964",
+      "first_words_iast": "net\u012bti brahma\u1e47o'nyatra m\u016brt\u0101m\u016brtavyavasthitau ||",
+      "classes": [
+        5
+      ]
+    },
+    {
+      "ref": "Verse 47",
+      "first_words_dev": "\u092e\u0939\u093e\u0928\u0941\u092d\u093e\u0935\u0938\u0902\u092a\u0930\u094d\u0915\u0903 \u0915\u0938\u094d\u092f \u0928\u094b\u0928\u094d\u0928\u0924\u093f\u0915\u093e\u0930\u0923\u092e\u094d \u0964\u0964",
+      "first_words_iast": "mah\u0101nubh\u0101vasa\u1e43parka\u1e25 kasya nonnatik\u0101ra\u1e47am ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 48",
+      "first_words_dev": "\u092d\u0917\u0935\u0924\u094d\u0938\u0902\u0917\u0924\u0947\u0930\u094d\u0928\u093e\u0928\u094d\u092f\u0903 \u092a\u0941\u0930\u0941\u0937\u093e\u0930\u094d\u0925\u094b\u093d\u092e\u0943\u0924\u0924\u094d\u0935\u0924\u0903 \u0964\u0964",
+      "first_words_iast": "bhagavatsa\u1e43gatern\u0101nya\u1e25 puru\u1e63\u0101rtho'm\u1e5btatvata\u1e25 ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 49",
+      "first_words_dev": "\u0938\u093e\u0930\u0947\u0923 \u092f\u0926\u093f \u0928\u093e\u092e\u0947\u092f\u0902 \u092a\u0942\u0930\u094d\u0923\u093e \u0938\u094d\u092f\u093e\u0926\u094d\u0935\u0938\u0941\u0928\u093e \u092e\u0939\u0940 \u0964\u0964",
+      "first_words_iast": "s\u0101re\u1e47a yadi n\u0101meya\u1e43 p\u016br\u1e47\u0101 sy\u0101dvasun\u0101 mah\u012b ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 50",
+      "first_words_dev": "\u0938\u0924\u094d\u0924\u093e\u092e\u093e\u0924\u094d\u0930\u094b\u092a\u0915\u093e\u0930\u093f\u0923\u093f \u0927\u0928\u093e\u0928\u093f \u0927\u0928\u093f\u0928\u093e\u0902 \u0928 \u0939\u093f \u0964\u0964",
+      "first_words_iast": "satt\u0101m\u0101tropak\u0101ri\u1e47i dhan\u0101ni dhanin\u0101\u1e43 na hi ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 51",
+      "first_words_dev": "\u092a\u094d\u0930\u0924\u094d\u092f\u093e\u0939 \u092a\u0943\u0937\u094d\u091f\u0903 \u0938\u094d\u0935\u093e\u0902 \u091c\u093e\u092f\u093e\u0902 \u0928\u093e\u092e\u0943\u0924\u0924\u094d\u0935\u0902 \u0927\u0928\u093e\u0926\u093f\u0924\u093f \u0964\u0964 \u096b\u0967 \u0964\u0964",
+      "first_words_iast": "praty\u0101ha p\u1e5b\u1e63\u1e6da\u1e25 sv\u0101\u1e43 j\u0101y\u0101\u1e43 n\u0101m\u1e5btatva\u1e43 dhan\u0101diti || ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 52",
+      "first_words_dev": "\u0935\u093f\u0924\u094d\u0924\u0902 \u091a\u0947\u0928\u094d\u0928\u093e\u092e\u0943\u0924\u0924\u094d\u0935\u093e\u092f \u0915\u0938\u094d\u092e\u093e\u0926\u094d\u0926\u093f\u0924\u094d\u0938\u0924\u093f \u0924\u0926\u094d\u092d\u0935\u093e\u0928\u094d \u0964\u0964",
+      "first_words_iast": "vitta\u1e43 cenn\u0101m\u1e5btatv\u0101ya kasm\u0101dditsati tadbhav\u0101n ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 53",
+      "first_words_dev": "\u0915\u094d\u0937\u092f\u093f\u0937\u094d\u0923\u0941\u0938\u093e\u0927\u0928\u093e\u0927\u0940\u0928\u0902 \u091c\u0940\u0935\u093f\u0924\u0902 \u0938\u094d\u092f\u093e\u0926\u094d\u092f\u0925\u093e \u0928\u0943\u0923\u093e\u092e\u094d \u0964\u0964",
+      "first_words_iast": "k\u1e63ayi\u1e63\u1e47us\u0101dhan\u0101dh\u012bna\u1e43 j\u012bvita\u1e43 sy\u0101dyath\u0101 n\u1e5b\u1e47\u0101m ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 54",
+      "first_words_dev": "\u0905\u0935\u093f\u0926\u094d\u092f\u093e\u092e\u093e\u0924\u094d\u0930\u0935\u093f\u0927\u094d\u0935\u0902\u0938\u093e\u091c\u094d\u091c\u094d\u091e\u093e\u0928\u093e\u0926\u0947\u0935\u093e\u092e\u0943\u0924\u0902 \u092f\u0924\u0903 \u0964\u0964",
+      "first_words_iast": "avidy\u0101m\u0101travidhva\u1e43s\u0101jj\u00f1\u0101n\u0101dev\u0101m\u1e5bta\u1e43 yata\u1e25 ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 55",
+      "first_words_dev": "\u0915\u0941\u0924\u094b\u093d\u092e\u0943\u0924\u0924\u094d\u0935\u0938\u0902\u092a\u094d\u0930\u093e\u092a\u094d\u0924\u093f\u0930\u094d\u091c\u094d\u091e\u093e\u0928\u092e\u093e\u0924\u094d\u0930\u0948\u0915\u0939\u0947\u0924\u0941\u0928\u093e \u0964\u0964",
+      "first_words_iast": "kuto'm\u1e5btatvasa\u1e43pr\u0101ptirj\u00f1\u0101nam\u0101traikahetun\u0101 ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 56",
+      "first_words_dev": "\u0938\u094d\u0935\u092d\u093e\u0935\u093e\u0926\u0947\u0935 \u0938\u093e\u0927\u0942\u0928\u093e\u0902 \u092a\u094d\u0930\u0935\u0943\u0924\u094d\u0924\u093f\u0930\u0941\u092a\u0915\u093e\u0930\u093f\u0923\u0940 \u0964\u0964",
+      "first_words_iast": "svabh\u0101v\u0101deva s\u0101dh\u016bn\u0101\u1e43 prav\u1e5bttirupak\u0101ri\u1e47\u012b ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 57",
+      "first_words_dev": "\u0928\u0942\u0928\u0902 \u092e\u092e\u093e\u092a\u0930\u093e\u0927\u094b\u093d\u092f\u0902 \u092f\u0926\u094d\u092d\u0935\u0928\u094d\u0924\u094b\u093d\u092a\u093f \u092e\u093e\u0902 \u092a\u094d\u0930\u0924\u093f \u0964\u0964",
+      "first_words_iast": "n\u016bna\u1e43 mam\u0101par\u0101dho'ya\u1e43 yadbhavanto'pi m\u0101\u1e43 prati ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 58",
+      "first_words_dev": "\u0905\u0928\u0941\u0930\u0915\u094d\u0924\u093e\u0902 \u092a\u094d\u0930\u093f\u092f\u093e\u0902 \u0938\u093e\u0927\u094d\u0935\u0940\u0902 \u092c\u0926\u094d\u0927\u094d\u0935\u093e \u0935\u093f\u0924\u094d\u0924\u0947\u0928 \u092e\u093e\u0902 \u0915\u0925\u092e\u094d \u0964\u0964",
+      "first_words_iast": "anurakt\u0101\u1e43 priy\u0101\u1e43 s\u0101dhv\u012b\u1e43 baddhv\u0101 vittena m\u0101\u1e43 katham ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 59",
+      "first_words_dev": "\u0935\u093f\u0924\u094d\u0924\u093e\u091a\u094d\u091a\u0947\u0926\u092e\u0943\u0924\u0924\u094d\u0935\u0902 \u0938\u094d\u092f\u093e\u0924\u094d\u0924\u0924\u094d\u0924\u093f\u0924\u094d\u092f\u0915\u094d\u0937\u093e \u0928 \u092f\u0941\u091c\u094d\u092f\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "vitt\u0101ccedam\u1e5btatva\u1e43 sy\u0101ttattityak\u1e63\u0101 na yujyate ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 60",
+      "first_words_dev": "\u092f\u0926\u094d\u092f\u0938\u094d\u0924\u094d\u092f\u0928\u0941\u091c\u093f\u0918\u0943\u0915\u094d\u0937\u0948\u0935\u0902 \u0915\u0930\u0941\u0923\u093e \u0935\u093e \u092e\u092f\u0940\u0937\u094d\u092f\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "yadyastyanujigh\u1e5bk\u1e63aiva\u1e43 karu\u1e47\u0101 v\u0101 may\u012b\u1e63yate ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 61",
+      "first_words_dev": "\u092f\u0926\u094d\u0935\u093f\u091c\u094d\u091e\u093e\u0928\u093e\u0924\u094d\u092a\u0930\u093f\u0924\u094d\u092f\u091c\u094d\u092f \u0928\u093f\u0903\u0936\u0947\u0937\u0902 \u0935\u093f\u0924\u094d\u0924\u0938\u093e\u0927\u0928\u092e\u094d \u0964\u0964",
+      "first_words_iast": "yadvij\u00f1\u0101n\u0101tparityajya ni\u1e25\u015be\u1e63a\u1e43 vittas\u0101dhanam ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 62",
+      "first_words_dev": "\u0928\u093e\u093d\u093d\u0926\u093f\u0930\u094d\u0928\u093e\u0928\u094d\u0924\u094b \u0928 \u092e\u0927\u094d\u092f\u0902 \u0935\u093e \u092f\u0938\u094d\u092f \u0935\u093f\u0924\u094d\u0924\u0938\u094d\u092f \u0935\u093f\u0926\u094d\u092f\u0924\u0947 \u0964\u0964",
+      "first_words_iast": "n\u0101''dirn\u0101nto na madhya\u1e43 v\u0101 yasya vittasya vidyate ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 63",
+      "first_words_dev": "\u0905\u0928\u0928\u094d\u0924\u0935\u093f\u0924\u094d\u0924\u094b \u0939\u093f \u092d\u0935\u093e\u0928\u0928\u094d\u0924\u0935\u0926\u094d\u0926\u0940\u092f\u0924\u0947 \u0915\u0941\u0924\u0903 \u0964\u0964",
+      "first_words_iast": "anantavitto hi bhav\u0101nantavadd\u012byate kuta\u1e25 ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 64",
+      "first_words_dev": "\u0938\u0902\u0938\u093e\u0930\u092a\u0941\u0930\u0941\u0937\u093e\u0930\u094d\u0925\u0947\u092d\u094d\u092f\u094b \u092f\u0924\u094b \u0928\u093e\u0935\u094d\u092f\u0941\u0924\u094d\u0925\u093f\u0924\u093e\u0924\u094d\u092e\u0928\u0947 \u0964\u0964",
+      "first_words_iast": "sa\u1e43s\u0101rapuru\u1e63\u0101rthebhyo yato n\u0101vyutthit\u0101tmane ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 65",
+      "first_words_dev": "\u0905\u092e\u0941\u092e\u0941\u0915\u094d\u0937\u0941\u0924\u094d\u0935\u092e\u093e\u0936\u0919\u094d\u0915\u094d\u092f \u092d\u0935\u0924\u094d\u092f\u0948 \u0924\u0924\u094d\u092a\u094d\u0930\u0926\u093f\u0924\u094d\u0938\u093f\u0924\u092e\u094d \u0964\u0964",
+      "first_words_iast": "amumuk\u1e63utvam\u0101\u015ba\u1e45kya bhavatyai tatpraditsitam ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 66",
+      "first_words_dev": "\u0938\u094d\u0924\u094d\u0930\u0940\u0923\u093e\u0902 \u092f\u0926\u0941\u091a\u093f\u0924\u0902 \u0935\u093e\u0915\u094d\u092f\u0902 \u092a\u094d\u0930\u0924\u093f\u0932\u094b\u092e\u0902 \u0928 \u092d\u093e\u0937\u0938\u0947 \u0964\u0964",
+      "first_words_iast": "str\u012b\u1e47\u0101\u1e43 yaducita\u1e43 v\u0101kya\u1e43 pratiloma\u1e43 na bh\u0101\u1e63ase ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 67",
+      "first_words_dev": "\u092e\u094b\u0915\u094d\u0937\u0902 \u092f\u093e\u0928\u094d\u0924\u0902 \u0928\u0930\u0902 \u0938\u0930\u094d\u0935\u0947 \u092e\u0941\u091e\u094d\u091a\u0928\u094d\u0924\u093f \u0938\u0939\u091c\u093e \u0905\u092a\u093f \u0964\u0964",
+      "first_words_iast": "mok\u1e63a\u1e43 y\u0101nta\u1e43 nara\u1e43 sarve mu\u00f1canti sahaj\u0101 api ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 68",
+      "first_words_dev": "\u0935\u093f\u092d\u093e\u0917\u092e\u0938\u0939\u0928\u094d\u0924\u0940\u0935 \u092e\u0926\u0924\u093f\u0938\u094d\u0928\u0947\u0939\u0915\u093e\u0930\u0923\u093e\u0924\u094d \u0964\u0964",
+      "first_words_iast": "vibh\u0101gamasahant\u012bva madatisnehak\u0101ra\u1e47\u0101t ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 69",
+      "first_words_dev": "\u0905\u0924\u093f\u0938\u094d\u0928\u0947\u0939\u093e\u093d\u092a\u0915\u0943\u0937\u094d\u091f\u094b\u092e\u093e \u0926\u0947\u0939\u093e\u0930\u094d\u0927\u0902 \u0936\u0942\u0932\u093f\u0928\u0903 \u0936\u094d\u0930\u093f\u0924\u093e \u0964\u0964",
+      "first_words_iast": "atisneh\u0101'pak\u1e5b\u1e63\u1e6dom\u0101 deh\u0101rdha\u1e43 \u015b\u016blina\u1e25 \u015brit\u0101 ||",
+      "classes": [
+        7
+      ]
+    },
+    {
+      "ref": "Verse 70",
+      "first_words_dev": "\u092f\u0924 \u090f\u0935\u092e\u0924\u0938\u094d\u0924\u0941\u092d\u094d\u092f\u0902 \u0935\u0915\u094d\u0937\u094d\u092f\u093e\u092e\u094d\u092f\u092e\u0943\u0924\u0938\u093e\u0927\u0928\u092e\u094d \u0964\u0964",
+      "first_words_iast": "yata evamatastubhya\u1e43 vak\u1e63y\u0101myam\u1e5btas\u0101dhanam ||",
+      "classes": [
+        7
+      ]
+    }
+  ]
+}

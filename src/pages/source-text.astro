@@ -1,44 +1,308 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const allClasses = await getCollection('classes');
-const iastClasses = allClasses
-  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
-  .sort((a, b) => a.data.class_number - b.data.class_number);
-const devClasses = allClasses
-  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'devanagari')
-  .sort((a, b) => a.data.class_number - b.data.class_number);
-const latest = iastClasses[iastClasses.length - 1];
 ---
 
-<BaseLayout title="Source Text Covered" description="Source text covered in the Maitreyī Brāhmaṇa classes so far.">
-  <div class="container container--wide page-pad">
-    <h1>Source Text Covered — Maitreyī Brāhmaṇa (2.4)</h1>
-    <p class="meta">Bṛhadāraṇyaka Upaniṣad with Śāṅkara Bhāṣya and Sureśvara Vārtika</p>
-    {latest && <p>This page reflects text covered through Class {latest.data.class_number}. Last updated: {latest.data.date}.</p>}
+<BaseLayout title="Source Text — Maitreyī Brāhmaṇa (2.4)" description="Śāṅkara Bhāṣya and Sureśvara Vārtika in canonical order.">
+  <div class="container container--wide page-pad" style="max-width: 900px; padding-top: 2rem; padding-bottom: 4rem;">
+    <h1>Source Text — Maitreyī Brāhmaṇa (2.4)</h1>
+    <p class="meta" style="margin-bottom: 1.5rem;">Bṛhadāraṇyaka Upaniṣad · Śāṅkara Bhāṣya · Sureśvara Vārtika</p>
+    
+    <p style="font-style: italic; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">
+      This page contains the complete source text covered through Class 10. It is updated after each class.
+      <br />Last updated: 2026-05-21.
+    </p>
 
-    <div class="script-toggle" role="tablist" aria-label="Script selection">
+    <!-- Table of Contents -->
+    <div class="toc-container" style="background: var(--surface-1); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 2.5rem;">
+      <h3 style="margin-top: 0; margin-bottom: 1rem; font-family: var(--font-ui); font-size: 1.1rem; font-weight: 600;">Contents</h3>
+      <ul style="list-style: none; padding-left: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; font-size: 0.95rem;">
+        <li><a href="#section-sambandha" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ Saṃbandha-bhāṣyam</a></li>
+        <li><a href="#section-vartika-sambandha" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ Vārtika on Saṃbandha-bhāṣyam (BV 2.4.1–20)</a></li>
+        <li><a href="#section-2-4-1" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ 2.4.1 Maitreyīti hovāca</a></li>
+        <li><a href="#section-2-4-2" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ 2.4.2 Sā hovāca maitreyī</a></li>
+        <li><a href="#section-vartika-2-4-2" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ Vārtika on 2.4.2–4 (verses 47–70)</a></li>
+        <li><a href="#section-2-4-3" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ 2.4.3 Sā hovāca maitreyī yenāhaṃ</a></li>
+        <li><a href="#section-2-4-4" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ 2.4.4 Sa hovāca yājñavalkyaḥ priyā</a></li>
+        <li><a href="#section-2-4-5" style="text-decoration: none; color: var(--primary-color); font-weight: 500;">→ 2.4.5 Sa hovāca na vā are</a></li>
+      </ul>
+    </div>
+
+    <!-- Script Toggle -->
+    <div class="script-toggle" role="tablist" aria-label="Script selection" style="margin-bottom: 2.5rem;">
       <button class="script-toggle__btn is-active" role="tab" aria-selected="true" aria-controls="source-iast" id="source-tab-iast" data-script="iast">IAST</button>
       <button class="script-toggle__btn" role="tab" aria-selected="false" aria-controls="source-devanagari" id="source-tab-devanagari" data-script="devanagari">Devanagari</button>
     </div>
 
+    <!-- IAST Panel -->
     <section class="script-panel is-visible" id="source-iast" role="tabpanel" aria-labelledby="source-tab-iast">
-      {iastClasses.map(cls => (
-        <article class="source-class-section">
-          <h2>Class {cls.data.class_number}</h2>
-          <div set:html={cls.data.source_text_content} />
-        </article>
-      ))}
+      <!-- SECTION 1: Saṃbandha-bhāṣya -->
+      <div class="source-section-block" id="section-sambandha" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4 Saṃbandha-Bhāṣyam</p>
+        <p class="src-label bhashyam-label">॥ Saṃbandha-bhāṣyam ॥</p>
+        <p class="src-bhashyam">ātmetyevopāsīta ; tadeva etasmin sarvasmin padanīyam ātmatattvam , yasmāt preyaḥ putrādeḥ — ityupanyastasya vākyasya vyākhyānaviṣaye sambandhaprayojane abhihite — <span class="src-pratika">‘tadātmānamevāvedahaṃ brahmāsmīti tasmāttatsarvamabhavat’ (bṛ. u. 1 | 4 | 10)</span> iti ; evaṃ pratyagātmā brahmavidyāyā viṣaya ityetat upanyastam |</p>
+        <p class="src-bhashyam">avidyāyāśca viṣayaḥ — <span class="src-pratika">‘anyo'sāvanyo'hamasmīti na sa veda’ (bṛ. u. 1 | 4 | 10)</span> ityārabhya cāturvarṇya-pravibhāgādi-nimitta-pāṅktakarma-sādhya-sādhana-lakṣaṇaḥ bījāṅkuravat vyākṛtāvyākṛtasvabhāvaḥ nāma-rūpa-karmātmakaḥ saṃsāraḥ <span class="src-pratika">‘trayaṃ vā idaṃ nāma rūpaṃ karma’ (bṛ. u. 1 | 6 | 1)</span> ityupasaṃhṛtaḥ</p>
+        <p class="src-bhashyam">śāstrīya utkarṣalakṣaṇo brahmalokāntaḥ, adhobhāvaśca sthāvarānto'śāstrīyaḥ, pūrvameva pradarśitaḥ — <span class="src-pratika">‘dvayā ha’ (bṛ. u. 1 | 3 | 1)</span> ityādinā | etasmādavidyāviṣayādviraktasya pratyagātma-viṣaya-brahmavidyāyām adhikāraḥ kathaṃ nāma syāditi — tṛtīye'dhyāye upasaṃhṛtaḥ samasto'vidyāviṣayaḥ |</p>
+        <p class="src-bhashyam">caturthe tu brahmavidyāviṣayaṃ pratyagātmānam <span class="src-pratika">‘brahma te bravāṇi’ (bṛ. u. 2 | 1 | 1)</span> iti <span class="src-pratika">‘brahma jñapayiṣyāmi’ (bṛ. u. 2 | 1 | 1)</span> iti ca prastutya, tat brahma ekam advayaṃ sarvaviśeṣaśūnyaṃ kriyā-kāraka-phala-svabhāva-satya-śabda-vācya-aśeṣa-bhūtadharma-pratiṣedha-dvāreṇa <span class="src-pratika">‘neti neti’ (bṛ. u. 2 | 3 | 6)</span> iti jñāpitam |</p>
+        <p class="src-bhashyam">asyā brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ, jāyā-putra-vittādi-lakṣaṇaṃ pāṅktaṃ karma avidyāviṣayaṃ yasmāt na ātma-prāpti-sādhanam ; anyasādhanaṃ hi anyasmai phalasādhanāya prayujyamānaṃ pratikūlaṃ bhavati ; na hi bubhukṣā-pipāsā-nivṛttyarthaṃ dhāvanaṃ gamanaṃ vā sādhanam ; manuṣyaloka-pitṛloka-devaloka-sādhanatvena hi putrādi-sādhanāni śrutāni, na ātma-prāpti-sādhanatvena, viśeṣitatvācca ; na ca brahmavido vihitāni, kāmyatva-śravaṇāt — <span class="src-pratika">‘etāvānvai kāmaḥ’ (bṛ. u. 1 | 4 | 17)</span> iti, brahmavidaśca āpta-kāmatvāt āptakāmasya kāmānupapatteḥ, <span class="src-pratika">‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> iti ca śruteḥ |</p>
+        <p class="src-bhashyam">kecittu brahmavido'pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — <span class="src-pratika">‘yeṣāṃ no'yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
+        <p class="src-bhashyam">‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca | kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) || etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena — ‘karmaṇā badhyate janturvidyayā ca vimucyate | tasmātkarma na kurvanti yatayaḥ pāradarśinaḥ’ (mo. dha. 241 | 7)</p>
+        <p class="src-bhashyam">ityevamādi — virodhaḥ pradarśitaḥ | tasmāt na sādhanāntara-sahitā brahmavidyā puruṣārtha-sādhanam , sarvavirodhāt , sādhananirapekṣaiva puruṣārthasādhanam — iti pārivrājyaṃ sarvasādhana-sannyāsa-lakṣaṇam aṅgatvena vidhitsyate ; etāvadeva amṛtatva-sādhanamityavadhāraṇāt , ṣaṣṭhasamāptau, liṅgācca — karmī sanyājñavalkyaḥ pravavrājeti | maitreyyai ca karmasādhana-rahitāyai sādhanatvenāmṛtatvasya brahmavidyopadeśāt , vittanindāvacanācca ; yadi hi amṛtatvasādhanaṃ karma syāt , vitta-sādhyaṃ pāṅktaṃ karmeti — tannindā-vacanamaniṣṭaṃ syāt ; yadi tu paritityājayiṣitaṃ karma, tato yuktā tatsādhana-nindā |</p>
+        <p class="src-bhashyam">karmādhikāra-nimitta-varṇāśramādi-pratyayopamardācca — <span class="src-pratika">‘brahma taṃ parādāt’ (bṛ. u. 2 | 4 | 6)</span> <span class="src-pratika">‘kṣatraṃ taṃ parādāt’ (bṛ. u. 2 | 4 | 6)</span> ityādeḥ ; na hi brahmakṣatrādyātma-pratyayopamarde, brāhmaṇenedaṃ kartavyaṃ kṣatriyeṇedaṃ kartavyamiti viṣayābhāvāt ātmānaṃ labhate vidhiḥ ; yasyaiva puruṣasya upamarditaḥ pratyayaḥ brahmakṣatrādyātmaviṣayaḥ, tasya tatpratyayasannyāsāt tatkāryāṇāṃ karmaṇāṃ karma-sādhanānāṃ ca arthaprāptaśca sannyāsaḥ | tasmāt ātmajñānāṅgatvena sannyāsavidhitsayaiva ākhyāyikeyamārabhyate ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 2: Vārtika on Saṃbandha-bhāṣya -->
+      <div class="source-section-block" id="section-vartika-sambandha" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4 Saṃbandha-Bhāṣya Vārttikam (BV 2.4.1-7, 9-20)</p>
+        <p class="src-label vartika-label">॥ Vārttikam ॥ (on Saṃbandha-bhāṣya)</p>
+        <p class="src-vartika">ātmetyeveti sūtrasya vyākhyeyaṃ prastutā sphuṭā ||<br>brahma te'haṃ bravāṇīti prārabhyā''pūrṇavākyataḥ || BV 2.4.1 ||</p>
+        <p class="src-vartika">nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān ||<br>niḥśeṣakarmahetūtthaphalasāvadyadhīstataḥ || BV 2.4.2 ||</p>
+        <p class="src-vartika">virakta āgrajātso'yaṃ tatsāvadyasamīkṣaṇāt ||<br>saṃsāraduḥkhasaṃskārasmṛtibhiḥ preryamāṇadhīḥ || BV 2.4.3 ||</p>
+        <p class="src-vartika">udbhūtatajjihāsaḥ saṃstaddhāne sādhanaspṛhaḥ ||<br>tyaktāśeṣaiṣaṇaḥ so'tha pratyagyāthātmyaniścayaḥ || BV 2.4.4 ||</p>
+        <p class="src-vartika">vastuvṛttātmasaṃbodhadhvastasaṃsārakāraṇaḥ ||<br>vyāviddhāśeṣasaṃsāro vimukto nā vimucyate || BV 2.4.5 ||</p>
+        <p class="src-vartika">yāvatkiṃcidavidyāyāḥ kāryaṃ vairāgyakāraṇam ||<br>tatsaṃnyāso viraktatvātsvata eva na śāstrataḥ || BV 2.4.6 ||</p>
+        <p class="src-vartika">brahmayāthātmyavijñānasādhanatvaṃ vinā''gamāt ||<br>saṃnyāsasya na vijñātaṃ tacchāstreṇeha bodhyate || BV 2.4.7 ||</p>
+        <div style="margin: 1.5rem 0;"></div>
+        <p class="src-vartika">tatraitacchaṅkyate codyaṃ brahmatvasiddhidoṣakṛt ||<br>niṣiddhaṃ neti netīti mūrtāmūrtādi vastu yat || BV 2.4.9 ||</p>
+        <p class="src-vartika">kiṃ tadbrahmānugaṃ sarvaṃ kiṃ vā tasmādvivicyate ||<br>yadi brahmānugaṃ brahma syādanarthātmakaṃ tadā || BV 2.4.10 ||</p>
+        <p class="src-vartika">abhāvaniṣṭaṃ taccetsyānmukhyaṃ brahma na sidhyati ||<br>abhāvasya tato'nyatvādanvayavyatirekataḥ || BV 2.4.11 ||</p>
+        <p class="src-vartika">netītyapi niṣedhoktistathā sati virudhyate || <br>vaidikaśca prayāso'yaṃ sarvaḥ syāttuṣakaṇḍanam || BV 2.4.12 ||</p>
+        <p class="src-vartika">vivicyate brahmaṇaścenmaivaṃ doṣastathā'pi hi ||<br>brahmatvaṃ brahmaṇo na syādvitīye sati vastuni || BV 2.4.13 ||</p>
+        <p class="src-vartika">avyāvṛttānanugataṃ vastu brahmatvamaśnute ||<br>etacca durlabhaṃ tasya dvitīye sati lakṣaṇam || BV 2.4.14 ||</p>
+        <p class="src-vartika">anvayādiniṣedhāya sarvamātmeti vākyataḥ ||<br>maitreyāītyādiko granthastasmādārabhyate paraḥ || BV 2.4.18 ||</p>
+        <p class="src-vartika">sarvābrahmaniṣedhena tadartho veha niścitaḥ ||<br>tasya saṃsiddhiviṣayamaikātmyamadhunotyate || BV 2.4.19 ||</p>
+        <p class="src-vartika">netīti brahmaṇo'nyatra mūrtāmūrtavyavasthitau ||<br>prasakte sāṃkhyasiddhānte sarvamātmeti vocyate || BV 2.4.20 ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 3: Mantra 2.4.1 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-1" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.1</p>
+        <p class="src-label mulam-label">॥ Mūlam ॥</p>
+        <p class="src-mulam">maitreyīti hovāca yājñavalkya ; udyāsyanvā are'hamasmātsthānādasmi; hanta te'nayā kātyāyanyāntaṃ karavāṇīti || 2-4-1 ||</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">maitreyīti hovāca yājñavalkyaḥ</span> — maitreyīṃ svabhāryāmāmantritavān yājñavalkyo nāma ṛṣiḥ ; <span class="src-pratika">udyāsyan</span> ūrdhvaṃ yāsyan pārivrājyākhyamāśramāntaram <span class="src-pratika">vai</span> ; ‘<span class="src-pratika">are</span>’ iti sambodhanam ; <span class="src-pratika">aham</span> , <span class="src-pratika">asmāt</span> gārhasthyāt , <span class="src-pratika">sthānāt</span> āśramāt , ūrdhvaṃ gantumicchan <span class="src-pratika">asmi</span> bhavāmi ; ataḥ <span class="src-pratika">hanta</span> anumatiṃ prārthayāmi <span class="src-pratika">te</span> tava ; kiñcānyat — te tava <span class="src-pratika">anayā</span> dvitīyayā bhāryayā <span class="src-pratika">kātyāyanyā</span> <span class="src-pratika">antaṃ</span> vicchedaṃ <span class="src-pratika">karavāṇi</span> ; patidvāreṇa yuvayormayā sambadhyamānayoryaḥ sambandha āsīt , tasya sambandhasya vicchedaṃ karavāṇi dravyavibhāgaṃ kṛtvā ; vittena saṃvibhajya yuvāṃ gamiṣyāmi ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 4: Mantra 2.4.2 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-2" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.2</p>
+        <p class="src-label mulam-label">॥ Mūlam ॥</p>
+        <p class="src-mulam">sā hovāca maitreyī | yannu ma iyaṃ bhagoḥ sarvā pṛthivī vittena pūrṇā syātkathaṃ tenāmṛtā syāmiti ; neti hovāca yājñavalkyo ; yathaivopakaraṇavatāṃ jīvitaṃ tathaiva te jīvitaṃ syād ; amṛtatvasya tu nāśāsti vitteneti || 2-4-2 ||</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">sā</span> evamuktā <span class="src-pratika">ha uvāca </span>— <span class="src-pratika">yat</span> yadi, ‘<span class="src-pratika">nu</span>’ iti vitarke, <span class="src-pratika">me</span> mama <span class="src-pratika">iyaṃ pṛthivī</span>, <span class="src-pratika">bhagoḥ</span> bhagavan , <span class="src-pratika">sarvā</span> sāgaraparikṣiptā <span class="src-pratika">vittena</span> dhanena <span class="src-pratika">pūrṇā</span> <span class="src-pratika">syāt</span> ; <span class="src-pratika">katham</span> ? na kathañcanetyākṣepārthaḥ, praśnārtho vā, tena pṛthivīpūrṇavittasādhyena karmaṇā agnihotrādinā — amṛtā kiṃ syāmiti vyavahitena sambandhaḥ |</p>
+        <p class="src-bhashyam"><span class="src-pratika">pratyuvāca</span> <span class="src-pratika">yājñavalkyaḥ</span> — kathamiti yadyākṣepārtham, anumodanam — <span class="src-pratika">neti hovāca yājñavalkya</span> iti ; praśnaścet prativacanārtham ; <span class="src-pratika">naiva syāḥ amṛtā</span>, kiṃ tarhi <span class="src-pratika">yathaiva</span> <span class="src-pratika">loke upakaraṇavatāṃ </span>sādhanavatāṃ <span class="src-pratika">jīvitaṃ</span> sukhopāya-bhoga-sampannam , <span class="src-pratika">tathaiva</span> tadvadeva <span class="src-pratika">tava jīvitaṃ syāt </span>; <span class="src-pratika">amṛtatvasya tu na āśā </span>manasāpi <span class="src-pratika">asti</span> <span class="src-pratika">vittena</span> vitta-sādhyena karmaṇeti ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 5: Vārtika on 2.4.2-4 -->
+      <div class="source-section-block" id="section-vartika-2-4-2" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.2-4 Vārttikam (Verses 47-70)</p>
+        <p class="src-label vartika-label">॥ Vārttikam ॥ (on 2.4.2–4)</p>
+        <p class="src-vartika">mahānubhāvasaṃparkaḥ kasya nonnatikāraṇam ||<br>aśucyapi payaḥ prāpya gaṅgāṃ yāti pavitratām || 47 ||</p>
+        <p class="src-vartika">bhagavatsaṃgaternānyaḥ puruṣārtho'mṛtatvataḥ ||<br>pṛcchāmyato'mṛtatvasya sādhanaṃ syātkathaṃ dhanam || 48 ||</p>
+        <p class="src-vartika">sāreṇa yadi nāmeyaṃ pūrṇā syādvasunā mahī ||<br>tāvatā'pyamṛtā'haṃ syāṃ kiṃvā netyucyatāṃ yathā || 49 ||</p>
+        <p class="src-vartika">sattāmātropakāriṇi dhanāni dhanināṃ na hi ||<br>kriyādvāropakārīṇi yato'taḥ pṛcchyate kriyā || 50 ||</p>
+        <p class="src-vartika">pratyāha pṛṣṭaḥ svāṃ jāyāṃ nāmṛtatvaṃ dhanāditi || 51 ||<br>vittaṃ cennāmṛtatvāya kasmādditsati tadbhavān ||<br>iti pṛṣṭo'bravīdvittasādhanasya prayojanam || 52 ||</p>
+        <p class="src-vartika">kṣayiṣṇusādhanādhīnaṃ jīvitaṃ syādyathā nṛṇām ||<br>tathaiva tava vittena jīvitaṃ nāmṛtātmatā || 53 ||</p>
+        <p class="src-vartika">avidyāmātravidhvaṃsājjñānādevāmṛtaṃ yataḥ ||<br>amṛtatvasya nā''śā'pi vittasādhyena karmaṇā || 54 ||</p>
+        <p class="src-vartika">kuto'mṛtatvasaṃprāptirjñānamātraikahetunā ||<br>na karma kāraṇaṃ mukternāgnistāpasya bheṣajam ||<br>karmabhyo janma niyataṃ janma cennirvṛtiḥ kutaḥ || 55 ||</p>
+        <p class="src-vartika">svabhāvādeva sādhūnāṃ pravṛttirupakāriṇī ||<br>apakāriṇyapi jane kimu bhaktajanaṃ prati || 56 ||</p>
+        <p class="src-vartika">nūnaṃ mamāparādho'yaṃ yadbhavanto'pi māṃ prati ||<br>pratilomaṃ cikīrṣanti ko'nyaḥ syāddhitakṛnmama || 57 ||</p>
+        <p class="src-vartika">anuraktāṃ priyāṃ sādhvīṃ baddhvā vittena māṃ katham ||<br>kāmocchittimakṛtvā ca saṃnyasanti bhavadvidhāḥ || 58 ||</p>
+        <p class="src-vartika">vittāccedamṛtatvaṃ syāttattityakṣā na yujyate ||<br>vittāccennāmṛtatvaṃ syādvada tena mamāpi kim || 59 ||</p>
+        <p class="src-vartika">yadyastyanujighṛkṣaivaṃ karuṇā vā mayīṣyate || <br>yadeva bhagavānveda tena saṃvibhajasva mām || 60 ||</p>
+        <p class="src-vartika">yadvijñānātparityajya niḥśeṣaṃ vittasādhanam ||<br>svārājyamīpsati bhavāṃstadeva vasu dehi me || 61 ||</p>
+        <p class="src-vartika">nā''dirnānto na madhyaṃ vā yasya vittasya vidyate ||<br>bhoge na ca kṣayaṃ yāti tadeva vasu dīyatām || 62 ||</p>
+        <p class="src-vartika">anantavitto hi bhavānantavaddīyate kutaḥ ||<br>asataḥ kīdṛśaṃ dānaṃ sadevātaḥ pradīyatām || 63 ||</p>
+        <p class="src-vartika">saṃsārapuruṣārthebhyo yato nāvyutthitātmane ||<br>muktyekasādhanaṃ jñānaṃ dātuṃ śakyamidaṃ mayā || 64 ||</p>
+        <p class="src-vartika">amumukṣutvamāśaṅkya bhavatyai tatpraditsitam ||<br>saṃsārāccedviraktā'si gṛhāṇānuttamāmṛtam || 65 ||</p>
+        <p class="src-vartika">strīṇāṃ yaducitaṃ vākyaṃ pratilomaṃ na bhāṣase ||<br>pūrvavattvanukūlaṃ tvamidānīmapi bhāṣase || 66 ||</p>
+        <p class="src-vartika">mokṣaṃ yāntaṃ naraṃ sarve muñcanti sahajā api ||<br>atibhaktitayā māṃ tvaṃ mokṣe'pi na jihāsasi || 67 ||</p>
+        <p class="src-vartika">vibhāgamasahantīva madatisnehakāraṇāt ||<br>muktāvanuyiyāsi tvaṃ madaikātmyaparīpsayā || 68 ||</p>
+        <p class="src-vartika">atisnehā'pakṛṣṭomā dehārdhaṃ śūlinaḥ śritā || <br>tvaṃ tu sarvātmanā''tmānaṃ kṛtsnaṃ māmāptumicchasi || 69 ||</p>
+        <p class="src-vartika">yata evamatastubhyaṃ vakṣyāmyamṛtasādhanam ||<br>nididhyāsasva ceto'to vyācakṣāṇasya tanmama || 70 ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 6: Mantra 2.4.3 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-3" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.3</p>
+        <p class="src-label mulam-label">॥ Mūlam ॥</p>
+        <p class="src-mulam">sā hovāca maitreyī yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryāṃ yadeva bhagavānveda tadeva me brūhīti || 2-4-3 ||</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">sā hovāca maitreyī</span> | evamuktā pratyuvāca maitreyī — yadyevaṃ <span class="src-pratika">yenāhaṃ nāmṛtā syām , kimahaṃ tena</span> vittena <span class="src-pratika">kuryām</span> ? <span class="src-pratika">yadeva</span> bhagavān kevalam amṛtatva-sādhanaṃ <span class="src-pratika">veda</span>, <span class="src-pratika">tadeva</span> amṛtatva-sādhanaṃ <span class="src-pratika">me</span> mahyaṃ <span class="src-pratika">brūhi</span> ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 7: Mantra 2.4.4 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-4" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.4</p>
+        <p class="src-label mulam-label">॥ Mūlam ॥</p>
+        <p class="src-mulam">sa hovāca yājñavalkyaḥ priyā batāre naḥ satī priyaṃ bhāṣasa ehyāssva vyākhyāsyāmi te vyācakṣāṇasya tu me nididhyāsasveti || 2-4-4 ||</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+        <p class="src-bhashyam">sa hovāca yājñavalkyaḥ | evaṃ vitta-sādhye'mṛtatva-sādhane pratyākhyāte, yājñavalkyaḥ svābhiprāya-sampattau tuṣṭa āha — <span class="src-pratika">sa hovāca</span> — <span class="src-pratika">priyā</span> iṣṭā, <span class="src-pratika">bata </span>ityanukampyāha, <span class="src-pratika">are</span> maitreyi, <span class="src-pratika">na</span> asmākaṃ <span class="src-pratika">pūrvamapi priyā satī </span>bhavantī idānīṃ <span class="src-pratika">priyame</span>va cittānukūlaṃ <span class="src-pratika">bhāṣase</span> | ataḥ <span class="src-pratika">ehi āssva </span>upaviśa <span class="src-pratika">vyākhyāsyāmi</span> — yat <span class="src-pratika">te </span>tava iṣṭam amṛtatva-sādhanamātma-jñānam kathayiṣyāmi | <span class="src-pratika">vyācakṣāṇasya</span> tu me mama vyākhyānaṃ kurvataḥ, <span class="src-pratika">nididhyāsasva</span> vākyāni arthato niścayena dhyātumiccheti ||</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 8: Mantra 2.4.5 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-5" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">Bṛhadāraṇyaka Upaniṣad 2.4.5</p>
+        <p class="src-label mulam-label">॥ Mūlam ॥</p>
+        <p class="src-mulam">sa hovāca na vā are patyuḥ kāmāya patiḥ priyo bhavatyātmanastu kāmāya patiḥ priyo bhavati | na vā are jāyāyai kāmāya jāyā priyā bhavatyātmanastu kāmāya jāyā priyā bhavati | na vā are putrāṇāṃ kāmāya putrāḥ priyā bhavantyātmanastu kāmāya putrāḥ priyā bhavanti | na vā are vittasya kāmāya vittaṃ priyaṃ bhavatyātmanastu kāmāya vittaṃ priyaṃ bhavati | na vā are brahmaṇaḥ kāmāya brahma priyaṃ bhavatyātmanastu kāmāya brahma priyaṃ bhavati | na vā are kṣatrasya kāmāya kṣatraṃ priyaṃ bhavatyātmanastu kāmāya kṣatraṃ priyaṃ bhavati | na vā are lokānāṃ kāmāya lokāḥ priyā bhavantyātmanastu kāmāya lokāḥ priyā bhavanti | na vā are devānāṃ kāmāya devāḥ priyā bhavantyātmanastu kāmāya devāḥ priyā bhavanti | na vā are bhūtānāṃ kāmāya bhūtāni priyāṇi bhavantyātmanastu kāmāya bhūtāni priyāṇi bhavanti | na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavatyātmanastu kāmāya sarvaṃ priyaṃ bhavati | ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyyātmano vā are darśanena śravaṇena matyā vijñānenedaṃ sarvaṃ viditam || 2-4-5 ||</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
+        <p class="src-bhashyam">sa hovāca — amṛtatvasādhanaṃ vairāgyamupadidixuḥ jāyāpatiputrādibhyo virāgamutpādayati tatsannyāsāya |</p>
+        <p class="src-bhashyam">na vai — vai - śabdaḥ prasiddhasmaraṇārthaḥ ; prasiddhameva etat loke ; patyuḥ bhartuḥ kāmāya prayojanāya jāyāyāḥ patiḥ priyo na bhavati, kiṃ tarhi ātmanastu kāmāya prayojanāyaiva bhāryāyāḥ patiḥ priyo bhavati | tathā na vā are jāyāyā ityādi samānanyat , na vā are putrāṇām , na vā are vittasya, na vā are brahmaṇaḥ, na vā are kṣatrasya, na vā are lokānām , na vā are devānām , na vā are bhūtānām , na vā are sarvasya | pūrvaṃ pūrvaṃ yathāsanne prītīsādhane vacanam , tatra tatra iṣṭataratvādvairāgyasya ; sarvagrahaṇam uktānuktārtham | tasmāt lokaprasiddhametat — ātmaiva priyaḥ, nānyat |</p>
+      </div>
     </section>
 
+    <!-- Devanagari Panel -->
     <section class="script-panel devanagari" id="source-devanagari" role="tabpanel" aria-labelledby="source-tab-devanagari" lang="sa">
-      {devClasses.map(cls => (
-        <article class="source-class-section">
-          <h2>Class {cls.data.class_number}</h2>
-          <div set:html={cls.data.source_text_content} />
-        </article>
-      ))}
+      <!-- SECTION 1: Saṃbandha-bhāṣya -->
+      <div class="source-section-block" id="section-sambandha" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४ सम्बन्धभाष्यम्</p>
+        <p class="src-label bhashyam-label">॥ सम्बन्धभाष्यम् ॥</p>
+        <p class="src-bhashyam">आत्मेत्येवोपासीत ; तदेव एतस्मिन् सर्वस्मिन् पदनीयम् आत्मतत्त्वम् , यस्मात् प्रेयः पुत्रादेः — इत्युपन्यस्तस्य वाक्यस्य व्याख्यानविषये सम्बन्धप्रयोजने अभिहिते — <span class="src-pratika">‘तदात्मानमेवावेदहं ब्रह्मास्मीति तस्मात्तत्सर्वमभवत्’ (बृ. उ. १ । ४ । १०)</span> इति ; एवं प्रत्यगात्मा ब्रह्मविद्याया विषय इत्येतत् उपन्यस्तम् ।</p>
+        <p class="src-bhashyam">अविद्यायाश्च विषयः — <span class="src-pratika">‘अन्योऽसावन्योऽहमस्मीति न स वेद’ (बृ. उ. १ । ४ । १०)</span> इत्यारभ्य चातुर्वर्ण्य-प्रविभागादि-निमित्त-पाङ्क्तकर्म-साध्य-साधन-लक्षणः बीजाङ्कुरवत् व्याकृताव्याकृतस्वभावः नाम-रूप-कर्मात्मकः संसारः <span class="src-pratika">‘त्रयं वा इदं नाम रूपं कर्म’ (बृ. उ. १ । ६ । १)</span> इत्युपसंहृतः</p>
+        <p class="src-bhashyam">शास्त्रीय उत्कर्षलक्षणो ब्रह्मलोकान्तः, अधोभावश्च स्थावरान्तोऽशास्त्रीयः, पूर्वमेव प्रदर्शितः — <span class="src-pratika">‘द्वया ह’ (बृ. उ. १ । ३ । १)</span> इत्यादिना । एतस्मादविद्याविषयाद्विरक्तस्य प्रत्यगात्म-विषय-ब्रह्मविद्यायाम् अधिकारः कथं नाम स्यादिति — तृतीयेऽध्याये उपसंहृतः समस्तोऽविद्याविषयः ।</p>
+        <p class="src-bhashyam">चतुर्थे तु ब्रह्मविद्याविषयं प्रत्यगात्मानम् <span class="src-pratika">‘ब्रह्म ते ब्रवाणि’ (बृ. उ. २ । १ । १)</span> इति <span class="src-pratika">‘ब्रह्म ज्ञपयिष्यामि’ (बृ. उ. २ । १ । १)</span> इति च प्रस्तुत्य, तत् ब्रह्म एकम् अद्वयं सर्वविशेषशून्यं क्रिया-कारक-फल-स्वभाव-सत्य-शब्द-वाच्य-अशेष-भूतधर्म-प्रतिषेध-द्वारेण <span class="src-pratika">‘नेति नेति’ (बृ. उ. २ । ३ । ६)</span> इति ज्ञापितम् ।</p>
+        <p class="src-bhashyam">अस्या ब्रह्मविद्याया अङ्गत्वेन सन्न्यासो विधित्सितः, जाया-पुत्र-वित्तादि-लक्षणं पाङ्क्तं कर्म अविद्याविषयं यस्मात् न आत्म-प्राप्ति-साधनम् ; अन्यसाधनं हि अन्यस्मै फलसाधनाय प्रयुज्यमानं प्रतिकूलं भवति ; न हि बुभुक्षा-पिपासा-निवृत्त्यर्थं धावनं गमनं वा साधनम् ; मनुष्यलोक-पितृलोक-देवलोक-साधनत्वेन हि पुत्रादि-साधनानि श्रुतानि, न आत्म-प्राप्ति-साधनत्वेन, विशेषितत्वाच्च ; न च ब्रह्मविदो विहितानि, काम्यत्व-श्रवणात् — <span class="src-pratika">‘एतावान्वै कामः’ (बृ. उ. १ । ४ । १७)</span> इति, ब्रह्मविदश्च आप्त-कामत्वात् आप्तकामस्य कामानुपपत्तेः, <span class="src-pratika">‘येषां नोऽयमात्मायं लोकः’ (बृ. उ. ४ । ४ । २२)</span> इति च श्रुतेः ।</p>
+        <p class="src-bhashyam">केचित्तु ब्रह्मविदोऽपेषणासम्बन्धं वर्णयन्ति ; तैर्बृहदारण्यकं न श्रुतम् ; पुत्राद्येषणानामविद्वद्विषयत्वम् , विद्याविषये च — <span class="src-pratika">‘येषां नोऽयमात्मायं लोकः’ (बृ. उ. ४ । ४ । २२)</span> इत्यतः ‘किं प्रजया करिष्यामः’ इति — एष विभागः तैर्न श्रुतः श्रुत्या कृतः ; सर्वक्रिया-कारक-फलोपमर्द-स्वरूपायां च विद्यायां सत्याम् , सह कार्येण अविद्याया अनुपपत्ति-लक्षणश्च विरोधः तैर्न विज्ञातः ; व्यास-वाक्यं च तैर्न श्रुतम् । कर्म-विद्या-स्वरूपयोः विद्याविद्यात्मकयोः प्रतिकूलवर्तनं विरोधः ।</p>
+        <p class="src-bhashyam">‘यदिदं वेदवचनं कुरु कर्म त्यजेति च । कां गतिं विद्यया यान्ति कां च गच्छन्ति कर्मणा’ (मो. ध. २४१ । १ । २) ॥ एतद्वै श्रोतुमिच्छामि तद्भवान्प्रब्रवीतु मे । एतावन्योन्यवैरुप्ये वर्तेते प्रतिकूलतः’ इत्येवं पृष्टस्य प्रतिवचनेन — ‘कर्मणा बध्यते जन्तुर्विद्यया च विमुच्यते । तस्मात्कर्म न कुर्वन्ति यतयः पारदर्शिनः’ (मो. ध. २४१ । ७)</p>
+        <p class="src-bhashyam">इत्येवमादि — विरोधः प्रदर्शितः । तस्मात् न साधनान्तर-सहिता ब्रह्मविद्या पुरुषार्थ-साधनम् , सर्वविरोधात् , साधननिरपेक्षैव पुरुषार्थसाधनम् — इति पारिव्राज्यं सर्वसाधन-सन्न्यास-लक्षणम् अङ्गत्वेन विधित्स्यते ; एतावदेव अमृतत्व-साधनमित्यवधारणात् , षष्ठसमाप्तौ, लिङ्गाच्च — कर्मी सन्याज्ञवल्क्यः प्रवव्राजेति । मैत्रेय्यै च कर्मसाधन-रहितायै साधनत्वेनामृतत्वस्य ब्रह्मविद्योपदेशात् , वित्तनिन्दावचनाच्च ; यदि हि अमृतत्वसाधनं कर्म स्यात् , वित्त-साध्यं पाङ्क्तं कर्मेति — तन्निन्दा-वचनमनिष्टं स्यात् ; यदि तु परितित्याजयिषितं कर्म, ततो युक्ता तत्साधन-निन्दा ।</p>
+        <p class="src-bhashyam">कर्माधिकार-निमित्त-वर्णाश्रमादि-प्रत्ययोमर्दाच्च — <span class="src-pratika">‘ब्रह्म तं परादात्’ (बृ. उ. २ । ४ । ६)</span> <span class="src-pratika">‘क्षत्रं तं परादात्’ (बृ. उ. २ । ४ । ६)</span> इत्यादेः ; न हि ब्रह्मक्षत्राद्यात्म-प्रत्ययोपमर्दे, ब्राह्मणेनेदं कर्तव्यं क्षत्रियेणेदं कर्तव्यमिति विषयाभावात् आत्मानं लभते विधिः ; यस्यैव पुरुषस्य उपमर्दितः प्रत्ययः ब्रह्मक्षत्राद्यात्मविषयः, तस्य तत्प्रत्ययसन्न्यासात् तत्कार्याणां कर्मणां कर्म-साधनानां च अर्थप्राप्तश्च सन्न्यासः । तस्मात् आत्मज्ञानाङ्गत्वेन सन्न्यासविधित्सयैव आख्यायिकेयमारभ्यते ॥</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 2: Vārtika on Saṃbandha-bhāṣya -->
+      <div class="source-section-block" id="section-vartika-sambandha" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४ सम्बन्धभाष्य-वार्तिकम् (BV 2.4.1-7, 9-20)</p>
+        <p class="src-label vartika-label">॥ वार्तिकम् ॥ (सम्बन्धभाष्य-विषयक)</p>
+        <p class="src-vartika">आत्मेत्येवेति सूत्रस्य व्याख्येयं प्रस्तुता स्फुटा ।।<br>ब्रह्म तेऽहं ब्रवाणीति प्रारभ्याऽऽपूर्णवाक्यतः ।। BV 2.4.१ ।।</p>
+        <p class="src-vartika">नित्यकर्माद्यनुष्ठानसंशुद्धधिषणः पुमान् ।।<br>निःशेषकर्महेतूत्थफलसावद्यधीस्ततः ।। BV 2.4.२ ।।</p>
+        <p class="src-vartika">विरक्त आग्रजात्सोऽयं तत्सावद्यसमीक्षणात् ।।<br>संसारदुःखसंस्कारस्मृतिभिः प्रेर्यमाणधीः ।। BV 2.4.३ ।।</p>
+        <p class="src-vartika">उद्भूततज्जिहासः संस्तद्धाने साधनस्पृहः ।।<br>त्यक्ताशेषैषणः सोऽथ प्रत्यग्याथात्म्यनिश्चयः ।। BV 2.4.४ ।।</p>
+        <p class="src-vartika">वस्तुवृत्तात्मसंबोधध्वस्तसंसारकारणः ।।<br>व्याविद्धाशेषसंसारो विमुक्तो ना विमुच्यते ।। BV 2.4.५ ।।</p>
+        <p class="src-vartika">यावत्किंचिदविद्यायाः कार्यं वैराग्यकारणम् ।।<br>तत्संन्यासो विरक्तत्वात्स्वत एव न शास्त्रतः ।। BV 2.4.६ ।।</p>
+        <p class="src-vartika">ब्रह्मयाथात्म्यविज्ञानसाधनत्वं विनाऽऽगमात् ।।<br>संन्यासस्य न विज्ञातं तच्छास्त्रेणेह बोध्यते ।। BV 2.4.७ ।।</p>
+        <div style="margin: 1.5rem 0;"></div>
+        <p class="src-vartika">तत्रैतच्छङ्क्यते चोद्यं ब्रह्मत्वसिद्धिदोषकृत् ।।<br>निषिद्धं नेति नेतीति मूर्तामूर्तादि वस्तु यत् ।। BV 2.4.९ ।।</p>
+        <p class="src-vartika">किं तद्ब्रह्मानुगं सर्वं किं वा तस्माद्विविच्यते ।।<br>यदि ब्रह्मानुगं ब्रह्म स्यादनर्थात्मकं तदा ।। BV 2.4.१० ।।</p>
+        <p class="src-vartika">अभावनिष्टं तच्चेत्स्यान्मुख्यं ब्रह्म न सिध्यति ।।<br>अभावस्य ततोऽन्यत्वादन्वयव्यतिरेकतः ।। BV 2.4.११ ।।</p>
+        <p class="src-vartika">नेतीत्यपि निषेधोक्तिस्तथा सति विरुध्यते ।। <br>वैदिकश्च प्रयासोऽयं सर्वः स्यात्तुषकण्डनम् ।। BV 2.4.१२ ।।</p>
+        <p class="src-vartika">विविच्यते ब्रह्मणश्चेन्मैवं दोषस्तथाऽपि हि ।।<br>ब्रह्मत्वं ब्रह्मणो न स्याद्वितीये सति वस्तुनि ।। BV 2.4.१३ ।।</p>
+        <p class="src-vartika">अव्यावृत्ताननुगतं वस्तु ब्रह्मत्वमश्नुते ।।<br>एतच्च दुर्लभं तस्य द्वितीये सति लक्षणम् ।। BV 2.4.१४ ।।</p>
+        <p class="src-vartika">अन्वयादिनिषेधाय सर्वमात्मेति वाक्यतः ।।<br>मैत्रेयाीत्यादिको ग्रन्थस्तस्मादारभ्यते परः ।। BV 2.4.१८ ।।</p>
+        <p class="src-vartika">सर्वाब्रह्मनिषेधेन तदर्थो वेह निश्चितः ।।<br>तस्य संसिद्धिविषयमैकात्म्यमधुनोत्यते ।। BV 2.4.१९ ।।</p>
+        <p class="src-vartika">नेतीति ब्रह्मणोऽन्यत्र मूर्तामूर्तव्यवस्थितौ ।।<br>प्रसक्ते सांख्यसिद्धान्ते सर्वमात्मेति वोच्यते ।। BV 2.4.२० ।।</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 3: Mantra 2.4.1 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-1" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.१</p>
+        <p class="src-label mulam-label">॥ मूलम् ॥</p>
+        <p class="src-mulam">मैत्रेयीति होवाच याज्ञवल्क्य ; उद्यास्यन्वा अरेऽहमस्मात्स्थानादस्मि; हन्त तेऽनया कात्यायन्यान्तं करवाणीति ॥ 2-4-1 ॥</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">मैत्रेयीति होवाच याज्ञवल्क्यः</span> — मैत्रेयीं स्वभार्यामामन्त्रितवान् याज्ञवल्क्यो नाम ऋषिः ; <span class="src-pratika">उद्यास्यन्</span> ऊर्ध्वं यास्यन् पारिव्राज्याख्यमाश्रमान्तरम् <span class="src-pratika">वै</span> ; ‘<span class="src-pratika">अरे</span>’ इति सम्बोधनम् ; <span class="src-pratika">अहम्</span> , <span class="src-pratika">अस्मात्</span> गार्हस्थ्यात् , <span class="src-pratika">स्थानात्</span> आश्रमात् , ऊर्ध्वं गन्तुमिच्छन् <span class="src-pratika">अस्मि</span> भवामि ; अतः <span class="src-pratika">हन्त</span> अनुमतिं प्रार्थयामि <span class="src-pratika">ते</span> तव ; किञ्चान्यत् — ते तव <span class="src-pratika">अनया</span> द्वितीयया भार्यया <span class="src-pratika">कात्यायन्या</span> <span class="src-pratika">अन्तं</span> विच्छेदं <span class="src-pratika">करवाणि</span> ; पतिद्वारेण युवयोर्मया सम्बध्यमानयोर्यः सम्बन्ध आसीत् , तस्य सम्बन्धस्य विच्छेदं करवाणि द्रव्यविभागं कृत्वा ; वित्तेन संविभज्य युवां गमिष्यामि ॥</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 4: Mantra 2.4.2 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-2" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.२</p>
+        <p class="src-label mulam-label">॥ मूलम् ॥</p>
+        <p class="src-mulam">सा होवाच मैत्रेयी । यन्नु म इयं भगोः सर्वा पृथिवी वित्तेन पूर्णा स्यात्कथं तेनामृता स्यामिति ; नेति होवाच याज्ञवल्क्यो ; यथैवोपकरणवतां जीवितं तथैव ते जीवितं स्याद् ; अमृतत्वस्य तु नाशास्ति वित्तेनेति ॥ 2-4-2 ॥</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">सा</span> एवमुक्ता <span class="src-pratika">ह उवाच </span>— <span class="src-pratika">यत्</span> यदि, ‘<span class="src-pratika">नु</span>’ इति वितर्के, <span class="src-pratika">मे</span> मम <span class="src-pratika">इयं पृथिवी</span>, <span class="src-pratika">भगोः</span> भगवन् , <span class="src-pratika">सर्वा</span> सागरपरिक्षिप्ता <span class="src-pratika">वित्तेन</span> धनेन <span class="src-pratika">पूर्णा</span> <span class="src-pratika">स्यात्</span> ; <span class="src-pratika">कथम्</span> ? न कथञ्चनेत्याक्षेपार्थः, प्रश्नार्थो वा, तेन पृथिवीपूर्णवित्तसाध्येन कर्मणा अग्निहोत्रादिना — अमृता किं स्यामिति व्यवहितेन सम्बन्धः ।</p>
+        <p class="src-bhashyam"><span class="src-pratika">प्रत्युवाच</span> <span class="src-pratika">याज्ञवल्क्यः</span> — कथमिति यद्याक्षेपार्थम्, अनुमोदनम् — <span class="src-pratika">नेति होवाच याज्ञवल्क्य</span> इति ; प्रश्नश्चेत् प्रतिवचनार्थम् ; <span class="src-pratika">नैव स्याः अमृता</span>, किं तर्हि <span class="src-pratika">यथैव</span> <span class="src-pratika">लोके उपकरणवतां </span>साधनवतां <span class="src-pratika">जीवितं</span> सुखोपाय-भोग-सम्पन्नम् , <span class="src-pratika">तथैव</span> तद्वदेव <span class="src-pratika">तव जीवितं स्यात् </span>; <span class="src-pratika">अमृतत्वस्य तु न आशा </span>मनसापि <span class="src-pratika">अस्ति</span> <span class="src-pratika">वित्तेन</span> वित्त-साध्येन कर्मणेति ॥</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 5: Vārtika on 2.4.2-4 -->
+      <div class="source-section-block" id="section-vartika-2-4-2" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.२-४ वार्तिकम् (Verses 47-70)</p>
+        <p class="src-label vartika-label">॥ वार्तिकम् ॥ (२.४.२-४ विषयक)</p>
+        <p class="src-vartika">महानुभावसंपर्कः कस्य नोन्नतिकारणम् ।।<br>अशुच्यपि पयः प्राप्य गङ्गां याति पवित्रताम् ।। ४७ ।।</p>
+        <p class="src-vartika">भगवत्संगतेर्नान्यः पुरुषार्थोऽमृतत्वतः ।।<br>पृच्छाम्यतोऽमृतत्वस्य साधनं स्यात्कथं धनम् ।। ४८ ।।</p>
+        <p class="src-vartika">सारेण यदि नामेयं पूर्णा स्याद्वसुना मही ।।<br>तावताऽप्यमृताऽहं स्यां किंवा नेत्युच्यतां यथा ।। ४९ ।।</p>
+        <p class="src-vartika">सत्तामात्रोपकारिणि धनानि धनिनां न हि ।।<br>क्रियाद्वारोपकारीणि यतोऽतः पृच्छ्यते क्रिया ।। ५० ।।</p>
+        <p class="src-vartika">प्रत्याह पृष्टः स्वां जायां नामृतत्वं धनादिति ।। ५१ ।।<br>वित्तं चेन्नामृतत्वाय कस्माद्दित्सति तद्भवान् ।।<br>इति पृष्टोऽब्रवीद्वित्तसाधनस्य प्रयोजनम् ।। ५२ ।।</p>
+        <p class="src-vartika">क्षयिष्णुसाधनाधीनं जीवितं स्याद्यथा नृणाम् ।।<br>तथैव तव वित्तेन जीवितं नामृतात्मता ।। ५३ ।।</p>
+        <p class="src-vartika">अविद्यामात्रविध्वंसाज्ज्ञानादेवामृतं यतः ।।<br>अमृतत्वस्य नाऽऽशाऽपि वित्तसाध्येन कर्मणा ।। ५४ ।।</p>
+        <p class="src-vartika">कुतोऽमृतत्वसंप्राप्तिर्ज्ञानमात्रैकहेतुना ।।<br>न कर्म कारणं मुक्तेर्नाग्निस्तापस्य भेषजम् ।।<br>कर्मभ्यो जन्म नियतं जन्म चेन्निर्वृतिः कुतः ।। ५५ ।।</p>
+        <p class="src-vartika">स्वभावादेव साधूनां प्रवृत्तिरुपकारिणी ।।<br>अपकारिण्यपि जने किमु भक्तजनं प्रति ।। ५६ ।।</p>
+        <p class="src-vartika">नूनं ममापराधोऽयं यद्भवन्तोऽपि मां प्रति ।।<br>प्रतिलोमं चिकीर्षन्ति कोऽन्यः स्याद्धितकृन्मम ।। ५७ ।।</p>
+        <p class="src-vartika">अनुरक्तां प्रियां साध्वीं बद्ध्वा वित्तेन मां कथम् ।।<br>कामोच्छित्तिमकृत्वा च संन्यसन्ति भवद्विधाः ।। ५८ ।।</p>
+        <p class="src-vartika">वित्ताच्चेदमृतत्वं स्यात्तत्तित्यक्षा न युज्यते ।।<br>वित्ताच्चेन्नामृतत्वं स्याद्वद तेन ममापि किम् ।। ५९ ।।</p>
+        <p class="src-vartika">यद्यस्त्यनुजिघृक्षैवं करुणा वा मयीष्यते ।। <br>यदेव भगवान्वेद तेन संविभजस्व माम् ।। ६० ।।</p>
+        <p class="src-vartika">यद्विज्ञानात्परित्यज्य निःशेषं वित्तसाधनम् ।।<br>स्वाराज्यमीप्सति भवांस्तदेव वसु देहि मे ।। ६१ ।।</p>
+        <p class="src-vartika">नाऽऽदिर्नान्तो न मध्यं वा यस्य वित्तस्य विद्यते ।।<br>भोगे न च क्षयं याति तदेव वसु दीयताम् ।। ६२ ।।</p>
+        <p class="src-vartika">अनन्तवित्तो हि भवानन्तवद्दीयते कुतः ।।<br>असतः कीदृशं दानं सदेवातः प्रदीयताम् ।। ६३ ।।</p>
+        <p class="src-vartika">संसारपुरुषार्थेभ्यो यतो नाव्युत्थितात्मने ।।<br>मुक्त्येकसाधनं ज्ञानं दातुं शक्यमिदं मया ।। ६४ ।।</p>
+        <p class="src-vartika">अमुमुक्षुत्वमाशङ्क्य भवत्यै तत्प्रदित्सितम् ।।<br>संसाराच्चेद्विरक्ताऽसि गृहाणानुत्तमामृतम् ।। ६५ ।।</p>
+        <p class="src-vartika">स्त्रीणां यदुचितं वाक्यं प्रतिलोमं न भाषसे ।।<br>पूर्ववत्त्वनुकूलं त्वमिदानीमपि भाषसे ।। ६६ ।।</p>
+        <p class="src-vartika">मोक्षं यान्तं नरं सर्वे मुञ्चन्ति सहजा अपि ।।<br>अतिभक्तितया मां त्वं मोक्षेऽपि न जिहाससि ।। ६७ ।।</p>
+        <p class="src-vartika">विभागमसहन्तीव मदतिस्नेहकारणात् ।।<br>मुक्तावनुयियासि त्वं मदैकात्म्यपरीप्सया ।। ६८ ।।</p>
+        <p class="src-vartika">अतिस्नेहाऽपकृष्टोमा देहार्धं शूलिनः श्रिता ।। <br>त्वं तु सर्वात्मनाऽऽत्मानं कृत्स्नं मामाप्तुमिच्छसि ।। ६९ ।।</p>
+        <p class="src-vartika">यत एवमतस्तुभ्यं वक्ष्याम्यमृतसाधनम् ।।<br>निदिध्यासस्व चेतोऽतो व्याचक्षाणस्य तन्मम ।। ७० ।।</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 6: Mantra 2.4.3 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-3" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.३</p>
+        <p class="src-label mulam-label">॥ मूलम् ॥</p>
+        <p class="src-mulam">सा होवाच मैत्रेयी येनाहं नामृता स्यां किमहं तेन कुर्यां यदेव भगवान्वेद तदेव मे ब्रूहीति ॥ 2-4-3 ॥</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">सा होवाच मैत्रेयी</span> । एवमुक्ता प्रत्युवाच मैत्रेयी — यद्येवं <span class="src-pratika">येनाहं नामृता स्याम् , किमहं तेन</span> वित्तेन <span class="src-pratika">कुर्याम्</span> ? <span class="src-pratika">यदेव</span> भगवान् केवलम् अमृतत्व-साधनं <span class="src-pratika">वेद</span>, <span class="src-pratika">तदेव</span> अमृतत्व-साधनं <span class="src-pratika">मे</span> मह्यं <span class="src-pratika">ब्रूहि</span> ॥</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 7: Mantra 2.4.4 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-4" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.४</p>
+        <p class="src-label mulam-label">॥ मूलम् ॥</p>
+        <p class="src-mulam">स होवाच याज्ञवल्क्यः प्रिया बतारे नः सती प्रियं भाषस एह्यास्स्व व्याख्यास्यामि ते व्याचक्षाणस्य तु मे निदिध्यासस्वेति ॥ 2-4-4 ॥</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+        <p class="src-bhashyam">स होवाच याज्ञवल्क्यः । एवं वित्त-साध्येऽमृतत्व-साधने प्रत्याख्याते, याज्ञवल्क्यः स्वाभिप्राय-सम्पत्तौ तुष्ट आह — <span class="src-pratika">स होवाच</span> — <span class="src-pratika">प्रिया</span> इष्टा, <span class="src-pratika">बत </span>इत्यनुकम्प्याह, <span class="src-pratika">अरे</span> मैत्रेयि, <span class="src-pratika">न</span> अस्माकं <span class="src-pratika">पूर्वमपि प्रिया सती </span>भवन्ती इदानीं <span class="src-pratika">प्रियमे</span>व चित्तानुकूलं <span class="src-pratika">भाषसे</span> । अतः <span class="src-pratika">एहि आस्स्व </span>उपविश <span class="src-pratika">व्याख्यास्यामि</span> — यत् <span class="src-pratika">ते </span>तव इष्टम् अमृतत्व-साधनमात्म-ज्ञानम् कथयिष्यामि । <span class="src-pratika">व्याचक्षाणस्य</span> तु मे मम व्याख्यानं कुर्वतः, <span class="src-pratika">निदिध्यासस्व</span> वाक्यानि अर्थतो निश्चयेन ध्यातुमिच्छेति ॥</p>
+      </div>
+
+      <hr style="border: none; border-top: 2px solid var(--border-color); margin: 2.5rem 0;">
+
+      <!-- SECTION 8: Mantra 2.4.5 with Bhāṣyam -->
+      <div class="source-section-block" id="section-2-4-5" style="margin-bottom: 3rem;">
+        <p class="mantra-ref-label" style="font-size: 0.8rem; font-family: var(--font-ui); letter-spacing: 0.06em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 0.5rem;">बृहदारण्यक उपनिषद् २.४.५</p>
+        <p class="src-label mulam-label">॥ मूलम् ॥</p>
+        <p class="src-mulam">स होवाच न वा अरे पत्युः कामाय पतिः प्रियो भवत्यात्मनस्तु कामाय पतिः प्रियो भवति । न वा अरे जायायै कामाय जाया प्रिया भवत्यात्मनस्तु कामाय जाया प्रिया भवति । न वा अरे पुत्राणां कामाय पुत्राः प्रिया भवन्त्यात्मनस्तु कामाय पुत्राः प्रिया भवन्ति । न वा अरे वित्तस्य कामाय वित्तं प्रियं भवत्यात्मनस्तु कामाय वित्तं प्रियं भवति । न वा अरे ब्रह्मणः कामाय ब्रह्म प्रियं भवत्यात्मनस्तु कामाय ब्रह्म प्रियं भवति । न वा अरे क्षत्रस्य कामाय क्षत्रं प्रियं भवत्यात्मनस्तु कामाय क्षत्रं प्रियं भवति । न वा अरे लोकानां कामाय लोकाः प्रिया भवन्त्यात्मनस्तु कामाय लोकाः प्रिया भवन्ति । न वा अरे देवानां कामाय देवाः प्रिया भवन्त्यात्मनस्तु कामाय देवाः प्रिया भवन्ति । न वा अरे भूतानां कामाय भूतानि प्रियाणि भवन्त्यात्मनस्तु कामाय भूतानि प्रियाणि भवन्ति । न वा अरे सर्वस्य कामाय सर्वं प्रियं भवत्यात्मनस्तु कामाय सर्वं प्रियं भवति । आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यो मैत्रेय्यात्मनो वा अरे दर्शनेन श्रवणेन मत्या विज्ञानेनेदं सर्वं विदितम् ॥ 2-4-5 ॥</p>
+        <hr class="src-divider">
+        <p class="src-label bhashyam-label">॥ भाष्यम् ॥</p>
+        <p class="src-bhashyam"><span class="src-pratika">स होवाच</span> — अमृतत्वसाधनं वैराग्यमुपदिदिक्षुः जायापतिपुत्रादिभ्यो विरागमुत्पादयति तत्सन्न्यासाय ।</p>
+        <p class="src-bhashyam"><span class="src-pratika">न वै</span> — वै - शब्दः प्रसिद्धस्मरणार्थः ; प्रसिद्धमेव एतत् लोके ; <span class="src-pratika">पत्युः</span> भर्तुः <span class="src-pratika">कामाय</span> प्रयोजनाय <span class="src-pratika">जायायाः पतिः प्रियो</span> न भवति, किं तर्हि <span class="src-pratika">आत्मनस्तु कामाय</span> प्रयोजनायैव भार्यायाः <span class="src-pratika">पतिः प्रियो भवति</span> । तथा <span class="src-pratika">न वा अरे जायाया</span> इत्यादि समानमन्यत् , न वा अरे पुत्राणाम् , न वा अरे वित्तस्य, न वा अरे ब्रह्मणः, न वा अरे क्षत्रस्य, न वा अरे लोकानाम् , न वा अरे देवानाम् , न वा अरे भूतानाम् , न वा अरे सर्वस्य । पूर्वं पूर्वं यथासन्ने प्रीतिसाधने वचनम् , तत्र तत्र इष्टतरत्वाद्वैराग्यस्य ; सर्वग्रहणम् उक्तानुक्तार्थम् । तस्मात् लोकप्रसिद्धमेतत् — आत्मैव प्रियः, नान्यत् ।</p>
+      </div>
     </section>
   </div>
 
@@ -56,7 +320,20 @@ const latest = iastClasses[iastClasses.length - 1];
         localStorage.setItem('preferred-script', script);
       }
       setActive(localStorage.getItem('preferred-script') || 'iast');
-      tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.getAttribute('data-script') || 'iast')));
+      tabs.forEach(tab => tab.addEventListener('click', () => {
+        setActive(tab.getAttribute('data-script') || 'iast');
+      }));
     });
   </script>
 </BaseLayout>
+
+<!--
+  TO ADD TEXT FROM A NEW CLASS:
+  1. Find the canonical position in this page where the
+     new text belongs (after the last covered section)
+  2. Add the new Mūlam/Bhāṣyam/Vārtika blocks
+     using the same HTML format as existing sections
+  3. Update the "covered through Class X" note at the top
+  4. Add any new mantra sections to the table of contents
+  5. Run npm run build and push
+-->
