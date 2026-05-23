@@ -1,466 +1,452 @@
 # Classwise Glossary — Bṛhadāraṇyaka Upaniṣad, Maitreyī Brāhmaṇa Classes 1–10
 
-> Working glossary prepared from the first ten class notes on Bṛhadāraṇyaka Upaniṣad 2.4, the Maitreyī Brāhmaṇa. Definitions are written in the teaching-context of Swamiji’s explanations, so they are not merely dictionary meanings. They are meant for the Glossary section of the site and can be refined further as the class series progresses.
+> Working glossary prepared from the first ten class notes on Bṛhadāraṇyaka Upaniṣad 2.4, the Maitreyī Brāhmaṇa. Definitions are written in the teaching-context of Swamiji’s explanations, so they are not merely dictionary meanings. Every Devanagari term in the explanations has been annotated with its IAST transliteration in brackets.
 
 ---
 
-## Class 1 — Introduction to the Maitreyī Brāhmaṇa and the Vidyāsūtra
+## Class 1 — Opening of Maitreyī Brāhmaṇa and the sambandha
 
 **मैत्रेयीब्राह्मण — Maitreyī Brāhmaṇa**
-: The fourth brāhmaṇa of the second adhyāya of the Bṛhadāraṇyaka Upaniṣad. It begins the teaching through the dialogue between Yājñavalkya and Maitreyī. In Swamiji’s explanation, it is not an isolated story; it is connected to the larger unfoldment of **आत्मविद्या** and to the sentence **आत्मेत्येवोपासीत**.
+: <strong>Definition:</strong> The fourth Brāhmaṇa of the second adhyāya of the Bṛhadāraṇyaka Upaniṣad, centred on the dialogue between Yājñavalkya and Maitreyī.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji presents this Brāhmaṇa as a new section whose beginning must be justified. Though Brahmavidyā has already been taught, this section brings in the importance of renunciation and a fresh entry into the same teaching through the question of what is truly dear.
 
-**मधुकाण्ड — Madhu Kāṇḍa**
-: The name of the second chapter of the Bṛhadāraṇyaka Upaniṣad. Though **मधुविद्या** occurs later in 2.5, the whole second chapter is called **मधुकाण्ड**.
+**सम्बन्धम् — sambandham**
+: <strong>Definition:</strong> The connection between the present section and what has already been taught.<br><br><strong>Swamiji's Contextual Explanation:</strong> At every new beginning, Bhāṣyakāra shows why the section is required. The sambandha prevents the study from becoming a disconnected reading; it tells us how this Brāhmaṇa continues and deepens the earlier teaching.
 
 **आत्मेत्येवोपासीत — ātmetyevopāsīta**
-: The vidyā-sūtra from Bṛhadāraṇyaka 1.4.7. Swamiji explains that it does not mean “meditate upon the body or individual as Ātman” in the ordinary upāsanā sense. It means: enquire into the reality of oneself as **आत्मा**, with the help of the āgama-vākya.
+: <strong>Definition:</strong> The Vidyāsūtra of Bṛhadāraṇyaka Upaniṣad 1.4.7, taken as the seed statement expanded by the rest of the Upaniṣad.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji stresses that **उपासीत (upāsīta)** here does not mean ordinary upāsanā or mental superimposition. It means enquiry into the nearest reality, the Self, through śāstra. The **इति (iti)** helps exclude the known and unknown, the manifest and unmanifest, and prevents a ritualistic or meditative misunderstanding.
 
-**विद्यासूत्र — vidyā-sūtra**
-: A compact statement in which the whole teaching is indicated briefly. **आत्मेत्येवोपासीत** is treated as such a vidyā-sūtra, requiring the rest of the Upaniṣadic teaching as its vyākhyā.
+**विद्यासूत्र — vidyāsūtra**
+: <strong>Definition:</strong> A compact śruti statement that contains the essence of the teaching and requires unfolding through explanation.<br><br><strong>Swamiji's Contextual Explanation:</strong> **आत्मेत्येवोपासीत (ātmetyevopāsīta)** is called a Vidyāsūtra because the whole teaching is present there in brief. The rest of the Upaniṣad functions like a commentary expanding that seed.
 
-**आत्मा — Ātman**
-: Not the body, but that which is the reality of oneself. In the class, Swamiji recalls the traditional derivation: **यदाप्नोति यदादत्ते यच्चात्ति विषयान्** — that which pervades, takes, and resolves; in this context, the reality that is also **सृष्टि-स्थिति-लय-कारणम्**.
-
-**इति — iti in “आत्मा इति”**
-: Not a marker of symbolic superimposition, as in ordinary upāsanā sentences. Here, **इति** helps indicate that the Ātman being taught is distinct from the **व्याकृत** and **अव्याकृत**, from **कार्य** and **कारण**, and from what is **विदित** and **अविदित**.
-
-**एव — eva**
-: In **आत्मेत्येवोपासीत**, **एव** excludes every alternative. The enquiry is into Ātman alone; no other object, word, or word-meaning is finally the object to be grasped.
+**आत्मा — Self**
+: <strong>Definition:</strong> The inmost reality, not the body or mind, and ultimately that from which the universe arises, by which it is sustained, and into which it resolves.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that the word **आत्मा (ātmā)** is not to be taken as the body. In this context it points to the reality that is the cause of sṛṣṭi, sthiti, and laya, and which is nearer than anything objectifiable.
 
 **उपासीत — upāsīta**
-: In this context, not a ritualistic or symbolic meditation. Swamiji derives it through **उप** as nearness and **आस्** as sitting; what is nearest, nearer than all kārya and kāraṇa, is oneself. Therefore **उपासीत** is understood as enquiry or vicāra into Ātman.
+: <strong>Definition:</strong> From **उप (upa)** meaning nearness and **आस् (ās)** meaning to sit; in this context, it means enquiry into the Self.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji cautions that **उपासीत (upāsīta)** should not be reduced to upāsanā like “śālagrāma as Viṣṇu.” Here it means vicāra into that which is never away from oneself.
+
+**इति — iti**
+: <strong>Definition:</strong> A particle which, in this context, helps mark the intended sense of the word **आत्मा (ātmā)** and separates it from wrong notions.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that **इति (iti)** in **आत्मेत्येवोपासीत (ātmetyevopāsīta)** is not an instruction to superimpose an idea. It helps show that the Self is different from vyākṛta and avyākṛta, from kārya and kāraṇa, and from vidita and avidita.
+
+**एव — eva**
+: <strong>Definition:</strong> A restrictive particle that excludes alternatives.<br><br><strong>Swamiji's Contextual Explanation:</strong> In **आत्मेत्येवोपासीत (ātmetyevopāsīta)**, **एव (eva)** indicates that there is no other ultimate pursuit or method apart from knowing the Self as Self. The Self is not merely a word, object, or concept.
 
 **पदनीयम् — padanīyam**
-: That which is truly worth going after. The **आत्मतत्त्वम्** alone is **पदनीयम्**, because it is the real puruṣārtha among all things one seeks.
+: <strong>Definition:</strong> That which deserves to be pursued as the true puruṣārtha.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains **पदनीयम् (padanīyam)** from **पद्यते इति पदम् (padyate iti padam)** — what one goes after. Among all possible pursuits, the Self alone is truly worth going after because it is dearer than son, wealth, and everything else.
 
-**प्रेयः — preyaḥ**
-: Dearer. In the bhāṣya connection, Ātman is said to be dearer than son and all other beloved things. Swamiji notes the gradation **प्रिय**, **प्रेयस्/प्रियतर**, **प्रेष्ठ/प्रियतम**.
-
-**प्रत्यगात्मा — pratyagātmā**
-: The innermost Self, the non-objectifiable reality of the individual. The teaching establishes that this **प्रत्यगात्मा** is the subject matter of **ब्रह्मविद्या**.
+**प्रेयः**
+: <strong>Definition:</strong> Comparative form from **प्रिय (priya)**, meaning dearer or more beloved.<br><br><strong>Swamiji's Contextual Explanation:</strong> The Self is **प्रेयः पुत्रादेः (preyaḥ putrādeḥ)** — dearer than son and all other dear objects. This prepares the Maitreyī teaching that all things are loved only for the sake of oneself.
 
 **ब्रह्मविद्या — brahmavidyā**
-: The knowledge whose subject matter is the pratyagātmā as Brahman. It is not one more action or ritual result; it is knowledge of what is already the truth.
+: <strong>Definition:</strong> The knowledge by which the identity of the innermost Self and Brahman is understood.<br><br><strong>Swamiji's Contextual Explanation:</strong> In these opening discussions, Brahmavidyā is shown to have the प्रत्यगात्मा (pratyagātmā) as its subject matter. It is not another karma or upāsanā but the knowledge that alone can free.
 
-**वैराग्यम् — vairāgya**
-: Dispassion born of seeing the limitation of karma and its results. Swamiji stresses that the karmakāṇḍa presentation in Vedānta is meant to mature the seeker by showing that every karma-phala is temporary.
+**सिंहावलोकनम् — siṃhāvalokanam**
+: <strong>Definition:</strong> A retrospective summary of what has already been taught.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji says Bhāṣyakāra looks back over the earlier sections like a lion glancing back while moving forward. This helps students remember the essential thread before entering a new Brāhmaṇa.
 
-**सन्न्यास / संन्यास — sannyāsa**
-: Renunciation. In the initial bhāṣya connection to the Maitreyī Brāhmaṇa, sannyāsa is introduced as significant for knowledge. Swamiji carefully distinguishes its role as a facilitator from the central fact that mokṣa is by knowledge alone.
 
-**अङ्ग / अङ्गी — aṅga / aṅgī**
-: A subsidiary factor and the principal. In the discussion of sannyāsa, Swamiji introduces the question whether sannyāsa is an **अङ्ग** for knowledge, while knowledge remains the **अङ्गी**, the principal means for mokṣa.
-
-**अविद्या-विषय — avidyā-viṣaya**
-: The field belonging to ignorance. Karma, kāraka, and worldly vyavahāra operate within this domain, whereas Brahmavidyā reveals the reality that is not an object within avidyā.
-
----
-
-## Class 2 — Karma, Vairāgya, Sannyāsa, and Adhikāritva
+## Class 2 — Karma, vairāgya, and sannyāsa as an aṅga
 
 **कर्म — karma**
-: Action, including Vedic ritual action. Swamiji explains that the first chapter largely shows what karma can produce, even up to Brahmaloka, but also its limitation: karma produces finite results and therefore cannot end seeking permanently.
+: <strong>Definition:</strong> Action performed through body, speech, and mind; in the Vedic context, ritual and duty-oriented action producing results.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that the first chapter shows what karma can give, even up to Brahmaloka, but all karma-phala is temporary. Therefore, karma is useful in Vedānta mainly to generate vairāgya and prepare the mind, not to give mokṣa.
 
 **कर्मफल — karma-phala**
-: The result of action. Every karma-phala is within time, therefore limited. Seeing this clearly is meant to create **वैराग्यम्**, not fascination for higher enjoyments.
+: <strong>Definition:</strong> Any result produced by action, whether visible or invisible, worldly or heavenly.<br><br><strong>Swamiji's Contextual Explanation:</strong> Since every karma-phala is produced, it is temporary. Swamiji repeatedly points out that if one keeps seeking produced results, seeking never ends. This insight matures into vairāgya.
 
-**ब्रह्मलोकप्राप्ति — brahmaloka-prāpti**
-: Attainment of Brahmaloka, presented as the highest result within the field of karma and upāsanā. Even this is not mokṣa in the direct sense, because it remains within the sphere of attained results.
+**वैराग्यम् — dispassion**
+: <strong>Definition:</strong> Freedom from dependence on objects, actions, and results for fulfilment.<br><br><strong>Swamiji's Contextual Explanation:</strong> The karmakāṇḍa presentation in Vedānta is not meant to make the student more fascinated with karma-phala. It is meant to show the limitation of all results and thereby produce vairāgya.
+
+**ब्रह्मलोकप्राप्ति — brahmalokaprāpti**
+: <strong>Definition:</strong> The highest result attainable through certain karmas and upāsanās.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses Brahmaloka as the upper limit of karma-produced attainment. Even that is within saṃsāra, and therefore it cannot be the final human end.
 
 **ज्ञानम् — jñānam**
-: Knowledge alone delivers mokṣa. Swamiji repeatedly highlights that everything else, including karma and upāsanā, has value only insofar as it prepares the mind or gives vairāgya.
+: <strong>Definition:</strong> Direct understanding of the truth of the Self as Brahman.<br><br><strong>Swamiji's Contextual Explanation:</strong> “ज्ञानम् (jñānam) alone will deliver.” Everything else has preparatory value. Karma can purify and produce vairāgya, but freedom is through knowledge alone.
 
-**अजातशत्रु विद्या — Ajātaśatru Vidyā**
-: The teaching section in the first three brāhmaṇas of the second chapter. It culminates in **नेति नेति**, where Brahman is indicated by negating everything objectifiable.
+**अजातशत्रुविद्या — Ajātaśatru Vidyā**
+: <strong>Definition:</strong> The teaching in the earlier Brāhmaṇas of the second adhyāya, culminating in the discussion of the vastu through **नेति नेति (neti neti)**.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji situates Maitreyī Brāhmaṇa after Ajātaśatru Vidyā. Since the vastu has already been taught, the question arises: why another Brāhmaṇa? This leads to the discussion of sannyāsa and the fresh method of teaching.
 
-**नेति नेति — neti neti**
-: “Not this, not this.” A central Upaniṣadic teaching that negates all objectifiable entities as not Brahman. It is not nihilism; it directs the seeker away from every object toward the non-objectifiable reality.
+**आख्यायिका — narrative, story**
+: <strong>Definition:</strong> A story used by śruti to communicate a teaching indirectly and memorably.<br><br><strong>Swamiji's Contextual Explanation:</strong> The story of Yājñavalkya and Maitreyī is not ornamental. Swamiji says the story itself indicates the importance of sannyāsa for knowledge or for abidance in knowledge.
 
-**आख्यायिका — ākhyāyikā**
-: A story used by the śruti as a teaching device. In the Maitreyī Brāhmaṇa, the story of Yājñavalkya taking sannyāsa is not ornamental; it conveys something about the place of renunciation in the pursuit of knowledge.
+**संन्यास — sannyāsa**
+: <strong>Definition:</strong> Renunciation of karma and the associated social identity, undertaken for the pursuit or assimilation of knowledge.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji presents sannyāsa carefully. It is shown as important for knowledge, but one should not debate it prematurely. Until one has Yājñavalkya's understanding, the practical focus should be karma-yoga and inner maturity.
 
-**त्याग — tyāga**
-: Giving up. Swamiji connects the discussion to the Bhagavad Gītā’s eighteenth chapter, where Arjuna asks about **संन्यास** and **त्याग**. The common element is giving up, but what is to be given up depends on adhikāra and context.
+**अङ्ग — limb, auxiliary**
+: <strong>Definition:</strong> A supporting factor that serves a principal pursuit, the **अङ्गी (aṅgī)**.<br><br><strong>Swamiji's Contextual Explanation:</strong> Bhāṣyakāra says sannyāsa is intended as an aṅga for Brahmavidyā. Swamiji explains that this does not make sannyāsa an independent producer of mokṣa; it serves knowledge.
 
-**अधिकारित्वम् — adhikāritvam**
-: Preparedness or qualification of the student. Swamiji emphasizes that teachings differ according to the student; what is taught to Arjuna, Śvetaketu, Naciketas, or Maitreyī cannot be mechanically universalized without considering adhikāra.
+**श्रवणम्, मननम्, निदिध्यासनम् — listening, reflection, contemplation**
+: <strong>Definition:</strong> The threefold discipline by which Vedānta is heard, doubts are resolved, and the teaching is assimilated.<br><br><strong>Swamiji's Contextual Explanation:</strong> The sannyāsī has no other irons in the fire. Therefore, his life can be fully committed to śravaṇa, manana, and nididhyāsana under the guidance of the guru.
 
-**व्यवसायात्मिका बुद्धिः — vyavasāyātmikā buddhiḥ**
-: A decisive, one-pointed understanding of the real pursuit. Though developed more later, its background is already relevant: without clarity about mokṣa as the real puruṣārtha, the mind remains spread across countless pursuits.
+**कर्मयोगबुद्धि — attitude of karma-yoga**
+: <strong>Definition:</strong> The attitude of doing what is to be done without binding dependence on results.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji advises students not to be disturbed by the sannyāsa discussion. Until one is prepared for that life, it is better to remain with karma performed with karma-yoga-buddhi.
 
-**मुमुक्षुत्वम् — mumukṣutvam**
-: The desire for mokṣa. Swamiji’s treatment implies that only when mokṣa becomes a real concern does the question of sannyāsa or deeper nididhyāsana become meaningful.
+**त्याग — giving up**
+: <strong>Definition:</strong> Renunciation or relinquishment; in the Gītā discussion, related to sannyāsa but not identical in every context.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji refers to the eighteenth chapter of the Gītā to show that answers about sannyāsa and tyāga depend on the student and context. Giving up is central, but its application must be understood carefully.
 
-**शिष्यभेद — difference among students**
-: Swamiji stresses that one universal instruction may not suit everyone. The śāstra teaches according to the condition of the student; therefore one must listen carefully without prematurely converting every statement into a blanket rule.
 
----
+## Class 3 — Vidyā, karma, and the impossibility of combining opposites
 
-## Class 3 — Jñāna, Sannyāsa, Jīvanmukti, and Limitation
+**विद्या — vidyā**
+: <strong>Definition:</strong> Knowledge of Brahman/Ātman that removes ignorance and frees the person.<br><br><strong>Swamiji's Contextual Explanation:</strong> Vidyā is not another action or result. It negates the reality of action, agent, instrument, and result by revealing the vastu as non-dual.
 
-**अभ्यास — abhyāsa**
-: Repetition. Swamiji notes that repetition itself is a **लिङ्ग** for determining tātparya. The Maitreyī Brāhmaṇa repeats Brahmavidyā, but with an additional emphasis.
+**अविद्या — ignorance**
+: <strong>Definition:</strong> Ignorance of the Self, expressed as taking oneself to be different, limited, and bound.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that the portion beginning with **अन्योऽसावन्योऽहमस्मि (anyo'sāvanyo'hamasmi)** presents the domain of avidyā: “that is different, I am different.” This is the basis of saṃsāra.
 
-**तात्पर्यनिश्चय — tātparya-niścaya**
-: Determination of the intended purport of the śruti. Repetition, context, and the presence of the story all help identify why this brāhmaṇa begins after the previous teaching.
+**विद्याविद्यात्मकयोः प्रतिकूलवर्तनम् — vidyāvidyātmakayoḥ pratikūlavartanam**
+: <strong>Definition:</strong> The impossibility of vidyā and avidyā coexisting as equally valid realities.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji compares it to light and darkness. Chaff and grain can be mixed, but light and darkness cannot. Similarly, karma rooted in avidyā and knowledge that removes avidyā cannot be combined as co-equal means to mokṣa.
 
-**जीवन्मुक्त — jīvanmukta**
-: One liberated while living. In the discussion of Janaka and Yājñavalkya, Swamiji cautions against imagining degrees of happiness in jīvanmukti, because non-duality cannot accommodate more or less completeness.
+**कर्मणा बध्यते जन्तुः — by karma the being is bound**
+: <strong>Definition:</strong> A statement indicating that action, when pursued as a means for fulfilment, keeps the person within bondage.<br><br><strong>Swamiji's Contextual Explanation:</strong> Quoting the Mahābhārata discussion, Swamiji highlights the contrast: by karma one is bound; by vidyā one is freed. Karma is not the final liberating means.
 
-**उदरम् अन्तरं कुरुते — udaram antaraṃ kurute**
-: A Taittirīya Upaniṣad expression used to show that even the slightest sense of difference produces fear. Swamiji explains **भयम्** here as saṃsāra, not merely emotional fear.
+**विद्यया च विमुच्यते — vidyayā ca vimucyate**
+: <strong>Definition:</strong> The direct liberating role of knowledge.<br><br><strong>Swamiji's Contextual Explanation:</strong> This is the positive counterpart to “karma binds.” The freedom sought is not produced by action but recognised through knowledge.
 
-**भयम् — bhayam**
-: In the Vedāntic context, fear stands for saṃsāra born of limitation. If there is something other than me, I am bounded; that boundary is the basis of fear.
+**सर्वक्रियाकारकफलोपमर्दस्वरूपा विद्या — sarvakriyākārakaphalopamardasvarūpā vidyā**
+: <strong>Definition:</strong> Knowledge that negates the independent reality of action, agent, instrument, object, and result.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that when Brahman alone is known as the vastu, kriyā, kāraka, and phala have no independent existence apart from that vastu.
 
-**संसार — saṃsāra**
-: The condition of limitation, dependence, and identification with body-mind. Swamiji explains that to say “I am limited” requires drawing a boundary where “I” end and something else begins.
+**अन्तःकरणशुद्धि — purification of the inner instrument**
+: <strong>Definition:</strong> Maturity and purity of mind gained through proper action and discipline.<br><br><strong>Swamiji's Contextual Explanation:</strong> Karma is useful when performed not for karma-phala but for inner growth — overcoming rāga-dveṣa and preparing the mind for knowledge.
 
-**गौणम् / मुख्यम् — gauṇam / mukhyam**
-: Figurative and primary meaning. Saying “I am my son” is **गौणम्**, not **मुख्यम्**; emotionally one may identify with the child, but one knows the child is not oneself in the primary sense.
+**चित्तनैश्चल्यम् — steadiness of mind**
+: <strong>Definition:</strong> Mental steadiness or composure needed for sustained enquiry.<br><br><strong>Swamiji's Contextual Explanation:</strong> Practices such as japa and other disciplines are useful not as mokṣa-producing actions but as aids to steadiness and preparedness for Vedānta.
 
-**अन्नमय — annamaya**
-: The body-level identification where confusion begins. Swamiji points out that nobody mistakes oneself for a pot; the real self-confusion begins in the body-mind complex.
+**विविदिषासंन्यास — vividiṣāsannyāsa**
+: <strong>Definition:</strong> Sannyāsa taken by one who desires to know Brahman.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji distinguishes the role of renunciation for the seeker. The life of sannyāsa can remove competing commitments and make the person available for knowledge.
 
-**अज्ञानलक्षणम् — ajñāna-lakṣaṇam**
-: A sign of ignorance. Identification with the mind, such as taking mental unhappiness as “I am unhappy,” is treated as an indication of ignorance.
+**विद्वत्संन्यास — vidvatsannyāsa**
+: <strong>Definition:</strong> Sannyāsa associated with one who has already gained knowledge and seeks firm abidance or lives naturally in that understanding.<br><br><strong>Swamiji's Contextual Explanation:</strong> The discussion allows for sannyāsa both before knowledge and after knowledge. In both cases, the point is not that a ritual act produces mokṣa, but that the life may align with knowledge.
 
-**निष्ठा — niṣṭhā**
-: Abidance. In the context of sannyāsa, Swamiji distinguishes gaining knowledge from gaining steadiness or abidance in that knowledge.
+**पाङ्क्तकर्म — fivefold karma-related structure**
+: <strong>Definition:</strong> Karma associated with wife, son, wealth, and the Vedic social-ritual order.<br><br><strong>Swamiji's Contextual Explanation:</strong> Bhāṣyakāra speaks of jāyā-putra-vitta and related structures as belonging to the domain of avidyā when taken as means to fulfilment. They are not the means to ātmā-prāpti.
 
----
+**आत्मलोक — ātmaloka**
+: <strong>Definition:</strong> A way of saying that the seeker is no longer interested in other lokas but in the Self alone.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that the mature seeker says: “I am not interested in manushyaloka, pitṛloka, or devaloka. I am interested in myself.” This is the turning point from karma to knowledge.
 
-## Class 4 — Sannyāsa as Facilitator, Knowledge as Mokṣa
+
+## Class 4 — Identity, eligibility for injunctions, and knowledge versus situation
+
+**विषयाभावात् आत्मानं न लभते विधिः — an injunction does not reach the person when its subject is absent**
+: <strong>Definition:</strong> A principle that a Vedic injunction applies only when the relevant identity or adhikāra is accepted.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses examples like a bald person not being attracted to shampoo. If one no longer takes oneself as brāhmaṇa, kṣatriya, brahmacārī, etc., injunctions addressed to those identities do not bind that person.
+
+**प्रत्यय — cognition, notion, identity-thought**
+: <strong>Definition:</strong> A settled notion such as “I am a brāhmaṇa,” “I am a householder,” or “I am this body-mind.”<br><br><strong>Swamiji's Contextual Explanation:</strong> The Vedic injunction reaches a person only when the relevant प्रत्यय (pratyaya) is active. When the प्रत्यय (pratyaya) is sublated by knowledge, the injunction has no subject to address.
+
+**ब्रह्मक्षत्राद्यात्मविषयः प्रत्ययः — identity-notion centred on brāhmaṇa, kṣatriya, etc.**
+: <strong>Definition:</strong> The self-identification with varṇa, āśrama, and social-religious roles.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that śāstric duties operate in relation to such identities. Once the person is no longer centred on those identities, the duties no longer function as binding commands.
+
+**पुरुषतन्त्रम् — puruṣatantram**
+: <strong>Definition:</strong> Something that depends on choice, effort, or decision.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji warns that if freedom were produced by taking sannyāsa as a chosen act, mokṣa would become puruṣatantra. But freedom is through knowledge of what already is, not through a will-based production.
+
+**वस्तुतन्त्रम् — dependent on the nature of the object/reality**
+: <strong>Definition:</strong> Knowledge determined by what is, not by personal choice.<br><br><strong>Swamiji's Contextual Explanation:</strong> Mokṣa is not a chosen condition; it is recognition of the truth. Therefore the teaching must reveal what is already true, rather than produce a new state.
 
 **ज्ञानादेव मोक्षः — jñānād eva mokṣaḥ**
-: Mokṣa is by knowledge alone. Swamiji repeatedly protects this principle while discussing the importance of sannyāsa.
+: <strong>Definition:</strong> The Vedāntic principle that mokṣa is gained only by knowledge, not by karma.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji repeatedly guards the student from thinking that sannyāsa itself produces freedom. Sannyāsa may facilitate knowledge, but mokṣa is through knowledge alone.
 
 **ज्ञानमेव मोक्षः — jñānam eva mokṣaḥ**
-: Knowledge is not merely a means to later liberation; the knowledge itself is freedom because freedom is the truth of oneself.
+: <strong>Definition:</strong> Liberation is not a separate result produced after knowledge; the knowledge itself removes the error of bondage.<br><br><strong>Swamiji's Contextual Explanation:</strong> Since bondage is due to ignorance, its removal is knowledge. A situation may help the pursuit, but it cannot become the liberating cause.
 
-**न कर्मणा — na karmaṇā**
-: Not by karma. Actions may prepare the mind, but they cannot produce mokṣa because mokṣa is not a produced result.
+**सर्वकर्मसंन्यास — sarvakarmasannyāsa**
+: <strong>Definition:</strong> Giving up ritual and duty-bound action as a binding pursuit.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji notes that all-karma-renunciation may be described as a fruit of knowledge, but it should not be misunderstood as an independent producer of liberation.
 
-**पुरुषतन्त्रम् — puruṣa-tantram**
-: Dependent on a person’s choice or will. Swamiji explains that if freedom depended on taking sannyāsa as an action chosen by the person, freedom would become puruṣa-tantra and therefore optional and produced — which is impossible.
+**नित्यत्वम् — permanence**
+: <strong>Definition:</strong> That which is not subject to time-bound origination and destruction.<br><br><strong>Swamiji's Contextual Explanation:</strong> Since karma produces only time-bound results, it cannot produce the permanent. This supports the teaching that mokṣa cannot be a produced state.
 
-**वस्तुतन्त्रम् — vastu-tantram**
-: Dependent on the fact as it is. Knowledge is vastu-tantra; it conforms to reality, not to personal choice. Brahmavidyā works because it reveals what is.
+**सावद्य — defective, involving limitation or defect**
+: <strong>Definition:</strong> That which is associated with limitation, impurity, or dependence.<br><br><strong>Swamiji's Contextual Explanation:</strong> In the context of karma and its results, Swamiji uses the limitation of produced ends to show why they cannot be the absolute puruṣārtha.
 
-**सर्वकर्मसंन्यास — sarva-karma-sannyāsa**
-: Renunciation of all karmas. It may be praised as a fruit or expression of knowledge, and as helpful for some seekers, but Swamiji warns against making it replace knowledge as the liberating factor.
+**गृहस्थाश्रम — householder stage**
+: <strong>Definition:</strong> The stage of life involving family, wealth, ritual duties, and social responsibilities.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya's leaving the gṛhastha-āśrama becomes the narrative basis for discussing sannyāsa. The issue is not contempt for the householder life but the recognition of what is required for this knowledge.
 
-**साधन — sādhana**
-: A means. Sannyāsa may function as a sādhana or conducive condition for knowledge or niṣṭhā, but it is not the producer of mokṣa.
+**स्थिति — situation, condition, placement**
+: <strong>Definition:</strong> A circumstance or arrangement in which one finds oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji cautions that if freedom depends on a situation, it can be lost when the situation changes. True freedom must depend on knowledge of what is, not on external arrangement.
 
-**सावद्य — sāvadya**
-: Defective or connected with limitation. Karma and karma-results are discussed as limited and therefore unable to give absolute freedom.
 
-**जिहासा — jihāsā**
-: Desire to give up. In the sannyāsa discussion, true renunciation must arise from understanding and maturity, not from emotional reaction or imagined escape.
+## Class 5 — Neti neti, mūrta-amūrta, and avoiding Sāṅkhya-like misunderstanding
 
-**स्थिति-निर्भरता — dependence on situation**
-: Swamiji’s practical point: if one’s freedom depends on a situation, the situation can change again. Therefore real freedom cannot be situational.
+**नेति नेति — “not this, not this”**
+: <strong>Definition:</strong> A teaching method that negates everything objectifiable as not being Brahman in its true nature.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that **नेति नेति (neti neti)** is not merely “not mūrta and not amūrta” as two categories. It negates every objectifiable thing and forces the student to recognise the non-objectifiable Self.
 
----
+**मूर्त — manifest, formed**
+: <strong>Definition:</strong> That which is formed, perceptible, or manifest.<br><br><strong>Swamiji's Contextual Explanation:</strong> The previous Brāhmaṇa considered the manifest universe as mūrta. Brahman is not to be identified as any mūrta object.
 
-## Class 5 — Neti Neti, Brahman, Sāṅkhya, and the Negation of Objects
+**अमूर्त — unmanifest, formless**
+: <strong>Definition:</strong> That which is not grossly manifest, including subtle impressions and unmanifest factors.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji includes even vāsanās and subtle traits within amūrta. Brahman is not a subtle object standing apart from gross objects.
 
-**मूर्त — mūrta**
-: The manifest, formed, or grossly available. In the previous brāhmaṇa, the manifest jagat is included in the analysis of **मूर्त** and **अमूर्त**.
+**वीप्सा — distributive repetition**
+: <strong>Definition:</strong> A grammatical sense in which repetition means “each and every.”<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains **नेति नेति (neti neti)** through vīpsā: the repetition does not merely negate two items but negates each and every objectifiable entity.
 
-**अमूर्त — amūrta**
-: The unmanifest or subtle. Swamiji notes that even vāsanās, impressions, and personality traits can be included under the amūrta side.
+**घटे घटे जलम् — water in every pot**
+: <strong>Definition:</strong> An example of distributive repetition.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses this to show that repetition can mean “in every pot.” Similarly, **नेति नेति (neti neti)** means “not this, not this” with reference to all objectifiable things.
 
-**मूर्त-अमूर्त ब्राह्मण — Mūrta-Amūrta Brāhmaṇa**
-: The preceding section that analyzed the whole jagat as mūrta and amūrta and culminated in **नेति नेति**.
+**साङ्ख्य — Sāṅkhya philosophical standpoint**
+: <strong>Definition:</strong> A system that accepts puruṣa and prakṛti as distinct principles.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji says Maitreyī Brāhmaṇa helps prevent a Sāṅkhya-like misunderstanding of **नेति नेति (neti neti)**, where Brahman is imagined as one thing standing apart from the world.
 
-**वीप्सा — vīpsā**
-: A grammatical sense of distributive repetition. In **नेति नेति**, the repetition is not merely “not mūrta, not amūrta” as two limited negations; it conveys “not this, not this — not any object whatsoever.”
+**प्रधान — primordial prakṛti in Sāṅkhya**
+: <strong>Definition:</strong> The insentient causal principle accepted in Sāṅkhya.<br><br><strong>Swamiji's Contextual Explanation:</strong> The discussion rejects the idea that Brahman is one conscious principle among other independently real principles such as pradhāna.
 
-**साङ्ख्य — Sāṅkhya**
-: A philosophical position that may treat puruṣa as distinct from prakṛti. Swamiji explains that Maitreyī Brāhmaṇa prevents misunderstanding **नेति नेति** as leaving Brahman as one separate entity among other real things.
+**जगत्कारणम् — cause of the universe**
+: <strong>Definition:</strong> That from which the universe arises and on which it depends.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji points out that Brahman cannot be understood as merely one cause apart from an independently real jagat. The teaching must culminate in non-duality.
 
-**प्रधान — pradhāna**
-: The Sāṅkhya principle of primordial prakṛti. In the Vedāntic discussion, Brahman is not one conscious entity standing apart from a separately real pradhāna.
+**मिथ्या — dependent reality**
+: <strong>Definition:</strong> That which appears and functions but has no independent existence apart from its adhiṣṭhāna.<br><br><strong>Swamiji's Contextual Explanation:</strong> The world is not dismissed as non-existent, nor accepted as independently real. It is understood as dependent on Brahman, which alone is satyam.
 
-**प्रकृति — prakṛti**
-: In Sāṅkhya, the material principle. Vedānta does not accept an independently real prakṛti separate from Brahman.
+**सत्यम् — absolute reality**
+: <strong>Definition:</strong> That which exists independently and is not sublated.<br><br><strong>Swamiji's Contextual Explanation:</strong> Brahman alone is satyam. Mūrta and amūrta, name and form, and all objects are not independently real.
 
-**अभाव — abhāva**
-: Absence or non-existence. Swamiji notes that **नेति नेति** should not be taken to mean Brahman is mere absence; Brahman is not an object, but it is not non-existence.
+**दृग्दृश्यविवेक — discrimination between seer and seen**
+: <strong>Definition:</strong> The enquiry that distinguishes the witnessing subject from all objectifiable entities.<br><br><strong>Swamiji's Contextual Explanation:</strong> Though not presented as a separate text here, the logic of **नेति नेति (neti neti)** relies on seeing that whatever is objectified cannot be the final Self.
 
-**अनात्मा — anātmā**
-: Not-Self, everything objectifiable. The negation of anātmā is not to produce a blank but to reveal the non-objectifiable Ātman.
+**असङ्ग — unattached**
+: <strong>Definition:</strong> Free from real association or dependence.<br><br><strong>Swamiji's Contextual Explanation:</strong> If the Self is not any objectifiable thing, then it is not truly attached to mūrta or amūrta. This supports the recognition of Brahman as free from limitation.
 
-**दृग्-दृश्य-विवेक — dṛg-dṛśya-viveka**
-: Discrimination between the seer and the seen. Swamiji invokes this style of enquiry to show that whatever is objectified cannot be the Self.
 
-**असङ्ग — asaṅga**
-: Unattached, unrelated. Ātman is not connected to objects as one object among them; its reality is not affected by the presence or absence of the jagat.
-
-**मिथ्या — mithyā**
-: Dependent reality; neither absolutely real nor absolutely non-existent. The jagat is not denied as sheer non-existence, but its independent reality is negated.
-
----
-
-## Class 6 — First Kaṇḍikā: Yājñavalkya Addresses Maitreyī
+## Class 6 — Entry into the Maitreyī-Yājñavalkya dialogue
 
 **कण्डिका — kaṇḍikā**
-: The term used in the Bṛhadāraṇyaka Upaniṣad for what is often called a mantra in other Upaniṣadic contexts.
+: <strong>Definition:</strong> The term used in Bṛhadāraṇyaka Upaniṣad for a mantra-like textual unit.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji notes that while Upaniṣadic passages are often called mantras, in Bṛhadāraṇyaka each unit is called a kaṇḍikā.
 
-**मैत्रेयि — Maitreyī in sambodhana**
-: The vocative form used when Yājñavalkya addresses Maitreyī. Swamiji notes that the first vowel-ending form is short in address: **मैत्रेयि**, not **मैत्रेयी**.
-
-**अरे — are**
-: A familiar form of address. It can be used toward someone lower in status, but also lovingly toward someone intimate; here Yājñavalkya addresses his wife Maitreyī with familiarity and affection.
+**मैत्रेयि — O Maitreyī**
+: <strong>Definition:</strong> Vocative form of **मैत्रेयी (Maitreyī)**, used by Yājñavalkya to address her.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji carefully distinguishes **मैत्रेयि (Maitreyi)** as the short vocative form, showing the importance of precise Sanskrit even in narrative portions.
 
 **ह उवाच — ha uvāca**
-: “He said,” with **ह** marking the narrative or historical style of the Upaniṣadic story.
+: <strong>Definition:</strong> A narrative expression marking a traditional or historical teaching account.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji treats **ह (ha)** as indicating that this is an old story being narrated by śruti, not merely an abstract doctrine.
+
+**अरे — familiar address**
+: <strong>Definition:</strong> A vocative particle used in familiar or intimate address.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that **अरे (are)** is not formal distance; it carries familiarity. Yājñavalkya addresses Maitreyī with closeness and affection.
 
 **उद्यास्यन् — udyāsyan**
-: Intending to move on or depart. In context, Yājñavalkya is saying he will move on from the gṛhastha-āśrama toward sannyāsa.
+: <strong>Definition:</strong> A form indicating one who is about to leave or move on.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya says he is moving on from this place. Swamiji explains this as moving on from gṛhastha-āśrama toward sannyāsa; one cannot go backwards to brahmacarya.
 
-**अस्मात् स्थानात् — asmāt sthānāt**
-: “From this place.” Swamiji explains that the place is not merely a physical location but the station of life — the gṛhastha-āśrama.
+**अस्मात् स्थानात् — from this place / station**
+: <strong>Definition:</strong> From this present position or āśrama.<br><br><strong>Swamiji's Contextual Explanation:</strong> The “place” is not merely a physical house. It means the station of gṛhastha life with its relational and ritual structures.
 
-**गृहस्थाश्रम — gṛhasthāśrama**
-: The householder stage of life. Yājñavalkya says he is moving on from this āśrama, not returning to brahmacarya.
+**हन्त — well then / now**
+: <strong>Definition:</strong> A particle introducing a decision or transition.<br><br><strong>Swamiji's Contextual Explanation:</strong> In this context, Swamiji does not load **हन्त (hanta)** with a major philosophical meaning. It simply marks Yājñavalkya's decision to settle matters before leaving.
 
-**पारिव्राज्य — pārivrājya**
-: The life of renunciation, wandering, or sannyāsa. The bhāṣya reads Yājñavalkya’s statement as indicating his intention to take pārivrājya.
-
-**हन्त — hanta**
-: An introductory particle. In this context Swamiji treats it as not needing a heavy separate meaning; it introduces Yājñavalkya’s statement about settling matters before leaving.
-
-**अन्तं करवाणि — antaṃ karavāṇi**
-: “I shall bring an end.” Yājñavalkya will bring an end to the household relation between Maitreyī and Kātyāyanī through himself as the connecting link.
+**अन्तं करवाणि — I shall bring to an end**
+: <strong>Definition:</strong> To terminate or settle a relationship or arrangement.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya will end the practical connection between Maitreyī and Kātyāyanī that existed through him, by dividing wealth and withdrawing from the household role.
 
 **कात्यायनी — Kātyāyanī**
-: Yājñavalkya’s other wife. The household relationship between Maitreyī and Kātyāyanī exists through Yājñavalkya, and he proposes to settle it before renouncing.
+: <strong>Definition:</strong> Yājñavalkya's other wife, mentioned along with Maitreyī.<br><br><strong>Swamiji's Contextual Explanation:</strong> Her mention clarifies the practical household situation. Yājñavalkya is not merely leaving emotionally; he is responsibly settling the household before renunciation.
 
-**उपकरण — upakaraṇa**
-: Means, resources, equipment. This becomes important in the next kaṇḍikā, where wealth can provide a life like that of those endowed with means, but not immortality.
+**विच्छेद — viccheda**
+: <strong>Definition:</strong> The ending of a relation or connection.<br><br><strong>Swamiji's Contextual Explanation:</strong> In the narrative, the severance is not hatred or abandonment. It is the formal ending of the household relation required for sannyāsa.
 
-**नु — nu**
-: A particle used in the sense of deliberation or questioning. In Maitreyī’s question, **यन्नु** introduces a thoughtful hypothetical enquiry.
+**गृहस्थाश्रमात् संन्यासः — gṛhasthāśramāt sannyāsaḥ**
+: <strong>Definition:</strong> Moving from household responsibilities into the renunciate life.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji treats this as the narrative action that gives the Brāhmaṇa its special relevance: Yājñavalkya himself prepares to leave.
 
----
+**भाष्यकार — bhāṣyakāra**
+: <strong>Definition:</strong> The traditional commentator who unfolds the meaning of the śruti.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji repeatedly shows that Bhāṣyakāra does not merely translate words. He reads the entire context and supplies what is implied by the narrative.
 
-## Class 7 — Wealth, Karma, and Immortality
 
-**वित्त — vitta**
-: Wealth. Maitreyī asks whether even the whole earth filled with wealth could give immortality. Swamiji explains that wealth is not being examined merely as money, but as a means for karma.
+## Class 7 — Wealth, karma, and immortality
 
-**सर्वा पृथिवी वित्तेन पूर्णा — sarvā pṛthivī vittena pūrṇā**
-: The whole earth filled with wealth. Maitreyī uses the largest imaginable wealth to test whether it can produce immortality.
+**वित्तम् — wealth**
+: <strong>Definition:</strong> Wealth, resources, or purchasing power.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that wealth is not an end in itself. It becomes meaningful only as a means to action, comfort, security, or ritual. It cannot give immortality.
 
-**सागरपरिक्षिप्ता — sāgara-parikṣiptā**
-: Surrounded by oceans. The bhāṣya uses this to explain the totality of the earth Maitreyī imagines.
+**इयं सर्वा पृथिवी वित्तेन पूर्णा — iyaṃ sarvā pṛthivī vittena pūrṇā**
+: <strong>Definition:</strong> Maitreyī's hypothetical possession of the entire earth filled with wealth.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that Maitreyī stretches wealth to its maximum imaginable limit. Even the whole earth with all wealth cannot solve the problem of mortality and limitation.
 
-**अमृतत्वम् — amṛtatvam**
-: Immortality, mokṣa. Maitreyī’s question is whether wealth can give the deathless freedom that Yājñavalkya is seeking.
+**सागरपरिक्षिप्ता — surrounded by oceans**
+: <strong>Definition:</strong> A descriptive expansion used by Bhāṣyakāra for the whole earth.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji notes that Bhāṣyakāra brings in this fuller sense to show the totality of Maitreyī's hypothetical wealth: the entire earth surrounded by oceans.
 
-**अमृता स्याम् — amṛtā syām**
-: “Would I become immortal?” This question reveals Maitreyī’s maturity: she is not satisfied with comfort; she wants that which ends limitation.
+**अमृतत्वम् — immortality**
+: <strong>Definition:</strong> Freedom from mortality, limitation, and saṃsāra; mokṣa.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī is not asking for long life or heavenly enjoyment. She asks whether wealth can give the deathless freedom Yājñavalkya is seeking. The answer is no.
 
-**उपकरणवतां जीवितम् — upakaraṇavatāṃ jīvitam**
-: The life of those endowed with means. Yājñavalkya says wealth can give such a comfortable life, but not immortality.
+**कथं तेन अमृता स्याम् — kathaṃ tena amṛtā syām**
+: <strong>Definition:</strong> Maitreyī's question about whether wealth can give immortality.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji shows two possible tones: it may be a genuine question or a rhetorical dismissal. Śaṅkara allows both: **प्रश्नार्थः (praśnārthaḥ)** or **आक्षेपार्थः (ākṣepārthaḥ)**.
 
-**अमृतत्वस्य न आशा अस्ति वित्तेन — amṛtatvasya na āśā asti vittena**
-: “There is no hope of immortality through wealth.” This is the central verdict of the second kaṇḍikā: wealth and karma cannot give mokṣa.
+**आक्षेपार्थः — ākṣepārthaḥ**
+: <strong>Definition:</strong> A meaning where a question implies impossibility rather than seeking information.<br><br><strong>Swamiji's Contextual Explanation:</strong> **कथम् (katham)** may mean “in no way.” Maitreyī may already understand that wealth cannot give immortality and is asking rhetorically.
 
-**कर्मणा अमृतत्वम्? — immortality through karma?**
-: Swamiji clarifies that the real question is whether karma, enabled by wealth, can produce mokṣa. Yājñavalkya’s answer is no.
+**प्रश्नार्थः — interrogative sense**
+: <strong>Definition:</strong> A genuine question seeking an answer.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji says the same sentence can also be read as Maitreyī genuinely asking Yājñavalkya whether wealth can produce immortality.
 
-**अनुमोदनम् — anumodanam**
-: Approval or permission. Maitreyī is not merely granting permission for Yājñavalkya’s sannyāsa; she turns the moment into a request for the knowledge he seeks.
+**पृथिवीपूर्णवित्तसाध्येन कर्मणा — pṛthivīpūrṇavittasādhyena karmaṇā**
+: <strong>Definition:</strong> Karma made possible by limitless wealth.<br><br><strong>Swamiji's Contextual Explanation:</strong> Śaṅkara does not treat wealth as the final means. Wealth enables karma. Therefore Maitreyī's real question is whether karma, even when backed by limitless wealth, can give immortality.
 
-**अनुजिघृक्षा — anujighṛkṣā**
-: Desire to bless or show favour. In the Vārtika verse discussed, Maitreyī effectively says: if you have compassion or wish to bless me, share with me the knowledge you have.
+**उपकरणवताम् जीवितम् — upakaraṇavatāṃ jīvitam**
+: <strong>Definition:</strong> A life equipped with resources, comforts, and instruments of enjoyment.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya says wealth can give only a comfortable life like that of resourceful people. It cannot give amṛtatva.
 
-**संविभजस्व माम् — saṃvibhajasva mām**
-: “Share with me.” Maitreyī asks not for a share of external wealth, but for a share in the real wealth — the knowledge of immortality.
+**अमृतत्वस्य तु न आशा अस्ति वित्तेन — amṛtatvasya tu na āśā asti vittena**
+: <strong>Definition:</strong> A decisive statement that wealth cannot give mokṣa.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji emphasises “not even mentally” is there hope. Wealth, and karma enabled by wealth, can produce comfort but not freedom.
 
-**वास्तविक धनम् — real wealth**
-: In Swamiji’s explanation, knowledge of immortality is the true wealth, unlike financial wealth which only supports limited living.
+**साध्यम् — sādhyam**
+: <strong>Definition:</strong> A goal or result that is produced or attained through a means.<br><br><strong>Swamiji's Contextual Explanation:</strong> Whatever is sādhyam is produced and therefore limited. Mokṣa cannot be sādhyam in that sense; otherwise it would be time-bound.
 
----
+**साधनम् — sādhanam**
+: <strong>Definition:</strong> An instrument or method used to accomplish a goal.<br><br><strong>Swamiji's Contextual Explanation:</strong> Wealth is a secondary sādhana because it enables karma. But if the desired sādhya is mokṣa, karma-sādhana is inadequate.
 
-## Class 8 — Maitreyī’s Request and the Beginning of the Teaching
+**त्यागेनैके अमृतत्वमानशुः — tyāgenaike amṛtatvamānaśuḥ**
+: <strong>Definition:</strong> A śruti statement indicating the role of renunciation in gaining immortality.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji connects this to the Maitreyī passage: when one is not interested in lokas gained by karma, prajā, or wealth, renunciation becomes meaningful.
 
-**येनाहं नामृता स्यां किमहं तेन कुर्याम् — yenāhaṃ nāmṛtā syāṃ kim ahaṃ tena kuryām**
-: “What shall I do with that by which I will not become immortal?” Maitreyī’s decisive statement of vairāgya toward wealth that cannot give mokṣa.
+**कामोच्छित्ति — kāmocchitti**
+: <strong>Definition:</strong> Freedom from desire by seeing the limitation of desired objects.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī's implied complaint is: do not bind me with wealth without freeing me from desire. Teach me that by which desire for the limited is resolved.
+
+
+## Class 8 — Maitreyī's request and the beginning of “ātmanastu kāmāya”
+
+**येन अहं न अमृता स्याम् किम् अहं तेन कुर्याम् — yena ahaṃ na amṛtā syām kim ahaṃ tena kuryām**
+: <strong>Definition:</strong> Maitreyī's rejection of wealth as inadequate for mokṣa.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī recognises that what does not give immortality is not ultimately worthwhile. This shows her qualification for the teaching.
 
 **यदेव भगवान् वेद तदेव मे ब्रूहि — yad eva bhagavān veda tad eva me brūhi**
-: “Teach me that alone which you know.” Maitreyī asks Yājñavalkya for the knowledge that he values above wealth and household life.
+: <strong>Definition:</strong> Maitreyī's request for the knowledge Yājñavalkya possesses.<br><br><strong>Swamiji's Contextual Explanation:</strong> She asks not for wealth but for the knowledge behind Yājñavalkya's renunciation. Swamiji presents this as the turning from external security to real wealth.
 
-**साधु भाषसे — sādhu bhāṣase**
-: “You speak well.” Yājñavalkya is pleased because Maitreyī has asked for what is truly worth asking.
+**अनुजिघृक्षा — anujighṛkṣā**
+: <strong>Definition:</strong> The compassionate wish to help or bless another.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī says, in effect: if you have compassion toward me, share with me the knowledge you know, not merely the wealth you are leaving.
 
-**प्रियं बत अरे नः सती प्रियं भाषसे — priyaṃ bata are naḥ satī priyaṃ bhāṣase**
-: Yājñavalkya’s affectionate approval of Maitreyī. Swamiji explains that he recognizes her love for the real teaching.
+**संविभजस्व माम् — saṃvibhajasva mām**
+: <strong>Definition:</strong> To distribute or share, here used for sharing knowledge.<br><br><strong>Swamiji's Contextual Explanation:</strong> Earlier Yājñavalkya intended to divide wealth. Maitreyī redirects the division: share not money, but the knowledge of immortality.
 
-**व्याख्यास्यामि — vyākhyāsyāmi**
-: “I shall explain.” The teaching proper begins after Maitreyī rejects wealth and asks for knowledge.
+**साध्वी — sādhvī**
+: <strong>Definition:</strong> Feminine form of **साधु (sādhu)**, indicating one who is good, committed, or noble.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī is presented as affectionate, dear, and worthy. Her worthiness is shown by her discrimination: she asks for immortality, not wealth.
 
-**निदिध्यासस्व — nididhyāsasva**
-: Contemplate, dwell upon the teaching. Yājñavalkya asks Maitreyī not merely to hear casually but to stay with what is being unfolded.
+**प्रियं भाषसे — priyaṃ bhāṣase**
+: <strong>Definition:</strong> Yājñavalkya's appreciation of Maitreyī's words.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya is pleased because Maitreyī asks for the right thing. Her statement reveals maturity and love for the truth.
 
-**पत्युः कामाय पतिः प्रियो भवति — patyuḥ kāmāya patiḥ priyo bhavati**
-: “The husband is dear, not for the husband’s sake.” The teaching begins by analyzing love and dearness.
+**एहि — ehi**
+: <strong>Definition:</strong> An invitation to approach.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya's “come” marks the beginning of formal teaching. The student has asked properly; the teacher now unfolds the knowledge.
 
-**आत्मनस्तु कामाय — ātmanas tu kāmāya**
-: “For the sake of oneself.” Everything dear is dear because of oneself; this becomes the bridge from ordinary love to enquiry into Ātman.
+**व्याख्यास्यामि — I shall explain**
+: <strong>Definition:</strong> A promise to unfold the teaching clearly.<br><br><strong>Swamiji's Contextual Explanation:</strong> Yājñavalkya does not merely give a formula. He undertakes to explain, because the teaching requires unfolding and assimilation.
 
-**प्रिय — priya**
-: Dear, beloved. The class begins the enquiry into why anything is dear and shows that every object is loved for the sake of the self.
+**न वा अरे पत्युः कामाय पतिः प्रियो भवति — na vā are patyuḥ kāmāya patiḥ priyo bhavati**
+: <strong>Definition:</strong> The opening statement of the teaching that objects and persons are loved for the sake of oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that the teaching begins with relationship because the mind is bound by what it loves. The statement is meant to make the student objective about love and attachment.
 
-**ईर्ष्यालु pursuit / jealous pursuit**
-: Swamiji describes Brahmavidyā as a pursuit that does not tolerate divided commitment. If one is really seeking Brahman, other pursuits must be understood for what they are.
+**आत्मनस्तु कामाय — for the sake of the Self**
+: <strong>Definition:</strong> The central phrase showing that everything dear is dear because of oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> The phrase redirects attention from objects to the subject. What is really loved is not the object as such, but the pleased self that seems to be gained through it.
 
-**व्यवसायात्मिका बुद्धिः — vyavasāyātmikā buddhiḥ**
-: The one-pointed understanding that mokṣa alone is the real pursuit. Without this clarity, the mind runs into **बहुशाखा** pursuits.
+**प्रिय — dear, beloved**
+: <strong>Definition:</strong> That which is loved or valued.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses **प्रिय (priya)** to expose dependence. Something becomes dear because it is thought to make “me” pleased, secure, or complete.
 
-**बहुशाखा बुद्धयः — bahuśākhā buddhayaḥ**
-: Many-branched thinking. The mind of one who has not determined the real puruṣārtha is scattered across countless interests.
+**व्यवसायात्मिका बुद्धिः — decisive understanding**
+: <strong>Definition:</strong> A mind resolved about the one true pursuit.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji invokes the Gītā: when one knows that mokṣa alone is the real pursuit, the mind becomes single-pointed. Otherwise it runs into countless branches.
 
----
+**बहुशाखा बुद्धिः — many-branched mind**
+: <strong>Definition:</strong> A mind dispersed into countless pursuits.<br><br><strong>Swamiji's Contextual Explanation:</strong> The person who has not understood what is truly sought becomes interested in endless things. The Maitreyī teaching is meant to free the mind from this dispersion.
 
-## Class 9 — Vairāgya through the Analysis of Dearness
+
+## Class 9 — Love, approval, people, and the broader meaning of relationship
 
 **कामाय — kāmāya**
-: “For the sake of.” In the mantra, **न वा अरे पत्युः कामाय पतिः प्रियो भवति** means the husband is not dear for the husband’s sake, but for the sake of oneself.
+: <strong>Definition:</strong> Dative expression indicating purpose or sake.<br><br><strong>Swamiji's Contextual Explanation:</strong> In the repeated sentences, **कामाय (kāmāya)** reveals why something is loved. It is not loved for its own sake; it serves the person's own sense of fulfilment.
 
-**आत्मनस्तु कामाय सर्वं प्रियं भवति — ātmanas tu kāmāya sarvaṃ priyaṃ bhavati**
-: Everything is dear for the sake of oneself. This is the central teaching thread through which the Upaniṣad turns the mind from objects to Ātman.
+**पत्युः कामाय — patyuḥ kāmāya**
+: <strong>Definition:</strong> The supposed reason for which a husband is loved.<br><br><strong>Swamiji's Contextual Explanation:</strong> The Upaniṣad negates this. The husband is not ultimately dear for his own sake, but for the sake of oneself.
 
-**वैराग्यजनन — vairāgya-janana**
-: The production of dispassion. Śaṅkara reads this section as meant to generate vairāgya toward spouse, children, wealth, worlds, and all objects by showing that none is loved for its own sake.
+**जायायै कामाय — jāyāyai kāmāya**
+: <strong>Definition:</strong> The supposed reason for which a wife is loved.<br><br><strong>Swamiji's Contextual Explanation:</strong> The same logic applies both ways. The wife is dear because of the pleased self one associates with that relationship.
 
-**अमृतत्व-साधनम् — amṛtatva-sādhanam**
-: A means to immortality. The teaching examines whether objects of love are really means to immortality; the conclusion is that they are not.
+**पुत्रस्य कामाय — putrasya kāmāya**
+: <strong>Definition:</strong> The supposed reason for which children are loved.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that children are loved intensely because they are taken as extensions of oneself. The love is still centred on oneself.
+
+**वित्तस्य कामाय — for the sake of wealth**
+: <strong>Definition:</strong> The supposed reason for which wealth is loved.<br><br><strong>Swamiji's Contextual Explanation:</strong> Wealth is loved because it promises security, comfort, and power to fulfil wants. It is not loved as wealth in itself.
+
+**क्षत्रस्य कामाय — kṣatrasya kāmāya**
+: <strong>Definition:</strong> The supposed love of status, power, or protection for its own sake.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that power is loved only as long as it serves me. If it no longer gives what I want, I do not pursue it for its own sake.
+
+**लोकानाम् कामाय — lokānām kāmāya**
+: <strong>Definition:</strong> The supposed love of people for their own sake.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains **लोक (loka)** here as people. We love people who make us feel approved, valued, or secure. This exposes the approval-seeking self.
+
+**देवानाम् कामाय — devānām kāmāya**
+: <strong>Definition:</strong> The supposed love of deities for their own sake.<br><br><strong>Swamiji's Contextual Explanation:</strong> Even worship is often connected with what the deity gives. The deity is sought as a means for the devotee's desired end, unless devotion is purified by knowledge.
 
 **पुरुषार्थ — puruṣārtha**
-: The human end being sought. Swamiji shows that people may outwardly seek relationships, career, wealth, or recognition, but the deeper puruṣārtha is the pleased self.
+: <strong>Definition:</strong> That which is sought by a human being as meaningful or desirable.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses the Maitreyī teaching to show that the real puruṣārtha is not any external object but the pleased, free self that one is trying to reach through objects.
 
-**मुमुक्षु — mumukṣu**
-: One who seeks mokṣa. For such a person, the analysis of dearness becomes a means to turn away from secondary pursuits and seek the Self directly.
+**सम्बन्ध — sambandha**
+: <strong>Definition:</strong> A connection with a person, object, role, status, or situation.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji deliberately broadens “relationship.” Relationship is not only with spouse or child; it includes wealth, job, status, car, society, and anything with which one identifies.
 
-**राग-द्वेष — rāga-dveṣa**
-: Likes and dislikes. Swamiji links them to what appears to make the pleased self manifest or disappear.
+**स्वार्थ — svārtha**
+: <strong>Definition:</strong> That which is centred on oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> The Upaniṣadic teaching is not meant as cynicism. It reveals that all love is finally centred on oneself, so the Self must be known.
 
-**संबन्ध — sambandha**
-: Relationship, used broadly. Swamiji extends it beyond personal relations to include wealth, career, car, club membership, and any object one relates to as a source of happiness.
+**वैराग्यार्थम् — for the sake of dispassion**
+: <strong>Definition:</strong> Intended to produce freedom from dependence on external pursuits.<br><br><strong>Swamiji's Contextual Explanation:</strong> The repeated “not for its sake, but for the Self's sake” statements are meant to create space from habitual pursuits, so that the real Self can be examined.
 
-**वस्तुनिष्ठता / objectivity**
-: Seeing a thing as it is, without making it a completer of oneself. As long as an object affects me as “my” source of completion, subjectivity remains.
 
-**पूर्णत्वहेतु — pūrṇatva-hetu**
-: A supposed cause of completeness. Objects are pursued because they are imagined to complete the incomplete self. The teaching exposes this error.
+## Class 10 — The pleased self, happiness, rāga-dveṣa, and ānanda
 
-**प्रिय आत्मा — the pleased self**
-: Swamiji uses the “pleased me” to explain why objects are loved. The object is not ultimately loved; the pleased self that seems to manifest through the object is loved.
+**पूर्णत्वहेतु — supposed cause of completeness**
+: <strong>Definition:</strong> Something imagined to complete oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji says we take people, objects, and achievements as completers of ourselves. Until they matter as pūrṇatva-hetu, we cannot be objective about them.
 
----
+**वस्तुनिष्ठता / Objectivity — objectivity**
+: <strong>Definition:</strong> Seeing a thing as it is without making it a source of personal completion or threat.<br><br><strong>Swamiji's Contextual Explanation:</strong> If something affects me as “mine,” subjectivity enters. To be objective is to see that the object does not complete or diminish me.
 
-## Class 10 — The Pleased Self, Happiness, and Dependence on Objects
-
-**प्रसन्न आत्मा / pleased self**
-: The self as experienced in the form “I am happy” or “I am pleased.” Swamiji uses this to show that what one really loves is not the object but the happy self that seems to appear through the object.
-
-**सुख / आनन्द — happiness**
-: Not an external object. Swamiji points out that one does not say “I see happiness”; one says “I am happy.” Happiness is centered on oneself, not on the object.
-
-**निमित्त — nimitta**
-: Occasion or trigger. Objects and situations may serve as occasions for a smile or happiness-event, but they are not the intrinsic source of happiness.
-
-**डेल्टा / differential happiness**
-: Swamiji’s practical illustration: water gives great joy when one is thirsty, but not the same joy after thirst is gone. This shows that object-based happiness depends on condition and contrast.
-
-**विषय-आश्रित सुख — object-dependent happiness**
-: Happiness that appears to depend on an object, person, event, or situation. The class examines this dependence and shows its instability.
+**ममत्व — mine-ness**
+: <strong>Definition:</strong> The sense that something is mine and therefore an extension of me.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses the example of “my child.” A million children may not disturb me, but “my child” does, because the child is taken as an extension of myself.
 
 **राग-द्वेष — rāga-dveṣa**
-: Likes and dislikes based on what seems to widen or contract the pleased self. What makes one smile is liked; what contracts the mind is disliked.
+: <strong>Definition:</strong> Attraction and aversion based on what seems to make me pleased or displeased.<br><br><strong>Swamiji's Contextual Explanation:</strong> Whatever seems to make me smile becomes rāga; whatever seems to make the smile disappear becomes dveṣa. They are rooted in the search for the pleased self.
 
-**सुषुप्ति — suṣupti**
-: Deep sleep. Swamiji uses sleep to show happiness without object-relation: in deep sleep, the wanting person and subject-object division are absent, yet one later says, “I slept well.”
+**प्रसन्नात्मा / pleased self — the pleased self**
+: <strong>Definition:</strong> The self as experienced when one is free from want, burden, or inner resistance.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that we love everything for the pleased self. The teaching then asks whether that pleased self is produced by objects or is already oneself.
 
-**द्वैतम् — dvaitam**
-: Duality, the subject-object structure. In deep sleep, the relator and related are absent, yet happiness is not absent; this supports the enquiry into the Self beyond relationships.
+**आनन्द — ānanda**
+: <strong>Definition:</strong> In Vedānta, not merely an emotional event but a pointer to fullness that is not away from the Self.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji carefully distinguishes experienced happiness from the Self as ānanda. If ānanda were an experience, it would come and go. The Upaniṣad uses ānanda to point to the Self that is not burdened or limited.
 
-**कर्तृत्व of wanting self — the wanting “I”**
-: The self-image that says “I am wanting” or “I need something to be okay.” Swamiji explains that much of life is an attempt to forget or overcome this wanting self through distractions.
+**आनन्दमय — the sheath associated with happiness**
+: <strong>Definition:</strong> In the Taittirīya model, the layer connected with experiential happiness or karma-phala.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji explains that ānanda in **आनन्दमय (ānandamaya)** is karma-phala — degrees of happiness appearing when situations become conducive. It is not the absolute ānanda of the Self.
 
-**विक्षेप / distraction**
-: Turning the mind away from the wanting self through entertainment, company, intoxication, or other means. Swamiji contrasts such temporary relief with knowledge of the Self.
+**कर्मफलरूप आनन्द — karmaphalarūpa ānanda**
+: <strong>Definition:</strong> A happiness-event produced when a desired situation is obtained or an obstruction is removed.<br><br><strong>Swamiji's Contextual Explanation:</strong> The smile that appears when thirst is removed or a desire is fulfilled is an event. It is a result at the mind level, not the intrinsic nature of the Self.
 
-**आत्मनस्तु कामाय — for the sake of oneself**
-: In Class 10, this phrase is deepened: every pursuit is ultimately for the happy self, and the Upaniṣad asks the student to know that Self directly rather than seek happiness through objects.
+**वृत्ति — mental modification**
+: <strong>Definition:</strong> A thought, mental state, or changing event in the mind.<br><br><strong>Swamiji's Contextual Explanation:</strong> Experienced happiness is a vṛtti. It comes and goes like any other mental event. Therefore it cannot be the final ānanda that Vedānta reveals as the Self.
 
----
+**नैसर्गिक अविद्या — natural ignorance**
+: <strong>Definition:</strong> The beginningless, natural sense of being a limited body-mind individual.<br><br><strong>Swamiji's Contextual Explanation:</strong> Even when one is not explicitly thinking “I am limited,” a subtle load of limitation remains. When that load is temporarily lifted, happiness seems to appear.
 
-## Consolidated Core Glossary for Site-Wide Use
+**अकृतः — akṛtaḥ**
+: <strong>Definition:</strong> That which is not made or produced by action.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji invokes **नास्त्यकृतः कृतेन (nāstyakṛtaḥ kṛtena)**: the unproduced cannot be gained by what is produced. The pleased self is not created by action; only burdens are created and removed.
 
-These terms recur across the first ten classes and can be given permanent entries in a general glossary, while the classwise entries above can be linked as teaching-context expansions.
+**नास्त्यकृतः कृतेन — nāstyakṛtaḥ kṛtena**
+: <strong>Definition:</strong> A śruti principle that action cannot produce the uncreated.<br><br><strong>Swamiji's Contextual Explanation:</strong> Since mokṣa and true ānanda are not produced entities, no action can produce them. Action can only remove a situational burden or prepare the mind.
 
-**आत्मा — Ātman**
-: The non-objectifiable reality of oneself; not the body, mind, senses, or any object. In the Maitreyī Brāhmaṇa, everything dear is shown to be dear for the sake of this Self.
+**प्रिय, मोद, प्रमोद**
+: <strong>Definition:</strong> Stages or gradations of pleasure experienced in relation to desired objects.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji uses the cloud-and-sun imagery: different degrees of happiness do not mean the Self becomes brighter or dimmer. The obstruction varies; the light remains the same.
+
+**उपलक्षण — upalakṣaṇa**
+: <strong>Definition:</strong> A word or feature that points beyond itself to something deeper.<br><br><strong>Swamiji's Contextual Explanation:</strong> Ānanda is used as an upalakṣaṇa. It points to the Self by showing that in moments of happiness one is comfortable being oneself, without demand.
+
+**अखण्ड — akhaṇḍa**
+: <strong>Definition:</strong> That which cannot be divided into parts.<br><br><strong>Swamiji's Contextual Explanation:</strong> The Self is not something one connects with and disconnects from. If ānanda were an experience, it would be “bliss in, bliss out.” But the Self is akhaṇḍa — not divisible.
+
+**पूर्णम् — pūrṇam**
+: <strong>Definition:</strong> That which lacks nothing and is not made complete by anything else.<br><br><strong>Swamiji's Contextual Explanation:</strong> The “pleased you” is ultimately not an adjective added to the self. The teaching shows that “pleased” is redundant because the Self is already pūrṇa.
+
+
+## Consolidated recurring glossary terms
+
+**These terms recur across multiple classes and should be included in a central glossary index as well.**
+: <strong>Definition:</strong> <br><br><strong>Swamiji's Contextual Explanation:</strong> 
+
+**आत्मा — Self**
+: <strong>Definition:</strong> The non-objectifiable reality of oneself, ultimately identical with Brahman.<br><br><strong>Swamiji's Contextual Explanation:</strong> The entire Maitreyī teaching turns the student from what is loved to the one for whose sake everything is loved. That one is the Self.
 
 **ब्रह्मन् — Brahman**
-: The limitless reality. The teaching moves between Brahman and Ātman until their identity is clear: what was sought as Brahman is the very Self.
+: <strong>Definition:</strong> The limitless reality that is not separate from the innermost Self.<br><br><strong>Swamiji's Contextual Explanation:</strong> Earlier the teaching began with Brahman and ended in the Self; Maitreyī Brāhmaṇa begins with the Self and leads to Brahman. Both directions establish the same identity.
 
-**ब्रह्मविद्या — Brahmavidyā**
-: Knowledge of Brahman as one’s own Self. It alone gives mokṣa because mokṣa is not produced but recognized as the truth.
+**मोक्ष — liberation**
+: <strong>Definition:</strong> Freedom from limitation, mortality, and saṃsāra through Self-knowledge.<br><br><strong>Swamiji's Contextual Explanation:</strong> Mokṣa is not a produced result. It is the recognition that the Self is already free and complete.
 
-**मोक्ष — Mokṣa**
-: Freedom from limitation, dependence, and saṃsāra. It is not a karma-phala and cannot be produced by wealth, ritual, or situation.
+**अमृतत्वम् — immortality**
+: <strong>Definition:</strong> Deathlessness understood as mokṣa, not mere endless continuity of life.<br><br><strong>Swamiji's Contextual Explanation:</strong> Maitreyī's greatness lies in asking for amṛtatva rather than wealth. This directs the dialogue from prosperity to liberation.
 
-**अमृतत्वम् — Amṛtatvam**
-: Immortality, identical in teaching-context with mokṣa. Maitreyī seeks this, not mere comfort.
+**वैराग्यम् — dispassion**
+: <strong>Definition:</strong> Freedom from dependence on limited objects and results.<br><br><strong>Swamiji's Contextual Explanation:</strong> The repeated analysis of wealth, relationships, people, and happiness is intended to create vairāgya, not indifference born of frustration but clarity born of discrimination.
 
-**कर्म — Karma**
-: Action, including Vedic ritual. It produces results but cannot produce mokṣa, because all produced results are limited.
+**संन्यास — sannyāsa**
+: <strong>Definition:</strong> Renunciation of karma and binding roles for the sake of knowledge or abidance in knowledge.<br><br><strong>Swamiji's Contextual Explanation:</strong> Sannyāsa is highlighted by the story, but Swamiji keeps the central principle clear: knowledge alone liberates. Sannyāsa is important as a facilitating life, not as a producer of mokṣa.
 
-**कर्मफल — Karma-phala**
-: The result of action. Since every result is gained in time, it is subject to limitation and cannot be absolute freedom.
+**नेति नेति — not this, not this**
+: <strong>Definition:</strong> The method of negating every objectifiable thing as not being the final Self/Brahman.<br><br><strong>Swamiji's Contextual Explanation:</strong> The negation is not nihilism. It removes wrong identification so the student can recognise the non-objectifiable Self.
 
-**वैराग्यम् — Vairāgya**
-: Dispassion born of understanding the limitation of all finite pursuits. The analysis of wealth and dearness is meant to generate this.
+**आत्मनस्तु कामाय — for the sake of the Self**
+: <strong>Definition:</strong> The core phrase of the Maitreyī teaching showing that everything dear is dear because of oneself.<br><br><strong>Swamiji's Contextual Explanation:</strong> This phrase is the doorway to objectivity. The student sees that all pursuits are really attempts to reach the pleased self — which is then revealed as not produced by those pursuits.
 
-**संन्यास — Sannyāsa**
-: Renunciation. Important as a conducive condition for some seekers and as connected with knowledge/niṣṭhā, but not a substitute for knowledge.
+**प्रिय — dear**
+: <strong>Definition:</strong> That which is loved, valued, or sought.<br><br><strong>Swamiji's Contextual Explanation:</strong> A thing is dear not because dearness belongs to the object independently, but because it is connected with oneself and the manifestation of happiness.
 
-**नेति नेति — Neti Neti**
-: The Upaniṣadic negation of every objectifiable entity as not Brahman. It does not teach absence but points to the non-objectifiable Self.
+**आनन्द — ānanda**
+: <strong>Definition:</strong> The fullness of the Self, distinguished from temporary pleasurable mental states.<br><br><strong>Swamiji's Contextual Explanation:</strong> Swamiji carefully separates ānanda as a mental event from ānanda as a pointer to the Self. Experienced joy comes and goes; the Self does not.
 
-**प्रिय — Priya**
-: Dear. The Maitreyī Brāhmaṇa uses the logic of dearness to show that nothing is loved for its own sake; everything is loved for the sake of oneself.
-
-**आत्मनस्तु कामाय — Ātmanas tu kāmāya**
-: “For the sake of oneself.” The key refrain of the Maitreyī teaching, revealing the Self as the real center of all love and pursuit.
-
-**निदिध्यासन — Nididhyāsana**
-: Contemplative assimilation of the teaching. Yājñavalkya’s instruction to Maitreyī includes not only hearing but dwelling on the teaching.
-
-**निष्ठा — Niṣṭhā**
-: Firm abidance in knowledge. The discussions of sannyāsa often relate to gaining steadiness in what has been understood.
-
-**संसार — Saṃsāra**
-: The life of limitation born of self-ignorance, dependence, and identification with body-mind.
-
-**अविद्या — Avidyā**
-: Ignorance of oneself as the limitless reality. It expresses as identification, seeking, dependence, and the sense of being incomplete.
-
-**मिथ्या — Mithyā**
-: Dependent reality. The world is not dismissed as non-existent, but its independent absolute reality is negated.
-
-**वस्तुतन्त्रम् — Vastu-tantram**
-: Governed by the object/fact. Knowledge is vastu-tantra because it must conform to what is, not to personal will.
-
-**पुरुषतन्त्रम् — Puruṣa-tantram**
-: Governed by personal choice. Action is puruṣa-tantra; mokṣa cannot be produced by such choice-based action.
-
-**व्यवसायात्मिका बुद्धिः — Vyavasāyātmikā Buddhiḥ**
-: A decisive, one-pointed understanding of the real pursuit. It contrasts with the scattered many-branched mind.
