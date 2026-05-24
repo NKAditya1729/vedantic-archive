@@ -7,27 +7,27 @@
         "deva": "आत्मेत्येवोपासीत",
         "iast": "ātmetyevopāsīta",
         "definition": "The Vidyāsūtra of Bṛhadāraṇyaka Upaniṣad 1.4.7, taken as the seed statement expanded by the rest of the Upaniṣad.",
-        "context": "Swamiji stresses that <strong>उपासीत</strong> here does not mean ordinary upāsanā or mental superimposition. It means enquiry into the nearest reality, the Self, through śāstra. The <strong>इति</strong> helps exclude the known and unknown, the manifest and unmanifest, and prevents a ritualistic or meditative misunderstanding.",
+        "context": "Swamiji stresses that <strong><span class=\"sanskrit-deva\">उपासीत</span><span class=\"sanskrit-iast\">upāsīta</span></strong> here does not mean ordinary upāsanā or mental superimposition. It means enquiry into the nearest reality, the Self, through śāstra. The <strong><span class=\"sanskrit-deva\">इति</span><span class=\"sanskrit-iast\">iti</span></strong> helps exclude the known and unknown, the manifest and unmanifest, and prevents a ritualistic or meditative misunderstanding.",
         "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.7 (Vidyāsūtra): \"तदेतदास्पदं... <u>आत्मेत्येवोपासीत</u>\"",
         "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.7 (Vidyāsūtra): \"tadetadāspadaṃ... <u>ātmetyevopāsīta</u>\"",
         "breakdown_deva": "आत्मा इति एव उपासीत — \"one should reflect on the Self as the Self alone\"",
         "breakdown_iast": "ātmā iti eva upāsīta — \"one should reflect on the Self as the Self alone\"",
         "phrasal": "The seed statement of the entire Upaniṣad",
         "search_deva": "आत्मेत्येवोपासीत आत्मा इति एव उपासीत उपासीत इति",
-        "search_iast": "atmetyevopasita atma iti eva upasita one should reflect on the self as the self alone the seed statement of the entire upanisad the vidyasutra of brhadaranyaka upanisad 1 4 7 taken as the seed statement expanded by the rest of the upanisad swamiji stresses that here does not mean ordinary upasana or mental superimposition it means enquiry into the nearest reality the self through sastra the helps exclude the known and unknown the manifest and unmanifest and prevents a ritualistic or meditative misunderstanding mula brhadaranyaka upanisad 1 4 7 vidyasutra"
+        "search_iast": "atmetyevopasita atma iti eva upasita one should reflect on the self as the self alone the seed statement of the entire upanisad the vidyasutra of brhadaranyaka upanisad 1 4 7 taken as the seed statement expanded by the rest of the upanisad swamiji stresses that upasita here does not mean ordinary upasana or mental superimposition it means enquiry into the nearest reality the self through sastra the iti helps exclude the known and unknown the manifest and unmanifest and prevents a ritualistic or meditative misunderstanding mula brhadaranyaka upanisad 1 4 7 vidyasutra"
       },
       {
         "deva": "पदनीयम्",
         "iast": "padanīyam",
         "definition": "That which deserves to be pursued as the true puruṣārtha.",
-        "context": "Swamiji explains <strong>पदनीयम्</strong> from <strong>पद्यते इति पदम्</strong> — what one goes after. Among all possible pursuits, the Self alone is truly worth going after because it is dearer than son, wealth, and everything else.",
+        "context": "Swamiji explains <strong><span class=\"sanskrit-deva\">पदनीयम्</span><span class=\"sanskrit-iast\">padanīyam</span></strong> from <strong><span class=\"sanskrit-deva\">पद्यते इति पदम्</span><span class=\"sanskrit-iast\">padyate iti padam</span></strong> — what one goes after. Among all possible pursuits, the Self alone is truly worth going after because it is dearer than son, wealth, and everything else.",
         "source": "Bhāṣya on 1.4.7: \"तदेतस्मिन् सर्वस्मिन् <u>पदनीयम्</u> आत्मतत्त्वम्\"",
         "source_iast": "Bhāṣya on 1.4.7: \"tadetasmin sarvasmin <u>padanīyam</u> ātmatattvam\"",
         "breakdown_deva": "पद् + अनीयर् — \"what is to be tracked down, pursued\"",
         "breakdown_iast": "pad + anīyar — \"what is to be tracked down, pursued\"",
         "phrasal": "That which is worth tracking down",
         "search_deva": "पदनीयम् पद् अनीयर् पदनीयम् पद्यते इति पदम्",
-        "search_iast": "padaniyam pad aniyar what is to be tracked down pursued that which is worth tracking down that which deserves to be pursued as the true purusartha swamiji explains from what one goes after among all possible pursuits the self alone is truly worth going after because it is dearer than son wealth and everything else bhasya on 1 4 7"
+        "search_iast": "padaniyam pad aniyar what is to be tracked down pursued that which is worth tracking down that which deserves to be pursued as the true purusartha swamiji explains padaniyam from padyate iti padam what one goes after among all possible pursuits the self alone is truly worth going after because it is dearer than son wealth and everything else bhasya on 1 4 7"
       },
       {
         "deva": "सिंहावलोकनम्",
@@ -155,7 +155,7 @@
       {
         "deva": "अङ्ग",
         "iast": "aṅga",
-        "definition": "A supporting factor that serves a principal pursuit, the <strong>अङ्गी</strong>.",
+        "definition": "A supporting factor that serves a principal pursuit, the <strong><span class=\"sanskrit-deva\">अङ्गी</span><span class=\"sanskrit-iast\">aṅgī</span></strong>.",
         "context": "Bhāṣyakāra says sannyāsa is intended as an aṅga for Brahmavidyā. Swamiji explains that this does not make sannyāsa an independent producer of mokṣa; it serves knowledge.",
         "source": "Bhāṣya — Introduction to 2.4: \"सन्न्यासोऽ<u>ङ्गत्वेन</u> विधित्सितः\"",
         "source_iast": "Bhāṣya — Introduction to 2.4: \"sannyāso'<u>ṅgatvena</u> vidhitsitaḥ\"",
@@ -163,7 +163,7 @@
         "breakdown_iast": "",
         "phrasal": "Auxiliary limb or prerequisite",
         "search_deva": "अङ्ग अङ्गी",
-        "search_iast": "anga auxiliary limb or prerequisite a supporting factor that serves a principal pursuit the bhasyakara says sannyasa is intended as an anga for brahmavidya swamiji explains that this does not make sannyasa an independent producer of moksa it serves knowledge bhasya introduction to 2 4"
+        "search_iast": "anga auxiliary limb or prerequisite a supporting factor that serves a principal pursuit the angi bhasyakara says sannyasa is intended as an anga for brahmavidya swamiji explains that this does not make sannyasa an independent producer of moksa it serves knowledge bhasya introduction to 2 4"
       },
       {
         "deva": "श्रवणम्, मननम्, निदिध्यासनम्",
@@ -279,14 +279,14 @@
         "deva": "अविद्या",
         "iast": "avidyā",
         "definition": "Ignorance of the Self, expressed as taking oneself to be different, limited, and bound.",
-        "context": "Swamiji explains that the portion beginning with <strong>अन्योऽसावन्योऽहमस्मि</strong> presents the domain of avidyā: “that is different, I am different.” This is the basis of saṃsāra.",
+        "context": "Swamiji explains that the portion beginning with <strong><span class=\"sanskrit-deva\">अन्योऽसावन्योऽहमस्मि</span><span class=\"sanskrit-iast\">anyo'sāvanyo'hamasmi</span></strong> presents the domain of avidyā: “that is different, I am different.” This is the basis of saṃsāra.",
         "source": "Bhāṣya — Introduction to 2.4: \"पाङ्क्तं कर्म <u>अविद्याविषयम्</u>\"",
         "source_iast": "Bhāṣya — Introduction to 2.4: \"pāṅktaṃ karma <u>avidyāviṣayam</u>\"",
         "breakdown_deva": "न विद्या — नञ्तत्पुरुष — \"ignorance of one's nature\"",
         "breakdown_iast": "na vidyā — nañ-tatpuruṣa — \"ignorance of one's nature\"",
         "phrasal": "Self-ignorance",
         "search_deva": "अविद्या न विद्या नञ्तत्पुरुष अन्योऽसावन्योऽहमस्मि",
-        "search_iast": "avidya na vidya nan tatpurusa ignorance of one s nature self ignorance ignorance of the self expressed as taking oneself to be different limited and bound swamiji explains that the portion beginning with presents the domain of avidya that is different i am different this is the basis of samsara bhasya introduction to 2 4"
+        "search_iast": "avidya na vidya nan tatpurusa ignorance of one s nature self ignorance ignorance of the self expressed as taking oneself to be different limited and bound swamiji explains that the portion beginning with anyo savanyo hamasmi presents the domain of avidya that is different i am different this is the basis of samsara bhasya introduction to 2 4"
       },
       {
         "deva": "विद्याविद्यात्मकयोः प्रतिकूलवर्तनम्",
@@ -454,14 +454,14 @@
         "deva": "प्रत्यय",
         "iast": "pratyaya",
         "definition": "A settled notion such as “I am a brāhmaṇa,” “I am a householder,” or “I am this body-mind.”",
-        "context": "The Vedic injunction reaches a person only when the relevant प्रत्यय is active. When the प्रत्यय is sublated by knowledge, the injunction has no subject to address.",
+        "context": "The Vedic injunction reaches a person only when the relevant <span class=\"sanskrit-deva\">प्रत्यय</span><span class=\"sanskrit-iast\">pratyaya</span> is active. When the <span class=\"sanskrit-deva\">प्रत्यय</span><span class=\"sanskrit-iast\">pratyaya</span> is sublated by knowledge, the injunction has no subject to address.",
         "source": "Bhāṣya — Introduction to 2.4: \"ब्रह्मक्षत्राद्यात्मविषयः <u>प्रत्ययः</u> कर्तव्याधिकारहेतुः\"",
         "source_iast": "Bhāṣya — Introduction to 2.4: \"brahmakṣatrādyātmaviṣayaḥ <u>pratyayaḥ</u> kartavyādhikārahetuḥ\"",
         "breakdown_deva": "प्रति + इ + अच् — \"settled notion, identity-thought\"",
         "breakdown_iast": "prati + i + ac — \"settled notion, identity-thought\"",
         "phrasal": "Settled identity notion",
         "search_deva": "प्रत्यय प्रति इ अच् - - प्रत्यय प्रत्यय",
-        "search_iast": "pratyaya prati i ac settled notion identity thought settled identity notion a settled notion such as i am a brahmana i am a householder or i am this body mind the vedic injunction reaches a person only when the relevant is active when the is sublated by knowledge the injunction has no subject to address bhasya introduction to 2 4"
+        "search_iast": "pratyaya prati i ac settled notion identity thought settled identity notion a settled notion such as i am a brahmana i am a householder or i am this body mind the vedic injunction reaches a person only when the relevant pratyaya is active when the pratyaya is sublated by knowledge the injunction has no subject to address bhasya introduction to 2 4"
       },
       {
         "deva": "ब्रह्मक्षत्राद्यात्मविषयः प्रत्ययः",
@@ -629,14 +629,14 @@
         "deva": "नेति नेति",
         "iast": "neti neti",
         "definition": "A teaching method that negates everything objectifiable as not being Brahman in its true nature.",
-        "context": "Swamiji explains that <strong>नेति नेति</strong> is not merely “not mūrta and not amūrta” as two categories. It negates every objectifiable thing and forces the student to recognise the non-objectifiable Self.",
+        "context": "Swamiji explains that <strong><span class=\"sanskrit-deva\">नेति नेति</span><span class=\"sanskrit-iast\">neti neti</span></strong> is not merely “not mūrta and not amūrta” as two categories. It negates every objectifiable thing and forces the student to recognise the non-objectifiable Self.",
         "source": "Bhāṣya on 2.4.2: \"सर्वविशेषप्रतिषेधद्वारेण <u>नेति नेति</u>\"",
         "source_iast": "Bhāṣya on 2.4.2: \"sarvaviśeṣapratiṣedhadvāreṇa <u>neti neti</u>\"",
         "breakdown_deva": "न इति न इति — \"not this, not this\"",
         "breakdown_iast": "na iti na iti — \"not this, not this\"",
         "phrasal": "The ultimate negation of all objectification",
         "search_deva": "नेति नेति न इति न इति नेति नेति -",
-        "search_iast": "neti neti na iti na iti not this not this the ultimate negation of all objectification a teaching method that negates everything objectifiable as not being brahman in its true nature swamiji explains that is not merely not murta and not amurta as two categories it negates every objectifiable thing and forces the student to recognise the non objectifiable self bhasya on 2 4 2"
+        "search_iast": "neti neti na iti na iti not this not this the ultimate negation of all objectification a teaching method that negates everything objectifiable as not being brahman in its true nature swamiji explains that neti neti is not merely not murta and not amurta as two categories it negates every objectifiable thing and forces the student to recognise the non objectifiable self bhasya on 2 4 2"
       },
       {
         "deva": "मूर्त",
@@ -668,14 +668,14 @@
         "deva": "वीप्सा",
         "iast": "vīpsā",
         "definition": "A grammatical sense in which repetition means “each and every.”",
-        "context": "Swamiji explains <strong>नेति नेति</strong> through vīpsā: the repetition does not merely negate two items but negates each and every objectifiable entity.",
+        "context": "Swamiji explains <strong><span class=\"sanskrit-deva\">नेति नेति</span><span class=\"sanskrit-iast\">neti neti</span></strong> through vīpsā: the repetition does not merely negate two items but negates each and every objectifiable entity.",
         "source": "Bhāṣya on 2.3.6: \"नेति नेतीति <u>वीप्सा</u> सर्वविशेषप्रतिषेधार्था\"",
         "source_iast": "Bhāṣya on 2.3.6: \"neti netīti <u>vīpsā</u> sarvaviśeṣapratiṣedhārthā\"",
         "breakdown_deva": "वीप्सा — \"distributive repetition meaning 'each and every'\"",
         "breakdown_iast": "vīpsā — \"distributive repetition meaning 'each and every'\"",
         "phrasal": "Distributive repetition",
         "search_deva": "वीप्सा वीप्सा नेति नेति",
-        "search_iast": "vipsa vipsa distributive repetition meaning each and every distributive repetition a grammatical sense in which repetition means each and every swamiji explains through vipsa the repetition does not merely negate two items but negates each and every objectifiable entity bhasya on 2 3 6"
+        "search_iast": "vipsa vipsa distributive repetition meaning each and every distributive repetition a grammatical sense in which repetition means each and every swamiji explains neti neti through vipsa the repetition does not merely negate two items but negates each and every objectifiable entity bhasya on 2 3 6"
       },
       {
         "deva": "प्रधान",
@@ -733,14 +733,14 @@
         "deva": "दृग्दृश्यविवेक",
         "iast": "dṛgdṛśyaviveka",
         "definition": "The enquiry that distinguishes the witnessing subject from all objectifiable entities.",
-        "context": "Though not presented as a separate text here, the logic of <strong>नेति नेति</strong> relies on seeing that whatever is objectified cannot be the final Self.",
+        "context": "Though not presented as a separate text here, the logic of <strong><span class=\"sanskrit-deva\">नेति नेति</span><span class=\"sanskrit-iast\">neti neti</span></strong> relies on seeing that whatever is objectified cannot be the final Self.",
         "source": "Traditional Vedāntic logic: \"<u>दृग्दृश्यविवेकः</u> सर्वभेदनिषेधाय उपयुज्यते\"",
         "source_iast": "Traditional Vedāntic logic: \"<u>dṛgdṛśyavivekaḥ</u> sarvabhedaniṣedhāya upayujyate\"",
         "breakdown_deva": "दृक् च दृश्यं च — तयोः विवेकः — \"discrimination between the seer and the seen\"",
         "breakdown_iast": "dṛk ca dṛśyaṃ ca — tayoḥ vivekaḥ — \"discrimination between the seer and the seen\"",
         "phrasal": "Discrimination between subject and object",
         "search_deva": "दृग्दृश्यविवेक दृक् च दृश्यं च तयोः विवेकः नेति नेति",
-        "search_iast": "drgdrsyaviveka drk ca drsyam ca tayoh vivekah discrimination between the seer and the seen discrimination between subject and object the enquiry that distinguishes the witnessing subject from all objectifiable entities though not presented as a separate text here the logic of relies on seeing that whatever is objectified cannot be the final self traditional vedantic logic"
+        "search_iast": "drgdrsyaviveka drk ca drsyam ca tayoh vivekah discrimination between the seer and the seen discrimination between subject and object the enquiry that distinguishes the witnessing subject from all objectifiable entities though not presented as a separate text here the logic of neti neti relies on seeing that whatever is objectified cannot be the final self traditional vedantic logic"
       },
       {
         "deva": "असङ्ग",
@@ -862,27 +862,27 @@
         "deva": "कथं तेन अमृता स्याम्",
         "iast": "kathaṃ tena amṛtā syām",
         "definition": "Maitreyī's question about whether wealth can give immortality.",
-        "context": "Swamiji shows two possible tones: it may be a genuine question or a rhetorical dismissal. Śaṅkara allows both: <strong>प्रश्नार्थः</strong> or <strong>आक्षेपार्थः</strong>.",
+        "context": "Swamiji shows two possible tones: it may be a genuine question or a rhetorical dismissal. Śaṅkara allows both: <strong><span class=\"sanskrit-deva\">प्रश्नार्थः</span><span class=\"sanskrit-iast\">praśnārthaḥ</span></strong> or <strong><span class=\"sanskrit-deva\">आक्षेपार्थः</span><span class=\"sanskrit-iast\">ākṣepārthaḥ</span></strong>.",
         "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.2: \"<u>कथं तेन अमृता स्याम्</u> इति\"",
         "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.2: \"<u>kathaṃ tena amṛtā syām</u> iti\"",
         "breakdown_deva": "कथं तेन अमृता स्याम् — \"how can I become immortal through that (wealth)?\"",
         "breakdown_iast": "kathaṃ tena amṛtā syām — \"how can I become immortal through that (wealth)?\"",
         "phrasal": "How can I gain immortality through that?",
         "search_deva": "कथं तेन अमृता स्याम् कथं तेन अमृता स्याम् प्रश्नार्थः आक्षेपार्थः",
-        "search_iast": "katham tena amrta syam katham tena amrta syam how can i become immortal through that wealth how can i gain immortality through that maitreyi s question about whether wealth can give immortality swamiji shows two possible tones it may be a genuine question or a rhetorical dismissal sankara allows both or mula brhadaranyaka upanisad 2 4 2"
+        "search_iast": "katham tena amrta syam katham tena amrta syam how can i become immortal through that wealth how can i gain immortality through that maitreyi s question about whether wealth can give immortality swamiji shows two possible tones it may be a genuine question or a rhetorical dismissal sankara allows both prasnarthah or akseparthah mula brhadaranyaka upanisad 2 4 2"
       },
       {
         "deva": "आक्षेपार्थः",
         "iast": "ākṣepārthaḥ",
         "definition": "A meaning where a question implies impossibility rather than seeking information.",
-        "context": "<strong>कथम्</strong> may mean “in no way.” Maitreyī may already understand that wealth cannot give immortality and is asking rhetorically.",
+        "context": "<strong><span class=\"sanskrit-deva\">कथम्</span><span class=\"sanskrit-iast\">katham</span></strong> may mean “in no way.” Maitreyī may already understand that wealth cannot give immortality and is asking rhetorically.",
         "source": "Bhāṣya on 2.4.2: \"कथमिति न कथञ्चनेति <u>आक्षेपार्थः</u>\"",
         "source_iast": "Bhāṣya on 2.4.2: \"kathamiti na kathañcaneti <u>ākṣepārthaḥ</u>\"",
         "breakdown_deva": "आक्षेपस्य अर्थः — ष. तत्पुरुष — \"rhetorical denial, indicating impossibility\"",
         "breakdown_iast": "ākṣepasya arthaḥ — ṣa. tatpuruṣa — \"rhetorical denial, indicating impossibility\"",
         "phrasal": "Interrogative marking impossibility",
         "search_deva": "आक्षेपार्थः आक्षेपस्य अर्थः ष तत्पुरुष कथम्",
-        "search_iast": "akseparthah aksepasya arthah sa tatpurusa rhetorical denial indicating impossibility interrogative marking impossibility a meaning where a question implies impossibility rather than seeking information may mean in no way maitreyi may already understand that wealth cannot give immortality and is asking rhetorically bhasya on 2 4 2"
+        "search_iast": "akseparthah aksepasya arthah sa tatpurusa rhetorical denial indicating impossibility interrogative marking impossibility a meaning where a question implies impossibility rather than seeking information katham may mean in no way maitreyi may already understand that wealth cannot give immortality and is asking rhetorically bhasya on 2 4 2"
       },
       {
         "deva": "प्रश्नार्थः",
@@ -1088,7 +1088,7 @@
       {
         "deva": "साध्वी",
         "iast": "sādhvī",
-        "definition": "Feminine form of <strong>साधु</strong>, indicating one who is good, committed, or noble.",
+        "definition": "Feminine form of <strong><span class=\"sanskrit-deva\">साधु</span><span class=\"sanskrit-iast\">sādhu</span></strong>, indicating one who is good, committed, or noble.",
         "context": "Maitreyī is presented as affectionate, dear, and worthy. Her worthiness is shown by her discrimination: she asks for immortality, not wealth.",
         "source": "Bhāṣya on 2.4.3: \"प्रियां <u>साध्वीं</u> बद्ध्वा वित्तेन मां कथम्\"",
         "source_iast": "Bhāṣya on 2.4.3: \"priyāṃ <u>sādhvīṃ</u> baddhvā vittena māṃ katham\"",
@@ -1096,7 +1096,7 @@
         "breakdown_iast": "",
         "phrasal": "Noble, dharma-aligned student",
         "search_deva": "साध्वी साधु",
-        "search_iast": "sadhvi noble dharma aligned student feminine form of indicating one who is good committed or noble maitreyi is presented as affectionate dear and worthy her worthiness is shown by her discrimination she asks for immortality not wealth bhasya on 2 4 3"
+        "search_iast": "sadhvi noble dharma aligned student feminine form of sadhu indicating one who is good committed or noble maitreyi is presented as affectionate dear and worthy her worthiness is shown by her discrimination she asks for immortality not wealth bhasya on 2 4 3"
       },
       {
         "deva": "प्रियं भाषसे",
@@ -1400,14 +1400,14 @@
         "deva": "आनन्दमय",
         "iast": "ānandamaya",
         "definition": "In the Taittirīya model, the layer connected with experiential happiness or karma-phala.",
-        "context": "Swamiji explains that ānanda in <strong>आनन्दमय</strong> is karma-phala — degrees of happiness appearing when situations become conducive. It is not the absolute ānanda of the Self.",
+        "context": "Swamiji explains that ānanda in <strong><span class=\"sanskrit-deva\">आनन्दमय</span><span class=\"sanskrit-iast\">ānandamaya</span></strong> is karma-phala — degrees of happiness appearing when situations become conducive. It is not the absolute ānanda of the Self.",
         "source": "Bhāṣya connection quoting Taittirīya Upaniṣad 2.5: \"तस्मात् कोशाभ्यन्तरः <u>आनन्दमयः</u>\"",
         "source_iast": "Bhāṣya connection quoting Taittirīya Upaniṣad 2.5: \"tasmāt kośābhyantaraḥ <u>ānandamayaḥ</u>\"",
         "breakdown_deva": "आनन्दस्य विकारः — षष्ठीतत्पुरुषः — \"the sheath of experiential happiness\"",
         "breakdown_iast": "ānandasya vikāraḥ — ṣaṣṭhī-tatpuruṣaḥ — \"the sheath of experiential happiness\"",
         "phrasal": "Sheath of experiential joy",
         "search_deva": "आनन्दमय आनन्दस्य विकारः षष्ठीतत्पुरुषः - आनन्दमय -",
-        "search_iast": "anandamaya anandasya vikarah sasthi tatpurusah the sheath of experiential happiness sheath of experiential joy in the taittiriya model the layer connected with experiential happiness or karma phala swamiji explains that ananda in is karma phala degrees of happiness appearing when situations become conducive it is not the absolute ananda of the self bhasya connection quoting taittiriya upanisad 2 5"
+        "search_iast": "anandamaya anandasya vikarah sasthi tatpurusah the sheath of experiential happiness sheath of experiential joy in the taittiriya model the layer connected with experiential happiness or karma phala swamiji explains that ananda in anandamaya is karma phala degrees of happiness appearing when situations become conducive it is not the absolute ananda of the self bhasya connection quoting taittiriya upanisad 2 5"
       },
       {
         "deva": "कर्मफलरूप आनन्द",
@@ -1452,14 +1452,14 @@
         "deva": "अकृतः",
         "iast": "akṛtaḥ",
         "definition": "That which is not made or produced by action.",
-        "context": "Swamiji invokes <strong>नास्त्यकृतः कृतेन</strong>: the unproduced cannot be gained by what is produced. The pleased self is not created by action; only burdens are created and removed.",
+        "context": "Swamiji invokes <strong><span class=\"sanskrit-deva\">नास्त्यकृतः कृतेन</span><span class=\"sanskrit-iast\">nāstyakṛtaḥ kṛtena</span></strong>: the unproduced cannot be gained by what is produced. The pleased self is not created by action; only burdens are created and removed.",
         "source": "Mūla quoting Muṇḍaka Upaniṣad 1.2.12: \"नास्त्य<u>कृतः</u> कृतेन\"",
         "source_iast": "Mūla quoting Muṇḍaka Upaniṣad 1.2.12: \"nāstya<u>kṛtaḥ</u> kṛtena\"",
         "breakdown_deva": "न कृतः — नञ्तत्पुरुष — \"that which is uncreated, permanent\"",
         "breakdown_iast": "na kṛtaḥ — nañ-tatpuruṣa — \"that which is uncreated, permanent\"",
         "phrasal": "The uncreated, permanent reality",
         "search_deva": "अकृतः न कृतः नञ्तत्पुरुष नास्त्यकृतः कृतेन",
-        "search_iast": "akrtah na krtah nan tatpurusa that which is uncreated permanent the uncreated permanent reality that which is not made or produced by action swamiji invokes the unproduced cannot be gained by what is produced the pleased self is not created by action only burdens are created and removed mula quoting mundaka upanisad 1 2 12"
+        "search_iast": "akrtah na krtah nan tatpurusa that which is uncreated permanent the uncreated permanent reality that which is not made or produced by action swamiji invokes nastyakrtah krtena the unproduced cannot be gained by what is produced the pleased self is not created by action only burdens are created and removed mula quoting mundaka upanisad 1 2 12"
       },
       {
         "deva": "नास्त्यकृतः कृतेन",
