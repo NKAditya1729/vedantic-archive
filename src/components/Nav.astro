@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname;
     <ul class="site-nav__links">
       <li><a href={`${base}/`} aria-current={currentPath === '/' || currentPath === base + '/' ? 'page' : undefined}>Home</a></li>
       <li><a href={`${base}/brhadaranyaka/`} aria-current={currentPath.includes('/brhadaranyaka') ? 'page' : undefined}>Bṛhadāraṇyaka</a></li>
-      <li><a href={`${base}/glossary/`} aria-current={currentPath.includes('/glossary') ? 'page' : undefined}>Glossary</a></li>
+      <li><a href={`${base}/glossary/`} aria-current={currentPath.includes('/glossary') ? 'page' : undefined}>Flashcards</a></li>
       <li><a href={`${base}/pronunciation/`} aria-current={currentPath.includes('/pronunciation') ? 'page' : undefined}>Pronunciation Guide</a></li>
       <li><a href={`${base}/how-to-use/`} aria-current={currentPath.includes('/how-to-use') ? 'page' : undefined}>How to Use</a></li>
       <li><a href={`${base}/about/`} aria-current={currentPath.includes('/about') ? 'page' : undefined}>About</a></li>
@@ -44,7 +44,7 @@ const currentPath = Astro.url.pathname;
   <ul class="mobile-nav__links">
     <li><a href={`${base}/`}>Home</a></li>
     <li><a href={`${base}/brhadaranyaka/`}>Bṛhadāraṇyaka Upaniṣad</a></li>
-    <li><a href={`${base}/glossary/`}>Glossary</a></li>
+    <li><a href={`${base}/glossary/`}>Flashcards</a></li>
     <li><a href={`${base}/pronunciation/`}>Pronunciation Guide</a></li>
     <li><a href={`${base}/how-to-use/`}>How to Use</a></li>
     <li><a href={`${base}/about/`}>About</a></li>

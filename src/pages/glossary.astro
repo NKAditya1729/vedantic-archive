@@ -39,7 +39,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
 }
 ---
 
-<BaseLayout title="Glossary" description="A comprehensive classwise and consolidated glossary for Maitreyī Brāhmaṇa study.">
+<BaseLayout title="Flashcards" description="A comprehensive classwise and consolidated set of flashcards for Maitreyī Brāhmaṇa study.">
   <!-- Run inline script block as early as possible to prevent flash of wrong script -->
   <script is:inline>
     (function() {
@@ -52,12 +52,12 @@ function getTermSlug(termIast: string, classNum: number | null) {
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/vedantic-archive/">Home</a>
       <span class="breadcrumb__sep" aria-hidden="true">›</span>
-      <span class="breadcrumb__current" aria-current="page">Glossary</span>
+      <span class="breadcrumb__current" aria-current="page">Flashcards</span>
     </nav>
 
     <header class="glossary-header">
-      <h1>Glossary</h1>
-      <p class="meta">A curated reference of Sanskrit terminology from the Maitreyī Brāhmaṇa classes (Bṛhadāraṇyaka Upaniṣad 2.4).</p>
+      <h1>Flashcards</h1>
+      <p class="meta">A curated set of flashcards covering Sanskrit terminology from the Maitreyī Brāhmaṇa classes (Bṛhadāraṇyaka Upaniṣad 2.4).</p>
     </header>
 
     <!-- Sticky Translucent Controls Panel -->
@@ -72,7 +72,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
           id="glossary-search" 
           class="search-input" 
           placeholder="Search by English, IAST, or Devanagari..." 
-          aria-label="Search glossary"
+          aria-label="Search flashcards"
         />
         <button id="glossary-search-clear" class="search-clear" aria-label="Clear search" style="display: none;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

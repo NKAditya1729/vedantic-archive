@@ -1,6 +1,6 @@
-# Classwise Glossary — Bṛhadāraṇyaka Upaniṣad, Maitreyī Brāhmaṇa Classes 1–10
+# Classwise Flashcards — Bṛhadāraṇyaka Upaniṣad, Maitreyī Brāhmaṇa Classes 1–10
 
-> Working glossary prepared from the first ten class notes on Bṛhadāraṇyaka Upaniṣad 2.4, the Maitreyī Brāhmaṇa. Definitions are written in the teaching-context of Swamiji’s explanations, so they are not merely dictionary meanings. Every Devanagari term in the explanations has been annotated with its IAST transliteration in brackets.
+> Working flashcards prepared from the first ten class notes on Bṛhadāraṇyaka Upaniṣad 2.4, the Maitreyī Brāhmaṇa. Definitions are written in the teaching-context of Swamiji’s explanations, so they are not merely dictionary meanings. Every Devanagari term in the explanations has been annotated with its IAST transliteration in brackets.
 
 ---
 
@@ -415,9 +415,9 @@
 : <strong>Definition:</strong> That which lacks nothing and is not made complete by anything else.<br><br><strong>Swamiji's Contextual Explanation:</strong> The “pleased you” is ultimately not an adjective added to the self. The teaching shows that “pleased” is redundant because the Self is already pūrṇa.
 
 
-## Consolidated recurring glossary terms
+## Consolidated recurring flashcard terms
 
-**These terms recur across multiple classes and should be included in a central glossary index as well.**
+**These terms recur across multiple classes and should be included in a central flashcards index as well.**
 : <strong>Definition:</strong> <br><br><strong>Swamiji's Contextual Explanation:</strong> 
 
 **आत्मा — Self**
