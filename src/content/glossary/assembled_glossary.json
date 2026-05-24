@@ -158,6 +158,71 @@
         "phrasal": "Retrospective glance or review",
         "search_deva": "सिंहावलोकनम् सिंहस्य अवलोकनम् ष तत्पुरुष",
         "search_iast": "simhavalokanam simhasya avalokanam sa tatpurusa a lion s backward glance retrospective glance or review a retrospective summary of what has already been taught swamiji says bhasyakara looks back over the earlier sections like a lion glancing back while moving forward this helps students remember the essential thread before entering a new brahmana bhasya method introduction to 2 4"
+      },
+      {
+        "deva": "प्रत्यगात्मा ब्रह्मविद्याया विषय",
+        "iast": "pratyagātmā brahmavidyāyā viṣaya",
+        "definition": "The pratyagātmā — the inmost Self that cannot be objectified — is the subject matter (viṣaya) of brahmavidyā.",
+        "context": "Swamiji explains that brahmavidyā is not knowledge of some external Brahman but of oneself as Brahman. Because brahmavidyā removes the false notion 'I am a body or mind,' its subject matter must be the very Self which underlies all such notions. Śaṅkara quotes Bṛh. Up. 1.4.10 — 'tadātmānamevāved ahaṃ brahmāsmīti' — to show that once one knows the Self thus, one becomes everything, since there is no second reality.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"एवं <u>प्रत्यगात्मा ब्रह्मविद्याया विषय</u> इत्येतत् उपन्यस्तम्\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"evaṃ <u>pratyagātmā brahmavidyāyā viṣaya</u> ityetat upanyastam\"",
+        "breakdown_deva": "प्रत्यक् + आत्मा + ब्रह्मविद्याया + विषयः — षष्ठी-तत्पुरुष — \"the inmost Self is the subject-matter of brahmavidyā\"",
+        "breakdown_iast": "pratyak + ātmā + brahmavidyāyā + viṣayaḥ — ṣaṣṭhī-tatpuruṣa — \"the inmost Self is the subject-matter of brahmavidyā\"",
+        "phrasal": "The inmost Self as the subject matter of knowledge of Brahman",
+        "search_deva": "प्रत्यगात्मा ब्रह्मविद्याया विषय प्रत्यक् आत्मा ब्रह्मविद्याया विषयः षष्ठी-तत्पुरुष -",
+        "search_iast": "pratyagatma brahmavidyaya visaya pratyak atma brahmavidyaya visayah sasthi tatpurusa the inmost self is the subject matter of brahmavidya the inmost self as the subject matter of knowledge of brahman the pratyagatma the inmost self that cannot be objectified is the subject matter visaya of brahmavidya swamiji explains that brahmavidya is not knowledge of some external brahman but of oneself as brahman because brahmavidya removes the false notion i am a body or mind its subject matter must be the very self which underlies all such notions sankara quotes brh up 1 4 10 tadatmanamevaved aham brahmasmiti to show that once one knows the self thus one becomes everything since there is no second reality bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "अन्योऽसावन्योऽहमस्मीति न स वेद",
+        "iast": "anyo'sāvanyo'hamasmīti na sa veda",
+        "definition": "'That (Brahman) is different; I am different' — he who thinks thus does not know. (Bṛh. Up. 1.4.10 — the avidyāsūtra)",
+        "context": "Swamiji calls this the avidyāsūtra — the seed-statement of ignorance — the counterpart to the vidyāsūtra ātmetyevopāsīta. The notion 'I am separate from that' produces the entire apparatus of saṃsāra: caste duties, karma, and rebirth. The Bhāṣya traces the whole first chapter of the Upaniṣad as an elaboration of this single ignorance.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.10 (avidyāsūtra): \"<u>अन्योऽसावन्योऽहमस्मीति न स वेद</u>\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.10 (avidyāsūtra): \"<u>anyo'sāvanyo'hamasmīti na sa veda</u>\"",
+        "breakdown_deva": "अन्यः + असौ + अन्यः + अहम् + अस्मि + इति + न + स + वेद — \"'that is different, I am different' — he who thinks thus does not know\"",
+        "breakdown_iast": "anyaḥ + asau + anyaḥ + aham + asmi + iti + na + sa + veda — \"'that is different, I am different' — he who thinks thus does not know\"",
+        "phrasal": "The seed statement of ignorance — the avidyāsūtra",
+        "search_deva": "अन्योऽसावन्योऽहमस्मीति न स वेद अन्यः असौ अन्यः अहम् अस्मि इति न स वेद -",
+        "search_iast": "anyo savanyo hamasmiti na sa veda anyah asau anyah aham asmi iti na sa veda that is different i am different he who thinks thus does not know the seed statement of ignorance the avidyasutra that brahman is different i am different he who thinks thus does not know brh up 1 4 10 the avidyasutra swamiji calls this the avidyasutra the seed statement of ignorance the counterpart to the vidyasutra atmetyevopasita the notion i am separate from that produces the entire apparatus of samsara caste duties karma and rebirth the bhasya traces the whole first chapter of the upanisad as an elaboration of this single ignorance mula brhadaranyaka upanisad 1 4 10 avidyasutra"
+      },
+      {
+        "deva": "चातुर्वर्ण्य",
+        "iast": "cāturvarṇya",
+        "definition": "Saṃsāra, characterised by name, form and function, oscillating like seed and sprout between manifest and unmanifest states, and driven by pāṅkta-karma (fivefold action) whose means and ends are occasioned by the fourfold social division.",
+        "context": "This long Bhāṣya compound from the sambandha-grantha summarises the entire domain of avidyā. Swamiji unpacks it carefully: cāturvarṇya gives rise to prescribed duties; those duties are sādhana-sādhya (means and ends) in nature; the cycle is anādi (beginningless) like the mutual dependence of seed and sprout; and everything in it can be captured under nāma-rūpa-karma — the three headings of Bṛh. Up. 1.6.1.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>चातुर्वर्ण्य-प्रविभागादि-निमित्त-पाङ्क्तकर्म-साध्य-साधन-लक्षणः बीजाङ्कुरवत् व्याकृताव्याकृतस्वभावः नाम-रूप-कर्मात्मकः संसारः</u> 'त्रयं वा इदं नाम रूपं कर्म' इत्युपसंहृतः\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>cāturvarṇya-pravibhāgādi-nimitta-pāṅktakarma-sādhya-sādhana-lakṣaṇaḥ bījāṅkuravat vyākṛtāvyākṛtasvabhāvaḥ nāma-rūpa-karmātmakaḥ saṃsāraḥ</u> 'trayaṃ vā idaṃ nāma rūpaṃ karma' ityupasaṃhṛtaḥ\"",
+        "breakdown_deva": "चातुर्वर्ण्य-प्रविभाग + पाङ्क्तकर्म + साध्य-साधन + बीजाङ्कुरवत् + व्याकृत-अव्याकृत + नाम-रूप-कर्म — \"saṃsāra defined by its full structure\"",
+        "breakdown_iast": "cāturvarṇya-pravibhāga + pāṅktakarma + sādhya-sādhana + bījāṅkuravat + vyākṛta-avyākṛta + nāma-rūpa-karma — \"saṃsāra defined by its full structure\"",
+        "phrasal": "The Bhāṣya's comprehensive technical description of saṃsāra",
+        "search_deva": "चातुर्वर्ण्य चातुर्वर्ण्य-प्रविभाग पाङ्क्तकर्म साध्य-साधन बीजाङ्कुरवत् व्याकृत-अव्याकृत नाम-रूप-कर्म - - - - -",
+        "search_iast": "caturvarnya caturvarnya pravibhaga panktakarma sadhya sadhana bijankuravat vyakrta avyakrta nama rupa karma samsara defined by its full structure the bhasya s comprehensive technical description of samsara samsara characterised by name form and function oscillating like seed and sprout between manifest and unmanifest states and driven by pankta karma fivefold action whose means and ends are occasioned by the fourfold social division this long bhasya compound from the sambandha grantha summarises the entire domain of avidya swamiji unpacks it carefully caturvarnya gives rise to prescribed duties those duties are sadhana sadhya means and ends in nature the cycle is anadi beginningless like the mutual dependence of seed and sprout and everything in it can be captured under nama rupa karma the three headings of brh up 1 6 1 bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "त्रयं वा इदं नाम रूपं कर्म",
+        "iast": "trayaṃ vā idaṃ nāma rūpaṃ karma",
+        "definition": "'These three — name, form, and function — constitute everything that is.' (Bṛh. Up. 1.6.1)",
+        "context": "Swamiji uses this as the Upaniṣad's own summary of the manifest world. Whatever can be objectified has a name (nāma), a form (rūpa), and a function or action (karma). Brahman alone is beyond all three — it is sarvakāraṇam with no nāma-rūpa of its own. The Bhāṣya cites this verse to signal that the entire domain of avidyā has been covered by the first chapter.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.6.1: \"<u>त्रयं वा इदं नाम रूपं कर्म</u>\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.6.1: \"<u>trayaṃ vā idaṃ nāma rūpaṃ karma</u>\"",
+        "breakdown_deva": "त्रयम् + नाम + रूपम् + कर्म — \"these three — name, form and function — are all that is here\"",
+        "breakdown_iast": "trayam + nāma + rūpam + karma — \"these three — name, form and function — are all that is here\"",
+        "phrasal": "The Upaniṣad's own three-fold summary of the manifest world",
+        "search_deva": "त्रयं वा इदं नाम रूपं कर्म त्रयम् नाम रूपम् कर्म -",
+        "search_iast": "trayam va idam nama rupam karma trayam nama rupam karma these three name form and function are all that is here the upanisad s own three fold summary of the manifest world these three name form and function constitute everything that is brh up 1 6 1 swamiji uses this as the upanisad s own summary of the manifest world whatever can be objectified has a name nama a form rupa and a function or action karma brahman alone is beyond all three it is sarvakaranam with no nama rupa of its own the bhasya cites this verse to signal that the entire domain of avidya has been covered by the first chapter mula brhadaranyaka upanisad 1 6 1"
+      },
+      {
+        "deva": "सर्वविशेषशून्यं",
+        "iast": "sarvaviśeṣaśūnyaṃ",
+        "definition": "Completely free of all distinguishing characteristics; devoid of every qualification.",
+        "context": "In the Bhāṣya summary of the second chapter, Śaṅkara says that Brahman — taught through neti-neti — is ekam, advayam, and sarvaviśeṣaśūnyam. Swamiji explains viśeṣa as any mark or attribute that distinguishes one thing from another. Since Brahman has no attributes that set it apart from anything, it cannot be grasped as an object. The neti-neti method systematically strips away all such viśeṣas.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"तद् ब्रह्म एकम् अद्वयं <u>सर्वविशेषशून्यं</u> ... नेति नेति इति ज्ञापितम्\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"tad brahma ekam advayaṃ <u>sarvaviśeṣaśūnyaṃ</u> ... neti neti iti jñāpitam\"",
+        "breakdown_deva": "सर्व + विशेष + शून्य — \"devoid of all distinguishing characteristics\"",
+        "breakdown_iast": "sarva + viśeṣa + śūnya — \"devoid of all distinguishing characteristics\"",
+        "phrasal": "Brahman as utterly free from all attributes and qualifications",
+        "search_deva": "सर्वविशेषशून्यं सर्व विशेष शून्य - -",
+        "search_iast": "sarvavisesasunyam sarva visesa sunya devoid of all distinguishing characteristics brahman as utterly free from all attributes and qualifications completely free of all distinguishing characteristics devoid of every qualification in the bhasya summary of the second chapter sankara says that brahman taught through neti neti is ekam advayam and sarvavisesasunyam swamiji explains visesa as any mark or attribute that distinguishes one thing from another since brahman has no attributes that set it apart from anything it cannot be grasped as an object the neti neti method systematically strips away all such visesas bhasya sambandha grantha on 2 4"
       }
     ]
   },
@@ -320,6 +385,84 @@
         "phrasal": "Renunciation or giving up",
         "search_deva": "त्याग त्यज् घञ्",
         "search_iast": "tyaga tyaj ghan relinquishment giving up renunciation or giving up renunciation or relinquishment in the gita discussion related to sannyasa but not identical in every context swamiji refers to the eighteenth chapter of the gita to show that answers about sannyasa and tyaga depend on the student and context giving up is central but its application must be understood carefully mula brhadaranyaka upanisad 2 4 2"
+      },
+      {
+        "deva": "सन्न्यासो",
+        "iast": "sannyāso",
+        "definition": "Sannyāsa — formal renunciation of all karma and worldly roles; the life of a wandering monk.",
+        "context": "Swamiji emphasises that sannyāsa here is vidhitsita — intended to be enjoined — specifically as an aṅga (auxiliary) for brahmavidyā, not as an independent spiritual goal. The Bhāṣya states: asya brahmavidyāyā aṅgatvena sannyāso vidhitsitaḥ. This means the Maitreyī Brāhmaṇa was begun precisely to establish the necessity of renunciation as a preparation for Self-knowledge.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"अस्या ब्रह्मविद्याया अङ्गत्वेन <u>सन्न्यासो</u> विधित्सितः\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"asyā brahmavidyāyā aṅgatvena <u>sannyāso</u> vidhitsitaḥ\"",
+        "breakdown_deva": "सम् + नि + √अस् — \"complete setting aside of all roles and duties\"",
+        "breakdown_iast": "sam + ni + √as — \"complete setting aside of all roles and duties\"",
+        "phrasal": "Formal renunciation as the enjoined auxiliary to brahmavidyā",
+        "search_deva": "सन्न्यासो सम् नि अस् -",
+        "search_iast": "sannyaso sam ni as complete setting aside of all roles and duties formal renunciation as the enjoined auxiliary to brahmavidya sannyasa formal renunciation of all karma and worldly roles the life of a wandering monk swamiji emphasises that sannyasa here is vidhitsita intended to be enjoined specifically as an anga auxiliary for brahmavidya not as an independent spiritual goal the bhasya states asya brahmavidyaya angatvena sannyaso vidhitsitah this means the maitreyi brahmana was begun precisely to establish the necessity of renunciation as a preparation for self knowledge bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "विधित्सितः",
+        "iast": "vidhitsitaḥ",
+        "definition": "Intended to be prescribed; sought to be enjoined by the śāstra.",
+        "context": "Vidhitsitaḥ (vi + dhā + san + kta) means 'that which one desires to prescribe.' Swamiji uses it to explain Śaṅkara's intent: the Bhāṣya says sannyāsa is vidhitsita — not yet enjoined in the previous chapters, but specifically about to be enjoined here in the Maitreyī Brāhmaṇa as a necessary aṅga for brahmavidyā.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"सन्न्यासः <u>विधित्सितः</u> — अस्मिन् ब्राह्मणे विधातुमिष्टः\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"sannyāsaḥ <u>vidhitsitaḥ</u> — asmin brāhmaṇe vidhātumiṣṭaḥ\"",
+        "breakdown_deva": "वि + √धा + सन् + क्त — सनन्त + क्त — \"that which is desired to be prescribed (by the śāstra)\"",
+        "breakdown_iast": "vi + √dhā + san + kta — sananta + kta — \"that which is desired to be prescribed (by the śāstra)\"",
+        "phrasal": "That which the śāstra intends to enjoin in this section",
+        "search_deva": "विधित्सितः वि धा सन् क्त सनन्त क्त",
+        "search_iast": "vidhitsitah vi dha san kta sananta kta that which is desired to be prescribed by the sastra that which the sastra intends to enjoin in this section intended to be prescribed sought to be enjoined by the sastra vidhitsitah vi dha san kta means that which one desires to prescribe swamiji uses it to explain sankara s intent the bhasya says sannyasa is vidhitsita not yet enjoined in the previous chapters but specifically about to be enjoined here in the maitreyi brahmana as a necessary anga for brahmavidya bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "जाया",
+        "iast": "jāyā",
+        "definition": "Characterised by wife, son, wealth and so on — referring to all household duties and their objects of attachment.",
+        "context": "This compound from the Bhāṣya describes pāṅkta-karma as it operates in a householder's life. Swamiji explains that these are the very things for which karma is performed: one marries, has children, earns wealth. But because all this is avidyā-viṣaya (the domain of ignorance), renouncing them is described as the right preparation for knowledge.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>जाया-पुत्र-वित्तादि-लक्षणं</u> पाङ्क्तं कर्म अविद्याविषयम्\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>jāyā-putra-vittādi-lakṣaṇaṃ</u> pāṅktaṃ karma avidyāviṣayam\"",
+        "breakdown_deva": "जाया + पुत्र + वित्त + आदि + लक्षण — बहुव्रीहि — \"characterised by wife, son, wealth and so on\"",
+        "breakdown_iast": "jāyā + putra + vitta + ādi + lakṣaṇa — bahuvrīhi — \"characterised by wife, son, wealth and so on\"",
+        "phrasal": "Household karma defined by its characteristic objects of attachment",
+        "search_deva": "जाया जाया पुत्र वित्त आदि लक्षण बहुव्रीहि - -",
+        "search_iast": "jaya jaya putra vitta adi laksana bahuvrihi characterised by wife son wealth and so on household karma defined by its characteristic objects of attachment characterised by wife son wealth and so on referring to all household duties and their objects of attachment this compound from the bhasya describes pankta karma as it operates in a householder s life swamiji explains that these are the very things for which karma is performed one marries has children earns wealth but because all this is avidya visaya the domain of ignorance renouncing them is described as the right preparation for knowledge bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "मनुष्यलोक",
+        "iast": "manuṣyaloka",
+        "definition": "As the means for attaining the human world, the world of the ancestors, and the world of the gods.",
+        "context": "Swamiji explains that the three lokas represent the full range of karma-phala — karma for sons ensures pitṛloka, karma for wealth ensures manusyaloka pleasures, karma for sacrifices ensures devaloka. But all three are within saṃsāra and therefore ultimately unsatisfying. This is why Maitreyī's question is so significant: she sees that none of these lokas grant amrtatva.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>मनुष्यलोक-पितृलोक-देवलोक-साधनत्वेन</u> पाङ्क्तं कर्म प्रदर्शितम्\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>manuṣyaloka-pitṛloka-devaloka-sādhanatvena</u> pāṅktaṃ karma pradarśitam\"",
+        "breakdown_deva": "मनुष्यलोक + पितृलोक + देवलोक + साधनत्व — तृतीयान्त — \"as the means for attaining the three worlds\"",
+        "breakdown_iast": "manuṣyaloka + pitṛloka + devaloka + sādhanatva — tṛtīyānta — \"as the means for attaining the three worlds\"",
+        "phrasal": "Karma as the means for the three lokas — all within saṃsāra",
+        "search_deva": "मनुष्यलोक मनुष्यलोक पितृलोक देवलोक साधनत्व तृतीयान्त -",
+        "search_iast": "manusyaloka manusyaloka pitrloka devaloka sadhanatva trtiyanta as the means for attaining the three worlds karma as the means for the three lokas all within samsara as the means for attaining the human world the world of the ancestors and the world of the gods swamiji explains that the three lokas represent the full range of karma phala karma for sons ensures pitrloka karma for wealth ensures manusyaloka pleasures karma for sacrifices ensures devaloka but all three are within samsara and therefore ultimately unsatisfying this is why maitreyi s question is so significant she sees that none of these lokas grant amrtatva bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "ब्रह्मविदश्च आप्त",
+        "iast": "brahmavidaśca āpta",
+        "definition": "And for the knowers of Brahman, because they are in the state of one whose desires are already fulfilled (āpta-kāma).",
+        "context": "Swamiji explains āpta-kāmatva as the natural condition of a brahmanistha — one who has realised that the Self is already pūrṇa (complete). For such a person, no karma is needed because there is nothing to be gained. Karma presupposes a gap between what one is and what one wants to be; the knower of Brahman sees no such gap. This is why brahmavidyā and karma belong to entirely different domains.",
+        "source": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>ब्रह्मविदश्च आप्त-कामत्वात्</u> संन्यासे अधिकारः\"",
+        "source_iast": "Bhāṣya — Sambandha-grantha on 2.4: \"<u>brahmavidaśca āpta-kāmatvāt</u> saṃnyāse adhikāraḥ\"",
+        "breakdown_deva": "ब्रह्मविद् + च + आप्त-काम + त्वात् — \"and for the knower of Brahman, because of his state of fulfilled-desiredness\"",
+        "breakdown_iast": "brahmavidam + ca + āpta-kāma + tvāt — \"and for the knower of Brahman, because of his state of fulfilled-desiredness\"",
+        "phrasal": "The knower's natural condition of having all desires already fulfilled",
+        "search_deva": "ब्रह्मविदश्च आप्त ब्रह्मविद् च आप्त-काम त्वात् - - -",
+        "search_iast": "brahmavidasca apta brahmavidam ca apta kama tvat and for the knower of brahman because of his state of fulfilled desiredness the knower s natural condition of having all desires already fulfilled and for the knowers of brahman because they are in the state of one whose desires are already fulfilled apta kama swamiji explains apta kamatva as the natural condition of a brahmanistha one who has realised that the self is already purna complete for such a person no karma is needed because there is nothing to be gained karma presupposes a gap between what one is and what one wants to be the knower of brahman sees no such gap this is why brahmavidya and karma belong to entirely different domains bhasya sambandha grantha on 2 4"
+      },
+      {
+        "deva": "येषां नोऽयमात्मायं लोकः",
+        "iast": "yeṣāṃ no'yamātmāyaṃ lokaḥ",
+        "definition": "'Those for whom this Self alone is their world.' (Bṛh. Up. 1.4.15 / 4.4.22)",
+        "context": "This quotation shows that for one who recognises the Self as the sole reality, all desires are fulfilled in that recognition alone. Swamiji draws on it to explain why a brahmavidyā-adhikārī has no need of prajā (children), dhana (wealth) or karma — because the Self, once known, leaves nothing further to be accomplished.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.15: \"<u>येषां नोऽयमात्मायं लोकः</u> — the Bhāṣya quotes this to describe the brahmavidyā-adhikārī\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 1.4.15: \"<u>yeṣāṃ no'yamātmāyaṃ lokaḥ</u> — the Bhāṣya quotes this to describe the brahmavidyā-adhikārī\"",
+        "breakdown_deva": "येषाम् + न + अयम् आत्मा + अयम् लोकः — \"those for whom this Self is their world\"",
+        "breakdown_iast": "yeṣām + na + ayam ātmā + ayam lokaḥ — \"those for whom this Self is their world\"",
+        "phrasal": "Self-knowledge as the highest fulfilment — the āpta-kāma state",
+        "search_deva": "येषां नोऽयमात्मायं लोकः येषाम् न अयम् आत्मा अयम् लोकः -",
+        "search_iast": "yesam no yamatmayam lokah yesam na ayam atma ayam lokah those for whom this self is their world self knowledge as the highest fulfilment the apta kama state those for whom this self alone is their world brh up 1 4 15 4 4 22 this quotation shows that for one who recognises the self as the sole reality all desires are fulfilled in that recognition alone swamiji draws on it to explain why a brahmavidya adhikari has no need of praja children dhana wealth or karma because the self once known leaves nothing further to be accomplished mula brhadaranyaka upanisad 1 4 15 the bhasya quotes this to describe the brahmavidya adhikari"
       }
     ]
   },
@@ -482,6 +625,19 @@
         "phrasal": "The world of the Self",
         "search_deva": "आत्मलोक आत्मा एव लोकः कर्मधारय",
         "search_iast": "atmaloka atma eva lokah karmadharaya the self alone is the world of fulfillment the world of the self a way of saying that the seeker is no longer interested in other lokas but in the self alone swamiji explains that the mature seeker says i am not interested in manushyaloka pitrloka or devaloka i am interested in myself this is the turning point from karma to knowledge bhasya quoting brh up 1 4 15 and 4 4 22"
+      },
+      {
+        "deva": "सर्वक्रिया",
+        "iast": "sarvakriyā",
+        "definition": "That (knowledge) whose very nature is the total destruction of all action, agents, and results.",
+        "context": "Swamiji explains this as Śaṅkara's precise definition of brahmavidyā: it does not merely suppress karma but eliminates the entire triad of kriyā (action), kāraka (agent-instrument framework), and phala (result). Since Brahman has none of these, recognising Brahman means recognising that one is beyond the reach of the entire karma-kāraṇa framework. This is why the two — vidyā and karma — are fundamentally incompatible in ultimate terms.",
+        "source": "Bhāṣya — Introduction to 2.4: \"<u>सर्वक्रिया-कारक-फलोपमर्द-स्वरूपायां</u> विद्यायाम् कर्मणः स्थानं नास्ति\"",
+        "source_iast": "Bhāṣya — Introduction to 2.4: \"<u>sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ</u> vidyāyām karmaṇaḥ sthānaṃ nāsti\"",
+        "breakdown_deva": "सर्व + क्रिया + कारक + फल + उपमर्द + स्वरूप + सप्तमी — \"(that knowledge) whose very nature is the total destruction of action, agent, and result\"",
+        "breakdown_iast": "sarva + kriyā + kāraka + phala + upamardam + svarūpa + saptamī — \"(that knowledge) whose very nature is the total destruction of action, agent, and result\"",
+        "phrasal": "Vidyā defined by what it destroys — the entire karma-framework",
+        "search_deva": "सर्वक्रिया सर्व क्रिया कारक फल उपमर्द स्वरूप सप्तमी - -",
+        "search_iast": "sarvakriya sarva kriya karaka phala upamardam svarupa saptami that knowledge whose very nature is the total destruction of action agent and result vidya defined by what it destroys the entire karma framework that knowledge whose very nature is the total destruction of all action agents and results swamiji explains this as sankara s precise definition of brahmavidya it does not merely suppress karma but eliminates the entire triad of kriya action karaka agent instrument framework and phala result since brahman has none of these recognising brahman means recognising that one is beyond the reach of the entire karma karana framework this is why the two vidya and karma are fundamentally incompatible in ultimate terms bhasya introduction to 2 4"
       }
     ]
   },
@@ -644,6 +800,32 @@
         "phrasal": "Situational condition or stage",
         "search_deva": "स्थिति स्था क्तिन्",
         "search_iast": "sthiti stha ktin station situation condition situational condition or stage a circumstance or arrangement in which one finds oneself swamiji cautions that if freedom depends on a situation it can be lost when the situation changes true freedom must depend on knowledge of what is not on external arrangement bhasya introduction to 2 4"
+      },
+      {
+        "deva": "नित्यकर्माद्यनुष्ठानसंशुद्धधिषणः पुमान्",
+        "iast": "nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān",
+        "definition": "A person (pumān) whose intellect has been purified (saṃśuddha-dhiṣaṇa) through the performance of nitya-karma and related duties.",
+        "context": "This is from Sureśvarācārya's Vārtika (BV 2.4.2). Swamiji explains that nityakarma — daily obligatory duties — are not to be abandoned prematurely. By performing them without desire for results, the mind becomes clear about the limitation of karma as a means for ultimate fulfilment. This purified intellect (saṃśuddha-dhiṣaṇa) then becomes fit to inquire into Brahman.",
+        "source": "Vārtika — Sureśvarācārya, BV 2.4.2: \"<u>नित्यकर्माद्यनुष्ठानसंशुद्धधिषणः पुमान्</u> निःशेषकर्महेतूत्थफलसावद्यधीस्ततः\"",
+        "source_iast": "Vārtika — Sureśvarācārya, BV 2.4.2: \"<u>nityakarmādyanuṣṭhānasaṃśuddhadhiṣaṇaḥ pumān</u> niḥśeṣakarmahetūtthaphalasāvadyadhīstataḥ\"",
+        "breakdown_deva": "नित्यकर्म + आदि + अनुष्ठान + सम्-शुद्ध + धिषण + पुमान् — \"a man whose intellect is purified through performance of nitya-karma and related duties\"",
+        "breakdown_iast": "nityakarma + ādi + anuṣṭhāna + sam-śuddha + dhiṣaṇa + pumān — \"a man whose intellect is purified through performance of nitya-karma and related duties\"",
+        "phrasal": "The qualified seeker — purified intellect through obligatory duties",
+        "search_deva": "नित्यकर्माद्यनुष्ठानसंशुद्धधिषणः पुमान् नित्यकर्म आदि अनुष्ठान सम्-शुद्ध धिषण पुमान् - - - -",
+        "search_iast": "nityakarmadyanusthanasamsuddhadhisanah puman nityakarma adi anusthana sam suddha dhisana puman a man whose intellect is purified through performance of nitya karma and related duties the qualified seeker purified intellect through obligatory duties a person puman whose intellect has been purified samsuddha dhisana through the performance of nitya karma and related duties this is from suresvaracarya s vartika bv 2 4 2 swamiji explains that nityakarma daily obligatory duties are not to be abandoned prematurely by performing them without desire for results the mind becomes clear about the limitation of karma as a means for ultimate fulfilment this purified intellect samsuddha dhisana then becomes fit to inquire into brahman vartika suresvaracarya bv 2 4 2"
+      },
+      {
+        "deva": "विरक्त आग्रजात्सोऽयं",
+        "iast": "virakta āgrajātso'yaṃ",
+        "definition": "That person (soʾyam) is dispassionate (virakta) even towards the position of Brahmā (āgrajāt — the first-born).",
+        "context": "From Sureśvarācārya's Vārtika (BV 2.4.3). Swamiji emphasises that true vairāgya is not merely freedom from worldly pleasures but extends all the way to the position of Brahmā — the creator himself. One who has clearly seen (samīkṣaṇāt) that even Brahmā's position is sāvadya (limited, with a tenure) and produces rebirth, gains the genuine vairāgya that qualifies for brahmavidyā.",
+        "source": "Vārtika — Sureśvarācārya, BV 2.4.3: \"<u>विरक्त आग्रजात्सोऽयं</u> तत्सावद्यसमीक्षणात् संसारदुःखसंस्कारस्मृतिभिः प्रेर्यमाणधीः\"",
+        "source_iast": "Vārtika — Sureśvarācārya, BV 2.4.3: \"<u>virakta āgrajātso'yaṃ</u> tatsāvadyasamīkṣaṇāt saṃsāraduḥkhasaṃskārasmṛtibhiḥ preryamāṇadhīḥ\"",
+        "breakdown_deva": "विरक्तः + आग्रजात् + सः + अयम् — \"that person is dispassionate even with regard to the position of Brahmā (āgrajāt = the first-born)\"",
+        "breakdown_iast": "viraktaḥ + āgrajāt + saḥ + ayam — \"that person is dispassionate even with regard to the position of Brahmā (āgrajāt = the first-born)\"",
+        "phrasal": "Vairāgya that extends all the way to Brahmā's exalted position",
+        "search_deva": "विरक्त आग्रजात्सोऽयं विरक्तः आग्रजात् सः अयम् - -",
+        "search_iast": "virakta agrajatso yam viraktah agrajat sah ayam that person is dispassionate even with regard to the position of brahma agrajat the first born vairagya that extends all the way to brahma s exalted position that person so yam is dispassionate virakta even towards the position of brahma agrajat the first born from suresvaracarya s vartika bv 2 4 3 swamiji emphasises that true vairagya is not merely freedom from worldly pleasures but extends all the way to the position of brahma the creator himself one who has clearly seen samiksanat that even brahma s position is savadya limited with a tenure and produces rebirth gains the genuine vairagya that qualifies for brahmavidya vartika suresvaracarya bv 2 4 3"
       }
     ]
   },
@@ -806,6 +988,19 @@
         "phrasal": "Unattached and relationless nature",
         "search_deva": "असङ्ग न सङ्गः यस्य सः बहुव्रीहि",
         "search_iast": "asanga na sangah yasya sah bahuvrihi unattached free from real relation unattached and relationless nature free from real association or dependence if the self is not any objectifiable thing then it is not truly attached to murta or amurta this supports the recognition of brahman as free from limitation mula brhadaranyaka upanisad 3 9 26"
+      },
+      {
+        "deva": "उद्यास्यन् ऊर्ध्वं यास्यन्;ऊर्ध्वं गन्तुमिच्छन्",
+        "iast": "udyāsyan ūrdhvaṃ yāsyan;ūrdhvaṃ gantumicchan",
+        "definition": "Udyāsyan — about to depart from this place; ūrdhvaṃ yāsyan — about to move upward; the Bhāṣya gloss: ūrdhvaṃ gantumicchann — desiring to go upward, i.e., about to take sannyāsa.",
+        "context": "This is Yājñavalkya's opening statement in the Maitreyī Brāhmaṇa (Bṛh. Up. 2.4.1). Swamiji explains udyāsyan from the root ud + yā — to leave, to move out; it marks the moment when Yājñavalkya formally declares his intention to renounce his householder station. The Bhāṣya gloss specifies: asmāt sthānāt = from this place; ūrdhvaṃ = upward, signifying the higher path of vividiṣā-sannyāsa.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.1: \"<u>उद्यास्यन्</u> वा अरे अहम् अस्मात् स्थानात् अस्मि — Bhāṣya gloss: ऊर्ध्वं यास्यन् — ऊर्ध्वं गन्तुमिच्छन्\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.1: \"<u>udyāsyan</u> vā are aham asmāt sthānāt asmi — Bhāṣya gloss: ūrdhvaṃ yāsyan — ūrdhvaṃ gantumicchan\"",
+        "breakdown_deva": "उत् + √या + शतृ — \"about to depart; Bhāṣya: ऊर्ध्वं = upward; गन्तुमिच्छन् = desiring to go — i.e., to take sannyāsa\"",
+        "breakdown_iast": "ut + √yā + śatṛ — \"about to depart; Bhāṣya: ūrdhvaṃ = upward; gantumicchann = desiring to go — i.e., to take sannyāsa\"",
+        "phrasal": "Yājñavalkya's declaration of his intention to renounce",
+        "search_deva": "उद्यास्यन् ऊर्ध्वं यास्यन् ऊर्ध्वं गन्तुमिच्छन् उत् या शतृ ऊर्ध्वं गन्तुमिच्छन् -",
+        "search_iast": "udyasyan urdhvam yasyan urdhvam gantumicchan ut ya satr about to depart bhasya urdhvam upward gantumicchann desiring to go i e to take sannyasa yajnavalkya s declaration of his intention to renounce udyasyan about to depart from this place urdhvam yasyan about to move upward the bhasya gloss urdhvam gantumicchann desiring to go upward i e about to take sannyasa this is yajnavalkya s opening statement in the maitreyi brahmana brh up 2 4 1 swamiji explains udyasyan from the root ud ya to leave to move out it marks the moment when yajnavalkya formally declares his intention to renounce his householder station the bhasya gloss specifies asmat sthanat from this place urdhvam upward signifying the higher path of vividisa sannyasa mula brhadaranyaka upanisad 2 4 1 bhasya gloss"
       }
     ]
   },
@@ -968,6 +1163,32 @@
         "phrasal": "The traditional commentator",
         "search_deva": "भाष्यकार भाष्यं करोति इति",
         "search_iast": "bhasyakara bhasyam karoti iti the maker of the commentary sankaracarya the traditional commentator the traditional commentator who unfolds the meaning of the sruti swamiji repeatedly shows that bhasyakara does not merely translate words he reads the entire context and supplies what is implied by the narrative traditional terminology"
+      },
+      {
+        "deva": "अनुमोदनम्",
+        "iast": "anumodanam",
+        "definition": "Approval, ratification, agreeing with what another has said or implied.",
+        "context": "Swamiji explains this in the context of the Bhāṣya on 2.4.3: when Maitreyī asks 'katham' (how?), the Bhāṣya says this can be read as either ākchepa (rhetorical rejection) or as a genuine question. If it is ākchepa, then Yājñavalkya's response 'neti hovāca' is anumodanam — he is agreeing with her implicit understanding that wealth cannot give immortality. Anu + mud = agreeing joyfully after another's statement.",
+        "source": "Bhāṣya on 2.4.3: \"कथम् इति यदि आक्षेपार्थम्, <u>अनुमोदनम्</u> — नेति होवाच याज्ञवल्क्यः\"",
+        "source_iast": "Bhāṣya on 2.4.3: \"katham iti yadi ākṣepārtham, <u>anumodanam</u> — neti hovāca yājñavalkyaḥ\"",
+        "breakdown_deva": "अनु + √मुद् + ल्युट् — \"agreeing after another; ratification of another's implicit understanding\"",
+        "breakdown_iast": "anu + √mud + lyuṭ — \"agreeing after another; ratification of another's implicit understanding\"",
+        "phrasal": "Yājñavalkya's agreement with Maitreyī's implied understanding",
+        "search_deva": "अनुमोदनम् अनु मुद् ल्युट्",
+        "search_iast": "anumodanam anu mud lyut agreeing after another ratification of another s implicit understanding yajnavalkya s agreement with maitreyi s implied understanding approval ratification agreeing with what another has said or implied swamiji explains this in the context of the bhasya on 2 4 3 when maitreyi asks katham how the bhasya says this can be read as either akchepa rhetorical rejection or as a genuine question if it is akchepa then yajnavalkya s response neti hovaca is anumodanam he is agreeing with her implicit understanding that wealth cannot give immortality anu mud agreeing joyfully after another s statement bhasya on 2 4 3"
+      },
+      {
+        "deva": "उपकरणवतां साधनवतां",
+        "iast": "upakaraṇavatāṃ sādhanavatāṃ",
+        "definition": "Those who are generously endowed with aids (upakaraṇa) and means (sādhana) — the wealthy and well-equipped.",
+        "context": "From the Bhāṣya on Bṛh. Up. 2.4.2. Swamiji explains that the Bhāṣya is telling Maitreyī: even if you had the lifestyle of the most resource-rich person imaginable — one who lacks nothing — you would still not gain amrtatva. Upakaraṇa = things that assist or enable (wealth, instruments, helpers). This is the Bhāṣya's way of honoring the hypothetical by taking it very seriously.",
+        "source": "Bhāṣya on 2.4.2: \"नैव स्याः अमृता; <u>उपकरणवतां साधनवतां</u> जीवितं सुखोपाय-भोग-सम्पन्नम् तथैव तव जीवितं स्यात्\"",
+        "source_iast": "Bhāṣya on 2.4.2: \"naiva syāḥ amṛtā; <u>upakaraṇavatāṃ sādhanavatāṃ</u> jīvitaṃ sukhopāya-bhoga-sampannam tathaiva tava jīvitaṃ syāt\"",
+        "breakdown_deva": "उपकरण + मतुप् + षष्ठी बहुवचन — \"those who are well-endowed with aids and means (genitive)\"",
+        "breakdown_iast": "upakaraṇa + matup + ṣaṣṭhī bahuvacanam — \"those who are well-endowed with aids and means (genitive)\"",
+        "phrasal": "People maximally equipped with wealth and resources",
+        "search_deva": "उपकरणवतां साधनवतां उपकरण मतुप् षष्ठी बहुवचन - - -",
+        "search_iast": "upakaranavatam sadhanavatam upakarana matup sasthi bahuvacanam those who are well endowed with aids and means genitive people maximally equipped with wealth and resources those who are generously endowed with aids upakarana and means sadhana the wealthy and well equipped from the bhasya on brh up 2 4 2 swamiji explains that the bhasya is telling maitreyi even if you had the lifestyle of the most resource rich person imaginable one who lacks nothing you would still not gain amrtatva upakarana things that assist or enable wealth instruments helpers this is the bhasya s way of honoring the hypothetical by taking it very seriously bhasya on 2 4 2"
       }
     ]
   },
@@ -1156,6 +1377,71 @@
         "phrasal": "Resolution of all desiring",
         "search_deva": "कामोच्छित्ति कामस्य उच्छित्तिः ष तत्पुरुष",
         "search_iast": "kamocchitti kamasya ucchittih sa tatpurusa destruction or resolution of desire resolution of all desiring freedom from desire by seeing the limitation of desired objects maitreyi s implied complaint is do not bind me with wealth without freeing me from desire teach me that by which desire for the limited is resolved bhasya on 2 4 2"
+      },
+      {
+        "deva": "क्रियाद्वारोपकारीणि",
+        "iast": "kriyādvāropakārīṇi",
+        "definition": "Things that are helpful only through the medium of action (kriyā-dvāra) — wealth assists only when converted into action.",
+        "context": "From Sureśvarācārya's Vārtika (BV verse 50). The Vārtika argues that wealth (dhana) per se does not help — it can only assist when converted into kriyā (action). Since brahmavidyā is not kriyā but jñāna, wealth cannot be its means. Swamiji uses this to clinch the point that there is no indirect pathway from wealth → karma → amrtatva.",
+        "source": "Vārtika — Sureśvarācārya, BV verse 50: \"सत्तामात्रोपकारिणि धनानि धनिनां न हि | <u>क्रियाद्वारोपकारीणि</u> यतोऽतः पृच्छ्यते क्रिया\"",
+        "source_iast": "Vārtika — Sureśvarācārya, BV verse 50: \"sattāmātropakāriṇi dhanāni dhanināṃ na hi | <u>kriyādvāropakārīṇi</u> yato'taḥ pṛcchyate kriyā\"",
+        "breakdown_deva": "क्रिया + द्वार + उपकारिन् — \"helpful only through the medium of action\"",
+        "breakdown_iast": "kriyā + dvāra + upakārin — \"helpful only through the medium of action\"",
+        "phrasal": "Wealth as useful only when converted into action — not a direct means for jñāna",
+        "search_deva": "क्रियाद्वारोपकारीणि क्रिया द्वार उपकारिन् -",
+        "search_iast": "kriyadvaropakarini kriya dvara upakarin helpful only through the medium of action wealth as useful only when converted into action not a direct means for jnana things that are helpful only through the medium of action kriya dvara wealth assists only when converted into action from suresvaracarya s vartika bv verse 50 the vartika argues that wealth dhana per se does not help it can only assist when converted into kriya action since brahmavidya is not kriya but jnana wealth cannot be its means swamiji uses this to clinch the point that there is no indirect pathway from wealth karma amrtatva vartika suresvaracarya bv verse 50"
+      },
+      {
+        "deva": "अविद्यामात्रविध्वंसाज्ज्ञानादेवामृतं यतः",
+        "iast": "avidyāmātravidhvaṃsājjñānādevāmṛtaṃ yataḥ",
+        "definition": "Because it is only from knowledge — which does nothing other than destroy ignorance alone — that immortality results.",
+        "context": "From Sureśvarācārya's Vārtika (BV verse 54). Swamiji explains: vidyā does exactly one thing — it destroys avidyā. It does not produce anything new. Brahman (= Ātmā = amrta) is already there; avidyā is the only obstacle. Remove avidyā and what remains is amrtatva. This is why jñāna alone (na karma) is the sādhana for mokṣa.",
+        "source": "Vārtika — Sureśvarācārya, BV verse 54: \"<u>अविद्यामात्रविध्वंसाज्ज्ञानादेवामृतं यतः</u> | अमृतत्वस्य नाऽऽशाऽपि वित्तसाध्येन कर्मणा\"",
+        "source_iast": "Vārtika — Sureśvarācārya, BV verse 54: \"<u>avidyāmātravidhvaṃsājjñānādevāmṛtaṃ yataḥ</u> | amṛtatvasya nā''śā'pi vittasādhyena karmaṇā\"",
+        "breakdown_deva": "अविद्या + मात्र + वि-ध्वंस + अभिहित-हेतु + ज्ञानात् + एव + अमृतम् + यतः — \"because from knowledge — which only destroys ignorance — comes immortality alone\"",
+        "breakdown_iast": "avidyā + mātra + vi-dhvaṃsa + abhihita-hetu + jñānāt + eva + amṛtam + yataḥ — \"because from knowledge — which only destroys ignorance — comes immortality alone\"",
+        "phrasal": "The Vārtika's statement that vidyā's sole function is removing avidyā",
+        "search_deva": "अविद्यामात्रविध्वंसाज्ज्ञानादेवामृतं यतः अविद्या मात्र वि-ध्वंस अभिहित-हेतु ज्ञानात् एव अमृतम् यतः",
+        "search_iast": "avidyamatravidhvamsajjnanadevamrtam yatah avidya matra vi dhvamsa abhihita hetu jnanat eva amrtam yatah because from knowledge which only destroys ignorance comes immortality alone the vartika s statement that vidya s sole function is removing avidya because it is only from knowledge which does nothing other than destroy ignorance alone that immortality results from suresvaracarya s vartika bv verse 54 swamiji explains vidya does exactly one thing it destroys avidya it does not produce anything new brahman atma amrta is already there avidya is the only obstacle remove avidya and what remains is amrtatva this is why jnana alone na karma is the sadhana for moksa vartika suresvaracarya bv verse 54"
+      },
+      {
+        "deva": "न कर्म कारणं मुक्तेर्नाग्निस्तापस्य भेषजम्",
+        "iast": "na karma kāraṇaṃ mukternāgnistāpasya bheṣajam",
+        "definition": "'Action is not the cause of liberation, just as fire is not the remedy for heat.' (Sureśvarācārya, BV verse 55)",
+        "context": "Swamiji quotes this Vārtika verse to make the argument vivid: putting fire near someone burning in summer heat only makes it worse. Similarly, karma — which by its very nature produces results and thus rebirth — cannot be the remedy for the bondage that karma itself creates. Karmabhyo janma niyatam; janma cen nirvrtiḥ kutaḥ — karma necessarily produces rebirth; if there is rebirth, where is liberation?",
+        "source": "Vārtika — Sureśvarācārya, BV verse 55: \"<u>न कर्म कारणं मुक्तेर्नाग्निस्तापस्य भेषजम्</u> | कर्मभ्यो जन्म नियतं जन्म चेन्निर्वृतिः कुतः\"",
+        "source_iast": "Vārtika — Sureśvarācārya, BV verse 55: \"<u>na karma kāraṇaṃ mukternāgnistāpasya bheṣajam</u> | karmabhyo janma niyataṃ janma cennirvṛtiḥ kutaḥ\"",
+        "breakdown_deva": "न + कर्म + कारणम् + मुक्तेः + न + अग्निः + तापस्य + भेषजम् — \"action is not the cause of liberation, just as fire is not the remedy for heat\"",
+        "breakdown_iast": "na + karma + kāraṇam + mukteḥ + na + agniḥ + tāpasya + bheṣajam — \"action is not the cause of liberation, just as fire is not the remedy for heat\"",
+        "phrasal": "The analogy showing karma cannot produce mokṣa",
+        "search_deva": "न कर्म कारणं मुक्तेर्नाग्निस्तापस्य भेषजम् न कर्म कारणम् मुक्तेः न अग्निः तापस्य भेषजम्",
+        "search_iast": "na karma karanam mukternagnistapasya bhesajam na karma karanam mukteh na agnih tapasya bhesajam action is not the cause of liberation just as fire is not the remedy for heat the analogy showing karma cannot produce moksa action is not the cause of liberation just as fire is not the remedy for heat suresvaracarya bv verse 55 swamiji quotes this vartika verse to make the argument vivid putting fire near someone burning in summer heat only makes it worse similarly karma which by its very nature produces results and thus rebirth cannot be the remedy for the bondage that karma itself creates karmabhyo janma niyatam janma cen nirvrtih kutah karma necessarily produces rebirth if there is rebirth where is liberation vartika suresvaracarya bv verse 55"
+      },
+      {
+        "deva": "येनाहं नामृता स्यां किमहं तेन कुर्यां",
+        "iast": "yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryāṃ",
+        "definition": "'By which I would not become immortal, what would I do with that?' (Bṛh. Up. 2.4.3 — Maitreyī's words)",
+        "context": "This is Maitreyī's pivotal statement which redirects the entire conversation. Swamiji highlights its sharpness: she does not say she does not want wealth — she says wealth that does not yield amrtatva is of no use to her. The question format (kiṃ... kuryāṃ?) is ākchepa — a rhetorical rejection — showing she has already understood the limitation of karma-phala.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.3: \"<u>येनाहं नामृता स्यां किमहं तेन कुर्यां</u> यदेव भगवान् वेद तदेव मे ब्रूहि\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.3: \"<u>yenāhaṃ nāmṛtā syāṃ kimahaṃ tena kuryāṃ</u> yadeva bhagavān veda tadeva me brūhi\"",
+        "breakdown_deva": "येन + अहम् + न + अमृता + स्याम् + किम् + अहम् + तेन + कुर्याम् — \"by which I would not become immortal, what use is that to me?\" — लिङ् लकार",
+        "breakdown_iast": "yena + aham + na + amṛtā + syām + kim + aham + tena + kuryām — \"by which I would not become immortal, what use is that to me?\" — liṅ-lakāra",
+        "phrasal": "Maitreyī's rhetorical rejection of wealth in favour of amrtatva",
+        "search_deva": "येनाहं नामृता स्यां किमहं तेन कुर्यां येन अहम् न अमृता स्याम् किम् अहम् तेन कुर्याम् लिङ् लकार -",
+        "search_iast": "yenaham namrta syam kimaham tena kuryam yena aham na amrta syam kim aham tena kuryam by which i would not become immortal what use is that to me lin lakara maitreyi s rhetorical rejection of wealth in favour of amrtatva by which i would not become immortal what would i do with that brh up 2 4 3 maitreyi s words this is maitreyi s pivotal statement which redirects the entire conversation swamiji highlights its sharpness she does not say she does not want wealth she says wealth that does not yield amrtatva is of no use to her the question format kim kuryam is akchepa a rhetorical rejection showing she has already understood the limitation of karma phala mula brhadaranyaka upanisad 2 4 3"
+      },
+      {
+        "deva": "यदेव भगवान् केवलम् अमृतत्व",
+        "iast": "yadeva bhagavān kevalam amṛtatva",
+        "definition": "'That which the revered one knows as the sole means for immortality — teach me that.' (Bhāṣya gloss on Bṛh. Up. 2.4.3)",
+        "context": "Swamiji shows that the Bhāṣya adds the word kevalam to Maitreyī's request — she is asking for the sole means, not any incidental teaching. This sets up the teaching that follows in 2.4.5 as a complete vidyā, not a partial one. The kevala-sādhana is ātmajñāna — nothing else.",
+        "source": "Bhāṣya on 2.4.3: \"<u>यदेव भगवान् केवलम् अमृतत्व-साधनं वेद</u> तदेव मे ब्रूहि — the Bhāṣya adds 'kevalam' to sharpen Maitreyī's demand\"",
+        "source_iast": "Bhāṣya on 2.4.3: \"<u>yadeva bhagavān kevalam amṛtatva-sādhanaṃ veda</u> tadeva me brūhi — the Bhāṣya adds 'kevalam' to sharpen Maitreyī's demand\"",
+        "breakdown_deva": "यद् + एव + भगवान् + केवलम् + अमृतत्व + साधनम् + वेद — \"whatever the revered one knows as the sole means for immortality\"",
+        "breakdown_iast": "yad + eva + bhagavān + kevalam + amṛtatva + sādhanam + veda — \"whatever the revered one knows as the sole means for immortality\"",
+        "phrasal": "Maitreyī's precise demand for the one true sādhana",
+        "search_deva": "यदेव भगवान् केवलम् अमृतत्व यद् एव भगवान् केवलम् अमृतत्व साधनम् वेद -",
+        "search_iast": "yadeva bhagavan kevalam amrtatva yad eva bhagavan kevalam amrtatva sadhanam veda whatever the revered one knows as the sole means for immortality maitreyi s precise demand for the one true sadhana that which the revered one knows as the sole means for immortality teach me that bhasya gloss on brh up 2 4 3 swamiji shows that the bhasya adds the word kevalam to maitreyi s request she is asking for the sole means not any incidental teaching this sets up the teaching that follows in 2 4 5 as a complete vidya not a partial one the kevala sadhana is atmajnana nothing else bhasya on 2 4 3 the bhasya adds kevalam to sharpen maitreyi s demand"
       }
     ]
   },
@@ -1331,6 +1617,58 @@
         "phrasal": "Scattered, many-branched mind",
         "search_deva": "बहुशाखा बुद्धिः बह्व्यः शाखाः यस्याः सा बहुव्रीहि -",
         "search_iast": "bahusakha buddhih bahvyah sakhah yasyah sa bahuvrihi many branched scattered intellect scattered many branched mind a mind dispersed into countless pursuits the person who has not understood what is truly sought becomes interested in endless things the maitreyi teaching is meant to free the mind from this dispersion bhasya connection quoting gita 2 41"
+      },
+      {
+        "deva": "एह्यास्स्व",
+        "iast": "ehyāssva",
+        "definition": "'Come, sit' — Yājñavalkya's invitation to Maitreyī to receive the teaching. (Bṛh. Up. 2.4.4)",
+        "context": "From Bṛh. Up. 2.4.4 — ehi āssva — ehi = come (from ā + i), āssva = sit down (from ā + as). Swamiji notes the warmth of the invitation — Yājñavalkya is pleased that Maitreyī has rejected wealth in favour of immortality, because her question has given him the opportunity to teach what he truly wants to give. The sitting down (āssva) signals the formal beginning of the upadeśa-krama.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.4: \"<u>एह्यास्स्व</u> व्याख्यास्यामि ते व्याचक्षाणस्य तु मे निदिध्यासस्व\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.4: \"<u>ehyāssva</u> vyākhyāsyāmi te vyācakṣāṇasya tu me nididhyāsasva\"",
+        "breakdown_deva": "एहि + आस्स्व — एहि = आगच्छ (लोट्, परस्मैपद); आस्स्व = उपविश (लोट्, आत्मनेपद) — \"come; sit down\"",
+        "breakdown_iast": "ehi + āssva — ehi = āgaccha (loṭ, parasmaipada); āssva = upaviśa (loṭ, ātmanepada) — \"come; sit down\"",
+        "phrasal": "Yājñavalkya's warm invitation to Maitreyī to begin the teaching",
+        "search_deva": "एह्यास्स्व एहि आस्स्व एहि आगच्छ लोट् परस्मैपद आस्स्व उपविश लोट् आत्मनेपद -",
+        "search_iast": "ehyassva ehi assva ehi agaccha lot parasmaipada assva upavisa lot atmanepada come sit down yajnavalkya s warm invitation to maitreyi to begin the teaching come sit yajnavalkya s invitation to maitreyi to receive the teaching brh up 2 4 4 from brh up 2 4 4 ehi assva ehi come from a i assva sit down from a as swamiji notes the warmth of the invitation yajnavalkya is pleased that maitreyi has rejected wealth in favour of immortality because her question has given him the opportunity to teach what he truly wants to give the sitting down assva signals the formal beginning of the upadesa krama mula brhadaranyaka upanisad 2 4 4"
+      },
+      {
+        "deva": "चित्तानुकूलं",
+        "iast": "cittānukūlaṃ",
+        "definition": "In accordance with the heart and mind; that which aligns with one's deepest purpose.",
+        "context": "From the Bhāṣya on Bṛh. Up. 2.4.4 — Śaṅkara glosses priyam bhāṣase as cittānukūlaṃ bhāṣase. Swamiji explains: Maitreyī's rejection of wealth and her demand for the means of amrtatva is exactly what is in accordance with Yājñavalkya's own deepest intention (svābhiprāya). He was planning to teach; she has created the perfect opening by asking the right question.",
+        "source": "Bhāṣya on 2.4.4: \"इदानीं <u>चित्तानुकूलं</u> प्रियमेव भाषसे — स्वाभिप्राय-सम्पत्तौ तुष्टः\"",
+        "source_iast": "Bhāṣya on 2.4.4: \"idānīṃ <u>cittānukūlaṃ</u> priyameva bhāṣase — svābhiprāya-sampattau tuṣṭaḥ\"",
+        "breakdown_deva": "चित्त + अनुकूल — \"in accordance with the inner mind; agreeable to one's deepest purpose\"",
+        "breakdown_iast": "citta + anukūla — \"in accordance with the inner mind; agreeable to one's deepest purpose\"",
+        "phrasal": "Maitreyī's question as perfectly aligned with Yājñavalkya's own intent",
+        "search_deva": "चित्तानुकूलं चित्त अनुकूल",
+        "search_iast": "cittanukulam citta anukula in accordance with the inner mind agreeable to one s deepest purpose maitreyi s question as perfectly aligned with yajnavalkya s own intent in accordance with the heart and mind that which aligns with one s deepest purpose from the bhasya on brh up 2 4 4 sankara glosses priyam bhasase as cittanukulam bhasase swamiji explains maitreyi s rejection of wealth and her demand for the means of amrtatva is exactly what is in accordance with yajnavalkya s own deepest intention svabhipraya he was planning to teach she has created the perfect opening by asking the right question bhasya on 2 4 4"
+      },
+      {
+        "deva": "व्याचक्षाणस्य",
+        "iast": "vyācakṣāṇasya",
+        "definition": "'Of me who is explaining' — while I am expounding. (Bṛh. Up. 2.4.4)",
+        "context": "From Bṛh. Up. 2.4.4 — vyācakṣāṇasya tu me — Yājñavalkya says: of me who is explaining (vyācakṣāṇasya), listen with nididhyāsana. The genitive singular indicates the ongoing act of the teacher. Swamiji notes the combination: vyākhyāsyāmi (I will explain) + vyācakṣāṇasya (of me who is explaining) + nididhyāsasva (contemplate deeply) — showing śravaṇa and nididhyāsana as happening simultaneously.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.4: \"<u>व्याचक्षाणस्य</u> तु मे निदिध्यासस्व\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.4: \"<u>vyācakṣāṇasya</u> tu me nididhyāsasva\"",
+        "breakdown_deva": "वि + आ + √चक्ष् + आन + षष्ठी एकवचन — आत्मनेपद शतृ — \"of me who is explaining\" (genitive of ongoing action)",
+        "breakdown_iast": "vi + ā + √cakṣ + āna + ṣaṣṭhī ekavacanam — ātmanepada śatṛ — \"of me who is explaining\" (genitive of ongoing action)",
+        "phrasal": "The ongoing act of the teacher — contemplate while I expound",
+        "search_deva": "व्याचक्षाणस्य वि आ चक्ष् आन षष्ठी एकवचन आत्मनेपद शतृ",
+        "search_iast": "vyacaksanasya vi a caks ana sasthi ekavacanam atmanepada satr of me who is explaining genitive of ongoing action the ongoing act of the teacher contemplate while i expound of me who is explaining while i am expounding brh up 2 4 4 from brh up 2 4 4 vyacaksanasya tu me yajnavalkya says of me who is explaining vyacaksanasya listen with nididhyasana the genitive singular indicates the ongoing act of the teacher swamiji notes the combination vyakhyasyami i will explain vyacaksanasya of me who is explaining nididhyasasva contemplate deeply showing sravana and nididhyasana as happening simultaneously mula brhadaranyaka upanisad 2 4 4"
+      },
+      {
+        "deva": "निदिध्यासस्व वाक्यानि अर्थतो निश्चयेन ध्यातुमिच्छेति",
+        "iast": "nididhyāsasva vākyāni arthato niścayena dhyātumiccheti",
+        "definition": "'May you contemplate the vākyas with the desire to know the meaning with certainty.' (Bhāṣya gloss on nididhyāsasva, Bṛh. Up. 2.4.4)",
+        "context": "This is Śaṅkara's gloss on the word nididhyāsasva. Swamiji unpacks it: nididhyāsasva = vākyas arthatah niścayena dhātumiccheti — to have the sustained desire to penetrate the meaning of the sentences with conviction. It is not passive listening but active inquiry into the purport of the mahāvākya that follows. This instruction is given before the teaching of ātmanastu kāmāya.",
+        "source": "Bhāṣya on 2.4.4: \"<u>निदिध्यासस्व</u> — वाक्यानि अर्थतो निश्चयेन ध्यातुमिच्छेति\"",
+        "source_iast": "Bhāṣya on 2.4.4: \"<u>nididhyāsasva</u> — vākyāni arthato niścayena dhyātumiccheti\"",
+        "breakdown_deva": "नि + दि + √ध्यास् + स्व — नाम-धातु + लोट् — \"wish to contemplate the sentences with the desire to know their meaning with certainty\"",
+        "breakdown_iast": "ni + di + √dhyās + sva — nāmadhātu + loṭ — \"wish to contemplate the sentences with the desire to know their meaning with certainty\"",
+        "phrasal": "The instruction to Maitreyī — Śaṅkara's definition of nididhyāsana",
+        "search_deva": "निदिध्यासस्व वाक्यानि अर्थतो निश्चयेन ध्यातुमिच्छेति नि दि ध्यास् स्व नाम-धातु लोट्",
+        "search_iast": "nididhyasasva vakyani arthato niscayena dhyatumiccheti ni di dhyas sva namadhatu lot wish to contemplate the sentences with the desire to know their meaning with certainty the instruction to maitreyi sankara s definition of nididhyasana may you contemplate the vakyas with the desire to know the meaning with certainty bhasya gloss on nididhyasasva brh up 2 4 4 this is sankara s gloss on the word nididhyasasva swamiji unpacks it nididhyasasva vakyas arthatah niscayena dhatumiccheti to have the sustained desire to penetrate the meaning of the sentences with conviction it is not passive listening but active inquiry into the purport of the mahavakya that follows this instruction is given before the teaching of atmanastu kamaya bhasya on 2 4 4"
       }
     ]
   },
@@ -1493,6 +1831,45 @@
         "phrasal": "For generating dispassion",
         "search_deva": "वैराग्यार्थम् वैराग्यस्य अर्थम्",
         "search_iast": "vairagyartham vairagyasya artham for the purpose of generating dispassion for generating dispassion intended to produce freedom from dependence on external pursuits the repeated not for its sake but for the self s sake statements are meant to create space from habitual pursuits so that the real self can be examined bhasya on 2 4 5"
+      },
+      {
+        "deva": "न वा अरे सर्वस्य कामाय सर्वं प्रियं भवति",
+        "iast": "na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavati",
+        "definition": "'It is not for the sake of everything that everything becomes dear.' (Bṛh. Up. 2.4.5 — the concluding negation)",
+        "context": "Swamiji explains that this is the Upaniṣad's own summary of the teaching given through all the specific examples (husband, wife, children, wealth, etc.). The word sarva here is not mere repetition — sarva-grahaṇam ukta-anukta-artham — it is meant to include everything left unsaid. Everything, without exception, is dear not for its own sake but for the sake of the Self.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>न वा अरे सर्वस्य कामाय सर्वं प्रियं भवति</u> — आत्मनस्तु कामाय सर्वं प्रियं भवति\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>na vā are sarvasya kāmāya sarvaṃ priyaṃ bhavati</u> — ātmanastu kāmāya sarvaṃ priyaṃ bhavati\"",
+        "breakdown_deva": "न + सर्वस्य + कामाय + सर्वम् + प्रियम् + भवति — \"not for the sake of everything does everything become dear\"",
+        "breakdown_iast": "na + sarvasya + kāmāya + sarvam + priyam + bhavati — \"not for the sake of everything does everything become dear\"",
+        "phrasal": "The Upaniṣad's negation — sarva-grahaṇam ukta-anukta-artham",
+        "search_deva": "न वा अरे सर्वस्य कामाय सर्वं प्रियं भवति न सर्वस्य कामाय सर्वम् प्रियम् भवति - - -",
+        "search_iast": "na va are sarvasya kamaya sarvam priyam bhavati na sarvasya kamaya sarvam priyam bhavati not for the sake of everything does everything become dear the upanisad s negation sarva grahanam ukta anukta artham it is not for the sake of everything that everything becomes dear brh up 2 4 5 the concluding negation swamiji explains that this is the upanisad s own summary of the teaching given through all the specific examples husband wife children wealth etc the word sarva here is not mere repetition sarva grahanam ukta anukta artham it is meant to include everything left unsaid everything without exception is dear not for its own sake but for the sake of the self mula brhadaranyaka upanisad 2 4 5"
+      },
+      {
+        "deva": "आत्मनस्तु कामाय सर्वं प्रियं भवति",
+        "iast": "ātmanastu kāmāya sarvaṃ priyaṃ bhavati",
+        "definition": "'It is for the sake of the Self that everything is dear.' (Bṛh. Up. 2.4.5)",
+        "context": "This is the central mahāvākya of the entire Maitreyī Brāhmaṇa teaching. Swamiji explains: the word tu (but) is the pivot — it pivots from the apparent object of desire to its true ground. Everything that appears dear because of itself is actually dear because it pleases the Self. Therefore what one is really seeking in every act of love and desire is the Self — which is inherently pleased and inherently complete.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>आत्मनस्तु कामाय सर्वं प्रियं भवति</u> — आत्मा वा अरे द्रष्टव्यः...\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>ātmanastu kāmāya sarvaṃ priyaṃ bhavati</u> — ātmā vā are draṣṭavyaḥ...\"",
+        "breakdown_deva": "आत्मनः + तु + कामाय + सर्वम् + प्रियम् + भवति — \"but for the sake of the Self, everything is dear\" — तु is the pivot",
+        "breakdown_iast": "ātmanaḥ + tu + kāmāya + sarvam + priyam + bhavati — \"but for the sake of the Self, everything is dear\" — tu is the pivot",
+        "phrasal": "The central mahāvākya of the Maitreyī Brāhmaṇa",
+        "search_deva": "आत्मनस्तु कामाय सर्वं प्रियं भवति आत्मनः तु कामाय सर्वम् प्रियम् भवति तु",
+        "search_iast": "atmanastu kamaya sarvam priyam bhavati atmanah tu kamaya sarvam priyam bhavati but for the sake of the self everything is dear tu is the pivot the central mahavakya of the maitreyi brahmana it is for the sake of the self that everything is dear brh up 2 4 5 this is the central mahavakya of the entire maitreyi brahmana teaching swamiji explains the word tu but is the pivot it pivots from the apparent object of desire to its true ground everything that appears dear because of itself is actually dear because it pleases the self therefore what one is really seeking in every act of love and desire is the self which is inherently pleased and inherently complete mula brhadaranyaka upanisad 2 4 5"
+      },
+      {
+        "deva": "आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यो",
+        "iast": "ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo",
+        "definition": "'The Self, dear one, should be seen, heard about, reflected upon, and deeply contemplated.' (Bṛh. Up. 2.4.5)",
+        "context": "This mahāvākya from Bṛh. Up. 2.4.5 states the entire sādhana-trayam for Self-knowledge: śrotavyaḥ (to be heard about — śravaṇa), mantavyaḥ (to be reflected upon — manana), nididhyāsitavyaḥ (to be deeply contemplated — nididhyāsana). Swamiji explains draṣṭavyaḥ as subsuming the result: the Self should finally be 'seen' — i.e., directly recognised — through this three-fold path.",
+        "source": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यो</u> मैत्रेयि\"",
+        "source_iast": "Mūla — Bṛhadāraṇyaka Upaniṣad 2.4.5: \"<u>ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo</u> maitreyi\"",
+        "breakdown_deva": "आत्मा + द्रष्टव्यः + श्रोतव्यः + मन्तव्यः + निदिध्यासितव्यः — तव्यत् कृदन्त — \"the Self should be seen, heard about, reflected upon, and deeply contemplated\"",
+        "breakdown_iast": "ātmā + draṣṭavyaḥ + śrotavyaḥ + mantavyaḥ + nididhyāsitavyaḥ — tavyat kṛdanta — \"the Self should be seen, heard about, reflected upon, and deeply contemplated\"",
+        "phrasal": "The Upaniṣad's statement of the threefold sādhana — śravaṇa, manana, nididhyāsana",
+        "search_deva": "आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यो आत्मा द्रष्टव्यः श्रोतव्यः मन्तव्यः निदिध्यासितव्यः तव्यत् कृदन्त - - -",
+        "search_iast": "atma va are drastavyah srotavyo mantavyo nididhyasitavyo atma drastavyah srotavyah mantavyah nididhyasitavyah tavyat krdanta the self should be seen heard about reflected upon and deeply contemplated the upanisad s statement of the threefold sadhana sravana manana nididhyasana the self dear one should be seen heard about reflected upon and deeply contemplated brh up 2 4 5 this mahavakya from brh up 2 4 5 states the entire sadhana trayam for self knowledge srotavyah to be heard about sravana mantavyah to be reflected upon manana nididhyasitavyah to be deeply contemplated nididhyasana swamiji explains drastavyah as subsuming the result the self should finally be seen i e directly recognised through this three fold path mula brhadaranyaka upanisad 2 4 5"
       }
     ]
   },
