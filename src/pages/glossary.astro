@@ -743,12 +743,21 @@ function getTermSlug(termIast: string, classNum: number | null) {
   }
 
   /* Metadata Rows */
-  .card-meta, .card-breakdown {
+  .card-meta {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     margin-bottom: 0.85rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .card-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.85rem;
+    font-size: 1.05rem;
     line-height: 1.5;
   }
 
@@ -778,8 +787,17 @@ function getTermSlug(termIast: string, classNum: number | null) {
   }
 
   .breakdown-content {
-    color: var(--text-secondary);
+    color: var(--text);
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .breakdown-content .iast-only {
     font-style: italic;
+  }
+
+  .breakdown-content .deva-only {
+    font-style: normal;
   }
 
   .card-body {
