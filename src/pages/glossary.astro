@@ -138,47 +138,40 @@ function getTermSlug(termIast: string, classNum: number | null) {
                 data-search-deva={term.search_deva}
                 data-search-iast={term.search_iast}
               >
-                <div class="card-header">
-                  <h3 class="card-word">
-                    <span class="deva-only">{term.deva}</span>
-                    <span class="iast-only">{term.iast}</span>
-                  </h3>
-                  {term.phrasal && <span class="card-phrasal">{term.phrasal}</span>}
-                </div>
-
-                {term.source && (
-                  <div class="card-meta">
-                    <span class="meta-label">Source</span>
-                    <span class="meta-value">{term.source}</span>
-                  </div>
-                )}
+                <h3 class="card-word">
+                  <span class="deva-only">{term.deva}</span>
+                  <span class="iast-only">{term.iast}</span>
+                </h3>
 
                 {(term.breakdown_deva || term.breakdown_iast) && (
                   <div class="card-breakdown">
-                    <span class="breakdown-label">Breakdown</span>
-                    <div class="breakdown-content">
-                      <span class="deva-only">{term.breakdown_deva}</span>
-                      <span class="iast-only">{term.breakdown_iast}</span>
-                    </div>
+                    <span class="deva-only">— {term.breakdown_deva}</span>
+                    <span class="iast-only">— {term.breakdown_iast}</span>
+                  </div>
+                )}
+
+                {term.phrasal && (
+                  <div class="card-phrasal">
+                    {term.phrasal}
+                  </div>
+                )}
+
+                {term.source && (
+                  <div class="card-source">
+                    Source: {term.source}
                   </div>
                 )}
 
                 <div class="card-body">
-                  <div class="definition-block">
-                    <h4 class="block-title">Definition</h4>
-                    <p class="block-text" set:html={term.definition}></p>
-                  </div>
+                  <p class="card-text">
+                    <strong>Definition.</strong> <span set:html={term.definition}></span>
+                  </p>
                   
                   {term.context && (
-                    <div class="definition-block">
-                      <h4 class="block-title">Swamiji's Contextual Explanation</h4>
-                      <p class="block-text" set:html={term.context}></p>
-                    </div>
+                    <p class="card-text">
+                      <strong>Swamiji's Contextual Explanation.</strong> <span set:html={term.context}></span>
+                    </p>
                   )}
-                </div>
-
-                <div class="card-footer">
-                  <span class="footer-tag">Class {section.classNumber}</span>
                 </div>
               </article>
             ))}
@@ -198,47 +191,40 @@ function getTermSlug(termIast: string, classNum: number | null) {
                 data-search-deva={term.search_deva}
                 data-search-iast={term.search_iast}
               >
-                <div class="card-header">
-                  <h3 class="card-word">
-                    <span class="deva-only">{term.deva}</span>
-                    <span class="iast-only">{term.iast}</span>
-                  </h3>
-                  {term.phrasal && <span class="card-phrasal">{term.phrasal}</span>}
-                </div>
-
-                {term.source && (
-                  <div class="card-meta">
-                    <span class="meta-label">Source</span>
-                    <span class="meta-value">{term.source}</span>
-                  </div>
-                )}
+                <h3 class="card-word">
+                  <span class="deva-only">{term.deva}</span>
+                  <span class="iast-only">{term.iast}</span>
+                </h3>
 
                 {(term.breakdown_deva || term.breakdown_iast) && (
                   <div class="card-breakdown">
-                    <span class="breakdown-label">Breakdown</span>
-                    <div class="breakdown-content">
-                      <span class="deva-only">{term.breakdown_deva}</span>
-                      <span class="iast-only">{term.breakdown_iast}</span>
-                    </div>
+                    <span class="deva-only">— {term.breakdown_deva}</span>
+                    <span class="iast-only">— {term.breakdown_iast}</span>
+                  </div>
+                )}
+
+                {term.phrasal && (
+                  <div class="card-phrasal">
+                    {term.phrasal}
+                  </div>
+                )}
+
+                {term.source && (
+                  <div class="card-source">
+                    Source: {term.source}
                   </div>
                 )}
 
                 <div class="card-body">
-                  <div class="definition-block">
-                    <h4 class="block-title">Definition</h4>
-                    <p class="block-text" set:html={term.definition}></p>
-                  </div>
+                  <p class="card-text">
+                    <strong>Definition.</strong> <span set:html={term.definition}></span>
+                  </p>
                   
                   {term.context && (
-                    <div class="definition-block">
-                      <h4 class="block-title">Swamiji's Contextual Explanation</h4>
-                      <p class="block-text" set:html={term.context}></p>
-                    </div>
+                    <p class="card-text">
+                      <strong>Swamiji's Contextual Explanation.</strong> <span set:html={term.context}></span>
+                    </p>
                   )}
-                </div>
-
-                <div class="card-footer">
-                  <span class="footer-tag">Core Term</span>
                 </div>
               </article>
             ))}
@@ -710,147 +696,62 @@ function getTermSlug(termIast: string, classNum: number | null) {
     animation: card-flash 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   }
 
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    margin-bottom: 1.15rem;
-  }
-
-  @media (min-width: 640px) {
-    .card-header {
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-  }
-
   .card-word {
     font-size: 1.65rem;
     font-weight: 700;
     color: var(--accent);
     line-height: 1.25;
-    margin: 0;
-  }
-
-  .card-phrasal {
-    font-family: var(--font-ui);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    letter-spacing: 0.02em;
-  }
-
-  /* Metadata Rows */
-  .card-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 0.85rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    margin: 0 0 0.35rem 0;
   }
 
   .card-breakdown {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 0.85rem;
-    font-size: 1.05rem;
-    line-height: 1.5;
-  }
-
-  @media (min-width: 640px) {
-    .card-meta, .card-breakdown {
-      flex-direction: row;
-      align-items: baseline;
-      gap: 1rem;
-    }
-  }
-
-  .meta-label, .breakdown-label {
-    font-family: var(--font-ui);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-tertiary);
-    width: 90px;
-    flex-shrink: 0;
-  }
-
-  .meta-value {
-    color: var(--text-secondary);
-    font-family: var(--font-ui);
-    font-weight: 500;
-  }
-
-  .breakdown-content {
-    color: var(--text);
+    font-family: var(--font-body);
     font-size: 1.125rem;
-    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
   }
 
-  .breakdown-content .iast-only {
+  .card-breakdown .deva-only {
+    font-family: var(--font-devanagari);
+  }
+
+  .card-breakdown .iast-only {
     font-style: italic;
   }
 
-  .breakdown-content .deva-only {
-    font-style: normal;
+  .card-phrasal {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+  }
+
+  .card-source {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
   }
 
   .card-body {
-    border-top: 1px solid var(--border-light);
-    padding-top: 1.25rem;
-    margin-top: 1.15rem;
+    margin-top: 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
-  .definition-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .block-title {
-    font-family: var(--font-ui);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-tertiary);
-    margin: 0;
-  }
-
-  .block-text {
+  .card-text {
     font-size: 1.1rem;
     line-height: 1.65;
     color: var(--text);
     margin: 0;
   }
 
-  .card-footer {
-    border-top: 1px solid var(--border-light);
-    padding-top: 1rem;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .footer-tag {
-    font-family: var(--font-ui);
-    font-size: 0.75rem;
+  .card-text strong {
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-tertiary);
-    background: var(--bg);
-    border: 1px solid var(--border-light);
-    padding: 0.25rem 0.65rem;
-    border-radius: 4px;
   }
 
   /* Dual script visibility classes */
