@@ -759,20 +759,26 @@ function getTermSlug(termIast: string, classNum: number | null) {
   }
 
   /* Dual script visibility classes */
-  .deva-only, .sanskrit-deva {
+  .deva-only {
     display: block;
     font-family: var(--font-devanagari);
   }
-  .sanskrit-deva {
+  :global(.sanskrit-deva) {
     display: inline;
+    font-family: var(--font-devanagari);
   }
   
-  .iast-only, .sanskrit-iast {
+  .iast-only {
+    display: none;
+  }
+  :global(.sanskrit-iast) {
     display: none;
   }
 
-  html[data-script="iast"] .deva-only,
-  html[data-script="iast"] .sanskrit-deva {
+  html[data-script="iast"] .deva-only {
+    display: none;
+  }
+  html[data-script="iast"] :global(.sanskrit-deva) {
     display: none;
   }
 
@@ -780,7 +786,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
     display: block;
   }
   
-  html[data-script="iast"] .sanskrit-iast {
+  html[data-script="iast"] :global(.sanskrit-iast) {
     display: inline;
     font-family: var(--font-body);
     font-style: italic;
