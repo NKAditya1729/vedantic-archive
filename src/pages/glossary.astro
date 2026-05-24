@@ -4,9 +4,10 @@ import { getCollection } from 'astro:content';
 import fs from 'node:fs';
 import path from 'node:path';
 
-// Read the markdown glossary file
-const glossaryPath = path.resolve('./src/content/glossary/brhad_upa_maitreyi_brahmana_glossary_classwise.md');
+// Read the pre-assembled rich glossary data from the repository content folder
+const glossaryPath = path.resolve('./src/content/glossary/assembled_glossary.json');
 const rawGlossary = fs.readFileSync(glossaryPath, 'utf-8');
+const glossarySections = JSON.parse(rawGlossary);
 
 // Get all class metadata to pull dates dynamically
 const allClasses = await getCollection('classes');
@@ -17,134 +18,862 @@ allClasses.forEach(c => {
   }
 });
 
-// Helper function to format basic inline markdown formatting into HTML
-function formatMarkdown(text: string) {
-  return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/_(.*?)_/g, '<em>$1</em>')
-    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
-}
+// Separate into class sections and the consolidated core section
+const classSections = glossarySections.filter(s => s.classNumber !== null);
+const coreSection = glossarySections.find(s => s.classNumber === null);
 
-// Parse glossary sections
-const parts = rawGlossary.split(/^##\s+/m);
-const rawSections = parts.slice(1);
-
-const parsedSections = rawSections.map((sectText) => {
-  const lines = sectText.split('\n');
-  const rawTitle = lines[0].trim();
-  
-  let classNumber = null;
-  let sectionTitle = rawTitle;
-  
-  // Format title e.g. "Class 1 — Introduction to the Maitreyī Brāhmaṇa and the Vidyāsūtra"
-  // or "Consolidated Core Glossary for Site-Wide Use"
-  const classMatch = rawTitle.match(/^Class\s+(\d+)/i);
-  if (classMatch) {
-    classNumber = parseInt(classMatch[1], 10);
-    // Strip "Class 1 — " from the sectionTitle
-    sectionTitle = rawTitle.replace(/^Class\s+\d+\s*[-—]\s*/i, '');
-  }
-
-  const terms = [];
-  let currentTerm = null;
-
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
-
-    const termMatch = line.match(/^\*\*(.*?)\*\*/);
-    if (termMatch) {
-      currentTerm = termMatch[1];
-    } else if (line.startsWith(':') && currentTerm) {
-      const definition = line.substring(1).trim();
-      terms.push([currentTerm, formatMarkdown(definition)]);
-      currentTerm = null;
-    }
-  }
-
-  return {
-    rawTitle,
-    sectionTitle,
-    classNumber,
-    terms
-  };
-});
-
-const classSections = parsedSections.filter(s => s.classNumber !== null);
-const coreSection = parsedSections.find(s => s.classNumber === null);
-
-// Generate consolidated terms list sorted alphabetically
-const terms = classSections
+// Generate flat list of all terms for the index cloud, sorted alphabetically by IAST
+const allIndexTerms = glossarySections
   .flatMap(section => 
-    section.terms.map(term => ({ 
-      term: term[0], 
-      classNumber: section.classNumber 
+    section.terms.map(term => ({
+      deva: term.deva,
+      iast: term.iast,
+      slug: `term-${section.classNumber || 'core'}-${term.iast.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+      classNumber: section.classNumber
     }))
   )
-  .sort((a, b) => a.term.localeCompare(b.term));
+  .sort((a, b) => a.iast.localeCompare(b.iast));
 
-function slug(term: string, classNumber: number) {
-  return `class-${classNumber}-${term.toLowerCase().replace(/[^a-z0-9āīūṛṝḷṅñṭḍṇśṣṃḥ]+/g, '-')}`;
+function getTermSlug(termIast: string, classNum: number | null) {
+  return `term-${classNum || 'core'}-${termIast.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 }
 ---
 
-<BaseLayout title="Glossary" description="Sanskrit terms explained in the class notes, organised by class.">
-  <div class="container container--wide page-pad">
-    <h1>Glossary</h1>
+<BaseLayout title="Glossary" description="A comprehensive classwise and consolidated glossary for Maitreyī Brāhmaṇa study.">
+  <!-- Run inline script block as early as possible to prevent flash of wrong script -->
+  <script is:inline>
+    (function() {
+      const savedScript = localStorage.getItem('vedantic_archive_glossary_script') || 'deva';
+      document.documentElement.setAttribute('data-script', savedScript);
+    })();
+  </script>
 
-    <details class="glossary-index-container" style="margin: 1.5rem 0 2.5rem; border: 1px solid var(--border-light); border-radius: 8px; background: var(--bg-surface); overflow: hidden;">
-      <summary style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600; color: var(--accent); cursor: pointer; user-select: none; list-style: none;">
-        <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          Browse All Terms ({terms.length})
+  <div class="container container--wide page-pad">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/vedantic-archive/">Home</a>
+      <span class="breadcrumb__sep" aria-hidden="true">›</span>
+      <span class="breadcrumb__current" aria-current="page">Glossary</span>
+    </nav>
+
+    <header class="glossary-header">
+      <h1>Glossary</h1>
+      <p class="meta">A curated reference of Sanskrit terminology from the Maitreyī Brāhmaṇa classes (Bṛhadāraṇyaka Upaniṣad 2.4).</p>
+    </header>
+
+    <!-- Sticky Translucent Controls Panel -->
+    <div class="glossary-controls-sticky">
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input 
+          type="text" 
+          id="glossary-search" 
+          class="search-input" 
+          placeholder="Search by English, IAST, or Devanagari..." 
+          aria-label="Search glossary"
+        />
+        <button id="glossary-search-clear" class="search-clear" aria-label="Clear search" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="controls-right">
+        <span class="matching-count" id="matching-count-val">137 of 137 matching</span>
+        
+        <div class="script-toggle-segmented" role="radiogroup" aria-label="Sanskrit script selection">
+          <button id="toggle-script-deva" class="script-toggle-btn active" role="radio" aria-checked="true">देवनागरी</button>
+          <button id="toggle-script-iast" class="script-toggle-btn" role="radio" aria-checked="false">IAST</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapsible Index Pill Cloud -->
+    <details class="glossary-index-container">
+      <summary>
+        <span class="summary-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"></path>
+            <path d="M3 20v-8c0-2.2 1.8-4 4-4h10c2.2 0 4 1.8 4 4v8"></path>
+            <circle cx="7" cy="12" r="1"></circle>
+            <circle cx="17" cy="12" r="1"></circle>
+            <path d="M12 8V5c0-1.7-1.3-3-3-3S6 3.3 6 5"></path>
+          </svg>
+          Browse Alphabetical Index ({allIndexTerms.length} terms)
         </span>
-        <svg class="details-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s ease;"><path d="m6 9 6 6 6-6"/></svg>
+        <svg class="details-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
       </summary>
-      <div style="border-top: 1px solid var(--border-light); padding: 1.25rem; background: var(--bg);">
-        <div class="glossary-index" style="margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-          {terms.map(item => <a href={`#${slug(item.term, item.classNumber)}`}>{item.term}</a>)}
+      <div class="index-content">
+        <div class="glossary-index-cloud">
+          {allIndexTerms.map(item => (
+            <a href={`#${item.slug}`} class="glossary-index-link">
+              <span class="deva-only">{item.deva}</span>
+              <span class="iast-only">{item.iast}</span>
+            </a>
+          ))}
         </div>
       </div>
     </details>
 
-    {classSections.map(section => (
-      <section class="glossary-section">
-        <h2>Class {section.classNumber} — {section.sectionTitle} {classDates[section.classNumber] ? `(${classDates[section.classNumber]})` : ''}</h2>
-        {section.terms.map(term => (
-          <article class="glossary-term" id={slug(term[0], section.classNumber)}>
-            <h3>{term[0]}</h3>
-            <p set:html={term[1]} />
-            <p class="meta">Class {section.classNumber}</p>
-          </article>
-        ))}
-      </section>
-    ))}
+    <!-- Main Cards Section -->
+    <div class="glossary-sections-container">
+      {classSections.map(section => (
+        <section class="glossary-section" id={`class-section-${section.classNumber}`}>
+          <h2 class="section-title">
+            Class {section.classNumber} — {section.sectionTitle} 
+            {classDates[section.classNumber] && <span class="section-date">({classDates[section.classNumber]})</span>}
+          </h2>
+          
+          <div class="cards-grid">
+            {section.terms.map(term => (
+              <article 
+                class="glossary-card" 
+                id={getTermSlug(term.iast, section.classNumber)}
+                data-search-deva={term.search_deva}
+                data-search-iast={term.search_iast}
+              >
+                <div class="card-header">
+                  <h3 class="card-word">
+                    <span class="deva-only">{term.deva}</span>
+                    <span class="iast-only">{term.iast}</span>
+                  </h3>
+                  {term.phrasal && <span class="card-phrasal">{term.phrasal}</span>}
+                </div>
 
-    {coreSection && coreSection.terms.length > 0 && (
-      <section class="glossary-section">
-        <h2>{coreSection.sectionTitle}</h2>
-        {coreSection.terms.map(term => (
-          <article class="glossary-term" id={`core-${term[0].toLowerCase().replace(/[^a-z0-9āīūṛṝḷṅñṭḍṇśṣṃḥ]+/g, '-')}`}>
-            <h3>{term[0]}</h3>
-            <p set:html={term[1]} />
-            <p class="meta">Core Term</p>
-          </article>
-        ))}
-      </section>
-    )}
+                {term.source && (
+                  <div class="card-meta">
+                    <span class="meta-label">Source</span>
+                    <span class="meta-value">{term.source}</span>
+                  </div>
+                )}
+
+                {(term.breakdown_deva || term.breakdown_iast) && (
+                  <div class="card-breakdown">
+                    <span class="breakdown-label">Breakdown</span>
+                    <div class="breakdown-content">
+                      <span class="deva-only">{term.breakdown_deva}</span>
+                      <span class="iast-only">{term.breakdown_iast}</span>
+                    </div>
+                  </div>
+                )}
+
+                <div class="card-body">
+                  <div class="definition-block">
+                    <h4 class="block-title">Definition</h4>
+                    <p class="block-text" set:html={term.definition}></p>
+                  </div>
+                  
+                  {term.context && (
+                    <div class="definition-block">
+                      <h4 class="block-title">Swamiji's Contextual Explanation</h4>
+                      <p class="block-text" set:html={term.context}></p>
+                    </div>
+                  )}
+                </div>
+
+                <div class="card-footer">
+                  <span class="footer-tag">Class {section.classNumber}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {coreSection && coreSection.terms.length > 0 && (
+        <section class="glossary-section" id="class-section-core">
+          <h2 class="section-title">{coreSection.sectionTitle}</h2>
+          
+          <div class="cards-grid">
+            {coreSection.terms.map(term => (
+              <article 
+                class="glossary-card" 
+                id={getTermSlug(term.iast, null)}
+                data-search-deva={term.search_deva}
+                data-search-iast={term.search_iast}
+              >
+                <div class="card-header">
+                  <h3 class="card-word">
+                    <span class="deva-only">{term.deva}</span>
+                    <span class="iast-only">{term.iast}</span>
+                  </h3>
+                  {term.phrasal && <span class="card-phrasal">{term.phrasal}</span>}
+                </div>
+
+                {term.source && (
+                  <div class="card-meta">
+                    <span class="meta-label">Source</span>
+                    <span class="meta-value">{term.source}</span>
+                  </div>
+                )}
+
+                {(term.breakdown_deva || term.breakdown_iast) && (
+                  <div class="card-breakdown">
+                    <span class="breakdown-label">Breakdown</span>
+                    <div class="breakdown-content">
+                      <span class="deva-only">{term.breakdown_deva}</span>
+                      <span class="iast-only">{term.breakdown_iast}</span>
+                    </div>
+                  </div>
+                )}
+
+                <div class="card-body">
+                  <div class="definition-block">
+                    <h4 class="block-title">Definition</h4>
+                    <p class="block-text" set:html={term.definition}></p>
+                  </div>
+                  
+                  {term.context && (
+                    <div class="definition-block">
+                      <h4 class="block-title">Swamiji's Contextual Explanation</h4>
+                      <p class="block-text" set:html={term.context}></p>
+                    </div>
+                  )}
+                </div>
+
+                <div class="card-footer">
+                  <span class="footer-tag">Core Term</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
   </div>
 </BaseLayout>
 
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('glossary-search');
+    const searchClear = document.getElementById('glossary-search-clear');
+    const matchingCount = document.getElementById('matching-count-val');
+    const cards = document.querySelectorAll('.glossary-card');
+    const indexLinks = document.querySelectorAll('.glossary-index-link');
+    const sections = document.querySelectorAll('.glossary-section');
+    const indexContainer = document.querySelector('.glossary-index-container');
+    
+    // Segmented toggle controls
+    const toggleDeva = document.getElementById('toggle-script-deva');
+    const toggleIast = document.getElementById('toggle-script-iast');
+    
+    // Function to normalise strings for search
+    function normalizeStr(str) {
+      if (!str) return '';
+      return str
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // remove combining diacritics
+        .replace(/ā/g, 'a')
+        .replace(/ī/g, 'i')
+        .replace(/ū/g, 'u')
+        .replace(/ṛ/g, 'r')
+        .replace(/ṝ/g, 'r')
+        .replace(/ḷ/g, 'l')
+        .replace(/ṅ/g, 'n')
+        .replace(/ñ/g, 'n')
+        .replace(/ṭ/g, 't')
+        .replace(/ḍ/g, 'd')
+        .replace(/ṇ/g, 'n')
+        .replace(/ś/g, 's')
+        .replace(/ṣ/g, 's')
+        .replace(/ṃ/g, 'm')
+        .replace(/ḥ/g, 'h')
+        .replace(/[^a-z0-9\s\u0900-\u097F]/g, ''); // retain Devanagari range but strip punctuation
+    }
+
+    // Toggle Script
+    function setScript(script) {
+      document.documentElement.setAttribute('data-script', script);
+      localStorage.setItem('vedantic_archive_glossary_script', script);
+      
+      if (script === 'deva') {
+        toggleDeva.classList.add('active');
+        toggleDeva.setAttribute('aria-checked', 'true');
+        toggleIast.classList.remove('active');
+        toggleIast.setAttribute('aria-checked', 'false');
+      } else {
+        toggleIast.classList.add('active');
+        toggleIast.setAttribute('aria-checked', 'true');
+        toggleDeva.classList.remove('active');
+        toggleDeva.setAttribute('aria-checked', 'false');
+      }
+    }
+    
+    // Read initial script
+    const initialScript = localStorage.getItem('vedantic_archive_glossary_script') || 'deva';
+    setScript(initialScript);
+    
+    toggleDeva.addEventListener('click', () => setScript('deva'));
+    toggleIast.addEventListener('click', () => setScript('iast'));
+    
+    // Search function
+    function runSearch() {
+      const rawQuery = searchInput.value;
+      const query = normalizeStr(rawQuery);
+      
+      if (rawQuery.length > 0) {
+        searchClear.style.display = 'flex';
+      } else {
+        searchClear.style.display = 'none';
+      }
+      
+      let matchCount = 0;
+      
+      sections.forEach(section => {
+        let sectionMatches = 0;
+        const sectionCards = section.querySelectorAll('.glossary-card');
+        
+        sectionCards.forEach(card => {
+          const devaSearch = card.getAttribute('data-search-deva') || '';
+          const iastSearch = card.getAttribute('data-search-iast') || '';
+          
+          const isMatch = devaSearch.includes(query) || iastSearch.includes(query);
+          
+          if (isMatch) {
+            card.style.display = 'block';
+            sectionMatches++;
+            matchCount++;
+            
+            // Show corresponding index link
+            const termId = card.id;
+            const link = document.querySelector(`.glossary-index-link[href="#${termId}"]`);
+            if (link) link.style.display = 'inline-flex';
+          } else {
+            card.style.display = 'none';
+            
+            // Hide corresponding index link
+            const termId = card.id;
+            const link = document.querySelector(`.glossary-index-link[href="#${termId}"]`);
+            if (link) link.style.display = 'none';
+          }
+        });
+        
+        if (sectionMatches > 0) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+      
+      matchingCount.textContent = `${matchCount} of ${cards.length} matching`;
+    }
+    
+    searchInput.addEventListener('input', runSearch);
+    
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      runSearch();
+      searchInput.focus();
+    });
+    
+    // Highlight card with Reflow animation flash
+    function highlightCard(hash) {
+      if (!hash) return;
+      const targetCard = document.querySelector(hash);
+      if (targetCard && targetCard.classList.contains('glossary-card')) {
+        cards.forEach(c => c.classList.remove('flash-active'));
+        void targetCard.offsetWidth; // force reflow
+        targetCard.classList.add('flash-active');
+        
+        // Scroll target card to center of viewport
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+    
+    // Listen for click on index links
+    indexLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const hash = link.getAttribute('href');
+        highlightCard(hash);
+        
+        // Close index panel on mobile
+        if (window.innerWidth < 768 && indexContainer) {
+          indexContainer.removeAttribute('open');
+        }
+      });
+    });
+    
+    // Check initial hash
+    if (window.location.hash) {
+      setTimeout(() => {
+        highlightCard(window.location.hash);
+      }, 300);
+    }
+  });
+</script>
+
 <style>
+  .glossary-header {
+    margin-bottom: 2rem;
+  }
+  
+  .glossary-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* Translucent Sticky Control Panel */
+  .glossary-controls-sticky {
+    position: sticky;
+    top: 3.5rem;
+    z-index: 40;
+    margin-bottom: 2.5rem;
+    padding: 0.85rem 1.25rem;
+    border-radius: 12px;
+    background: rgba(243, 239, 230, 0.85); /* Translucent surface */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  [data-theme="dark"] .glossary-controls-sticky {
+    background: rgba(36, 32, 25, 0.85);
+    border-color: var(--border-light);
+  }
+
+  @media (min-width: 768px) {
+    .glossary-controls-sticky {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+  }
+
+  .search-wrapper {
+    position: relative;
+    flex: 1;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.65rem 2.5rem 0.65rem 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-muted);
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.15rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-clear:hover {
+    background: var(--border-light);
+    color: var(--text);
+  }
+
+  .controls-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .matching-count {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  /* Segmented control script toggle */
+  .script-toggle-segmented {
+    display: flex;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.1875rem;
+  }
+
+  .script-toggle-btn {
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.25s ease;
+    user-select: none;
+  }
+
+  .script-toggle-btn:hover:not(.active) {
+    color: var(--text);
+  }
+
+  .script-toggle-btn.active {
+    background: var(--accent);
+    color: #ffffff;
+  }
+
+  [data-theme="dark"] .script-toggle-btn.active {
+    color: #1a1712;
+  }
+
+  /* Collapsible Index Pill Cloud */
+  .glossary-index-container {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-surface);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .glossary-index-container summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.95rem 1.25rem;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+  }
+
   .glossary-index-container summary::-webkit-details-marker {
     display: none;
   }
-  .glossary-index-container summary {
-    list-style: none;
+
+  .summary-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
   }
+
+  .details-chevron {
+    transition: transform 0.25s ease;
+    color: var(--text-secondary);
+  }
+
   .glossary-index-container[open] .details-chevron {
     transform: rotate(180deg);
   }
-</style>
 
+  .index-content {
+    border-top: 1px solid var(--border);
+    padding: 1.25rem;
+    background: var(--bg);
+  }
+
+  .glossary-index-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .glossary-index-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .glossary-index-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-muted);
+    text-decoration: none;
+  }
+
+  /* Section Title and Date styling */
+  .glossary-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-title {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+
+  .section-date {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 760px; /* Enforces premium centered max width */
+    margin: 0 auto;
+  }
+
+  /* Premium Card Design */
+  .glossary-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    scroll-margin-top: 10rem; /* offset for scrolling when sticky panel is active */
+  }
+
+  .glossary-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(139, 105, 20, 0.1);
+  }
+
+  [data-theme="dark"] .glossary-card:hover {
+    box-shadow: 0 6px 20px rgba(212, 168, 67, 0.08);
+  }
+
+  /* Card Jump Target Flash animation */
+  @keyframes card-flash {
+    0% {
+      background-color: var(--accent-muted);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-muted);
+    }
+    100% {
+      background-color: var(--bg-surface);
+      border-color: var(--border);
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+  }
+
+  .glossary-card.flash-active {
+    animation: card-flash 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.15rem;
+  }
+
+  @media (min-width: 640px) {
+    .card-header {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+  }
+
+  .card-word {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .card-phrasal {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+  }
+
+  /* Metadata Rows */
+  .card-meta, .card-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .card-meta, .card-breakdown {
+      flex-direction: row;
+      align-items: baseline;
+      gap: 1rem;
+    }
+  }
+
+  .meta-label, .breakdown-label {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    width: 90px;
+    flex-shrink: 0;
+  }
+
+  .meta-value {
+    color: var(--text-secondary);
+    font-family: var(--font-ui);
+    font-weight: 500;
+  }
+
+  .breakdown-content {
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .card-body {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1.25rem;
+    margin-top: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .definition-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .block-title {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .block-text {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .card-footer {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer-tag {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    background: var(--bg);
+    border: 1px solid var(--border-light);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  /* Dual script visibility classes */
+  .deva-only, .sanskrit-deva {
+    display: block;
+    font-family: var(--font-devanagari);
+  }
+  .sanskrit-deva {
+    display: inline;
+  }
+  
+  .iast-only, .sanskrit-iast {
+    display: none;
+  }
+
+  html[data-script="iast"] .deva-only,
+  html[data-script="iast"] .sanskrit-deva {
+    display: none;
+  }
+
+  html[data-script="iast"] .iast-only {
+    display: block;
+  }
+  
+  html[data-script="iast"] .sanskrit-iast {
+    display: inline;
+    font-family: var(--font-body);
+    font-style: italic;
+  }
+
+  h3.card-word .deva-only {
+    display: block;
+  }
+  h3.card-word .iast-only {
+    display: none;
+  }
+  html[data-script="iast"] h3.card-word .deva-only {
+    display: none;
+  }
+  html[data-script="iast"] h3.card-word .iast-only {
+    display: block;
+    font-style: italic;
+  }
+</style>
