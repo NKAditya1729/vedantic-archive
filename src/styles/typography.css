@@ -54,6 +54,7 @@ h3 {
 /* --- Paragraphs --- */
 p {
   margin-bottom: 1.25rem;
+  text-align: justify;
 }
 
 p:last-child {
@@ -62,7 +63,7 @@ p:last-child {
 
 /* --- Strong / Bold --- */
 strong, b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* --- Devanagari text --- */
@@ -71,12 +72,12 @@ strong, b {
   font-family: var(--font-devanagari);
 }
 
-/* Bold Devanagari — use semibold (600) not bold (700) to avoid visual heaviness */
+/* Bold Devanagari — use bold (700) */
 .devanagari strong,
 .devanagari b,
 [lang="sa"] strong,
 [lang="sa"] b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* --- Verse / Citation Blocks --- */
