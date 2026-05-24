@@ -158,7 +158,9 @@ function getTermSlug(termIast: string, classNum: number | null) {
 
                 {term.source && (
                   <div class="card-source">
-                    Source: <span set:html={term.source} />
+                    Source:
+                    <span class="deva-only" set:html={term.source} />
+                    <span class="iast-only" set:html={term.source_iast || term.source} />
                   </div>
                 )}
 
@@ -211,7 +213,9 @@ function getTermSlug(termIast: string, classNum: number | null) {
 
                 {term.source && (
                   <div class="card-source">
-                    Source: <span set:html={term.source} />
+                    Source:
+                    <span class="deva-only" set:html={term.source} />
+                    <span class="iast-only" set:html={term.source_iast || term.source} />
                   </div>
                 )}
 
