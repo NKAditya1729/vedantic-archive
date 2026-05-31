@@ -8,7 +8,7 @@ class_number: 11
 date: "2026-05-25"
 coverage: "आत्मा एव प्रियः, not anything else; the unique vedāntic सत्यम्-मिथ्या distinction in reality; आत्मा वा अरे द्रष्टव्यः — treating one's blindness through श्रवण-मनन-निदिध्यासन; तदेतत्प्रेयः पुत्रात् (१.४.८) as वृत्तिस्थानीयम् expanded; गौणी प्रीति elsewhere, मुख्या in the आत्मा; प्रमायुकम् — always in the jaws of death."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-11/Brhad_2-4_Class_11.mp3"
-video_url: "https://www.youtube.com/watch?v=LQRCZfNYD8E"
+video_url: "https://www.youtube.com/watch?v=mASMI_VG32E"
 materials_url: ""
 script: devanagari
 source_text_content: |

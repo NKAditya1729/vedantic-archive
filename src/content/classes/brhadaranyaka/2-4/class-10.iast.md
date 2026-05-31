@@ -8,7 +8,7 @@ class_number: 10
 date: "2026-05-21"
 coverage: "Ātmanas tu kāmāya continued; pleased self as what is really loved; rāga-dveṣa and objectivity toward relationships; happiness as not in object or mind; sleep and relief from wanting; ānanda as unproduced and not an event."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-10/Brhad_2-4_Class_10.mp3"
-video_url: "https://www.youtube.com/watch?v=LQRCZfNYD8E&list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn"
+video_url: "https://www.youtube.com/watch?v=LQRCZfNYD8E"
 materials_url: ""
 script: iast
 source_text_content: |

@@ -8,7 +8,7 @@ class_number: 11
 date: "2026-05-25"
 coverage: "Ātmā eva priyaḥ, not anything else; the unique vedāntic satyam–mithyā distinction in reality; ātmā vā are draṣṭavyaḥ — treating one's blindness through śravaṇa-manana-nididhyāsana; tadetatpreyaḥ putrāt (1.4.8) as vṛttisthānīyam expanded; gauṇī prīti elsewhere, mukhyā in the ātmā; pramāyukam — always in the jaws of death."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-11/Brhad_2-4_Class_11.mp3"
-video_url: "https://www.youtube.com/watch?v=LQRCZfNYD8E"
+video_url: "https://www.youtube.com/watch?v=mASMI_VG32E"
 materials_url: ""
 script: iast
 source_text_content: |
