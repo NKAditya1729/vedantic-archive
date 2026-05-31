@@ -144,33 +144,56 @@ button {
   height: 3px !important;
 }
 
-/* Class body prose line height and paragraph spacing */
+/* ── Class body typography ─────────────────── */
 .class-body p {
-  line-height: 1.75;
+  line-height: 1.8;
   margin-bottom: 1.25rem;
   margin-top: 0;
 }
 .class-body.devanagari p {
-  line-height: 1.85;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
 }
 
-/* Invocation Block styling */
+/* ── Invocation block ───────────────────────── */
 .invocation-block {
   border-left: 3px solid var(--primary-color, #8B6914);
   padding: 1rem 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   background: var(--surface-2, #f5f0e8);
   border-radius: 0 4px 4px 0;
   font-style: italic;
-  line-height: 1.9;
+  line-height: 2;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.invocation-verse {
+  display: block;
+  margin-bottom: 0.1rem;
+}
+.invocation-separator {
+  border: none;
+  border-top: 1px solid var(--border-color, #ddd);
+  margin: 1.75rem 0 1.75rem 0;
+}
+
+/* ── Closing verse ──────────────────────────── */
+.closing-verse-block {
+  border-left: 3px solid var(--primary-color, #8B6914);
+  padding: 0.75rem 1.25rem;
+  margin-top: 2rem;
+  background: var(--surface-2, #f5f0e8);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  line-height: 2;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
-.invocation-separator {
-  border: none;
-  border-top: 1px solid var(--border-color, #ddd);
-  margin: 1.5rem 0 2rem 0;
+/* ── Paragraph spacer (teaching breaks) ────── */
+.para-spacer {
+  display: block;
+  height: 1.4rem;
 }
 
 /* Section heading spacing for article/main content */

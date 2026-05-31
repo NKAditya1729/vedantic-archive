@@ -356,62 +356,110 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
       }
     }
 
-    // Automatically group invocation paragraphs
-    function initInvocationGrouping() {
-      const bodies = document.querySelectorAll('.class-body');
-      bodies.forEach(body => {
-        const paragraphs = Array.from(body.querySelectorAll('p'));
-        let inGroup = false;
-        let groupParas: HTMLParagraphElement[] = [];
+    function processClassBody() {
+      document.querySelectorAll('.class-body').forEach(body => {
+        const allParas = Array.from(body.querySelectorAll('p'));
+        if (!allParas.length) return;
 
-        paragraphs.forEach((p, idx) => {
-          const text = p.innerText.trim();
-          const cleanText = text.toLowerCase().replace(/^[*\s_॥।\-]+/g, '');
-          
-          const startsWithOm = /^(om|oṃ|oṁ|ॐ|śruti|श्रुति|īśvara|ईश्वरो)/i.test(cleanText);
-          const endsWithTarget = /(śāntiḥ|शान्तिः|gurubhyaḥ|गुरुभ्यः)[*\s_॥।\-]*$/i.test(cleanText);
+        // ── A: Opening invocation ──────────────────────────────────
+        const first = allParas[0];
+        const ft = first ? first.textContent.trim() : '';
+        const hasOM = ft.startsWith('oṃ') || ft.startsWith('ॐ') ||
+                      ft.toLowerCase().startsWith('om ');
 
-          if (!inGroup && startsWithOm) {
-            inGroup = true;
-            groupParas = [p as HTMLParagraphElement];
-          } else if (inGroup) {
-            groupParas.push(p as HTMLParagraphElement);
+        if (hasOM) {
+          // Collect invocation paragraphs (ends at gurubhyaḥ line)
+          let invocEls = [];
+          for (let i = 0; i < Math.min(allParas.length, 8); i++) {
+            const t = allParas[i].textContent.trim();
+            const isEnglish = /^(So |Now |In |The |We |This )/.test(t)
+                              && t.length > 100;
+            invocEls.push(allParas[i]);
+            if (t.includes('gurubhyaḥ') || t.includes('गुरुभ्यः') ||
+                t.includes('namo gurubhyaḥ')) break;
+            if (isEnglish) { invocEls.pop(); break; }
           }
 
-          if (inGroup && endsWithTarget) {
-            // Check if next paragraph also starts with invocation start words
-            const nextP = paragraphs[idx + 1];
-            let nextStarts = false;
-            if (nextP) {
-              const nextText = nextP.innerText.trim();
-              const nextClean = nextText.toLowerCase().replace(/^[*\s_॥।\-]+/g, '');
-              nextStarts = /^(om|oṃ|oṁ|ॐ|śruti|श्रुति|īśvara|ईश्वरो)/i.test(nextClean);
-            }
+          if (invocEls.length) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'invocation-block';
 
-            if (!nextStarts) {
-              // Wrap the current group
-              const firstPara = groupParas[0];
-              const parent = firstPara.parentNode;
-              if (parent) {
-                const container = document.createElement('div');
-                container.className = 'invocation-block';
-                
-                // Insert container before the first paragraph
-                parent.insertBefore(container, firstPara);
-                
-                // Move paragraphs inside
-                groupParas.forEach(gp => {
-                  container.appendChild(gp);
-                });
-                
-                // Create separator and insert after container
-                const hr = document.createElement('hr');
-                hr.className = 'invocation-separator';
-                parent.insertBefore(hr, container.nextSibling);
-              }
-              inGroup = false;
-              groupParas = [];
+            invocEls.forEach(el => {
+              // Split by || to put each śloka on its own line
+              const parts = el.innerHTML.split(/\s*\|\|\s*/);
+              parts.forEach((part, pi) => {
+                const p = part.trim();
+                if (!p) return;
+                const span = document.createElement('span');
+                span.className = 'invocation-verse';
+                span.innerHTML = p + (pi < parts.length - 2 ? ' ||' : '');
+                wrapper.appendChild(span);
+              });
+              el.remove();
+            });
+
+            body.insertBefore(wrapper, body.firstChild);
+            const hr = document.createElement('hr');
+            hr.className = 'invocation-separator';
+            wrapper.after(hr);
+          }
+        }
+
+        // ── B: Closing pūrṇam / śānti verse ───────────────────────
+        const allP2 = Array.from(body.querySelectorAll('p'));
+        allP2.slice(-4).forEach(el => {
+          const t = el.textContent.trim();
+          if ((t.includes('pūrṇamadaḥ') || t.includes('पूर्णमदः') ||
+               (t.includes('hariḥ oṃ') || t.includes('हरिः ॐ')) ||
+               ((t.includes('śāntiḥ') || t.includes('शान्तिः'))
+                && t.length < 300)) && !el.classList.contains('invocation-block')) {
+            el.classList.add('closing-verse-block');
+            const parts = el.innerHTML.split(/\s*\|\|\s*/);
+            if (parts.length > 1) {
+              el.innerHTML = parts.filter(p => p.trim())
+                .map((p, i, a) =>
+                  '<span class="invocation-verse">' + p.trim() +
+                  (i < a.length - 1 ? ' ||' : '') + '</span>')
+                .join('');
             }
+          }
+        });
+
+        // ── C: Teaching paragraph breaks ──────────────────────────
+        // Swamiji ends a point with "Okay?" / "Okay." / "Alright."
+        // and begins the next with "So " / "Now " / "Let me " etc.
+        // We inject a visual spacer at these natural breaks so the
+        // teaching reads as distinct paragraphs.
+        Array.from(body.querySelectorAll('p')).forEach(p => {
+          if (p.classList.contains('invocation-block') ||
+              p.classList.contains('closing-verse-block') ||
+              p.classList.contains('invocation-verse')) return;
+
+          const text = p.textContent;
+          if (text.length < 300) return; // short paras are fine as-is
+
+          // Pattern: sentence ending with Okay. / Okay? / Alright.
+          // followed by a new sentence starting with capital
+          let html = p.innerHTML;
+
+          // Break after "Okay." or "Okay?" followed by new sentence
+          html = html.replace(
+            /(\bOkay\s*[.?]\s+)(?=[A-Z\*<])/g,
+            '$1<span class="para-spacer"></span>'
+          );
+          // Break after "Alright." followed by new sentence
+          html = html.replace(
+            /(\bAlright\s*[.?]\s+)(?=[A-Z\*<])/g,
+            '$1<span class="para-spacer"></span>'
+          );
+          // Break before strong paragraph transitions
+          html = html.replace(
+            /(\.\s+)((?:So now|Now,|So,|Coming back|Let me|Let's go back|Let us|Therefore,|This is why|That is why|The point is)[, ])/g,
+            '$1<span class="para-spacer"></span>$2'
+          );
+
+          if (html !== p.innerHTML) {
+            p.innerHTML = html;
           }
         });
       });
@@ -420,7 +468,7 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
     // Initialize scripts
     document.addEventListener('DOMContentLoaded', () => {
       initScriptToggle();
-      initInvocationGrouping();
+      processClassBody();
 
       const progress = document.getElementById('reading-progress');
       if (progress) {
@@ -433,6 +481,12 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
         updateProgress();
         document.addEventListener('scroll', updateProgress, { passive: true });
       }
+    });
+
+    document.querySelectorAll('.script-toggle__btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(processClassBody, 60);
+      });
     });
   </script>
 </BaseLayout>
