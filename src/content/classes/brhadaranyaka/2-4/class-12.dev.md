@@ -6,7 +6,7 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 12
 date: "2026-05-28"
-coverage: "मोक्ष as प्राप्तस्य प्राप्तिः, recognised not gained in time; सत्यम् vs मिथ्या, two orders of reality; श्रवण-मनन-निदिध्यासन as आगम, तर्क, निश्चय"
+coverage: "Two orders of reality (सत्यम् and मिथ्या) vs. the structural error of manyness; resolving the rope-snake and clay-pot analogies; श्रवण, मनन, and निदिध्यासन as a single, intertwined tripartite path (एकवाक्यता) rather than independent means; श्रवण as the primary limb (अङ्गी) with मनन and निदिध्यासन as secondary limbs (अङ्ग); refuting परोक्ष-ज्ञान (indirect knowledge) of the self and the misconception of meditation as an experience-producing event; final sublation of प्रपञ्च through आत्म-ज्ञान."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-12/Brhad_2-4_Class_12.mp3"
 video_url: "https://www.youtube.com/watch?v=xEYvuxJdtt8"
 materials_url: ""

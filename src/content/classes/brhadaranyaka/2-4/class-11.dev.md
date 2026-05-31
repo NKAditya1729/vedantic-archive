@@ -6,7 +6,7 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 11
 date: "2026-05-25"
-coverage: "आत्मा एव प्रियः, not anything else; the unique vedāntic सत्यम्-मिथ्या distinction in reality; आत्मा वा अरे द्रष्टव्यः — treating one's blindness through श्रवण-मनन-निदिध्यासन; तदेतत्प्रेयः पुत्रात् (१.४.८) as वृत्तिस्थानीयम् expanded; गौणी प्रीति elsewhere, मुख्या in the आत्मा; प्रमायुकम् — always in the jaws of death."
+coverage: "बृहदारण्यक उपनिषद् 2.4.5 and 1.4.8 continued; आत्मनस्तु कामाय and the conditional nature of love for the \"pleased self\"; structural overview of सूत्र, भाष्य, and the pedagogical framework of brief vs. expanded exposition; confrontation of मृत्यु (death) as a daily reality vs. the delusion of going from \"life to life\"; defending the pedagogical virtue of पुनरुक्ति (repetition) to remove cognitive blindness."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-11/Brhad_2-4_Class_11.mp3"
 video_url: "https://www.youtube.com/watch?v=mASMI_VG32E"
 materials_url: ""

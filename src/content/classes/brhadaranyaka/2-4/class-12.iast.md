@@ -6,7 +6,7 @@ brahmana: 4
 brahmana_name: Maitreyī Brāhmaṇa
 class_number: 12
 date: "2026-05-28"
-coverage: "mokṣa as prāptasya prāptiḥ, recognised not gained in time; satyam vs mithyā, two orders of reality; śravaṇa-manana-nididhyāsana as āgama, tarka, niścaya"
+coverage: "Two orders of reality (satyam and mithyā) vs. the structural error of manyness; resolving the rope-snake and clay-pot analogies; śravaṇa, manana, and nididhyāsana as a single, intertwined tripartite path (ekavākyatā) rather than independent means; śravaṇa as the primary limb (aṅgī) with manana and nididhyāsana as secondary limbs (aṅga); refuting parokṣa-jñāna (indirect knowledge) of the self and the misconception of meditation as an experience-producing event; final sublation of prapañca through ātma-jñāna."
 audio_url: "https://archive.org/download/vedantic-archive-brhad-2-4-class-12/Brhad_2-4_Class_12.mp3"
 video_url: "https://www.youtube.com/watch?v=xEYvuxJdtt8"
 materials_url: ""
