@@ -394,7 +394,7 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
           if (!v) return;
           const span = document.createElement('span');
           span.className = 'invocation-verse';
-          span.textContent = v;
+          span.innerHTML = v;
           invocDiv.appendChild(span);
         });
 

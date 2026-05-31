@@ -154,7 +154,7 @@ button {
 /* ── Invocation block ───────────────────────── */
 .invocation-block {
   border-left: 3px solid var(--primary-color, #8B6914);
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   margin-bottom: 0;
   background: var(--surface-2, #f5f0e8);
   border-radius: 0 4px 4px 0;
