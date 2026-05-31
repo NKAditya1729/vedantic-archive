@@ -22,6 +22,11 @@ allClasses.forEach(c => {
 const classSections = glossarySections.filter(s => s.classNumber !== null);
 const coreSection = glossarySections.find(s => s.classNumber === null);
 
+// Most recent class is expanded by default; older classes start collapsed
+const maxClassNumber = classSections.length
+  ? Math.max(...classSections.map(s => s.classNumber))
+  : 0;
+
 // Generate flat list of all terms for the index cloud, sorted alphabetically by IAST
 const allIndexTerms = glossarySections
   .flatMap(section => 
@@ -124,12 +129,20 @@ function getTermSlug(termIast: string, classNum: number | null) {
     <!-- Main Cards Section -->
     <div class="glossary-sections-container">
       {classSections.map(section => (
-        <section class="glossary-section" id={`class-section-${section.classNumber}`}>
-          <h2 class="section-title">
-            Class {section.classNumber} — {section.sectionTitle} 
+        <details
+          class="glossary-section class-accordion"
+          id={`class-section-${section.classNumber}`}
+          open={section.classNumber === maxClassNumber}
+          data-default-open={section.classNumber === maxClassNumber ? '' : undefined}
+        >
+          <summary class="class-accordion__header">
+            <span class="accordion-class">Class {section.classNumber}</span>
+            <span class="accordion-title">{section.sectionTitle}</span>
             {classDates[section.classNumber] && <span class="section-date">({classDates[section.classNumber]})</span>}
-          </h2>
-          
+            <span class="term-count">{section.terms.length} terms</span>
+          </summary>
+
+          <div class="class-accordion__body">
           <div class="cards-grid">
             {section.terms.map(term => (
               <article 
@@ -178,13 +191,19 @@ function getTermSlug(termIast: string, classNum: number | null) {
               </article>
             ))}
           </div>
-        </section>
+          </div>
+        </details>
       ))}
 
       {coreSection && coreSection.terms.length > 0 && (
-        <section class="glossary-section" id="class-section-core">
-          <h2 class="section-title">{coreSection.sectionTitle}</h2>
-          
+        <details class="glossary-section class-accordion" id="class-section-core">
+          <summary class="class-accordion__header">
+            <span class="accordion-class">Core</span>
+            <span class="accordion-title">{coreSection.sectionTitle}</span>
+            <span class="term-count">{coreSection.terms.length} terms</span>
+          </summary>
+
+          <div class="class-accordion__body">
           <div class="cards-grid">
             {coreSection.terms.map(term => (
               <article 
@@ -233,7 +252,8 @@ function getTermSlug(termIast: string, classNum: number | null) {
               </article>
             ))}
           </div>
-        </section>
+          </div>
+        </details>
       )}
     </div>
   </div>
@@ -350,6 +370,17 @@ function getTermSlug(termIast: string, classNum: number | null) {
         } else {
           section.style.display = 'none';
         }
+
+        // Accordion behaviour: while searching, expand every section that has
+        // matches so the cards are visible; when the query is cleared, restore
+        // the default (only the most recent class open).
+        if (section.tagName === 'DETAILS') {
+          if (rawQuery.length > 0) {
+            section.open = sectionMatches > 0;
+          } else {
+            section.open = section.hasAttribute('data-default-open');
+          }
+        }
       });
       
       matchingCount.textContent = `${matchCount} of ${cards.length} matching`;
@@ -368,6 +399,10 @@ function getTermSlug(termIast: string, classNum: number | null) {
       if (!hash) return;
       const targetCard = document.querySelector(hash);
       if (targetCard && targetCard.classList.contains('glossary-card')) {
+        // Open the containing accordion so the target card is visible
+        const accordion = targetCard.closest('details.class-accordion');
+        if (accordion) accordion.open = true;
+
         cards.forEach(c => c.classList.remove('flash-active'));
         void targetCard.offsetWidth; // force reflow
         targetCard.classList.add('flash-active');
@@ -624,6 +659,59 @@ function getTermSlug(termIast: string, classNum: number | null) {
   /* Section Title and Date styling */
   .glossary-section {
     margin-bottom: 4rem;
+  }
+
+  /* Collapsible class accordion */
+  .class-accordion {
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-surface);
+  }
+
+  .class-accordion__header {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.85rem;
+    padding: 1.1rem 1.35rem;
+    font-family: var(--font-body);
+    background-color: var(--bg-surface-alt, var(--bg-surface));
+    transition: background-color 0.15s ease;
+  }
+
+  .class-accordion__header::-webkit-details-marker { display: none; }
+  .class-accordion__header:hover { background-color: var(--border-light); }
+
+  .class-accordion[open] .class-accordion__header {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .accordion-class {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .accordion-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .term-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
+  .class-accordion__body {
+    padding: 2rem 1.35rem 2.5rem;
   }
 
   .section-title {
