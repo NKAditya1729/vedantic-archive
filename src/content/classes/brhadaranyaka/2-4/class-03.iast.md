@@ -15,7 +15,7 @@ source_text_content: |
   <div class="source-text-structured">
     <p class="source-ref-line">Covered: Bṛhad. 2.4 sambandha-bhāṣya</p>
     <p class="src-label bhashyam-label">॥ Bhāṣyam ॥</p>
-    <p class="src-bhashyam">kecittu brahmavido&#x27;pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — *<span class="src-pratika">‘yeṣāṃ no&#x27;yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
+    <p class="src-bhashyam">kecittu brahmavido&#x27;pyeṣaṇāsambandhaṃ varṇayanti ; tairbṛhadāraṇyakaṃ na śrutam ; putrādyeṣaṇānāmavidvadviṣayatvam , vidyāviṣaye ca — <span class="src-pratika">‘yeṣāṃ no&#x27;yamātmāyaṃ lokaḥ’ (bṛ. u. 4 | 4 | 22)</span> ityataḥ ‘kiṃ prajayā kariṣyāmaḥ’ iti — eṣa vibhāgaḥ tairna śrutaḥ śrutyā kṛtaḥ ; sarvakriyā-kāraka-phalopamarda-svarūpāyāṃ ca vidyāyāṃ satyām , saha kāryeṇa avidyāyā anupapatti-lakṣaṇaśca virodhaḥ tairna vijñātaḥ ; vyāsa-vākyaṃ ca tairna śrutam | karma-vidyā-svarūpayoḥ vidyāvidyātmakayoḥ pratikūlavartanaṃ virodhaḥ |</p>
     <p class="src-bhashyam">‘yadidaṃ vedavacanaṃ kuru karma tyajeti ca | kāṃ gatiṃ vidyayā yānti kāṃ ca gacchanti karmaṇā’ (mo. dha. 241 | 1 | 2) ||</p>
     <p class="src-bhashyam">etadvai śrotumicchāmi tadbhavānprabravītu me | etāvanyonyavairupye vartete pratikūlataḥ’ ityevaṃ pṛṣṭasya prativacanena —</p>
     <p class="src-bhashyam">‘karmaṇā badhyate janturvidyayā ca vimucyate |</p>
