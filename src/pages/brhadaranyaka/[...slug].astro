@@ -72,23 +72,6 @@ const { Content: IastContent } = await render(iastEntry);
 const devResult = devEntry ? await render(devEntry) : null;
 const DevContent = devResult?.Content ?? null;
 
-// Calculate course progress
-const allClasses = await getCollection('classes');
-const seriesClasses = allClasses
-  .filter(c => c.data.script === 'iast' && c.data.series === data.series)
-  .sort((a, b) => {
-    if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
-    if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
-    return a.data.class_number - b.data.class_number;
-  });
-const currentIdx = seriesClasses.findIndex(
-  c => c.data.adhyaya === data.adhyaya &&
-       c.data.brahmana === data.brahmana &&
-       c.data.class_number === data.class_number
-);
-const totalClasses = seriesClasses.length;
-const progressPercent = totalClasses > 0 ? Math.round(((currentIdx + 1) / totalClasses) * 100) : 0;
-
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
@@ -149,62 +132,42 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
         {data.brahmana_name} ({data.adhyaya}.{data.brahmana}) — Class {data.class_number}
       </h1>
       <div class="class-header__date" data-pagefind-meta="date">{formatDate(data.date)}</div>
-      
-      <!-- Class Progress Bar -->
-      <div class="class-progress" style="margin-top: 0.5rem; margin-bottom: 1.25rem;">
-        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.25rem; font-family: var(--font-ui);">
-          <span>Class progress</span>
-          <span>{currentIdx + 1} / {totalClasses} ({progressPercent}%)</span>
-        </div>
-        <div style="width: 100%; height: 4px; background-color: var(--border-light); border-radius: 2px; overflow: hidden;">
-          <div style={`width: ${progressPercent}%; height: 100%; background-color: var(--accent); transition: width 0.3s ease;`}></div>
-        </div>
-      </div>
-
       <div class="class-header__coverage">
         <strong style="font-size: 0.8125rem; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary);">Coverage</strong><br>
         {data.coverage}
       </div>
       
       <!-- Metadata Block -->
-      <div class="class-metadata" style="margin-top: 1.5rem; border-top: 1px solid var(--border-light); padding-top: 0.75rem; display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.75rem; color: var(--text-tertiary);">
+      <div class="class-metadata text-xs meta" style="margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
         <div><strong>Status:</strong> Audio-reviewed and Editor-corrected</div>
         <div><strong>Version:</strong> 1.0</div>
-        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive - ${data.brahmana_name} Class ${data.class_number}`} style="color: inherit; text-decoration: underline;">Report Error / Feedback</a></div>
+        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive - ${data.brahmana_name} Class ${data.class_number}`}>Report Error / Feedback</a></div>
       </div>
     </header>
 
+    {videoId && (
+      <div class="video-embed" style="margin-bottom: 2rem;">
+        <strong style="display:block; margin-bottom:0.5rem; font-size:0.875rem;">Watch Class Video</strong>
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}`}
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          />
+        </div>
+      </div>
+    )}
+
     <!-- Audio Player -->
     {audioUrl && (
-      <div class="audio-player" style="margin-top: 1.5rem; margin-bottom: 1.5rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
+      <div class="audio-player" style="margin-bottom: 2rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
         <strong style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem;">Listen to Class Audio</strong>
         <audio controls src={audioUrl} style="width: 100%;">
           Your browser does not support the audio element.
         </audio>
       </div>
-    )}
-
-    {videoId && (
-      <details class="accordion video-accordion" style="margin-bottom: 2rem; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden;">
-        <summary style="font-weight: 600; padding: 1rem; background: var(--bg-surface); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
-          <span style="font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent);"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            Watch Class Video (Optional)
-          </span>
-          <span class="accordion-icon" style="transition: transform 0.2s ease; font-size: 0.75rem; color: var(--text-tertiary);">▼</span>
-        </summary>
-        <div style="padding: 1rem; background: var(--bg);">
-          <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px;">
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
-              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </details>
     )}
 
     <!-- Script Toggle -->
@@ -356,176 +319,8 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
       }
     }
 
-    function processClassBody() {
-      // The invocation always ends with one of these markers:
-      const INVOC_END_IAST = [
-        'namo gurubhyaḥ ||',
-        'namo gurubhyaḥ',
-        'gurubhyaḥ ||',
-        'gurubhyaḥ',
-      ];
-      const INVOC_END_DEV = [
-        'नमो गुरुभ्यः॥',
-        'नमो गुरुभ्यः ।।',
-        'गुरुभ्यः॥',
-        'गुरुभ्यः ।।',
-        'गुरुभ्यः',
-      ];
-
-      // Helper: split a paragraph element into multiple elements
-      // at a text split point, inserting them in place
-      function splitParagraphAt(para, splitAfterText) {
-        const html = para.innerHTML;
-        const idx = html.indexOf(splitAfterText);
-        if (idx === -1) return false;
-
-        const invocHTML = html.substring(0, idx + splitAfterText.length).trim();
-        let teachHTML = html.substring(idx + splitAfterText.length).trim();
-        // Remove leading pipes/dandas/spaces
-        teachHTML = teachHTML.replace(/^[\s|।॥]+/, '').trim();
-        if (!invocHTML || !teachHTML) return false;
-
-        // Build invocation block
-        const invocDiv = document.createElement('div');
-        invocDiv.className = 'invocation-block';
-        const verses = invocHTML.split(/\s*\|\|\s*/);
-        verses.forEach((verse) => {
-          const v = verse.trim();
-          if (!v) return;
-          const span = document.createElement('span');
-          span.className = 'invocation-verse';
-          span.innerHTML = v;
-          invocDiv.appendChild(span);
-        });
-
-        // Build separator
-        const hr = document.createElement('hr');
-        hr.className = 'invocation-separator';
-
-        // Build teaching paragraph
-        const teachPara = document.createElement('p');
-        teachPara.innerHTML = teachHTML;
-
-        // Replace original element
-        para.replaceWith(invocDiv, hr, teachPara);
-        return true;
-      }
-
-      // Helper: split long paragraph at natural break points
-      // Returns array of new paragraphs
-      function smartSplit(para) {
-        if (para.textContent.length < 450) return;
-        if (para.closest('.invocation-block') ||
-            para.classList.contains('closing-verse-block')) return;
-
-        let html = para.innerHTML;
-        const original = html;
-
-        // Mark break points with a sentinel string
-        const SENTINEL = '|||PARABREAK|||';
-
-        // Break after "Okay." or "Okay?" at end of a point
-        html = html.replace(/(\bOkay\s*\.)\s+(?=[A-Z\u0900-\u097F\*])/g,
-          '$1 ' + SENTINEL);
-        html = html.replace(/(\bOkay\s*\?)\s+(?=[A-Z\u0900-\u097F\*])/g,
-          '$1 ' + SENTINEL);
-        // Break after "Alright." / "Alright?"
-        html = html.replace(/(\bAlright\s*[.?])\s+(?=[A-Z\*])/g,
-          '$1 ' + SENTINEL);
-        // Break before strong transition phrases at sentence start
-        html = html.replace(/\.\s+(So now[,\s])/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(Now,\s)/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(Coming back\s)/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(Let me\s)/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(Let us\s)/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(Therefore,\s)/g, '. ' + SENTINEL + '$1');
-        html = html.replace(/\.\s+(This is why\s)/g, '. ' + SENTINEL + '$1');
-
-        if (html === original) return; // no breaks found
-
-        const parts = html.split(SENTINEL).filter(p => p.trim());
-        if (parts.length < 2) return;
-
-        const fragment = document.createDocumentFragment();
-        parts.forEach(part => {
-          const np = document.createElement('p');
-          np.innerHTML = part.trim();
-          fragment.appendChild(np);
-        });
-        para.parentNode.replaceChild(fragment, para);
-      }
-
-      // Process each class-body panel
-      document.querySelectorAll('.class-body').forEach(body => {
-        // ── 1. OPENING INVOCATION ───────────────────────────────────────
-        const firstPara = body.querySelector('p');
-        if (firstPara) {
-          const text = firstPara.textContent.trim();
-          const startsOM = text.startsWith('oṃ') ||
-                           text.startsWith('ॐ') ||
-                           text.toLowerCase().startsWith('om ');
-
-          if (startsOM) {
-            // Try each possible end marker
-            let found = false;
-            const markers = [...INVOC_END_IAST, ...INVOC_END_DEV];
-            for (const marker of markers) {
-              if (firstPara.innerHTML.includes(marker)) {
-                found = splitParagraphAt(firstPara, marker);
-                if (found) break;
-              }
-            }
-
-            // Fallback: if no marker found but para has || and English after,
-            // split at last || sequence before an English capital letter
-            if (!found && text.includes('||')) {
-              const html = firstPara.innerHTML;
-              // Find last || before English text
-              const matches = [...html.matchAll(/\|\|/g)];
-              if (matches.length > 0) {
-                const lastMatch = matches[matches.length - 1];
-                const afterPipes = html.substring(lastMatch.index + 2);
-                if (/^\s*[A-Z]/.test(afterPipes)) {
-                  splitParagraphAt(firstPara, '||' + html.substring(
-                    lastMatch.index + 2,
-                    lastMatch.index + 2 + afterPipes.search(/[A-Z]/)));
-                }
-              }
-            }
-          }
-        }
-
-        // ── 2. CLOSING VERSE ────────────────────────────────────────────
-        const allP = Array.from(body.querySelectorAll('p'));
-        const closingMarkers = [
-          'pūrṇamadaḥ', 'पूर्णमदः',
-          'hariḥ oṃ', 'हरिः ॐ',
-        ];
-        allP.slice(-5).forEach(p => {
-          const t = p.textContent;
-          if (closingMarkers.some(m => t.includes(m)) &&
-              !p.closest('.invocation-block')) {
-            p.classList.add('closing-verse-block');
-            // Format verses: split by || onto separate lines
-            const parts = p.innerHTML.split(/\s*\|\|\s*/);
-            if (parts.length > 1) {
-              p.innerHTML = parts.filter(v => v.trim())
-                .map(v => '<span class="invocation-verse">' + v.trim() + '</span>')
-                .join('');
-            }
-          }
-        });
-
-        // ── 3. SMART PARAGRAPH BREAKS ───────────────────────────────────
-        // Run on ALL paragraphs (snapshot first to avoid mutation issues)
-        Array.from(body.querySelectorAll('p')).forEach(p => {
-          smartSplit(p);
-        });
-      });
-    }
-
-    // ── Run after DOM and after every script-toggle click ──────────────
-    function runOnceReady() {
+    // Initialize scripts
+    document.addEventListener('DOMContentLoaded', () => {
       initScriptToggle();
 
       const progress = document.getElementById('reading-progress');
@@ -539,20 +334,6 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
         updateProgress();
         document.addEventListener('scroll', updateProgress, { passive: true });
       }
-
-      processClassBody();
-      
-      document.querySelectorAll('.script-toggle__btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          setTimeout(processClassBody, 80);
-        });
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', runOnceReady);
-    } else {
-      runOnceReady();
-    }
+    });
   </script>
 </BaseLayout>
