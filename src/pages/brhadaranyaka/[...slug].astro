@@ -357,118 +357,176 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
     }
 
     function processClassBody() {
+      // The invocation always ends with one of these markers:
+      const INVOC_END_IAST = [
+        'namo gurubhyaḥ ||',
+        'namo gurubhyaḥ',
+        'gurubhyaḥ ||',
+        'gurubhyaḥ',
+      ];
+      const INVOC_END_DEV = [
+        'नमो गुरुभ्यः॥',
+        'नमो गुरुभ्यः ।।',
+        'गुरुभ्यः॥',
+        'गुरुभ्यः ।।',
+        'गुरुभ्यः',
+      ];
+
+      // Helper: split a paragraph element into multiple elements
+      // at a text split point, inserting them in place
+      function splitParagraphAt(para, splitAfterText) {
+        const html = para.innerHTML;
+        const idx = html.indexOf(splitAfterText);
+        if (idx === -1) return false;
+
+        const invocHTML = html.substring(0, idx + splitAfterText.length).trim();
+        let teachHTML = html.substring(idx + splitAfterText.length).trim();
+        // Remove leading pipes/dandas/spaces
+        teachHTML = teachHTML.replace(/^[\s|।॥]+/, '').trim();
+        if (!invocHTML || !teachHTML) return false;
+
+        // Build invocation block
+        const invocDiv = document.createElement('div');
+        invocDiv.className = 'invocation-block';
+        const verses = invocHTML.split(/\s*\|\|\s*/);
+        verses.forEach((verse) => {
+          const v = verse.trim();
+          if (!v) return;
+          const span = document.createElement('span');
+          span.className = 'invocation-verse';
+          span.textContent = v;
+          invocDiv.appendChild(span);
+        });
+
+        // Build separator
+        const hr = document.createElement('hr');
+        hr.className = 'invocation-separator';
+
+        // Build teaching paragraph
+        const teachPara = document.createElement('p');
+        teachPara.innerHTML = teachHTML;
+
+        // Replace original element
+        para.replaceWith(invocDiv, hr, teachPara);
+        return true;
+      }
+
+      // Helper: split long paragraph at natural break points
+      // Returns array of new paragraphs
+      function smartSplit(para) {
+        if (para.textContent.length < 450) return;
+        if (para.closest('.invocation-block') ||
+            para.classList.contains('closing-verse-block')) return;
+
+        let html = para.innerHTML;
+        const original = html;
+
+        // Mark break points with a sentinel string
+        const SENTINEL = '|||PARABREAK|||';
+
+        // Break after "Okay." or "Okay?" at end of a point
+        html = html.replace(/(\bOkay\s*\.)\s+(?=[A-Z\u0900-\u097F\*])/g,
+          '$1 ' + SENTINEL);
+        html = html.replace(/(\bOkay\s*\?)\s+(?=[A-Z\u0900-\u097F\*])/g,
+          '$1 ' + SENTINEL);
+        // Break after "Alright." / "Alright?"
+        html = html.replace(/(\bAlright\s*[.?])\s+(?=[A-Z\*])/g,
+          '$1 ' + SENTINEL);
+        // Break before strong transition phrases at sentence start
+        html = html.replace(/\.\s+(So now[,\s])/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(Now,\s)/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(Coming back\s)/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(Let me\s)/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(Let us\s)/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(Therefore,\s)/g, '. ' + SENTINEL + '$1');
+        html = html.replace(/\.\s+(This is why\s)/g, '. ' + SENTINEL + '$1');
+
+        if (html === original) return; // no breaks found
+
+        const parts = html.split(SENTINEL).filter(p => p.trim());
+        if (parts.length < 2) return;
+
+        const fragment = document.createDocumentFragment();
+        parts.forEach(part => {
+          const np = document.createElement('p');
+          np.innerHTML = part.trim();
+          fragment.appendChild(np);
+        });
+        para.parentNode.replaceChild(fragment, para);
+      }
+
+      // Process each class-body panel
       document.querySelectorAll('.class-body').forEach(body => {
-        const allParas = Array.from(body.querySelectorAll('p'));
-        if (!allParas.length) return;
+        // ── 1. OPENING INVOCATION ───────────────────────────────────────
+        const firstPara = body.querySelector('p');
+        if (firstPara) {
+          const text = firstPara.textContent.trim();
+          const startsOM = text.startsWith('oṃ') ||
+                           text.startsWith('ॐ') ||
+                           text.toLowerCase().startsWith('om ');
 
-        // ── A: Opening invocation ──────────────────────────────────
-        const first = allParas[0];
-        const ft = first ? first.textContent.trim() : '';
-        const hasOM = ft.startsWith('oṃ') || ft.startsWith('ॐ') ||
-                      ft.toLowerCase().startsWith('om ');
+          if (startsOM) {
+            // Try each possible end marker
+            let found = false;
+            const markers = [...INVOC_END_IAST, ...INVOC_END_DEV];
+            for (const marker of markers) {
+              if (firstPara.innerHTML.includes(marker)) {
+                found = splitParagraphAt(firstPara, marker);
+                if (found) break;
+              }
+            }
 
-        if (hasOM) {
-          // Collect invocation paragraphs (ends at gurubhyaḥ line)
-          let invocEls = [];
-          for (let i = 0; i < Math.min(allParas.length, 8); i++) {
-            const t = allParas[i].textContent.trim();
-            const isEnglish = /^(So |Now |In |The |We |This )/.test(t)
-                              && t.length > 100;
-            invocEls.push(allParas[i]);
-            if (t.includes('gurubhyaḥ') || t.includes('गुरुभ्यः') ||
-                t.includes('namo gurubhyaḥ')) break;
-            if (isEnglish) { invocEls.pop(); break; }
-          }
-
-          if (invocEls.length) {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'invocation-block';
-
-            invocEls.forEach(el => {
-              // Split by || to put each śloka on its own line
-              const parts = el.innerHTML.split(/\s*\|\|\s*/);
-              parts.forEach((part, pi) => {
-                const p = part.trim();
-                if (!p) return;
-                const span = document.createElement('span');
-                span.className = 'invocation-verse';
-                span.innerHTML = p + (pi < parts.length - 2 ? ' ||' : '');
-                wrapper.appendChild(span);
-              });
-              el.remove();
-            });
-
-            body.insertBefore(wrapper, body.firstChild);
-            const hr = document.createElement('hr');
-            hr.className = 'invocation-separator';
-            wrapper.after(hr);
+            // Fallback: if no marker found but para has || and English after,
+            // split at last || sequence before an English capital letter
+            if (!found && text.includes('||')) {
+              const html = firstPara.innerHTML;
+              // Find last || before English text
+              const matches = [...html.matchAll(/\|\|/g)];
+              if (matches.length > 0) {
+                const lastMatch = matches[matches.length - 1];
+                const afterPipes = html.substring(lastMatch.index + 2);
+                if (/^\s*[A-Z]/.test(afterPipes)) {
+                  splitParagraphAt(firstPara, '||' + html.substring(
+                    lastMatch.index + 2,
+                    lastMatch.index + 2 + afterPipes.search(/[A-Z]/)));
+                }
+              }
+            }
           }
         }
 
-        // ── B: Closing pūrṇam / śānti verse ───────────────────────
-        const allP2 = Array.from(body.querySelectorAll('p'));
-        allP2.slice(-4).forEach(el => {
-          const t = el.textContent.trim();
-          if ((t.includes('pūrṇamadaḥ') || t.includes('पूर्णमदः') ||
-               (t.includes('hariḥ oṃ') || t.includes('हरिः ॐ')) ||
-               ((t.includes('śāntiḥ') || t.includes('शान्तिः'))
-                && t.length < 300)) && !el.classList.contains('invocation-block')) {
-            el.classList.add('closing-verse-block');
-            const parts = el.innerHTML.split(/\s*\|\|\s*/);
+        // ── 2. CLOSING VERSE ────────────────────────────────────────────
+        const allP = Array.from(body.querySelectorAll('p'));
+        const closingMarkers = [
+          'pūrṇamadaḥ', 'पूर्णमदः',
+          'hariḥ oṃ', 'हरिः ॐ',
+        ];
+        allP.slice(-5).forEach(p => {
+          const t = p.textContent;
+          if (closingMarkers.some(m => t.includes(m)) &&
+              !p.closest('.invocation-block')) {
+            p.classList.add('closing-verse-block');
+            // Format verses: split by || onto separate lines
+            const parts = p.innerHTML.split(/\s*\|\|\s*/);
             if (parts.length > 1) {
-              el.innerHTML = parts.filter(p => p.trim())
-                .map((p, i, a) =>
-                  '<span class="invocation-verse">' + p.trim() +
-                  (i < a.length - 1 ? ' ||' : '') + '</span>')
+              p.innerHTML = parts.filter(v => v.trim())
+                .map(v => '<span class="invocation-verse">' + v.trim() + '</span>')
                 .join('');
             }
           }
         });
 
-        // ── C: Teaching paragraph breaks ──────────────────────────
-        // Swamiji ends a point with "Okay?" / "Okay." / "Alright."
-        // and begins the next with "So " / "Now " / "Let me " etc.
-        // We inject a visual spacer at these natural breaks so the
-        // teaching reads as distinct paragraphs.
+        // ── 3. SMART PARAGRAPH BREAKS ───────────────────────────────────
+        // Run on ALL paragraphs (snapshot first to avoid mutation issues)
         Array.from(body.querySelectorAll('p')).forEach(p => {
-          if (p.classList.contains('invocation-block') ||
-              p.classList.contains('closing-verse-block') ||
-              p.classList.contains('invocation-verse')) return;
-
-          const text = p.textContent;
-          if (text.length < 300) return; // short paras are fine as-is
-
-          // Pattern: sentence ending with Okay. / Okay? / Alright.
-          // followed by a new sentence starting with capital
-          let html = p.innerHTML;
-
-          // Break after "Okay." or "Okay?" followed by new sentence
-          html = html.replace(
-            /(\bOkay\s*[.?]\s+)(?=[A-Z\*<])/g,
-            '$1<span class="para-spacer"></span>'
-          );
-          // Break after "Alright." followed by new sentence
-          html = html.replace(
-            /(\bAlright\s*[.?]\s+)(?=[A-Z\*<])/g,
-            '$1<span class="para-spacer"></span>'
-          );
-          // Break before strong paragraph transitions
-          html = html.replace(
-            /(\.\s+)((?:So now|Now,|So,|Coming back|Let me|Let's go back|Let us|Therefore,|This is why|That is why|The point is)[, ])/g,
-            '$1<span class="para-spacer"></span>$2'
-          );
-
-          if (html !== p.innerHTML) {
-            p.innerHTML = html;
-          }
+          smartSplit(p);
         });
       });
     }
 
-    // Initialize scripts
-    document.addEventListener('DOMContentLoaded', () => {
+    // ── Run after DOM and after every script-toggle click ──────────────
+    function runOnceReady() {
       initScriptToggle();
-      processClassBody();
 
       const progress = document.getElementById('reading-progress');
       if (progress) {
@@ -481,12 +539,20 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
         updateProgress();
         document.addEventListener('scroll', updateProgress, { passive: true });
       }
-    });
 
-    document.querySelectorAll('.script-toggle__btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        setTimeout(processClassBody, 60);
+      processClassBody();
+      
+      document.querySelectorAll('.script-toggle__btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setTimeout(processClassBody, 80);
+        });
       });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runOnceReady);
+    } else {
+      runOnceReady();
+    }
   </script>
 </BaseLayout>
