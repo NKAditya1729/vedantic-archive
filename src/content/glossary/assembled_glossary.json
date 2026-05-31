@@ -1678,6 +1678,142 @@
     ]
   },
   {
+    "classNumber": 12,
+    "sectionTitle": "Two orders of reality (satyam/mithyā) and śravaṇa–manana–nididhyāsana",
+    "terms": [
+      {
+        "deva": "मिथ्यात्वम्",
+        "iast": "mithyātvam",
+        "definition": "The status of being mithyā — dependent, negatable, without independent being.",
+        "context": "Swamiji gives several definitions Swamiji cites: yad vicāraṁ na sahate tat mithyā (what does not withstand enquiry) and kāraṇa-avyatiriktaṁ mithyā (non-different from its cause). mithyā is neither sat nor asat — not a third reality but a dependent order.",
+        "source": "Discussion on 2.4.5: \"यद् विचारं न सहते तत् <u>मिथ्या</u> ; कारणाव्यतिरिक्तं मिथ्या\"",
+        "source_iast": "Discussion on 2.4.5: \"yad vicāraṃ na sahate tat <u>mithyā</u> ; kāraṇāvyatiriktaṃ mithyā\"",
+        "breakdown_deva": "मिथ्या + त्व — \"the property of being mithyā\"",
+        "breakdown_iast": "mithyā + tva — \"the property of being mithyā\"",
+        "phrasal": "Dependent, negatable being",
+        "search_deva": "मिथ्यात्वम् मिथ्या + त्व the property of being mithyā The status of being mithyā dependent negatable without independent being. Discussion on 2.4.5 यद् विचारं न सहते तत् मिथ्या कारणाव्यतिरिक्तं मिथ्या",
+        "search_iast": "mithyatvam mithya tva the property of being mithya dependent negatable being the status of being mithya dependent negatable without independent being swamiji gives several definitions swamiji cites yad vicaram na sahate tat mithya what does not withstand enquiry and karana avyatiriktam mithya non different from its cause mithya is neither sat nor asat not a third reality but a dependent order discussion on 2 4 5 yad vicaram na sahate tat mithya karanavyatiriktam mithya"
+      },
+      {
+        "deva": "प्रमाणप्राप्त",
+        "iast": "pramāṇaprāpta",
+        "definition": "What is established through the means of knowledge (pratyakṣa, anumāna, etc.).",
+        "context": "Swamiji: whatever is pramāṇaprāpta — gained by the pañca-pramāṇas like perception and inference — is real at its level, yet does not reveal the absolute. What is so gained still depends on something more real.",
+        "source": "Discussion on 2.4.5: <u>प्रमाणप्राप्तम्</u> — प्रत्यक्षानुमानादिप्रमाणैः",
+        "source_iast": "Discussion on 2.4.5: <u>pramāṇaprāptam</u> — pratyakṣānumānādipramāṇaiḥ",
+        "breakdown_deva": "प्रमाणेन प्राप्तम् — \"obtained through a means of knowledge\"",
+        "breakdown_iast": "pramāṇena prāptam — \"obtained through a means of knowledge\"",
+        "phrasal": "Established by means of knowledge",
+        "search_deva": "प्रमाणप्राप्त प्रमाणेन प्राप्तम् obtained through a means of knowledge What is established through the means of knowledge pratyakṣa anumāna etc. . Discussion on 2.4.5 प्रमाणप्राप्तम् प्रत्यक्षानुमानादिप्रमाणैः",
+        "search_iast": "pramanaprapta pramanena praptam obtained through a means of knowledge established by means of knowledge what is established through the means of knowledge pratyaksa anumana etc swamiji whatever is pramanaprapta gained by the panca pramanas like perception and inference is real at its level yet does not reveal the absolute what is so gained still depends on something more real discussion on 2 4 5 pramanapraptam pratyaksanumanadipramanaih"
+      },
+      {
+        "deva": "शास्त्रप्रमाणम्",
+        "iast": "śāstrapramāṇa",
+        "definition": "Scripture as the unique means of knowledge for the absolute reality.",
+        "context": "Swamiji: since perception and inference reveal only the pramāṇaprāpta world and not the absolute, it is śāstra-pramāṇa alone that reveals satyam — the reality on which everything else depends.",
+        "source": "Discussion on 2.4.5: \"तत् प्रकाशयितुं <u>शास्त्रप्रमाणम्</u>\"",
+        "source_iast": "Discussion on 2.4.5: \"tat prakāśayituṃ <u>śāstrapramāṇam</u>\"",
+        "breakdown_deva": "शास्त्रम् एव प्रमाणम् — \"scripture itself as the means of knowledge\"",
+        "breakdown_iast": "śāstram eva pramāṇam — \"scripture itself as the means of knowledge\"",
+        "phrasal": "Scripture as the means for the absolute",
+        "search_deva": "शास्त्रप्रमाणम् शास्त्रम् एव प्रमाणम् scripture itself as the means of knowledge Scripture as the unique means of knowledge for the absolute reality. Discussion on 2.4.5 तत् प्रकाशयितुं शास्त्रप्रमाणम्",
+        "search_iast": "sastrapramana sastram eva pramanam scripture itself as the means of knowledge scripture as the means for the absolute scripture as the unique means of knowledge for the absolute reality swamiji since perception and inference reveal only the pramanaprapta world and not the absolute it is sastra pramana alone that reveals satyam the reality on which everything else depends discussion on 2 4 5 tat prakasayitum sastrapramanam"
+      },
+      {
+        "deva": "प्राप्तस्य प्राप्तिः",
+        "iast": "prāptasya prāptiḥ",
+        "definition": "The gaining of what is already attained — recognition, not acquisition.",
+        "context": "Swamiji: mokṣa is not aprāptasya prāptiḥ (gaining the not-yet-attained); it is prāptasya prāptiḥ jñānena — the already-accomplished freedom is only recognised in time through knowledge, not produced.",
+        "source": "Discussion on 2.4.5: \"न अप्राप्तस्य प्राप्तिः, <u>प्राप्तस्य प्राप्तिः</u> ज्ञानेन\"",
+        "source_iast": "Discussion on 2.4.5: \"na aprāptasya prāptiḥ, <u>prāptasya prāptiḥ</u> jñānena\"",
+        "breakdown_deva": "प्राप्तस्य प्राप्तिः — षष्ठीतत्पुरुषः",
+        "breakdown_iast": "prāptasya prāptiḥ — ṣaṣṭhī-tatpuruṣaḥ",
+        "phrasal": "Gaining the ever-attained",
+        "search_deva": "प्राप्तस्य प्राप्तिः प्राप्तस्य प्राप्तिः षष्ठीतत्पुरुषः The gaining of what is already attained recognition not acquisition. Discussion on 2.4.5 न अप्राप्तस्य प्राप्तिः प्राप्तस्य प्राप्तिः ज्ञानेन",
+        "search_iast": "praptasya praptih praptasya praptih sasthi tatpurusah gaining the ever attained the gaining of what is already attained recognition not acquisition swamiji moksa is not apraptasya praptih gaining the not yet attained it is praptasya praptih jnanena the already accomplished freedom is only recognised in time through knowledge not produced discussion on 2 4 5 na apraptasya praptih praptasya praptih jnanena"
+      },
+      {
+        "deva": "पुरुषार्थविषयः",
+        "iast": "puruṣārthaviṣaya",
+        "definition": "That which is worth pursuing as a genuine human end.",
+        "context": "Swamiji: in calling the self darśanārhaḥ, the śruti marks it as the puruṣārthaviṣaya — the one thing that truly deserves to be pursued, unlike means-and-ends that only burden.",
+        "source": "Bhāṣya on 2.4.5: आत्मा एव <u>पुरुषार्थविषयः</u> — दर्शनार्हः",
+        "source_iast": "Bhāṣya on 2.4.5: ātmā eva <u>puruṣārthaviṣaya</u> — darśanārhaḥ",
+        "breakdown_deva": "पुरुषार्थस्य विषयः — \"the object that is a human end\"",
+        "breakdown_iast": "puruṣārthasya viṣayaḥ — \"the object that is a human end\"",
+        "phrasal": "Worth pursuing as a human end",
+        "search_deva": "पुरुषार्थविषयः पुरुषार्थस्य विषयः the object that is a human end That which is worth pursuing as a genuine human end. Bhāṣya on 2.4.5 आत्मा एव पुरुषार्थविषयः दर्शनार्हः",
+        "search_iast": "purusarthavisaya purusarthasya visayah the object that is a human end worth pursuing as a human end that which is worth pursuing as a genuine human end swamiji in calling the self darsanarhah the sruti marks it as the purusarthavisaya the one thing that truly deserves to be pursued unlike means and ends that only burden bhasya on 2 4 5 atma eva purusarthavisaya darsanarhah"
+      },
+      {
+        "deva": "श्रोतव्यः",
+        "iast": "śrotavyaḥ",
+        "definition": "To be listened to — the self is first heard of from the teacher and scripture.",
+        "context": "Swamiji: śrotavyaḥ pūrvam ācāryataḥ āgamataśca — śravaṇa is the first step, where śabda-pramāṇa must reach you through a teacher; you cannot reason about what you have not first heard.",
+        "source": "Bhāṣya on 2.4.5: \"<u>श्रोतव्यः</u> पूर्वम् आचार्यत आगमतश्च\"",
+        "source_iast": "Bhāṣya on 2.4.5: \"<u>śrotavyaḥ</u> pūrvam ācāryata āgamataśca\"",
+        "breakdown_deva": "श्रोतुम् अर्हः / श्रवणीयः — \"to be heard\"",
+        "breakdown_iast": "śrotum arhaḥ / śravaṇīyaḥ — \"to be heard\"",
+        "phrasal": "To be listened to (śravaṇa)",
+        "search_deva": "श्रोतव्यः श्रोतुम् अर्हः / श्रवणीयः to be heard To be listened to the self is first heard of from the teacher and scripture. Bhāṣya on 2.4.5 श्रोतव्यः पूर्वम् आचार्यत आगमतश्च",
+        "search_iast": "srotavyah srotum arhah sravaniyah to be heard to be listened to sravana to be listened to the self is first heard of from the teacher and scripture swamiji srotavyah purvam acaryatah agamatasca sravana is the first step where sabda pramana must reach you through a teacher you cannot reason about what you have not first heard bhasya on 2 4 5 srotavyah purvam acaryata agamatasca"
+      },
+      {
+        "deva": "मन्तव्यः",
+        "iast": "mantavyaḥ",
+        "definition": "To be reflected upon — what is heard is examined through reasoning.",
+        "context": "Swamiji: paścāt mantavyaḥ tarkataḥ — after hearing, manana is reflection through tarka aligned with śruti, to remove doubt about what was heard.",
+        "source": "Bhāṣya on 2.4.5: \"पश्चात् <u>मन्तव्यः</u> तर्कतः\"",
+        "source_iast": "Bhāṣya on 2.4.5: \"paścāt <u>mantavyaḥ</u> tarkataḥ\"",
+        "breakdown_deva": "मन्तुम् अर्हः — \"to be reflected upon\"",
+        "breakdown_iast": "mantum arhaḥ — \"to be reflected upon\"",
+        "phrasal": "To be reflected on (manana)",
+        "search_deva": "मन्तव्यः मन्तुम् अर्हः to be reflected upon To be reflected upon what is heard is examined through reasoning. Bhāṣya on 2.4.5 पश्चात् मन्तव्यः तर्कतः",
+        "search_iast": "mantavyah mantum arhah to be reflected upon to be reflected on manana to be reflected upon what is heard is examined through reasoning swamiji pascat mantavyah tarkatah after hearing manana is reflection through tarka aligned with sruti to remove doubt about what was heard bhasya on 2 4 5 pascat mantavyah tarkatah"
+      },
+      {
+        "deva": "निदिध्यासितव्यः",
+        "iast": "nididhyāsitavyaḥ",
+        "definition": "To be contemplated with conviction until abidance.",
+        "context": "Swamiji: tataḥ nididhyāsitavyaḥ niścayena dhyātavyaḥ — after śravaṇa and manana, nididhyāsana is dwelling with certainty, to dissolve the habitual wrong way of taking oneself.",
+        "source": "Bhāṣya on 2.4.5: \"ततो <u>निदिध्यासितव्यः</u> निश्चयेन ध्यातव्यः\"",
+        "source_iast": "Bhāṣya on 2.4.5: \"tato <u>nididhyāsitavyaḥ</u> niścayena dhyātavyaḥ\"",
+        "breakdown_deva": "निदिध्यासितुम् अर्हः — \"to be deeply contemplated\"",
+        "breakdown_iast": "nididhyāsitum arhaḥ — \"to be deeply contemplated\"",
+        "phrasal": "To be contemplated (nididhyāsana)",
+        "search_deva": "निदिध्यासितव्यः निदिध्यासितुम् अर्हः to be deeply contemplated To be contemplated with conviction until abidance. Bhāṣya on 2.4.5 ततो निदिध्यासितव्यः निश्चयेन ध्यातव्यः",
+        "search_iast": "nididhyasitavyah nididhyasitum arhah to be deeply contemplated to be contemplated nididhyasana to be contemplated with conviction until abidance swamiji tatah nididhyasitavyah niscayena dhyatavyah after sravana and manana nididhyasana is dwelling with certainty to dissolve the habitual wrong way of taking oneself bhasya on 2 4 5 tato nididhyasitavyah niscayena dhyatavyah"
+      },
+      {
+        "deva": "सम्यग्दर्शनम्",
+        "iast": "samyagdarśanam",
+        "definition": "Right vision of the oneness of brahman — the fruit of all three means together.",
+        "context": "Swamiji: when śravaṇa, manana and nididhyāsana become one, samyagdarśana — vision whose object is brahma-ekatva — becomes clear; it does not arise by mere hearing (na śravaṇa-mātreṇa).",
+        "source": "Bhāṣya on 2.4.5: \"<u>सम्यग्दर्शनं</u> ब्रह्मैकत्व-विषयं प्रसीदति, न अन्यथा श्रवणमात्रेण\"",
+        "source_iast": "Bhāṣya on 2.4.5: \"<u>samyagdarśanaṃ</u> brahmaikatva-viṣayaṃ prasīdati, na anyathā śravaṇamātreṇa\"",
+        "breakdown_deva": "सम्यक् दर्शनम् — \"complete / right seeing\"",
+        "breakdown_iast": "samyak darśanam — \"complete / right seeing\"",
+        "phrasal": "Right vision of oneness",
+        "search_deva": "सम्यग्दर्शनम् सम्यक् दर्शनम् complete / right seeing Right vision of the oneness of brahman the fruit of all three means together. Bhāṣya on 2.4.5 सम्यग्दर्शनं ब्रह्मैकत्व विषयं प्रसीदति न अन्यथा श्रवणमात्रेण",
+        "search_iast": "samyagdarsanam samyak darsanam complete right seeing right vision of oneness right vision of the oneness of brahman the fruit of all three means together swamiji when sravana manana and nididhyasana become one samyagdarsana vision whose object is brahma ekatva becomes clear it does not arise by mere hearing na sravana matrena bhasya on 2 4 5 samyagdarsanam brahmaikatva visayam prasidati na anyatha sravanamatrena"
+      },
+      {
+        "deva": "तुच्छम्",
+        "iast": "tuccham",
+        "definition": "The insignificant; in the prakriyā used in the sense of mithyā.",
+        "context": "Swamiji notes that in the daśaślokī the jagat is called tuccham only in the sense of mithyā; interestingly ācārya Śaṅkara does not use the word tuccham anywhere in the prasthāna-traya bhāṣyam.",
+        "source": "Discussion on 2.4.5: दशश्लोक्यां जगत् <u>तुच्छम्</u> इति मिथ्यार्थे",
+        "source_iast": "Discussion on 2.4.5: daśaślokyāṃ jagat <u>tuccham</u> iti mithyārthe",
+        "breakdown_deva": "तुच्छ — \"trifling, insignificant; here = mithyā\"",
+        "breakdown_iast": "tuccha — \"trifling, insignificant; here = mithyā\"",
+        "phrasal": "Insignificant; used for mithyā",
+        "search_deva": "तुच्छम् तुच्छ trifling insignificant here = mithyā The insignificant in the prakriyā used in the sense of mithyā. Discussion on 2.4.5 दशश्लोक्यां जगत् तुच्छम् इति मिथ्यार्थे",
+        "search_iast": "tuccham tuccha trifling insignificant here mithya insignificant used for mithya the insignificant in the prakriya used in the sense of mithya swamiji notes that in the dasasloki the jagat is called tuccham only in the sense of mithya interestingly acarya sankara does not use the word tuccham anywhere in the prasthana traya bhasyam discussion on 2 4 5 dasaslokyam jagat tuccham iti mithyarthe"
+      }
+    ]
+  },
+  {
     "classNumber": null,
     "sectionTitle": "Consolidated recurring flashcard terms",
     "terms": [
