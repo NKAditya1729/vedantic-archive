@@ -72,6 +72,23 @@ const { Content: IastContent } = await render(iastEntry);
 const devResult = devEntry ? await render(devEntry) : null;
 const DevContent = devResult?.Content ?? null;
 
+// Calculate course progress
+const allClasses = await getCollection('classes');
+const seriesClasses = allClasses
+  .filter(c => c.data.script === 'iast' && c.data.series === data.series)
+  .sort((a, b) => {
+    if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
+    if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
+    return a.data.class_number - b.data.class_number;
+  });
+const currentIdx = seriesClasses.findIndex(
+  c => c.data.adhyaya === data.adhyaya &&
+       c.data.brahmana === data.brahmana &&
+       c.data.class_number === data.class_number
+);
+const totalClasses = seriesClasses.length;
+const progressPercent = totalClasses > 0 ? Math.round(((currentIdx + 1) / totalClasses) * 100) : 0;
+
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
@@ -132,42 +149,62 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
         {data.brahmana_name} ({data.adhyaya}.{data.brahmana}) — Class {data.class_number}
       </h1>
       <div class="class-header__date" data-pagefind-meta="date">{formatDate(data.date)}</div>
+      
+      <!-- Class Progress Bar -->
+      <div class="class-progress" style="margin-top: 0.5rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.25rem; font-family: var(--font-ui);">
+          <span>Class progress</span>
+          <span>{currentIdx + 1} / {totalClasses} ({progressPercent}%)</span>
+        </div>
+        <div style="width: 100%; height: 4px; background-color: var(--border-light); border-radius: 2px; overflow: hidden;">
+          <div style={`width: ${progressPercent}%; height: 100%; background-color: var(--accent); transition: width 0.3s ease;`}></div>
+        </div>
+      </div>
+
       <div class="class-header__coverage">
         <strong style="font-size: 0.8125rem; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-tertiary);">Coverage</strong><br>
         {data.coverage}
       </div>
       
       <!-- Metadata Block -->
-      <div class="class-metadata text-xs meta" style="margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <div class="class-metadata" style="margin-top: 1.5rem; border-top: 1px solid var(--border-light); padding-top: 0.75rem; display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.75rem; color: var(--text-tertiary);">
         <div><strong>Status:</strong> Audio-reviewed and Editor-corrected</div>
         <div><strong>Version:</strong> 1.0</div>
-        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive - ${data.brahmana_name} Class ${data.class_number}`}>Report Error / Feedback</a></div>
+        <div><a href={`mailto:nistala.aditya@gmail.com?subject=Corrections - Vedāntic Study Archive - ${data.brahmana_name} Class ${data.class_number}`} style="color: inherit; text-decoration: underline;">Report Error / Feedback</a></div>
       </div>
     </header>
 
-    {videoId && (
-      <div class="video-embed" style="margin-bottom: 2rem;">
-        <strong style="display:block; margin-bottom:0.5rem; font-size:0.875rem;">Watch Class Video</strong>
-        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}`}
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          />
-        </div>
-      </div>
-    )}
-
     <!-- Audio Player -->
     {audioUrl && (
-      <div class="audio-player" style="margin-bottom: 2rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
+      <div class="audio-player" style="margin-top: 1.5rem; margin-bottom: 1.5rem; background: var(--surface-2); padding: 1rem; border-radius: 8px;">
         <strong style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem;">Listen to Class Audio</strong>
         <audio controls src={audioUrl} style="width: 100%;">
           Your browser does not support the audio element.
         </audio>
       </div>
+    )}
+
+    {videoId && (
+      <details class="accordion video-accordion" style="margin-bottom: 2rem; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden;">
+        <summary style="font-weight: 600; padding: 1rem; background: var(--bg-surface); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+          <span style="font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent);"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            Watch Class Video (Optional)
+          </span>
+          <span class="accordion-icon" style="transition: transform 0.2s ease; font-size: 0.75rem; color: var(--text-tertiary);">▼</span>
+        </summary>
+        <div style="padding: 1rem; background: var(--bg);">
+          <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px;">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </details>
     )}
 
     <!-- Script Toggle -->
@@ -319,9 +356,71 @@ const videoId = data.video_url ? extractVideoId(data.video_url) : '';
       }
     }
 
+    // Automatically group invocation paragraphs
+    function initInvocationGrouping() {
+      const bodies = document.querySelectorAll('.class-body');
+      bodies.forEach(body => {
+        const paragraphs = Array.from(body.querySelectorAll('p'));
+        let inGroup = false;
+        let groupParas: HTMLParagraphElement[] = [];
+
+        paragraphs.forEach((p, idx) => {
+          const text = p.innerText.trim();
+          const cleanText = text.toLowerCase().replace(/^[*\s_॥।\-]+/g, '');
+          
+          const startsWithOm = /^(om|oṃ|oṁ|ॐ|śruti|श्रुति|īśvara|ईश्वरो)/i.test(cleanText);
+          const endsWithTarget = /(śāntiḥ|शान्तिः|gurubhyaḥ|गुरुभ्यः)[*\s_॥।\-]*$/i.test(cleanText);
+
+          if (!inGroup && startsWithOm) {
+            inGroup = true;
+            groupParas = [p as HTMLParagraphElement];
+          } else if (inGroup) {
+            groupParas.push(p as HTMLParagraphElement);
+          }
+
+          if (inGroup && endsWithTarget) {
+            // Check if next paragraph also starts with invocation start words
+            const nextP = paragraphs[idx + 1];
+            let nextStarts = false;
+            if (nextP) {
+              const nextText = nextP.innerText.trim();
+              const nextClean = nextText.toLowerCase().replace(/^[*\s_॥।\-]+/g, '');
+              nextStarts = /^(om|oṃ|oṁ|ॐ|śruti|श्रुति|īśvara|ईश्वरो)/i.test(nextClean);
+            }
+
+            if (!nextStarts) {
+              // Wrap the current group
+              const firstPara = groupParas[0];
+              const parent = firstPara.parentNode;
+              if (parent) {
+                const container = document.createElement('div');
+                container.className = 'invocation-block';
+                
+                // Insert container before the first paragraph
+                parent.insertBefore(container, firstPara);
+                
+                // Move paragraphs inside
+                groupParas.forEach(gp => {
+                  container.appendChild(gp);
+                });
+                
+                // Create separator and insert after container
+                const hr = document.createElement('hr');
+                hr.className = 'invocation-separator';
+                parent.insertBefore(hr, container.nextSibling);
+              }
+              inGroup = false;
+              groupParas = [];
+            }
+          }
+        });
+      });
+    }
+
     // Initialize scripts
     document.addEventListener('DOMContentLoaded', () => {
       initScriptToggle();
+      initInvocationGrouping();
 
       const progress = document.getElementById('reading-progress');
       if (progress) {

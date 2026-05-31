@@ -77,10 +77,54 @@ const devanagariSource = `<div class="source-text-structured">
     </div>
 
     <section class="script-panel is-visible" id="source-iast" role="tabpanel" aria-labelledby="source-tab-iast">
+      <!-- Formatting Legend -->
+      <div class="source-legend" style="display: flex; flex-wrap: wrap; gap: 1rem; background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; align-items: center; font-size: 0.875rem;">
+        <span style="font-weight: 600; color: var(--text-secondary); font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem;">Text Formatting Legend</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-left: auto;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #1a1a1a; border: 1px solid #1a1a1a;"></span>
+            <span style="font-weight: 700; color: var(--text-secondary);">Mūlam (Upaniṣad Verse)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #1a1a1a; border: 1px solid var(--border); opacity: 0.75;"></span>
+            <span style="color: var(--text-secondary);">Bhāṣyam (Śaṅkara Commentary)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #b54510; border: 1px solid #b54510;"></span>
+            <span style="font-weight: 700; color: var(--text-secondary);">Pratīka (Cited Mūlam words)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #5b1a8e; border: 1px solid #5b1a8e;"></span>
+            <span style="color: var(--text-secondary);">Vārttika (Sureśvara Verse)</span>
+          </div>
+        </div>
+      </div>
       <article class="source-class-section" set:html={iastSource} />
     </section>
 
     <section class="script-panel devanagari" id="source-devanagari" role="tabpanel" aria-labelledby="source-tab-devanagari" lang="sa">
+      <!-- Formatting Legend -->
+      <div class="source-legend" style="display: flex; flex-wrap: wrap; gap: 1rem; background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; align-items: center; font-size: 0.875rem;">
+        <span style="font-weight: 600; color: var(--text-secondary); font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem;">Text Formatting Legend</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-left: auto;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #1a1a1a; border: 1px solid #1a1a1a;"></span>
+            <span style="font-weight: 700; color: var(--text-secondary);">Mūlam (Upaniṣad Verse)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #1a1a1a; border: 1px solid var(--border); opacity: 0.75;"></span>
+            <span style="color: var(--text-secondary);">Bhāṣyam (Śaṅkara Commentary)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #b54510; border: 1px solid #b54510;"></span>
+            <span style="font-weight: 700; color: var(--text-secondary);">Pratīka (Cited Mūlam words)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 12px; height: 12px; border-radius: 2px; background: #5b1a8e; border: 1px solid #5b1a8e;"></span>
+            <span style="color: var(--text-secondary);">Vārttika (Sureśvara Verse)</span>
+          </div>
+        </div>
+      </div>
       <article class="source-class-section" set:html={devanagariSource} />
     </section>
   </div>

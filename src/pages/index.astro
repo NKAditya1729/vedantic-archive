@@ -56,19 +56,9 @@ const series = Array.from(seriesMap.values());
         This archive contains detailed class notes from an ongoing study of the principal Upaniṣads and Vedāntic texts, taught by <strong><a href="https://arshavidya.in/teachers/swami-shankarananda-saraswati/" target="_blank" rel="noopener noreferrer">Pūjya Swami Shankarananda Saraswati</a></strong>.
       </p>
 
-      <div style="margin-top: 2rem; background: var(--surface-2); padding: 1.5rem; border-radius: 8px;">
-        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is</h3>
-        <ul style="margin-bottom: 1.5rem; padding-left: 1.25rem;">
-          <li>A student-prepared study aid based on faithful class notes.</li>
-          <li>Intended for revision, reflection, and continuity of study.</li>
-        </ul>
-
-        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is NOT</h3>
-        <ul style="padding-left: 1.25rem;">
-          <li>Not an official publication of Pūjya Swami Shankarananda Saraswati.</li>
-          <li>Not a substitute for direct śravaṇa (listening to the classes).</li>
-          <li>Not an independent commentary on the śāstra.</li>
-        </ul>
+      <!-- Search component moved immediately below intro paragraph -->
+      <div style="margin-top: 1.5rem; margin-bottom: 2rem;">
+        <Search />
       </div>
 
       <p style="margin-top: 2rem;">
@@ -83,19 +73,20 @@ const series = Array.from(seriesMap.values());
       </p>
     </section>
 
-    <section class="page-section">
-      <div class="stats-grid" aria-label="Archive statistics">
-        <div class="stat-box">
-          <span class="stat-box__value">{totalClasses}</span>
-          <span class="stat-box__label">Classes completed</span>
+    <!-- Visual Stats Tiles Grid -->
+    <section class="page-section" style="margin-bottom: 3rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;" aria-label="Archive statistics">
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1.5rem; border-radius: 8px; text-align: center;" class="class-card">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">{totalClasses}</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-family: var(--font-ui);">Classes completed</div>
         </div>
-        <div class="stat-box">
-          <span class="stat-box__value">{mantraRefs.size}</span>
-          <span class="stat-box__label">Mantras covered</span>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1.5rem; border-radius: 8px; text-align: center;" class="class-card">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">{mantraRefs.size}</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-family: var(--font-ui);">Mantras covered</div>
         </div>
-        <div class="stat-box">
-          <span class="stat-box__value">approx. {teachingHours}</span>
-          <span class="stat-box__label">Teaching hours</span>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1.5rem; border-radius: 8px; text-align: center;" class="class-card">
+          <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">approx. {teachingHours}</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-family: var(--font-ui);">Teaching hours</div>
         </div>
       </div>
     </section>
@@ -135,6 +126,24 @@ const series = Array.from(seriesMap.values());
       </ul>
     </section>
 
+    <!-- Archive Scope Description (moved here from top) -->
+    <section class="page-section">
+      <div style="background: var(--surface-2); padding: 1.5rem; border-radius: 8px;">
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.25rem;">
+          <li>A student-prepared study aid based on faithful class notes.</li>
+          <li>Intended for revision, reflection, and continuity of study.</li>
+        </ul>
+
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">What this archive is NOT</h3>
+        <ul style="padding-left: 1.25rem;">
+          <li>Not an official publication of Pūjya Swami Shankarananda Saraswati.</li>
+          <li>Not a substitute for direct śravaṇa (listening to the classes).</li>
+          <li>Not an independent commentary on the śāstra.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Process link -->
     <section class="page-section">
       <h2 class="page-section__heading">How These Notes Are Prepared</h2>
@@ -142,12 +151,6 @@ const series = Array.from(seriesMap.values());
         These notes are transcribed from video recordings, processed through multiple review stages, and carefully edited for accuracy. Each class undergoes review by the editor before publication.
         <a href={`${import.meta.env.BASE_URL}/about/#process`}>Read more about the process →</a>
       </p>
-    </section>
-
-    <!-- Search -->
-    <section class="page-section">
-      <h2 class="page-section__heading">Search the Archive</h2>
-      <Search />
     </section>
 
   </div>

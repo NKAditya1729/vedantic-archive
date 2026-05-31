@@ -23,9 +23,6 @@ const fullTitle = title ? `${title} — ${siteName}` : siteName;
 const metaTitle = ogTitle || fullTitle;
 const metaDescription = ogDescription || description;
 
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-
 import '../styles/global.css';
 import '../styles/typography.css';
 import '../styles/components.css';
@@ -79,10 +76,115 @@ import '../styles/print.css';
   {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 </head>
 <body>
-  <Nav />
+  <!-- Inlined navigation bar with consolidated 4 links -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-nav__inner">
+      <a href={`${import.meta.env.BASE_URL}/`} class="site-nav__brand" aria-label="Vedāntic Study Archive — Home">
+        <div class="site-nav__logo">
+          <span class="om" aria-hidden="true">ॐ</span>
+        </div>
+        <span class="site-nav__title">Vedāntic Study Archive</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="site-nav__links">
+        <li><a href={`${import.meta.env.BASE_URL}/`} aria-current={Astro.url.pathname === '/' || Astro.url.pathname === import.meta.env.BASE_URL + '/' ? 'page' : undefined}>Home</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/brhadaranyaka/`} aria-current={Astro.url.pathname.includes('/brhadaranyaka') ? 'page' : undefined}>Bṛhadāraṇyaka</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/flashcards/`} aria-current={Astro.url.pathname.includes('/flashcards') ? 'page' : undefined}>Flashcards</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/search/`} aria-current={Astro.url.pathname.includes('/search') ? 'page' : undefined}>Search</a></li>
+      </ul>
+
+      <!-- Theme Toggle & Mobile Menu -->
+      <div class="site-nav__controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <button class="hamburger" id="menu-toggle" aria-expanded="false" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav__links">
+      <li><a href={`${import.meta.env.BASE_URL}/`}>Home</a></li>
+      <li><a href={`${import.meta.env.BASE_URL}/brhadaranyaka/`}>Bṛhadāraṇyaka Upaniṣad</a></li>
+      <li><a href={`${import.meta.env.BASE_URL}/flashcards/`}>Flashcards</a></li>
+      <li><a href={`${import.meta.env.BASE_URL}/search/`}>Search</a></li>
+    </ul>
+  </div>
+
   <main>
     <slot />
   </main>
-  <Footer />
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <ul class="site-footer__links">
+        <li><a href={`${import.meta.env.BASE_URL}/`}>Home</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/brhadaranyaka/`}>Bṛhadāraṇyaka</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/flashcards/`}>Flashcards</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/pronunciation/`}>Pronunciation Guide</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/how-to-use/`}>How to Use</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/about/`}>About</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/feedback/`}>Feedback</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}/search/`}>Search</a></li>
+      </ul>
+
+      <div class="site-footer__attribution">
+        These notes are prepared from the teachings of <a href="https://www.youtube.com/@shankaranandaswami" target="_blank" rel="noopener noreferrer">Pūjya Swami Shankarananda</a>, in the lineage of Pūjya Swami Dayananda Saraswati (Arsha Vidya Gurukulam).
+      </div>
+      <p class="site-footer__text" style="margin-top: 0.5rem;">
+        Study notes only — not authoritative teachings. Please verify with your ācārya.
+      </p>
+      <p class="site-footer__text" style="margin-top: 0.75rem;">
+        © {new Date().getFullYear()} Vedāntic Study Archive
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script for toggling theme and mobile navigation menu -->
+  <script is:inline>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const newTheme = isDark ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        if (newTheme === 'light') {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', newTheme);
+      });
+    }
+
+    // Hamburger menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.contains('is-open');
+        mobileNav.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        mobileNav.setAttribute('aria-hidden', String(isOpen));
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  </script>
 </body>
 </html>
