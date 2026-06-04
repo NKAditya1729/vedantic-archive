@@ -123,7 +123,7 @@ def extract_runs(rtf: str):
         elif kind == 'hex':
             if not state['skip']:
                 try:
-                    ch = bytes.fromhex(val).decode('latin-1')
+                    ch = bytes.fromhex(val).decode('cp1252')
                     yield (ch, state['cf'], state['bold'], state['ul'])
                 except Exception:
                     pass
@@ -187,7 +187,7 @@ def spans_to_html(spans, script='devanagari') -> str:
         # U+2028 LINE SEPARATOR → verse line break; handle before stripping
         has_line_sep = ' ' in text
         text = text.replace(' ', '\n')
-        text = text.strip()
+        text = text.replace('\xa0', ' ').strip()
         if not text and not has_line_sep:
             continue
 
