@@ -234,7 +234,7 @@ def classify_para(spans) -> str:
     cfs = [cf for (_, cf, _, _) in text_spans]
     bolds = [b for (_, _, b, _) in text_spans]
 
-    if 5 in cfs:
+    if 5 in cfs or 7 in cfs:   # cf5 = intro vartika; cf7 = verse-section vartika
         return 'vartika'
     if 6 in cfs:
         return 'bhashyam'   # bhashyam with inline pratika spans
@@ -256,6 +256,55 @@ def ref_to_display(raw: str, script: str) -> str:
     return f'बृहद् {" । ".join(to_dev(p) for p in parts)}'
 
 
+_VERSE_NUM_PAT = re.compile(r'(।।\s*[०-९\d]+\s*।।)')
+
+
+def split_cf7_verses(text: str) -> list:
+    """
+    A cf7 paragraph packs many Vārtika śloka-s into one block.
+    Each śloka is: pūrvārdha ।। <LINE_SEP> uttarārdha ।। N ।।
+    Some śloka-s are single-line (ekārdha) with no LINE_SEP before them.
+    Returns a list of strings, each = "pūrvārdha\nuttarārdha ।। N ।।"
+    or just "single-line ।। N ।।" for ekārdha verses.
+    """
+    LINE_SEP = chr(8232)
+    segs = [s.strip() for s in text.split(LINE_SEP) if s.strip()]
+    if not segs:
+        return []
+
+    verses = []
+    purva = segs[0]
+
+    def drain_verse_nums(fragment, accumulated_purva):
+        """Extract all complete verses from fragment, return leftover purva."""
+        remaining = fragment
+        while True:
+            m = _VERSE_NUM_PAT.search(remaining)
+            if not m:
+                break
+            verse_content = remaining[:m.end()].strip()
+            if accumulated_purva:
+                verses.append(accumulated_purva + '\n' + verse_content)
+                accumulated_purva = ''
+            else:
+                verses.append(verse_content)
+            remaining = remaining[m.end():].strip()
+        return remaining, accumulated_purva
+
+    for seg in segs[1:]:
+        remaining, purva = drain_verse_nums(seg, purva)
+        if remaining:
+            purva = (purva + '\n' + remaining).strip() if purva else remaining
+
+    # Handle any leftover purva
+    if purva.strip():
+        remaining, _ = drain_verse_nums(purva, '')
+        if remaining:
+            verses.append(remaining)
+
+    return verses
+
+
 def build_html(paragraphs, script='devanagari') -> str:
     lines = ['<div class="source-text-structured">']
 
@@ -271,6 +320,30 @@ def build_html(paragraphs, script='devanagari') -> str:
             label = ref_to_display(raw, script)
             lines.append(f'  <p class="source-ref-line">{escape(label)}</p>')
             prev_kind = kind
+            continue
+
+        # cf7 vārtika paragraphs pack many verses into one block — split them
+        cfs_in_para = [s[1] for s in spans if s[0].strip()]
+        is_cf7_vartika = kind == 'vartika' and 7 in cfs_in_para and 5 not in cfs_in_para
+
+        if is_cf7_vartika:
+            raw_text = ''.join(s[0] for s in spans)
+            verse_strs = split_cf7_verses(raw_text)
+            if not verse_strs:
+                continue
+
+            if prev_kind != 'vartika':
+                lines.append('  <p class="src-label vartika-label">॥ वार्तिकम् ॥</p>' if script == 'devanagari'
+                              else '  <p class="src-label vartika-label">॥ Vārtikam ॥</p>')
+
+            for verse in verse_strs:
+                halves = [h.strip() for h in verse.split('\n') if h.strip()]
+                if script == 'iast':
+                    halves = [dev_to_iast(h) for h in halves]
+                halves_html = '<br>'.join(escape(h) for h in halves)
+                lines.append(f'  <p class="src-vartika">{halves_html}</p>')
+
+            prev_kind = 'vartika'
             continue
 
         inner = spans_to_html(spans, script=script)
