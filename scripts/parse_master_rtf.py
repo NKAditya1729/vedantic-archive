@@ -184,15 +184,24 @@ def spans_to_html(spans, script='devanagari') -> str:
     parts = []
     for span in spans:
         text, cf, bold, ul = span
+        # U+2028 LINE SEPARATOR → verse line break; handle before stripping
+        has_line_sep = ' ' in text
+        text = text.replace(' ', '\n')
         text = text.strip()
-        if not text:
+        if not text and not has_line_sep:
             continue
 
         # Transliterate if IAST mode
         if script == 'iast':
             text = dev_to_iast(text)
 
-        text = escape(text)
+        # Convert internal newlines (from line separator) to <br>
+        segments = text.split('\n')
+        segments = [escape(s.strip()) for s in segments if s.strip()]
+        text = '<br>'.join(segments) if len(segments) > 1 else (escape(text) if segments else '')
+
+        if not text:
+            continue
 
         if cf == 6 or ul:   # Pratika
             parts.append(f'<span style="{PRATIKA_STYLE}">{text}</span>')
