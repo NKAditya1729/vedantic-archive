@@ -16,6 +16,51 @@ from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 
 
+# ── Colour → role mapping (hex-based, robust to colour-table reordering) ──────
+# The master RTF's colour table has been reworked over time and the cf indices
+# are NOT stable. So we resolve every cf index to its RGB hex (read from the
+# file's own \colortbl) and map the hex to one of the canonical source roles.
+#   text    → #1a1a1a : bhāṣyam (normal) / mūlam (bold)
+#   pratika → #b54510, #af4504 (mantra-words), #0000ff (scriptural citations)
+#   vartika → #80017f, #800080, #5b1a8e
+#   skip    → #e6000e (document title), #000000 (editorial English notes), white
+ROLE_BY_HEX = {
+    '1a1a1a': 'text',
+    'b54510': 'pratika',
+    'af4504': 'pratika',
+    '0000ff': 'pratika',
+    '80017f': 'vartika',
+    '800080': 'vartika',
+    '5b1a8e': 'vartika',
+    'e6000e': 'skip',
+    'ffffff': 'skip',
+    # NB: pure black #000000 is NOT mapped to 'skip' — it appears both as
+    # stray single chars inside real text (must be kept) and as editorial
+    # English notes (skipped at paragraph level via the Latin-dominant rule).
+    '000000': 'text',
+}
+
+CF_HEX = {}   # cf index → 6-digit hex, populated by load_colortbl() in main()
+
+
+def load_colortbl(rtf: str):
+    """Parse \\colortbl and fill CF_HEX (1-based cf index → 'rrggbb')."""
+    CF_HEX.clear()
+    m = re.search(r'\\colortbl;(.*?)}', rtf, re.S)
+    if not m:
+        return
+    for i, entry in enumerate(m.group(1).split(';')):
+        rgb = dict(re.findall(r'\\(red|green|blue)(\d+)', entry))
+        if rgb:
+            CF_HEX[i + 1] = '%02x%02x%02x' % (
+                int(rgb.get('red', 0)), int(rgb.get('green', 0)), int(rgb.get('blue', 0)))
+
+
+def cf_role(cf):
+    """Canonical role for a colour index: text / pratika / vartika / skip."""
+    return ROLE_BY_HEX.get(CF_HEX.get(cf, ''), 'text')
+
+
 # ── RTF tokeniser ────────────────────────────────────────────────────────────
 
 def tokenise(rtf: str):
@@ -203,7 +248,10 @@ def spans_to_html(spans, script='devanagari') -> str:
         if not text:
             continue
 
-        if cf == 6 or ul:   # Pratika
+        role = cf_role(cf)
+        if role == 'skip':
+            continue
+        if role == 'pratika':
             parts.append(f'<span style="{PRATIKA_STYLE}">{text}</span>')
         else:
             parts.append(text)
@@ -231,14 +279,29 @@ def classify_para(spans) -> str:
     if _VERSE_REF_RE.match(full_text):
         return 'ref'
 
-    cfs = [cf for (_, cf, _, _) in text_spans]
-    bolds = [b for (_, _, b, _) in text_spans]
+    # Editorial English annotations (e.g. "What does ātmā mean?") are
+    # Latin-dominant even when they embed a Devanagari term — skip them.
+    if len(re.findall(r'[A-Za-z]', full_text)) > len(re.findall(r'[ऀ-ॿ]', full_text)):
+        return 'skip'
 
-    if 5 in cfs or 7 in cfs:   # cf5 = intro vartika; cf7 = verse-section vartika
+    # Consider only Devanagari-bearing spans whose colour is not 'skip'
+    sig = [(t, cf, b, ul) for (t, cf, b, ul) in text_spans
+           if re.search(r'[ऀ-ॿ]', t) and cf_role(cf) != 'skip']
+    if not sig:
+        return 'skip'
+
+    # Section-divider headings (e.g. "२.४. सम्बन्ध भष्यम्") are fully underlined
+    # Devanagari with no daṇḍa — real mūla/bhāṣya text-runs are not underlined.
+    if all(ul for (t, cf, b, ul) in sig) and not re.search(r'[।॥]', full_text):
+        return 'skip'
+
+    roles = [cf_role(cf) for (t, cf, b, ul) in sig]
+    if 'vartika' in roles:
         return 'vartika'
-    if 6 in cfs:
-        return 'bhashyam'   # bhashyam with inline pratika spans
-    if any(bolds):
+    if 'pratika' in roles:
+        return 'bhashyam'   # commentary containing glossed mantra-words
+    # No pratika spans: a bold mantra block is mūlam, else plain bhāṣyam
+    if any(b for (t, cf, b, ul) in sig):
         return 'mulam'
     return 'bhashyam'
 
@@ -256,7 +319,10 @@ def ref_to_display(raw: str, script: str) -> str:
     return f'बृहद् {" । ".join(to_dev(p) for p in parts)}'
 
 
-_VERSE_NUM_PAT = re.compile(r'(।।\s*[०-९\d]+\s*।।)')
+# A verse number sits between two dandas: devanagari/latin digits, optionally
+# prefixed "BV" and containing dots/dashes/spaces, e.g. ।। ४७ ।। , ।। BV 2.4.1 ।।
+# , ।। 2-4-७१ ।।
+_VERSE_NUM_PAT = re.compile(r'(।।\s*(?:BV\s*)?[०-९\d][०-९\d.\- ]*\s*।।)')
 
 
 def split_cf7_verses(text: str) -> list:
@@ -322,11 +388,9 @@ def build_html(paragraphs, script='devanagari') -> str:
             prev_kind = kind
             continue
 
-        # cf7 vārtika paragraphs pack many verses into one block — split them
-        cfs_in_para = [s[1] for s in spans if s[0].strip()]
-        is_cf7_vartika = kind == 'vartika' and 7 in cfs_in_para and 5 not in cfs_in_para
-
-        if is_cf7_vartika:
+        # Vārtika paragraphs may pack many verses into one block — split them.
+        # (split_cf7_verses handles single-verse blocks correctly too.)
+        if kind == 'vartika':
             raw_text = ''.join(s[0] for s in spans)
             verse_strs = split_cf7_verses(raw_text)
             if not verse_strs:
@@ -398,6 +462,10 @@ def main():
 
     with open(rtf_path, 'rb') as f:
         raw = f.read().decode('latin-1')
+
+    # Resolve colour indices from this file's own colour table
+    load_colortbl(raw)
+    print("Colour table:", {cf: CF_HEX[cf] + '→' + cf_role(cf) for cf in sorted(CF_HEX)})
 
     # Find body (skip header, colour table, font table)
     body_start = raw.find('\\pard')
