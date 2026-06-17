@@ -194,6 +194,10 @@
   color: #5b1a8e;
 }
 
+.vartikasara-label {
+  color: #0d6002;
+}
+
 .src-mulam {
   font-weight: 700;
   color: #1a1a1a;
@@ -214,6 +218,13 @@
 .src-vartika {
   font-weight: 400;
   color: #5b1a8e;
+  margin-bottom: 0.25rem;
+}
+
+/* Vārtikasāra (Vidyāraṇya) — green; some verses carry blue/yellow bg highlights set inline */
+.src-vartika-sara {
+  font-weight: 400;
+  color: #0d6002;
   margin-bottom: 0.25rem;
 }
 
@@ -257,6 +268,10 @@
 
 [data-theme="dark"] .src-vartika {
   color: #5b1a8e !important;
+}
+
+[data-theme="dark"] .src-vartika-sara {
+  color: #0d6002 !important;
 }
 
 /* --- Floating Source Text Panel --- */
