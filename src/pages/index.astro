@@ -14,14 +14,15 @@ const latestDate = iastClasses
 const latestClasses = [...iastClasses]
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
   .slice(0, 3);
-const mantraRefs = new Set(
-  iastClasses
-    .flatMap(c => {
-      const text = `${c.data.source_ref || ''} ${c.data.source_text_content || ''}`;
-      return text.match(/(?:Bṛhad\.\s*)?2[.-]4[.-]\d+/g) || [];
-    })
-    .map(ref => ref.replace('Bṛhad.', '').trim().replace(/-/g, '.'))
-);
+// Mantras covered = highest mantra number reached in the per-class source_ref
+// (the mūlam reference 2.4.X; the X is the mantra number). Coverage is
+// sequential from 2.4.1, so the maximum equals the count. We read ONLY
+// source_ref — not source_text_content — to avoid counting Vārtika verse
+// numbers (e.g. "2-4-71") or incidental bhāṣyam citations (e.g. "2.4.6").
+const mantraNumbers = iastClasses
+  .flatMap(c => [...(c.data.source_ref || '').matchAll(/2[.-]4[.-](\d+)/g)].map(m => parseInt(m[1], 10)))
+  .filter(n => n >= 1 && n <= 14);
+const mantrasCovered = mantraNumbers.length ? Math.max(...mantraNumbers) : 0;
 const teachingHours = Math.round(totalClasses * 1.5);
 
 // Group by series
@@ -81,7 +82,7 @@ const series = Array.from(seriesMap.values());
           <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-family: var(--font-ui);">Classes completed</div>
         </div>
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1.5rem; border-radius: 8px; text-align: center;" class="class-card">
-          <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">{mantraRefs.size}</div>
+          <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">{mantrasCovered}</div>
           <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-family: var(--font-ui);">Mantras covered</div>
         </div>
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); padding: 1.5rem; border-radius: 8px; text-align: center;" class="class-card">

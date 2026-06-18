@@ -221,11 +221,27 @@
   margin-bottom: 0.25rem;
 }
 
-/* Vārtikasāra (Vidyāraṇya) — green; some verses carry blue/yellow bg highlights set inline */
+/* Vārtikasāra (Vidyāraṇya) — green; some verses carry blue/yellow highlights */
 .src-vartika-sara {
   font-weight: 400;
   color: #0d6002;
   margin-bottom: 0.25rem;
+}
+
+/* Verse highlights — inline so they hug the verse text (not the full-width line),
+   light tints, cloned across the <br> so each line is wrapped tightly. */
+.hl-blue,
+.hl-yellow {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+.hl-blue {
+  background-color: #d6ebff;
+}
+.hl-yellow {
+  background-color: #fdf7b5;
 }
 
 .src-divider {

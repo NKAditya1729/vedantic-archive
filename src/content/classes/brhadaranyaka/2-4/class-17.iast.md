@@ -24,11 +24,11 @@ source_text_content: |
     <p class="src-vartika-sara">sarvāsūpaniṣatsvetatsārvātmyaṃ pratipādyate ||<br>kāryajñeyasamāptiḥ syātsārvātmyasyāvabodhataḥ || 32 ||</p>
     <p class="src-vartika-sara">nāvidhvastaṃ tamo'trāsti naca jñānamanutthitama ||<br>nānivṛttastathā'nartho nānavāptaṃ sukhaṃ tathā || 33 ||</p>
     <p class="src-vartika-sara">ityajñātajñāpanākhyo vidhiratropavarṇitaḥ ||<br>apravṛttapravṛtyākhyo vidhirnātropapadyate || 34 ||</p>
-    <p class="src-vartika-sara" style="background-color:#118dff;">vidheyaṃ vā phalaṃ vā'sya na sambhavati kiñcana ||<br>brahma-taddhī-stadabhyāsa upāyo vā vidhīyatām || 35 ||</p>
+    <p class="src-vartika-sara"><span class="hl-blue">vidheyaṃ vā phalaṃ vā'sya na sambhavati kiñcana ||<br>brahma-taddhī-stadabhyāsa upāyo vā vidhīyatām || 35 ||</span></p>
     <p class="src-vartika-sara">na brahma nityasiddhatvādvidhātuṃ śakyate kiñcit ||<br>abhūtabhāvi-yāgādirvidhimarhati netaraḥ || 36 ||</p>
     <p class="src-vartika-sara">nityaṃ na bhavanaṃ yasya yasya vā nityabhūtatā ||<br>na tayorvidhi-yogyatvaṃ khapuṣpākāśayoriva || 37 ||</p>
-    <p class="src-vartika-sara" style="background-color:#f9ff29;">taddhīrvidheyetyasmiṃśca pakṣe dhīḥ ketikathyatām ||<br>antaḥkaraṇavṛttirvā kiṃvā tatphalavedanam || 38 ||</p>
-    <p class="src-vartika-sara" style="background-color:#f9ff29;">vṛttiḥ pratyakcidākārā kiṃvā sārvātmyagocarā ||<br>ādye vidhirapūrvo vā niyamo vā'thavetaraḥ || 39 ||</p>
+    <p class="src-vartika-sara"><span class="hl-yellow">taddhīrvidheyetyasmiṃśca pakṣe dhīḥ ketikathyatām ||<br>antaḥkaraṇavṛttirvā kiṃvā tatphalavedanam || 38 ||</span></p>
+    <p class="src-vartika-sara"><span class="hl-yellow">vṛttiḥ pratyakcidākārā kiṃvā sārvātmyagocarā ||<br>ādye vidhirapūrvo vā niyamo vā'thavetaraḥ || 39 ||</span></p>
   </div>
 source_ref: "Bṛhad. 2.4.5"
 related_verses: ""
