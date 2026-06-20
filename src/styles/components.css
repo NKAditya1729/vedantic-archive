@@ -228,6 +228,12 @@
   margin-bottom: 0.25rem;
 }
 
+/* Teaching-aid notes inserted by Swamiji (e.g. the {…} Vidhi classification) — blue, kept verbatim */
+.src-note-blue {
+  color: #0000ff;
+  margin-bottom: 0.5rem;
+}
+
 /* Verse highlights — inline so they hug the verse text (not the full-width line),
    light tints, cloned across the <br> so each line is wrapped tightly. */
 .hl-blue,
@@ -288,6 +294,10 @@
 
 [data-theme="dark"] .src-vartika-sara {
   color: #0d6002 !important;
+}
+
+[data-theme="dark"] .src-note-blue {
+  color: #0000ff !important;
 }
 
 /* --- Floating Source Text Panel --- */
