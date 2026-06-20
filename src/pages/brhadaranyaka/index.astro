@@ -8,10 +8,10 @@ const allClasses = await getCollection('classes');
 const iastClasses = allClasses
   .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
   .sort((a, b) => {
-    // Sort by adhyaya, brahmana, class_number
+    // Sort by adhyaya, brahmana, then class_number DESCENDING (latest class first)
     if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
     if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
-    return a.data.class_number - b.data.class_number;
+    return b.data.class_number - a.data.class_number;
   });
 
 // Group by adhyaya then brahmana
