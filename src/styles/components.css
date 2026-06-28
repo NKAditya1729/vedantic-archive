@@ -195,7 +195,7 @@
 }
 
 .vartikasara-label {
-  color: #0d6002;
+  color: #0c5a53;
 }
 
 .src-mulam {
@@ -224,8 +224,36 @@
 /* Vārtikasāra (Vidyāraṇya) — green; some verses carry blue/yellow highlights */
 .src-vartika-sara {
   font-weight: 400;
-  color: #0d6002;
+  color: #0c5a53;
   margin-bottom: 0.25rem;
+}
+
+/* Vārtika ṭīkā (commentary on the Vārtika) — gray, small */
+.src-vartika-tika {
+  font-weight: 400;
+  color: #808080;
+  font-size: 0.82em;
+  margin-bottom: 0.25rem;
+}
+
+/* Vārtikasāra ṭīkā — light blue, small */
+.src-vartika-sara-tika {
+  font-weight: 400;
+  color: #48b3ff;
+  font-size: 0.82em;
+  margin-bottom: 0.25rem;
+}
+
+/* Bhāṣyam dialogue: question in red, answer in green */
+.src-bhashyam-q {
+  font-weight: 400;
+  color: #e60006;
+  margin-bottom: 0.5rem;
+}
+.src-bhashyam-a {
+  font-weight: 400;
+  color: #16a53f;
+  margin-bottom: 0.5rem;
 }
 
 /* Teaching-aid notes inserted by Swamiji (e.g. the {…} Vidhi classification) — blue, kept verbatim */
@@ -237,7 +265,8 @@
 /* Verse highlights — inline so they hug the verse text (not the full-width line),
    light tints, cloned across the <br> so each line is wrapped tightly. */
 .hl-blue,
-.hl-yellow {
+.hl-yellow,
+.hl-cyan {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   padding: 0 0.15em;
@@ -248,6 +277,9 @@
 }
 .hl-yellow {
   background-color: #fdf7b5;
+}
+.hl-cyan {
+  background-color: #c4fff8;
 }
 
 .src-divider {
@@ -293,11 +325,27 @@
 }
 
 [data-theme="dark"] .src-vartika-sara {
-  color: #0d6002 !important;
+  color: #0c5a53 !important;
 }
 
 [data-theme="dark"] .src-note-blue {
   color: #0000ff !important;
+}
+
+[data-theme="dark"] .src-vartika-tika {
+  color: #808080 !important;
+}
+
+[data-theme="dark"] .src-vartika-sara-tika {
+  color: #48b3ff !important;
+}
+
+[data-theme="dark"] .src-bhashyam-q {
+  color: #e60006 !important;
+}
+
+[data-theme="dark"] .src-bhashyam-a {
+  color: #16a53f !important;
 }
 
 /* --- Floating Source Text Panel --- */
