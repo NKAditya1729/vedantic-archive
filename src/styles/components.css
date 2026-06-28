@@ -436,6 +436,41 @@
   background: #5b1a8e;
 }
 
+.legend-box--question {
+  background: #e60006;
+}
+.legend-box--answer {
+  background: #16a53f;
+}
+.legend-box--vartika-tika {
+  background: #808080;
+}
+.legend-box--vartika-sara {
+  background: #0c5a53;
+}
+.legend-box--vartika-sara-tika {
+  background: #48b3ff;
+}
+.legend-box--note {
+  background: #0000ff;
+}
+
+/* Colour legend on the Complete Source Text page (and reused styling for the float) */
+.source-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.75rem 0 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.source-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .source-float__close {
   width: 1.75rem;
   height: 1.75rem;
