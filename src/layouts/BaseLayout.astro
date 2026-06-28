@@ -7,6 +7,7 @@ interface Props {
   ogDescription?: string;
   ogType?: string;
   ogUrl?: string;
+  forceLight?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   ogDescription,
   ogType = 'website',
   ogUrl,
+  forceLight = false,
 } = Astro.props;
 const siteName = 'Vedāntic Study Archive';
 const fullTitle = title ? `${title} — ${siteName}` : siteName;
@@ -30,30 +32,35 @@ import '../styles/print.css';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class={forceLight ? 'force-light' : undefined}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
   <meta name="description" content={metaDescription} />
 
-  <!-- Prevent flash of wrong theme -->
-  <script is:inline>
-    (function() {
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
+  <!-- Prevent flash of wrong theme. Pages with forceLight stay in light mode regardless of preference. -->
+  {!forceLight && (
+    <script is:inline>
+      (function() {
+        const theme = (() => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+          }
+          return 'light';
+        })();
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-        return 'light';
       })();
-      if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    })();
-  </script>
+    </script>
+  )}
+  {forceLight && (
+    <script is:inline>document.documentElement.removeAttribute('data-theme');</script>
+  )}
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

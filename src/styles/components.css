@@ -1298,3 +1298,8 @@
   color: var(--accent);
   background: var(--accent-muted);
 }
+
+/* Pages rendered in forced light mode (e.g. Complete Source Text) hide the dark-mode toggle */
+html.force-light .theme-toggle {
+  display: none;
+}
