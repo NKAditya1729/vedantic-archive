@@ -423,7 +423,10 @@
   border-radius: 1px;
 }
 
-.legend-box--mulam,
+.legend-box--mulam {
+  background: #000000;
+}
+
 .legend-box--bhashyam {
   background: #1a1a1a;
 }
@@ -433,7 +436,7 @@
 }
 
 .legend-box--vartika {
-  background: #5b1a8e;
+  background: #80017f;
 }
 
 .legend-box--question {
