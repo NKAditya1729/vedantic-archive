@@ -18,8 +18,13 @@ allClasses.forEach(c => {
   }
 });
 
-// Separate into class sections and the consolidated core section
-const classSections = glossarySections.filter(s => s.classNumber !== null);
+// Separate into class sections and the consolidated core section.
+// Class sections render class_number DESCENDING (latest class first), matching the
+// class-notes listing, so the most recent class is reachable without scrolling
+// past the whole archive. The JSON data file itself stays in ascending order.
+const classSections = glossarySections
+  .filter(s => s.classNumber !== null)
+  .sort((a, b) => b.classNumber - a.classNumber);
 const coreSection = glossarySections.find(s => s.classNumber === null);
 
 // Most recent class is expanded by default; older classes start collapsed
