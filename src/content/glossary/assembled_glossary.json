@@ -2916,5 +2916,50 @@
         "search_iast": "tasmat atmaiva ekamadvayamiti pratipattavyam tasmat atma eva ekam advayam iti pratipattavyam therefore it is to be understood that the atma alone is one without a second the self alone one without a second therefore it is to be understood that the atma alone is one without a second bhasyam s closing sentence on 2 4 11 and the conclusion of the whole manana section sthiti utpatti and pralaya have each been shown to yield nothing apart from prajnana so atmaiva ekam advayam the atma alone one without a second bhasyam brhad 2 4 11 tasmat atmaiva ekamadvayamiti pratipattavyam"
       }
     ]
+  },
+  {
+    "classNumber": 28,
+    "sectionTitle": "The pralaya sequence completes through every sense and organ into the prajñāna-ghana, and the objection about the karaṇas is answered — an instrument is only another configuration of the object itself, like a lamp",
+    "terms": [
+      {
+        "deva": "विषयसमानजातीयं करणं मन्यते श्रुतिः",
+        "iast": "viṣayasamānajātīyaṃ karaṇaṃ manyate śrutiḥ",
+        "definition": "The śruti regards the instrument (karaṇa) as belonging to the same class as its object — not as a separate order of thing.",
+        "context": "Bhāṣyam on 2.4.11 answering the objection that only the dissolution of viṣayas was described, never that of the karaṇas. Bāḍham — granted; but the śruti does not treat the sense-organs as a different category from their objects, so their pralaya is not a separate topic.",
+        "source": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>किन्तु विषयसमानजातीयं करणं मन्यते श्रुतिः</u> ।\"",
+        "source_iast": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>kintu viṣayasamānajātīyaṃ karaṇaṃ manyate śrutiḥ</u> |\"",
+        "breakdown_deva": "विषय-समान-जातीयम् करणम् मन्यते श्रुतिः — \"the śruti holds the instrument to be of the same class as the object\"",
+        "breakdown_iast": "viṣaya-samāna-jātīyam karaṇam manyate śrutiḥ — \"the śruti holds the instrument to be of the same class as the object\"",
+        "phrasal": "Organ and object, one class",
+        "search_deva": "विषयसमानजातीयं करणं मन्यते श्रुतिः विषय-समान-जातीयम् करणम् मन्यते श्रुतिः — \"the śruti holds the instrument to be of the same class as the object\" The śruti regards the instrument (karaṇa) as belonging to the same class as its object — not as a separate order of thing. Bhāṣyam (Bṛhad. 2.4.11) किन्तु विषयसमानजातीयं करणं मन्यते श्रुतिः ।",
+        "search_iast": "visayasamanajatiyam karanam manyate srutih visaya samana jatiyam karanam manyate srutih the sruti holds the instrument to be of the same class as the object organ and object one class the sruti regards the instrument karana as belonging to the same class as its object not as a separate order of thing bhasyam on 2 4 11 answering the objection that only the dissolution of visayas was described never that of the karanas badham granted but the sruti does not treat the sense organs as a different category from their objects so their pralaya is not a separate topic bhasyam brhad 2 4 11 visayasamanajatiyam karanam manyate srutih"
+      },
+      {
+        "deva": "न तु जात्यन्तरम्",
+        "iast": "na tu jātyantaram",
+        "definition": "— and not something of another class; the instrument is not a different order of reality from the object it reveals.",
+        "context": "Bhāṣyam on 2.4.11, completing the previous clause: since karaṇa is not jāty-antara, it carries no independent existence that would need its own dissolution — the point that lets the whole pralaya be stated in terms of viṣaya alone.",
+        "source": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>न तु जात्यन्तरम्</u> ।\"",
+        "source_iast": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>na tu jātyantaram</u> |\"",
+        "breakdown_deva": "न तु जाति-अन्तरम् — \"but not of a different class\"",
+        "breakdown_iast": "na tu jāti-antaram — \"but not of a different class\"",
+        "phrasal": "Not a different order of thing",
+        "search_deva": "न तु जात्यन्तरम् न तु जाति-अन्तरम् — \"but not of a different class\" — and not something of another class; the instrument is not a different order of reality from the object it reveals. Bhāṣyam (Bṛhad. 2.4.11) न तु जात्यन्तरम् ।",
+        "search_iast": "na tu jatyantaram na tu jati antaram but not of a different class not a different order of thing and not something of another class the instrument is not a different order of reality from the object it reveals bhasyam on 2 4 11 completing the previous clause since karana is not jaty antara it carries no independent existence that would need its own dissolution the point that lets the whole pralaya be stated in terms of visaya alone bhasyam brhad 2 4 11 na tu jatyantaram"
+      },
+      {
+        "deva": "विषयस्यैव स्वात्मग्राहकत्वेन संस्थानान्तरं करणं नाम",
+        "iast": "viṣayasyaiva svātmagrāhakatvena saṃsthānāntaraṃ karaṇaṃ nāma",
+        "definition": "What is called an instrument is only another configuration of the object itself, functioning as the revealer of its own nature.",
+        "context": "Bhāṣyam on 2.4.11 with the lamp illustration: as a lamp is itself a configuration of rūpa yet serves as the instrument for revealing all rūpa, so each sense-organ is a saṃsthānāntara of its own viṣaya. Hence no separate effort is needed for the karaṇas' dissolution — tasmāt na karaṇānāṃ pṛthak-pralaye yatnaḥ kāryaḥ.",
+        "source": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>विषयस्यैव स्वात्मग्राहकत्वेन संस्थानान्तरं करणं नाम</u> ।\"",
+        "source_iast": "Bhāṣyam (Bṛhad. 2.4.11): \"<u>viṣayasyaiva svātmagrāhakatvena saṃsthānāntaraṃ karaṇaṃ nāma</u> |\"",
+        "breakdown_deva": "विषयस्य एव स्व-आत्म-ग्राहकत्वेन संस्थान-अन्तरम् करणम् नाम — \"what is called an instrument is another configuration of the object itself, as the grasper of its own nature\"",
+        "breakdown_iast": "viṣayasya eva sva-ātma-grāhakatvena saṃsthāna-antaram karaṇam nāma — \"what is called an instrument is another configuration of the object itself, as the grasper of its own nature\"",
+        "phrasal": "The organ is the object, reshaped",
+        "search_deva": "विषयस्यैव स्वात्मग्राहकत्वेन संस्थानान्तरं करणं नाम विषयस्य एव स्व-आत्म-ग्राहकत्वेन संस्थान-अन्तरम् करणम् नाम — \"what is called an instrument is another configuration of the object itself, as the grasper of its own nature\" What is called an instrument is only another configuration of the object itself, functioning as the revealer of its own nature. Bhāṣyam (Bṛhad. 2.4.11) विषयस्यैव स्वात्मग्राहकत्वेन संस्थानान्तरं करणं नाम ।",
+        "search_iast": "visayasyaiva svatmagrahakatvena samsthanantaram karanam nama visayasya eva sva atma grahakatvena samsthana antaram karanam nama what is called an instrument is another configuration of the object itself as the grasper of its own nature the organ is the object reshaped what is called an instrument is only another configuration of the object itself functioning as the revealer of its own nature bhasyam on 2 4 11 with the lamp illustration as a lamp is itself a configuration of rupa yet serves as the instrument for revealing all rupa so each sense organ is a samsthanantara of its own visaya hence no separate effort is needed for the karanas dissolution tasmat na karananam prthak pralaye yatnah karyah bhasyam brhad 2 4 11 visayasyaiva svatmagrahakatvena samsthanantaram karanam nama"
+      }
+    ]
   }
 ]
