@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import { BRAHMANAS, mantrasCovered } from '../../lib/brahmanas';
+
+// One class-list page per brāhmaṇa: /brhadaranyaka/2-4/, /brhadaranyaka/2-5/, …
+export async function getStaticPaths() {
+  const allClasses = await getCollection('classes');
+  return BRAHMANAS
+    .filter(b => allClasses.some(c => c.data.adhyaya === b.adhyaya && c.data.brahmana === b.brahmana))
+    .map(b => ({ params: { section: b.key }, props: { info: b } }));
+}
+
+const { info } = Astro.props;
+const allClasses = await getCollection('classes');
+// Only IAST versions for listing (avoid duplicates); latest class first
+const classes = allClasses
+  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast' &&
+               c.data.adhyaya === info.adhyaya && c.data.brahmana === info.brahmana)
+  .sort((a, b) => b.data.class_number - a.data.class_number);
+const covered = mantrasCovered(info, classes);
+const base = import.meta.env.BASE_URL;
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  title={`${info.name} (${info.adhyaya}.${info.brahmana}) — Bṛhadāraṇyaka Upaniṣad`}
+  description={`Class notes on the ${info.name} (Bṛhadāraṇyaka Upaniṣad ${info.adhyaya}.${info.brahmana}) with Śāṅkara Bhāṣya.`}
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <Breadcrumb items={[
+      { label: 'Home', href: `${base}/` },
+      { label: 'Bṛhadāraṇyaka', href: `${base}/brhadaranyaka/` },
+      { label: `${info.adhyaya}.${info.brahmana} ${info.name}` },
+    ]} />
+
+    <h1>{info.name} <span style="font-weight: 400;">({info.adhyaya}.{info.brahmana})</span></h1>
+    <p class="meta" style="margin-bottom: 0.75rem; font-size: 1.125rem;" lang="sa">{info.nameDeva}</p>
+    <p style="margin-bottom: 0.75rem;">{info.blurb}</p>
+    <p class="meta" style="margin-bottom: 0.75rem; font-size: 0.875rem;">
+      {classes.length} {classes.length === 1 ? 'class' : 'classes'}
+      {covered === info.mantraCount
+        ? ` · Complete — all ${info.mantraCount} mantras`
+        : covered
+          ? ` · Mantras ${info.adhyaya}.${info.brahmana}.1–${info.adhyaya}.${info.brahmana}.${covered} of ${info.mantraCount} covered so far`
+          : ' · In progress'}
+    </p>
+    <p style="margin-bottom: 1.5rem; font-size: 0.9375rem;">
+      <a href={info.playlistUrl} target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a>
+      {info.introPath && <> · <a href={`${base}${info.introPath}`}>Introduction to the {info.name}</a></>}
+    </p>
+
+    <div class="index-actions">
+      <a href={`${base}${info.sourceTextPath}`}>Complete Source Text →</a>
+    </div>
+
+    <div class="tree">
+      <div class="tree__brahmana">
+        {classes.map(cls => (
+          <a
+            href={`${base}/brhadaranyaka/${info.key}/class-${String(cls.data.class_number).padStart(2, '0')}/`}
+            class="class-item"
+            id={`class-${info.adhyaya}-${info.brahmana}-${cls.data.class_number}`}
+          >
+            <div class="class-item__header">
+              <span class="class-item__number">Class {cls.data.class_number}</span>
+              <span class="class-item__date">{formatDate(cls.data.date)}</span>
+            </div>
+            <div class="class-item__coverage">{cls.data.coverage}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

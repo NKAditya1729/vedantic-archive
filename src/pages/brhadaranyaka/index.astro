@@ -2,32 +2,27 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
+import { BRAHMANAS, mantrasCovered } from '../../lib/brahmanas';
 
 const allClasses = await getCollection('classes');
-// Only IAST versions for listing (avoid duplicates)
-const iastClasses = allClasses
-  .filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast')
-  .sort((a, b) => {
-    // Sort by adhyaya, brahmana, then class_number DESCENDING (latest class first)
-    if (a.data.adhyaya !== b.data.adhyaya) return a.data.adhyaya - b.data.adhyaya;
-    if (a.data.brahmana !== b.data.brahmana) return a.data.brahmana - b.data.brahmana;
-    return b.data.class_number - a.data.class_number;
-  });
+// Only IAST versions for counting (avoid duplicates)
+const iastClasses = allClasses.filter(c => c.data.series === 'brhadaranyaka' && c.data.script === 'iast');
 
-// Group by adhyaya then brahmana
-type ClassEntry = typeof iastClasses[0];
-const tree: Map<number, Map<number, { name: string; classes: ClassEntry[] }>> = new Map();
-
-for (const cls of iastClasses) {
-  if (!tree.has(cls.data.adhyaya)) {
-    tree.set(cls.data.adhyaya, new Map());
-  }
-  const adhyayaMap = tree.get(cls.data.adhyaya)!;
-  if (!adhyayaMap.has(cls.data.brahmana)) {
-    adhyayaMap.set(cls.data.brahmana, { name: cls.data.brahmana_name, classes: [] });
-  }
-  adhyayaMap.get(cls.data.brahmana)!.classes.push(cls);
-}
+// One card per brāhmaṇa, the one currently being taught first
+const cards = BRAHMANAS
+  .map(b => {
+    const classes = iastClasses.filter(c => c.data.adhyaya === b.adhyaya && c.data.brahmana === b.brahmana);
+    const covered = mantrasCovered(b, classes);
+    return {
+      ...b,
+      count: classes.length,
+      latestDate: classes.map(c => c.data.date).sort().reverse()[0] || '',
+      covered,
+      complete: covered === b.mantraCount,
+    };
+  })
+  .filter(b => b.count > 0)
+  .sort((a, b) => b.adhyaya - a.adhyaya || b.brahmana - a.brahmana);
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -54,7 +49,9 @@ function formatDate(dateStr: string) {
       The Bṛhadāraṇyaka Upaniṣad is the largest and among the most important of the principal Upaniṣads. Belonging to the Śukla Yajurveda, it forms the concluding portion (āraṇyaka) of the Śatapatha Brāhmaṇa. The text is studied here with Śrī Śaṅkarācārya's bhāṣya, supplemented by Sureśvarācārya's Vārttika, as taught by <strong>Pūjya Swami Shankarananda</strong>.
     </p>
     <p style="margin-bottom: 0.75rem; font-size: 0.9375rem;">
-      <a href="https://www.youtube.com/playlist?list=PLFx8rf4WVNI6Iu1Icx5k7_29L4VQ7TXmn" target="_blank" rel="noopener noreferrer">📺 YouTube Playlist</a> ·
+      {cards.map(b => (
+        <><a href={b.playlistUrl} target="_blank" rel="noopener noreferrer">📺 {b.name} Playlist</a> · </>
+      ))}
       <a href="https://drive.google.com/drive/folders/1GsnyvVftBlBqhcu36YtXgnGkHRYGroFA" target="_blank" rel="noopener noreferrer">📄 Class Materials (Google Drive)</a>
     </p>
     <p style="margin-bottom: 2rem; font-size: 0.875rem; color: var(--text-secondary);">
@@ -65,38 +62,33 @@ function formatDate(dateStr: string) {
       <a href="https://advaitasharada.sringeri.net/ग्रन्थाः/" target="_blank" rel="noopener noreferrer">All Śruti Texts</a>
     </p>
 
-    <div class="index-actions">
-      <a href={`${import.meta.env.BASE_URL}/source-text/`}>Complete Source Text →</a>
-    </div>
-
-    <div class="tree">
-      {Array.from(tree.entries()).sort(([a], [b]) => a - b).map(([adhyaya, brahmanas]) => (
-        <div class="tree__adhyaya">
-          <h2 class="tree__heading">Adhyāya {adhyaya}</h2>
-          {Array.from(brahmanas.entries()).sort(([a], [b]) => a - b).map(([brahmana, data]) => (
-            <div class="tree__brahmana">
-              <h3 class="tree__brahmana-name">
-                {adhyaya}.{brahmana} — {data.name}
-              </h3>
-              <div>
-                {data.classes.map(cls => (
-                  <a
-                    href={`${import.meta.env.BASE_URL}/brhadaranyaka/${cls.data.adhyaya}-${cls.data.brahmana}/class-${String(cls.data.class_number).padStart(2, '0')}/`}
-                    class="class-item"
-                    id={`class-${cls.data.adhyaya}-${cls.data.brahmana}-${cls.data.class_number}`}
-                  >
-                    <div class="class-item__header">
-                      <span class="class-item__number">Class {cls.data.class_number}</span>
-                      <span class="class-item__date">{formatDate(cls.data.date)}</span>
-                    </div>
-                    <div class="class-item__coverage">{cls.data.coverage}</div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <h2 class="tree__heading" style="margin-top: 0.5rem;">Adhyāya 2</h2>
+    <div class="brahmana-cards" style="display: grid; gap: 1rem; margin-top: 1rem;">
+      {cards.map(b => (
+        <a href={`${import.meta.env.BASE_URL}/brhadaranyaka/${b.key}/`} class="series-card" id={`brahmana-${b.key}`}>
+          <div class="series-card__title">{b.adhyaya}.{b.brahmana} — {b.name}</div>
+          <div class="series-card__subtitle" lang="sa">{b.nameDeva}</div>
+          <div class="series-card__meta">
+            {b.count} {b.count === 1 ? 'class' : 'classes'}
+            {b.complete
+              ? ` · Complete — all ${b.mantraCount} mantras`
+              : b.covered
+                ? ` · In progress — mantras ${b.adhyaya}.${b.brahmana}.1–${b.adhyaya}.${b.brahmana}.${b.covered} of ${b.mantraCount}`
+                : ' · In progress'}
+            {b.latestDate && ` · Latest: ${formatDate(b.latestDate)}`}
+          </div>
+          <div class="series-card__arrow">Open classes →</div>
+        </a>
       ))}
     </div>
+
+    <script is:inline>
+      // Old links pointed at #class-2-4-N on this page; the class lists now live
+      // on one page per brāhmaṇa, so forward those anchors there.
+      (function () {
+        var m = location.hash.match(/^#class-(\d+)-(\d+)-(\d+)$/);
+        if (m) location.replace(location.pathname.replace(/\/?$/, '/') + m[1] + '-' + m[2] + '/' + location.hash);
+      })();
+    </script>
   </div>
 </BaseLayout>

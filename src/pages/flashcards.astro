@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { BRAHMANAS } from '../lib/brahmanas';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -14,23 +15,34 @@ const allClasses = await getCollection('classes');
 const classDates = {};
 allClasses.forEach(c => {
   if (c.data.script === 'iast') {
-    classDates[c.data.class_number] = c.data.date;
+    classDates[`${c.data.adhyaya}-${c.data.brahmana}-${c.data.class_number}`] = c.data.date;
   }
 });
+
+// A flashcard section names its brāhmaṇa (`"brahmana": 5` for the Madhu Brāhmaṇa);
+// sections without it are the Maitreyī Brāhmaṇa (2.4), written before there was a second one.
+const brahmanaOf = s => BRAHMANAS.find(b => b.adhyaya === 2 && b.brahmana === (s.brahmana ?? 4));
+// Maitreyī ids keep their original form so existing links to cards keep working
+const idPrefix = s => (s.brahmana ?? 4) === 4 ? '' : `${brahmanaOf(s).key}-`;
+const dateOf = s => classDates[`${brahmanaOf(s).key}-${s.classNumber}`];
 
 // Separate into class sections and the consolidated core section.
 // Class sections render class_number DESCENDING (latest class first), matching the
 // class-notes listing, so the most recent class is reachable without scrolling
 // past the whole archive. The JSON data file itself stays in ascending order.
+// Sections are grouped by brāhmaṇa (the one being taught now first), and within
+// each group the most recent class is expanded by default.
 const classSections = glossarySections
   .filter(s => s.classNumber !== null)
   .sort((a, b) => b.classNumber - a.classNumber);
 const coreSection = glossarySections.find(s => s.classNumber === null);
-
-// Most recent class is expanded by default; older classes start collapsed
-const maxClassNumber = classSections.length
-  ? Math.max(...classSections.map(s => s.classNumber))
-  : 0;
+const groups = [...BRAHMANAS]
+  .sort((a, b) => b.adhyaya - a.adhyaya || b.brahmana - a.brahmana)
+  .map(info => {
+    const sections = classSections.filter(s => brahmanaOf(s) === info);
+    return { info, sections, maxClassNumber: sections.length ? sections[0].classNumber : 0 };
+  })
+  .filter(g => g.sections.length > 0);
 
 // Generate flat list of all terms for the index cloud, sorted alphabetically by IAST
 const allIndexTerms = glossarySections
@@ -38,18 +50,19 @@ const allIndexTerms = glossarySections
     section.terms.map(term => ({
       deva: term.deva,
       iast: term.iast,
-      slug: `term-${section.classNumber || 'core'}-${term.iast.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+      slug: getTermSlug(term.iast, section),
       classNumber: section.classNumber
     }))
   )
   .sort((a, b) => a.iast.localeCompare(b.iast));
 
-function getTermSlug(termIast: string, classNum: number | null) {
-  return `term-${classNum || 'core'}-${termIast.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+function getTermSlug(termIast: string, section) {
+  const cls = section.classNumber === null ? 'core' : `${idPrefix(section)}${section.classNumber}`;
+  return `term-${cls}-${termIast.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 }
 ---
 
-<BaseLayout title="Flashcards" description="A comprehensive classwise and consolidated set of flashcards for Maitreyī Brāhmaṇa study.">
+<BaseLayout title="Flashcards" description="A classwise set of flashcards for the study of the Maitreyī and Madhu Brāhmaṇas of the Bṛhadāraṇyaka Upaniṣad.">
   <!-- Run inline script block as early as possible to prevent flash of wrong script -->
   <script is:inline>
     (function() {
@@ -67,7 +80,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
 
     <header class="glossary-header">
       <h1>Flashcards</h1>
-      <p class="meta">A curated set of flashcards covering Sanskrit terminology from the Maitreyī Brāhmaṇa classes (Bṛhadāraṇyaka Upaniṣad 2.4).</p>
+      <p class="meta">A curated set of flashcards covering Sanskrit terminology from the Bṛhadāraṇyaka Upaniṣad classes — the Madhu Brāhmaṇa (2.5) and the Maitreyī Brāhmaṇa (2.4).</p>
     </header>
 
     <!-- Sticky Translucent Controls Panel -->
@@ -132,18 +145,35 @@ function getTermSlug(termIast: string, classNum: number | null) {
     </details>
 
     <!-- Main Cards Section -->
+    {groups.length > 1 && (
+      <div class="brahmana-toggle" role="tablist" aria-label="Brāhmaṇa">
+        {groups.map((g, i) => (
+          <button
+            class={`brahmana-toggle__btn${i === 0 ? ' active' : ''}`}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            data-brahmana={g.info.key}
+          >
+            {g.info.name} <span class="brahmana-toggle__ref">({g.info.adhyaya}.{g.info.brahmana})</span>
+          </button>
+        ))}
+      </div>
+    )}
+
     <div class="glossary-sections-container">
-      {classSections.map(section => (
+      {groups.map((g, gi) => (
+        <div class="brahmana-group" data-brahmana={g.info.key} hidden={gi !== 0}>
+      {g.sections.map(section => (
         <details
           class="glossary-section class-accordion"
-          id={`class-section-${section.classNumber}`}
-          open={section.classNumber === maxClassNumber}
-          data-default-open={section.classNumber === maxClassNumber ? '' : undefined}
+          id={`class-section-${idPrefix(section)}${section.classNumber}`}
+          open={section.classNumber === g.maxClassNumber}
+          data-default-open={section.classNumber === g.maxClassNumber ? '' : undefined}
         >
           <summary class="class-accordion__header">
             <span class="accordion-class">Class {section.classNumber}</span>
             <span class="accordion-title">{section.sectionTitle}</span>
-            {classDates[section.classNumber] && <span class="section-date">({classDates[section.classNumber]})</span>}
+            {dateOf(section) && <span class="section-date">({dateOf(section)})</span>}
             <span class="term-count">{section.terms.length} terms</span>
           </summary>
 
@@ -152,7 +182,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
             {section.terms.map(term => (
               <article 
                 class="glossary-card" 
-                id={getTermSlug(term.iast, section.classNumber)}
+                id={getTermSlug(term.iast, section)}
                 data-search-deva={term.search_deva}
                 data-search-iast={term.search_iast}
               >
@@ -199,6 +229,8 @@ function getTermSlug(termIast: string, classNum: number | null) {
           </div>
         </details>
       ))}
+        </div>
+      ))}
 
       {coreSection && coreSection.terms.length > 0 && (
         <details class="glossary-section class-accordion" id="class-section-core">
@@ -213,7 +245,7 @@ function getTermSlug(termIast: string, classNum: number | null) {
             {coreSection.terms.map(term => (
               <article 
                 class="glossary-card" 
-                id={getTermSlug(term.iast, null)}
+                id={getTermSlug(term.iast, coreSection)}
                 data-search-deva={term.search_deva}
                 data-search-iast={term.search_iast}
               >
@@ -272,6 +304,21 @@ function getTermSlug(termIast: string, classNum: number | null) {
     const cards = document.querySelectorAll('.glossary-card');
     const indexLinks = document.querySelectorAll('.glossary-index-link');
     const sections = document.querySelectorAll('.glossary-section');
+    const groupEls = document.querySelectorAll('.brahmana-group');
+    const brahmanaBtns = document.querySelectorAll('.brahmana-toggle__btn');
+    let activeBrahmana = brahmanaBtns.length ? brahmanaBtns[0].dataset.brahmana : null;
+
+    // Brāhmaṇa toggle: show one brāhmaṇa's classes at a time (search spans all)
+    function setBrahmana(key) {
+      activeBrahmana = key;
+      brahmanaBtns.forEach(btn => {
+        const on = btn.dataset.brahmana === key;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-selected', String(on));
+      });
+      if (!searchInput.value) groupEls.forEach(g => { g.hidden = g.dataset.brahmana !== key; });
+    }
+    brahmanaBtns.forEach(btn => btn.addEventListener('click', () => setBrahmana(btn.dataset.brahmana)));
     const indexContainer = document.querySelector('.glossary-index-container');
     
     // Segmented toggle controls
@@ -388,6 +435,13 @@ function getTermSlug(termIast: string, classNum: number | null) {
         }
       });
       
+      // While searching, show every brāhmaṇa that has matches; otherwise only the selected one
+      groupEls.forEach(g => {
+        g.hidden = rawQuery.length > 0
+          ? !Array.from(g.querySelectorAll('.glossary-section')).some(sec => sec.style.display !== 'none')
+          : g.dataset.brahmana !== activeBrahmana;
+      });
+
       matchingCount.textContent = `${matchCount} of ${cards.length} matching`;
     }
     
@@ -404,7 +458,12 @@ function getTermSlug(termIast: string, classNum: number | null) {
       if (!hash) return;
       const targetCard = document.querySelector(hash);
       if (targetCard && targetCard.classList.contains('glossary-card')) {
-        // Open the containing accordion so the target card is visible
+        // Switch to the card's brāhmaṇa and open its accordion so the card is visible
+        const group = targetCard.closest('.brahmana-group');
+        if (group && group.hidden) {
+          if (searchInput.value) group.hidden = false;
+          else setBrahmana(group.dataset.brahmana);
+        }
         const accordion = targetCard.closest('details.class-accordion');
         if (accordion) accordion.open = true;
 
@@ -582,6 +641,46 @@ function getTermSlug(termIast: string, classNum: number | null) {
 
   [data-theme="dark"] .script-toggle-btn.active {
     color: #1a1712;
+  }
+
+  /* Brāhmaṇa toggle (Madhu | Maitreyī) above the class accordions */
+  .brahmana-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brahmana-toggle__btn {
+    padding: 0.5rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-surface);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.25s ease;
+  }
+
+  .brahmana-toggle__btn:hover:not(.active) {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  .brahmana-toggle__btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+
+  [data-theme="dark"] .brahmana-toggle__btn.active {
+    color: #1a1712;
+  }
+
+  .brahmana-toggle__ref {
+    font-weight: 400;
+    opacity: 0.85;
   }
 
   /* Collapsible Index Pill Cloud */

@@ -2,7 +2,9 @@
 """
 build_system_a.py — rebuild the Complete Source Text page (System A) by pasting
 the master RTF VERBATIM (see CLAUDE.md §5A). Run from the repo root after Aditya
-updates the master RTF:  python3 scripts/build_system_a.py
+updates the master RTF:
+    python3 scripts/build_system_a.py            # Maitreyī Brāhmaṇa (2.4) -> src/pages/source-text.astro
+    python3 scripts/build_system_a.py madhu      # Madhu Brāhmaṇa (2.5)    -> src/pages/source-text/madhu.astro
 
 Method: `textutil -convert html` on the master RTF preserves the EXACT colours,
 bold (<b>), links (<a>), and verse line structure (each pāda its own <p>, a blank
@@ -12,10 +14,22 @@ the highlight from blank spacers), then write both panels into source-text.astro
 Dev panel = as-is; IAST panel = transliterate Devanagari only. Remember to bump
 `const coveredThrough = N` afterwards.
 """
-import re, subprocess, os
+import re, subprocess, os, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MASTER = "/Users/aditya_nistala/Downloads/Brhad_Upa_Class_Notes/Class Coverage Notes/मैत्रेयी ब्राह्मणाम् - भाष्यम् ‍+ वार्तिक Notes.rtf"
+MAITREYI_MASTER = "/Users/aditya_nistala/Downloads/Brhad_Upa_Class_Notes/Class Coverage Notes/मैत्रेयी ब्राह्मणाम् - भाष्यम् ‍+ वार्तिक Notes.rtf"
+MASTERS = {
+    'maitreyi': dict(rtf=MAITREYI_MASTER, page='src/pages/source-text.astro', heading_fixes={}),
+    'madhu': dict(
+        rtf=MAITREYI_MASTER.replace('मैत्रेयी', 'मधु'),
+        page='src/pages/source-text/madhu.astro',
+        # Rendering correction Aditya approved on 2026-09-26 (the RTF itself is unchanged):
+        # the Madhu saṃbandha-bhāṣya heading was carried over from the Maitreyī master.
+        heading_fixes={'२.४. सम्बन्ध भष्यम्': '२.५. सम्बन्धभाष्यम्'},
+    ),
+}
+CONF = MASTERS[sys.argv[1] if len(sys.argv) > 1 else 'maitreyi']
+MASTER = CONF['rtf']
 
 html = subprocess.run(['textutil', '-convert', 'html', '-stdout', MASTER],
                       capture_output=True, text=True).stdout
@@ -70,12 +84,27 @@ def fix_highlights(b):
 
 body = fix_highlights(body)
 
+# 3b. approved heading corrections: replace the whole heading paragraph's inner runs
+def fix_headings(b):
+    def repl(m):
+        text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(2))).strip()
+        if text in CONF['heading_fixes']:
+            return f'{m.group(1)}<span style="text-decoration:underline"><b>{CONF["heading_fixes"][text]}</b></span></p>'
+        return m.group(0)
+    out, n = re.subn(r'(<p style="[^"]*">)((?:(?!</p>).)*?)</p>', repl, b)
+    return out
+
+before = body
+body = fix_headings(body)
+for old in CONF['heading_fixes']:
+    assert body != before, f'heading fix not applied: {old}'
+
 dev_body = body.strip()
 iast_body = subprocess.run(['python3', f'{REPO}/scripts/transliterate_dev_to_iast.py'],
                            input=dev_body, capture_output=True, text=True).stdout.strip()
 
 # 4. write both panels into source-text.astro
-p = f'{REPO}/src/pages/source-text.astro'
+p = f'{REPO}/{CONF["page"]}'
 s = open(p).read()
 def replace_const(s, name, content):
     start = s.index(f'const {name} = `')
