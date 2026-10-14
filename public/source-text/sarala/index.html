@@ -14,7 +14,7 @@
   <button class="icon menu-button" id="menu" aria-label="अनुक्रमणिका उद्घाट्यताम् अथवा पिधीयताम्" aria-controls="sidebar" aria-expanded="true">☰</button>
   <a href="../" class="brand back-link" aria-label="Source Text" title="Source Text">← Source Text</a>
   <div class="breadcrumbs" aria-label="पाठस्थानम्"><span class="breadcrumb-book">मैत्रेयीब्राह्मणम्</span><span aria-hidden="true">›</span><span id="breadcrumb-id">२.४.१</span></div>
-  <nav class="topnav" aria-label="सामान्यविकल्पाः"><button id="method-open">अध्ययनपद्धतिः</button></nav>
+  <nav class="topnav" aria-label="सामान्यविकल्पाः"><button id="library-open" hidden style="display:none !important;" aria-hidden="true"></button><button id="method-open">अध्ययनपद्धतिः</button></nav>
   <label class="search-wrap header-search"><span aria-hidden="true">⌕</span><input type="search" id="lesson-search" placeholder="पाठान्वेषणम्" aria-label="सर्वपाठेषु अन्वेषणम्" autocomplete="off"><button id="search-submit" type="button" aria-label="अन्वेषयतु">↵</button></label>
   <div class="tools"><button id="search-open" class="icon" aria-label="सर्वपाठेषु अन्वेषणम्">⌕</button>
    <button id="bhashya-toggle" class="reader-toggle" aria-pressed="false" title="मूलमात्रम्">मूलम्</button>
@@ -27,13 +27,13 @@
  </div>
 </header>
 <noscript><nav class="source-origin" aria-label="संगृहीतग्रन्थाः"><a href="https://advaitasharada.sringeri.net/">मूलग्रन्थान् अद्वैतशारदायां पठतु ↗</a></nav></noscript>
-
+<div hidden style="display:none !important;" aria-hidden="true"><button id="library-open-side"></button><main id="home"><input id="home-search" type="search"><button id="home-text-search"></button><div id="home-catalogue"></div></main></div>
 <div class="layout">
  <aside class="sidebar" id="sidebar" aria-label="ग्रन्थानुक्रमणिका">
   <div class="side-inner">
    
-   <p class="eyebrow">श्रुतिप्रस्थानम्</p><h2>मैत्रेयीब्राह्मणम्</h2><p class="muted side-author">श्रीशङ्करभगवत्पादभाष्यम्</p>
-   <nav class="source-tree" aria-label="मैत्रेयीब्राह्मणम्"><details class="source-chapter" open><summary>मैत्रेयीब्राह्मणम्</summary><div class="chapter-section"><div id="lesson-list" class="lesson-list"><p class="muted">पाठाः आनीयन्ते…</p></div><p id="search-empty" class="muted" hidden>अयं शब्दः न लब्धः।</p><a class="chapter-source" href="https://advaitasharada.sringeri.net/read/brihadaranyaka-bhashya/2/#BR_C02_S04" target="_blank" rel="noopener">सम्पूर्णब्राह्मणं मूलस्रोते ↗</a></div></details></nav>
+   <p class="eyebrow">श्रुतिप्रस्थानम्</p><h2>बृहदारण्यकोपनिषत् · मैत्रेयीब्राह्मणम्</h2><p class="muted side-author">श्रीशङ्करभगवत्पादभाष्यम्</p>
+   <nav class="source-tree" aria-label="मैत्रेयीब्राह्मणम्"><details class="source-chapter" open><summary>मन्त्राः</summary><div class="chapter-section"><div id="lesson-list" class="lesson-list"><p class="muted">पाठाः आनीयन्ते…</p></div><p id="search-empty" class="muted" hidden>अयं शब्दः न लब्धः।</p><a class="chapter-source" href="https://advaitasharada.sringeri.net/read/brihadaranyaka-bhashya/2/#BR_C02_S04" target="_blank" rel="noopener">सम्पूर्णब्राह्मणं मूलस्रोते ↗</a></div></details></nav>
    <div class="side-divider"></div>
    <button class="side-action" id="notes-open">✎ <span>मम टिप्पण्यः</span></button>
    <button class="side-action" id="method-open-side">अध्ययनपद्धतिः</button>
@@ -64,7 +64,7 @@
 </div>
  </main>
 </div>
-
+<dialog id="library-dialog"><div class="dialog-header"><div><p class="eyebrow">अद्वैतशारदायाः ग्रन्थसूची</p><h2>ग्रन्थसङ्ग्रहः</h2></div><button class="icon close-dialog" aria-label="पिधानम्">✕</button></div><p class="muted">अधुना मैत्रेयीब्राह्मणस्य प्रारम्भिकाः अभ्यासपाठाः सज्जाः। अन्येषां ग्रन्थानां मूलपाठाः अद्वैतशारदायाम् उद्घाट्यन्ते; नूतनविवरणानि अद्यापि न रचितानि।</p><label class="search-wrap"><span>⌕</span><input id="catalogue-search" type="search" placeholder="ग्रन्थनाम लिखतु…" aria-label="ग्रन्थान्वेषणम्"></label><div class="catalogue-count" id="catalogue-count"></div><p class="subtle-note">वार्तिकं टीका च स्वतन्त्रग्रन्थौ। तयोः पाठक्रमः मूलमन्त्रक्रमात् पृथक् अस्ति।</p><div id="catalogue"></div></dialog>
 <dialog id="search-dialog" aria-labelledby="search-title" data-no-transliterate><div class="dialog-header"><h2 id="search-title">पाठान्वेषणम्</h2><button class="icon close-dialog" aria-label="अन्वेषणस्य पिधानम्">✕</button></div><form id="global-search-form"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="global-search" type="search" aria-label="अन्वेषणीयः पाठः" placeholder="आत्मा वा अरे…" autocomplete="off"><button type="submit">अन्वेषयतु</button></label><label class="search-scope">अन्वेषणक्षेत्रम्<select id="search-scope"><option value="help">अध्ययनसाहाय्ये</option></select></label></form><p class="scope-note" id="search-coverage">अत्र अध्ययनसाहाय्ये अन्वेषणम्। सम्पूर्णमूलग्रन्थेषु <a href="https://advaitasharada.sringeri.net/search" target="_blank" rel="noopener">अद्वैतशारदायाम् अन्वेषयतु ↗</a>।</p><details class="search-help"><summary>अन्वेषणपद्धतिः</summary><p>देवनागर्या, आइट्रान्स्-पद्धत्या, अन्यया समर्थितलिप्या वा लिखतु। अन्तरालाः, अवग्रहः, सन्धिभेदाः च यथाशक्ति उपेक्ष्यन्ते। निकटपाठाः पृथक् निर्दिश्यन्ते; ते अक्षरशः समानाः न सन्ति।</p></details><p id="search-status" role="status" aria-live="polite"></p><div id="search-results"></div></dialog>
 <dialog id="info-dialog"><div class="dialog-header"><h2 id="info-title" data-study-transliterate></h2><button class="icon close-dialog" aria-label="पिधानम्">✕</button></div><div id="info-body" data-study-transliterate></div></dialog>
 <div class="toast" id="toast" role="status" hidden></div>

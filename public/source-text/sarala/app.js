@@ -51,8 +51,8 @@ function sourceNotice(l,record){
  const message=pending?'अद्वैतशारदायाः पाठः आनीयते। अध्ययनसाहाय्यम् अधः उपलब्धम्।':changed?'मूलस्रोतसि पाठभेदः दृश्यते। अस्य अंशस्य वर्णसङ्केताः पदच्छेदश्च न दर्श्यन्ते।':'मूलस्रोतस्य पाठः अधुना न प्राप्तः। अध्ययनसाहाय्यम् तु उपलब्धम्।';
  return `<aside class="source-status" role="status" data-live-status="${pending?'pending':record?.status||'failed'}" data-source-id="${esc(record?.id||'')}" data-source-hash="${esc(record?.actualHash||'')}" data-source-expected="${esc(record?.expectedHash||'')}" data-source-request="${esc(record?.request_url||'')}" data-source-response="${esc(record?.response_url||'')}" data-source-origin="${record?.origin_verified===true}" data-source-credentials="${esc(record?.credentials||'')}"><p>${message}</p>${pending?'':`<button data-source-retry>पुनः प्रयत्नः</button>`} <a href="${safeURL(record?.source_url||l.sourceUrl)}" target="_blank" rel="noopener">मूलस्रोते पठतु ↗</a></aside>`;
 }
-function liveMula(l,unit){const r=sourceRecord(l,'mula');return (r?.status==='matched'?`<p class="mula" data-live-status="matched" data-source-id="${esc(r.id)}" data-source-hash="${r.actualHash}" data-source-expected="${r.expectedHash}" data-source-request="${esc(r.request_url)}" data-source-response="${esc(r.response_url)}" data-source-origin="${r.origin_verified}" data-source-credentials="${r.credentials}">${unit?UnitReader.mulaSource(unit,readingPadaccheda):esc(l.mulam)}</p>`:(r?.rawText?`<p class="mula">${esc(r.rawText)}</p>`:''))+sourceNotice(l,r);}
-function liveBhashya(l,b,unit){const r=sourceRecord(l,'bhashya',b.id);return (r?.status==='matched'?`<div data-live-status="matched" data-source-id="${esc(r.id)}" data-source-hash="${r.actualHash}" data-source-expected="${r.expectedHash}" data-source-request="${esc(r.request_url)}" data-source-response="${esc(r.response_url)}" data-source-origin="${r.origin_verified}" data-source-credentials="${r.credentials}">${unit?(researchMode?UnitReader.researchSource(unit):UnitReader.bhashyaSource(unit,readingPadaccheda)):researchMode?legacyResearch(b,l):`<p class="original">${annotated(b)}</p>`}</div>`:(r?.rawText?`<p class="original">${esc(r.rawText)}</p>`:''))+sourceNotice(l,r);}
+function liveMula(l,unit){const r=sourceRecord(l,'mula');const text=unit?UnitReader.mulaSource(unit,readingPadaccheda):esc(r?.rawText||l.mulam||'');return (r?.status==='matched'?`<p class="mula" data-live-status="matched" data-source-id="${esc(r.id)}" data-source-hash="${r.actualHash}" data-source-expected="${r.expectedHash}" data-source-request="${esc(r.request_url)}" data-source-response="${esc(r.response_url)}" data-source-origin="${r.origin_verified}" data-source-credentials="${r.credentials}">${text}</p>`:(r?.rawText?`<p class="mula">${esc(r.rawText)}</p>`:''))+sourceNotice(l,r);}
+function liveBhashya(l,b,unit){const r=sourceRecord(l,'bhashya',b.id);const text=unit?(researchMode?UnitReader.researchSource(unit):UnitReader.bhashyaSource(unit,readingPadaccheda)):researchMode?legacyResearch(b,l):(b.original?`<p class="original">${annotated(b)}</p>`:`<p class="original">${esc(r?.rawText||'')}</p>`);return (r?.status==='matched'?`<div data-live-status="matched" data-source-id="${esc(r.id)}" data-source-hash="${r.actualHash}" data-source-expected="${r.expectedHash}" data-source-request="${esc(r.request_url)}" data-source-response="${esc(r.response_url)}" data-source-origin="${r.origin_verified}" data-source-credentials="${r.credentials}">${text}</div>`:(r?.rawText?`<p class="original">${esc(r.rawText)}</p>`:''))+sourceNotice(l,r);}
 let data=[], independentWorks=[], independentLessons=[], catalogue=[], current, mode='original', marks=readStore('marks',[]), notes=readStore('notes',{}), color=readStore('colors',true)!==false, size=readStore('size',20);
 if(!Array.isArray(marks))marks=[]; if(!notes||Array.isArray(notes)||typeof notes!=='object')notes={};
 const roles={pratika:'प्रतीकम्',question:'पूर्वपक्षः',answer:'सिद्धान्तः',citation:'उद्धरणम्'};
@@ -154,26 +154,26 @@ function toggleStudy(button){
  const open=button.getAttribute('aria-expanded')!=='true';collapseBank(button.closest('.study-bank'));
  button.setAttribute('aria-expanded',String(open));button.querySelector('span').textContent=open?'−':'＋';$('#'+button.getAttribute('aria-controls')).hidden=!open;
 }
-function renderNav(){const q='';let n=0;$('#lesson-list').innerHTML=activeLessons().map(l=>{
+function renderNav(){const q='';let n=0;if($('#lesson-list'))$('#lesson-list').innerHTML=activeLessons().map(l=>{
  const match=!q||JSON.stringify(l).normalize('NFC').toLowerCase().includes(q);if(match)n++;
  const title=l.shortTitle||(l.id==='2.4.0'?'सम्बन्धभाष्यम्':(l.workId?'श्लोकः ':'मन्त्रः ')+deva((l.nativeId||l.id).split('.').at(-1)));const status=l.reviewStatus==='source-only'?'मूलम् · भाष्यम्':'सविवरणम् · समीक्ष्यम्';
- const linkLabel=l.id==='2.4.0'?'सम्बन्धभाष्यम्':((runtimeManifest?.archive_mode?'मन्त्रः ':'')+deva((l.nativeId||l.id).split('.').at(-1)));
+ const linkLabel=l.id==='2.4.0'?'सम्बन्धभाष्यम्':deva((l.nativeId||l.id).split('.').at(-1));
  if(l._sourceOnly)return `<a class="lesson-link ${l.id==='2.4.0'?'source-intro':''}" href="${safeURL(l.sourceUrl)}" target="_blank" rel="noopener" title="${esc(title+' · मूलस्रोते पठनम्')}" aria-label="${esc(deva(l.id)+' · '+title+' · मूलस्रोते पठनम्')}">${linkLabel}</a>`;
  return `<button class="lesson-link ${l.id==='2.4.0'?'source-intro':''} ${l.reviewStatus==='draft'?'has-study':''} ${current?.id===l.id?'active':''}" data-lesson="${esc(l.id)}" title="${esc(title+' · '+status)}" aria-label="${esc(deva(l.nativeId||l.id)+' · '+title+' · '+status)}" ${match?'':'hidden'} ${current?.id===l.id?'aria-current="page"':''}>${linkLabel}</button>`;
- }).join('');$('#search-empty').hidden=n!==0;$('#bookmark-count').textContent=deva(marks.length);}
+ }).join('');if($('#search-empty'))$('#search-empty').hidden=n!==0;if($('#bookmark-count'))$('#bookmark-count').textContent=deva(marks.length);}
 function render(l,scroll=true,asResearch=false){
  if(current?.id!==l.id||asResearch)readingPadaccheda=false;researchMode=asResearch&&hasResearch(l);document.body.classList.toggle('research-view',researchMode);if(researchMode)closeStudy(false);
- remotePage=null;++sourceRequest;document.body.classList.remove('home-view','remote-reader');$('#home').hidden=true;$('.layout').hidden=false;
- bankSequence=0;if(current?.workId!==l.workId)$('#lesson-search').value='';current=l;configureReader(l); const routeHash='#'+encodeURIComponent(l.id)+(researchMode?'/vimarshah':'');if(location.hash!==routeHash)history.replaceState(null,'',routeHash);writeStore('last',l.id);$('#breadcrumb-id').textContent=deva(l.nativeId||l.id);
- const unit=unitFor(l);$('#unit-tools').hidden=!unit;$('#bhashya-toggle').hidden=researchMode||!!l.workId||!hasMula(l);
+ remotePage=null;++sourceRequest;document.body.classList.remove('home-view','remote-reader');if($('#home'))$('#home').hidden=true;if($('.layout'))$('.layout').hidden=false;
+ bankSequence=0;if(current?.workId!==l.workId&&$('#lesson-search'))$('#lesson-search').value='';current=l;configureReader(l); const routeHash='#'+encodeURIComponent(l.id)+(researchMode?'/vimarshah':'');if(location.hash!==routeHash)history.replaceState(null,'',routeHash);writeStore('last',l.id);if($('#breadcrumb-id'))$('#breadcrumb-id').textContent=deva(l.nativeId||l.id);
+ const unit=unitFor(l);if($('#unit-tools'))$('#unit-tools').hidden=!unit;if($('#bhashya-toggle'))$('#bhashya-toggle').hidden=researchMode||!!l.workId||!hasMula(l);
  if(runtimeManifest?.archive_mode){
   const unitLabel=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('मन्त्रः '+deva((l.nativeId||l.id).split('.').at(-1)));
-  $('.reader-context h1').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
-  $('.reader-context > span').textContent=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('द्वितीयोऽध्यायः · चतुर्थं ब्राह्मणम् · '+unitLabel);
-  $('.breadcrumb-book').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
-  $('#breadcrumb-id').textContent=unitLabel;
+  if($('.reader-context h1'))$('.reader-context h1').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
+  if($('.reader-context > span'))$('.reader-context > span').textContent=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('द्वितीयोऽध्यायः · चतुर्थं ब्राह्मणम् · '+unitLabel);
+  if($('.breadcrumb-book'))$('.breadcrumb-book').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
+  if($('#breadcrumb-id'))$('#breadcrumb-id').textContent=unitLabel;
   document.title=(runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्')+' · '+unitLabel+(researchMode?' · विमर्शः':'');
- } else if(researchMode){$('.reader-context h1').textContent='विमर्शः';document.title='वेदान्तपाठशाला · '+deva(l.id)+' · विमर्शः';}
+ } else if(researchMode){if($('.reader-context h1'))$('.reader-context h1').textContent='विमर्शः';document.title=(runtimeManifest?.archive_mode?(runtimeManifest?.page_title||'मैत्रेयीब्राह्मणम्'):'मैत्रेयीब्राह्मणम्')+' · '+deva(l.id)+' · विमर्शः';}
  const bm=marks.includes(l.id);
  const before=(l.bhashya||[]).filter(b=>b.position==='before-mulam');
  const after=(l.bhashya||[]).filter(b=>b.position!=='before-mulam');
@@ -205,7 +205,7 @@ async function select(id,{scroll=true,push=true,anchor='',chunk}={}){
  try{await ensureLesson(route.lesson,route.research);if(request!==navigationRequest)return;render(route.lesson,scroll,route.research);if(anchor)await jumpUnit(anchor);}
  catch{if(request===navigationRequest)notice('पाठः न प्राप्तः। कृपया पुनः प्रयतताम्।');}
 }
-function exportNotes(){const text={format:'vedanta-pathashala-notes-v1',exported:new Date().toISOString(),notes:Object.entries(notes).map(([id,text])=>({id,text,sourceUrl:allLessons().find(x=>x.id===id)?.sourceUrl})),bookmarks:marks};const url=URL.createObjectURL(new Blob([JSON.stringify(text,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='vedanta-study-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function exportNotes(){const text={format:runtimeManifest?.archive_mode?'vedantic-study-notes-v1':'vedanta-pathashala-notes-v1',exported:new Date().toISOString(),notes:Object.entries(notes).map(([id,text])=>({id,text,sourceUrl:allLessons().find(x=>x.id===id)?.sourceUrl})),bookmarks:marks};const url=URL.createObjectURL(new Blob([JSON.stringify(text,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='vedanta-study-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function catalogueHTML(q=''){
  const items=catalogue.filter(c=>JSON.stringify(c).normalize('NFC').toLowerCase().includes(q));
  return [...new Set(items.map(x=>x.category))].map(g=>`<section class="catalogue-group"><h3>${esc(g)}</h3><div class="catalogue-grid">${items.filter(x=>x.category===g).map(c=>{const unit=independentWorks.find(w=>w.id===c.slug)?.units[0],study=c.slug==='brihadaranyaka-bhashya'?'2.4.1':unit?.id;return `<div class="catalogue-item"><div><a href="${safeURL(c.sourceUrl)}" target="_blank" rel="noopener">${esc(c.title)} ↗</a><small>${esc(c.author||c.extent||'मूलस्रोते पठनम्')}</small></div>${study?`<a href="#${esc(study)}" class="badge local-route">अध्ययनसाहाय्यम् →</a>`:'<span class="badge">मूलस्रोतः</span>'}</div>`;}).join('')}</div></section>`).join('')||'<p class="muted">ग्रन्थः न लब्धः।</p>';
@@ -217,28 +217,28 @@ async function showCorpusIndex(kind){
   $('#library-dialog').close();showInfo(kind==='grammar'?'व्याकरणसूची':'उद्धरणसूची','<p class="scope-note">सविवरणेषु पाठेषु निर्मिताः सन्दर्भाः एव अत्र सन्ति।</p><div data-study-transliterate>'+entries.map(r=>`<article class="study-flow"><a class="local-route" href="${esc(r.href)}">${esc(r.padam||r.text||'पाठः')}</a> · <span>${r.unit_id?.startsWith('BU.')?'बृहदारण्यकोपनिषत् '+esc(deva(r.unit_id.slice(3))):'पाठः'}</span>${kind==='quotation'?`<p>${esc(r.grantha||'')} ${esc(r.sthanam||'')} · <a href="${safeURL(r.source_url)}" target="_blank" rel="noopener">मूलस्रोतः ↗</a></p>`:''}</article>`).join('')+'</div>');
  }catch{notice('सूची न प्राप्ता। पुनः प्रयतताम्।');}
 }
-function renderHome(scroll=true){++navigationRequest;researchMode=false;readingPadaccheda=false;document.body.classList.remove('research-view');++sourceRequest;remotePage=null;closeStudy(false);$('#bookmark-count').textContent=deva(marks.length);document.body.classList.add('home-view');$('#home').hidden=false;$('.layout').hidden=true;$('#home-catalogue').innerHTML=catalogueHTML($('#home-search').value.trim().normalize('NFC').toLowerCase());document.title='वेदान्तपाठशाला · ग्रन्थसङ्ग्रहः';if(scroll){window.scrollTo({top:0,behavior:'instant'});$('#home').focus({preventScroll:true});}}
+function renderHome(scroll=true){++navigationRequest;researchMode=false;readingPadaccheda=false;document.body.classList.remove('research-view');++sourceRequest;remotePage=null;closeStudy(false);if($('#bookmark-count'))$('#bookmark-count').textContent=deva(marks.length);document.body.classList.add('home-view');if($('#home'))$('#home').hidden=false;if($('.layout'))$('.layout').hidden=true;if($('#home-catalogue'))$('#home-catalogue').innerHTML=catalogueHTML($('#home-search')?.value.trim().normalize('NFC').toLowerCase()||'');document.title=(runtimeManifest?.archive_mode?(runtimeManifest?.page_title||'मैत्रेयीब्राह्मणम्'):'मैत्रेयीब्राह्मणम्')+' · ग्रन्थसङ्ग्रहः';if(scroll){window.scrollTo({top:0,behavior:'instant'});$('#home')?.focus({preventScroll:true});}}
 function localSourceNavigation(html){return html;}
 function configureReader(l){
  const work=independentWorks.find(w=>w.id===l.workId);
  document.body.classList.toggle('independent-reader',!!work);
  if(runtimeManifest?.archive_mode){
   const unitLabel=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('मन्त्रः '+deva((l.nativeId||l.id).split('.').at(-1)));
-  $('.breadcrumb-book').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
-  $('.sidebar h2').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
-  $('.side-author').textContent='श्रीशङ्करभगवत्पादभाष्यम्';
-  $('.sidebar .eyebrow').textContent='श्रुतिप्रस्थानम्';
-  $('.reader-context h1').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
-  $('.reader-context > span').textContent=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('द्वितीयोऽध्यायः · चतुर्थं ब्राह्मणम् · '+unitLabel);
+  if($('.breadcrumb-book'))$('.breadcrumb-book').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
+  if($('.sidebar h2'))$('.sidebar h2').textContent='बृहदारण्यकोपनिषत् · '+(runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्');
+  if($('.side-author'))$('.side-author').textContent='श्रीशङ्करभगवत्पादभाष्यम्';
+  if($('.sidebar .eyebrow'))$('.sidebar .eyebrow').textContent='श्रुतिप्रस्थानम्';
+  if($('.reader-context h1'))$('.reader-context h1').textContent=runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्';
+  if($('.reader-context > span'))$('.reader-context > span').textContent=l.id==='2.4.0'?'सम्बन्धभाष्यम्':('द्वितीयोऽध्यायः · चतुर्थं ब्राह्मणम् · '+unitLabel);
   document.title=(runtimeManifest.page_title||'मैत्रेयीब्राह्मणम्')+' · '+unitLabel;
  } else {
-  $('.breadcrumb-book').textContent=work?work.title:'बृहदारण्यकोपनिषत्';
-  $('.sidebar h2').textContent=work?work.title:'बृहदारण्यकोपनिषत्';
-  $('.side-author').textContent=work?work.author:'श्रीशङ्करभगवत्पादभाष्यम्';
-  $('.sidebar .eyebrow').textContent=work?'स्वतन्त्रग्रन्थः':'श्रुतिप्रस्थानम्';
-  $('.reader-context h1').textContent=work?work.title:'चतुर्थं ब्राह्मणम्';
-  $('.reader-context > span').textContent=work?work.author:'द्वितीयोऽध्यायः · बृहदारण्यकोपनिषत्';
-  document.title='वेदान्तपाठशाला · '+(work?work.title:'चतुर्थं ब्राह्मणम्');
+  if($('.breadcrumb-book'))$('.breadcrumb-book').textContent=work?work.title:'बृहदारण्यकोपनिषत्';
+  if($('.sidebar h2'))$('.sidebar h2').textContent=work?work.title:'बृहदारण्यकोपनिषत्';
+  if($('.side-author'))$('.side-author').textContent=work?work.author:'श्रीशङ्करभगवत्पादभाष्यम्';
+  if($('.sidebar .eyebrow'))$('.sidebar .eyebrow').textContent=work?'स्वतन्त्रग्रन्थः':'श्रुतिप्रस्थानम्';
+  if($('.reader-context h1'))$('.reader-context h1').textContent=work?work.title:'चतुर्थं ब्राह्मणम्';
+  if($('.reader-context > span'))$('.reader-context > span').textContent=work?work.author:'द्वितीयोऽध्यायः · बृहदारण्यकोपनिषत्';
+  document.title='मैत्रेयीब्राह्मणम् · '+(work?work.title:'चतुर्थं ब्राह्मणम्');
  }
  $('.source-tree').innerHTML=localSourceNavigation(work?`<p class="section-label">स्वकीयः श्लोकक्रमः</p><div id="lesson-list" class="lesson-list"></div><p id="search-empty" hidden>अयं शब्दः न लब्धः।</p><p class="subtle-note">अभ्यासार्थम् एकः श्लोकः उपलब्धः।</p>${links([{label:'सम्पूर्णग्रन्थः मूलस्रोते',url:work.sourceUrl}])}`:runtimeManifest?.bu_source_navigation||sourceTreeHTML);
  $('#lesson-search').setAttribute('aria-label','सर्वपाठेषु अन्वेषणम्');
@@ -252,23 +252,22 @@ if($('#library-open'))$('#library-open').onclick=openLibrary;if($('#library-open
 
 document.addEventListener('click',e=>{if(e.target.closest('a.brand')){if(runtimeManifest?.archive_mode)return;e.preventDefault();history.pushState(null,'','#home');renderHome();return;}const local=e.target.closest('a.local-route,.local-card');if(local){e.preventDefault();if($('#library-dialog').open)$('#library-dialog').close();if($('#info-dialog').open)$('#info-dialog').close();select(decodeURIComponent(local.getAttribute('href').slice(1)));return;}const entry=e.target.closest('[data-study-context]');if(entry){openStudy(entry.dataset.studyContext,entry);return;}const disclosure=e.target.closest('.study-control');if(disclosure){toggleStudy(disclosure);return;}const jump=e.target.closest('.page-nav a, a.skip');if(jump){e.preventDefault();if(jump.classList.contains('skip')&&document.body.classList.contains('home-view')){$('#home').focus();return;}if(jump.getAttribute('href')==='#bhashya'){showBhashya=true;document.body.classList.remove('mula-only');syncReadingMode();}if(jump.getAttribute('href')==='#personal-note')setMode('study');const target=document.querySelector(jump.getAttribute('href'));target?.scrollIntoView();if(jump.classList.contains('skip'))target?.focus({preventScroll:true});return;}const sourceLink=e.target.closest('[data-source-main]');if(sourceLink){select('corpus/'+sourceLink.dataset.sourceMain+'/'+sourceLink.dataset.path);return;}const companion=e.target.closest('[data-companion-path]');if(companion){loadCompanion(panelKind,companion.dataset.companionPath,{force:companion.hasAttribute('data-source-retry-companion')});return;}const remoteStudy=e.target.closest('[data-remote-study]');if(remoteStudy){sideBySide=true;openStudy(remoteStudy.dataset.remoteStudy,remoteStudy);return;}const l=e.target.closest('[data-lesson]');if(l){select(l.dataset.lesson);if($('#info-dialog').open)$('#info-dialog').close();}const s=e.target.closest('[data-step]');if(s&&!s.disabled)select(activeLessons()[activeLessons().indexOf(current)+Number(s.dataset.step)].id);if(e.target.closest('[data-local-study]')){$('#library-dialog').close();select('2.4.1');}});
 $$('.close-dialog').forEach(b=>b.onclick=()=>b.closest('dialog').close());$$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
-$('#menu').onclick=()=>{if(window.matchMedia('(max-width: 900px)').matches){const open=$('#sidebar').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String(open));}else{const folded=document.body.classList.toggle('nav-folded');$('#menu').setAttribute('aria-expanded',String(!folded));}};
+if($('#menu'))$('#menu').onclick=()=>{if(window.matchMedia('(max-width: 900px)').matches){const open=$('#sidebar')?.classList.toggle('open');$('#menu')?.setAttribute('aria-expanded',String(open));}else{const folded=document.body.classList.toggle('nav-folded');$('#menu')?.setAttribute('aria-expanded',String(!folded));}};
 const themeNames={light:'श्वेतम्',sepia:'धूम्रपीतम्',dark:'श्यामम्',patra:'तालपत्रम्'};
 let theme=readStore('theme',readStore('dark',false)?'dark':'patra');if(!themeNames[theme])theme='patra';
-function applyTheme(){document.body.dataset.theme=theme;document.body.classList.toggle('dark',theme==='dark');$('#theme').title='वर्णरूपम् — '+themeNames[theme];$('#theme').setAttribute('aria-label','वर्णरूपम् — '+themeNames[theme]+'; परिवर्तनार्थं स्पृशतु');writeStore('theme',theme);}
-$('#theme').onclick=()=>{const themes=Object.keys(themeNames);theme=themes[(themes.indexOf(theme)+1)%themes.length];applyTheme();notice(themeNames[theme]);};applyTheme();
-function applySize(){size=Math.max(15.2,Math.min(28.8,Number(size)||20));document.documentElement.style.setProperty('--font-size',size+'px');writeStore('size',size);}$('#size-up').onclick=()=>{size+=1.6;applySize();};$('#size-down').onclick=()=>{size-=1.6;applySize();};applySize();
-function syncReadingMode(){document.body.classList.toggle('mula-only',!researchMode&&!showBhashya&&hasMula(current||{})&&!current?.workId);$('#bhashya-toggle').setAttribute('aria-pressed',String(!showBhashya));}
+function applyTheme(){document.body.dataset.theme=theme;document.body.classList.toggle('dark',theme==='dark');if($('#theme')){$('#theme').title='वर्णरूपम् — '+themeNames[theme];$('#theme').setAttribute('aria-label','वर्णरूपम् — '+themeNames[theme]+'; परिवर्तनार्थं स्पृशतु');}writeStore('theme',theme);}
+if($('#theme'))$('#theme').onclick=()=>{const themes=Object.keys(themeNames);theme=themes[(themes.indexOf(theme)+1)%themes.length];applyTheme();notice(themeNames[theme]);};applyTheme();
+function applySize(){size=Math.max(15.2,Math.min(28.8,Number(size)||20));document.documentElement.style.setProperty('--font-size',size+'px');writeStore('size',size);}if($('#size-up'))$('#size-up').onclick=()=>{size+=1.6;applySize();};if($('#size-down'))$('#size-down').onclick=()=>{size-=1.6;applySize();};applySize();
+function syncReadingMode(){document.body.classList.toggle('mula-only',!researchMode&&!showBhashya&&hasMula(current||{})&&!current?.workId);if($('#bhashya-toggle'))$('#bhashya-toggle').setAttribute('aria-pressed',String(!showBhashya));}
 function sourceModeAvailable(){const unit=unitFor(current);return !remotePage&&!researchMode&&current?._liveResult?.status==='matched'&&!!unit&&UnitReader.canPadaccheda(unit);}
 function syncSourceMode(){
  const available=sourceModeAvailable();if(!available)readingPadaccheda=false;
  document.body.classList.toggle('padaccheda-reading',readingPadaccheda);
- $('.reading-form').hidden=researchMode;
- $('#padaccheda-toggle').disabled=!available;
- $('#padaccheda-toggle').title=available?'मूलस्य भाष्यस्य च सम्पूर्णः पदच्छेदः':'अस्य सम्पूर्णपाठस्य पदच्छेदः अद्यापि न सज्जः।';
- $('#padaccheda-toggle').setAttribute('aria-pressed',String(readingPadaccheda));$('#source-text-toggle').setAttribute('aria-pressed',String(!readingPadaccheda));
- $('#reading-form-note').textContent=readingPadaccheda?'मूलम् भाष्यं च · पदच्छेदः':'';
- $$('[data-study-action="padaccheda"]').forEach(b=>{b.disabled=!available;b.title=$('#padaccheda-toggle').title;b.setAttribute('aria-pressed',String(readingPadaccheda));b.querySelector('span').textContent=readingPadaccheda?'✓':'↗';});
+ if($('.reading-form'))$('.reading-form').hidden=researchMode;
+ if($('#padaccheda-toggle')){$('#padaccheda-toggle').disabled=!available;$('#padaccheda-toggle').title=available?'मूलस्य भाष्यस्य च सम्पूर्णः पदच्छेदः':'अस्य सम्पूर्णपाठस्य पदच्छेदः अद्यापि न सज्जः।';$('#padaccheda-toggle').setAttribute('aria-pressed',String(readingPadaccheda));}
+ if($('#source-text-toggle'))$('#source-text-toggle').setAttribute('aria-pressed',String(!readingPadaccheda));
+ if($('#reading-form-note'))$('#reading-form-note').textContent=readingPadaccheda?'मूलम् भाष्यं च · पदच्छेदः':'';
+ $$('[data-study-action="padaccheda"]').forEach(b=>{b.disabled=!available;b.title=$('#padaccheda-toggle')?.title||'';b.setAttribute('aria-pressed',String(readingPadaccheda));b.querySelector('span').textContent=readingPadaccheda?'✓':'↗';});
 }
 function setPadaccheda(enabled,fromStudy=false){
  if(!sourceModeAvailable()){readingPadaccheda=false;syncSourceMode();if(enabled)notice('अस्य सम्पूर्णपाठस्य पदच्छेदः अद्यापि न सज्जः।');return;}
@@ -279,29 +278,32 @@ function setPadaccheda(enabled,fromStudy=false){
   for(const quote of $$('[data-bhashya-sentences]'))quote.outerHTML=UnitReader.bhashyaQuotation(unit,quote.dataset.bhashyaSentences.split(' '),readingPadaccheda);
  }
  syncSourceMode();window.ScriptDisplay?.apply();
- if(fromStudy){closeStudy(false);$('#mula').scrollIntoView({block:'start'});$('#reading').focus({preventScroll:true});}
+ if(fromStudy){closeStudy(false);$('#mula')?.scrollIntoView({block:'start'});$('#reading')?.focus({preventScroll:true});}
 }
-$('#source-text-toggle').onclick=()=>setPadaccheda(false);
-$('#padaccheda-toggle').onclick=()=>setPadaccheda(!readingPadaccheda);
-$('#legend-open').onclick=()=>{
+if($('#source-text-toggle'))$('#source-text-toggle').onclick=()=>setPadaccheda(false);
+if($('#padaccheda-toggle'))$('#padaccheda-toggle').onclick=()=>setPadaccheda(!readingPadaccheda);
+if($('#legend-open'))$('#legend-open').onclick=()=>{
  showInfo('वर्णसङ्केताः',`<div class="reading-legend">${legendHTML()}</div><p>मुख्यपाठे वर्णाः रेखाचिह्नानि च इच्छानुसारं दर्श्यन्ते। ऊर्ध्वचिह्नानि विमर्शे एव दृश्यन्ते।</p><button class="color-switch" data-colour-switch aria-pressed="${color}">${color?'वर्णाः दर्शिताः ✓':'वर्णाः न दर्शिताः'}</button>${hasResearch(current)?'<p>'+researchLink(current)+'</p>':''}`);
 };
 document.addEventListener('click',e=>{if(e.target.closest('[data-colour-switch]'))toggleColors();});
 function setMode(v){mode=v;document.body.classList.toggle('original-only',v==='original');}
 
-function studyEntry(id,label){return `<div class="study-entry"><button data-study-context="${esc(id)}" aria-controls="study-dialog">${esc(label)} <span aria-hidden="true">→</span></button></div>`;}
+function studyEntry(id,label){
+ if(!unitFor(current))return `<p class="study-pending-note">अस्य भागस्य अध्ययनसाहाय्यम् शीघ्रम् उपलप्स्यते।</p>`;
+ return `<div class="study-entry"><button data-study-context="${esc(id)}" aria-controls="study-dialog">${esc(label)} <span aria-hidden="true">→</span></button></div>`;
+}
 let studyReturnFocus=null;
 function syncPanelLayout(){
  const open=!!panelKind;
- $('#study-dialog').hidden=!open;
+ if($('#study-dialog'))$('#study-dialog').hidden=!open;
  document.body.classList.toggle('study-open',open);
  document.body.classList.toggle('layout-side',open&&sideBySide);
- $('#layout-toggle').setAttribute('aria-pressed',String(sideBySide));
+ if($('#layout-toggle'))$('#layout-toggle').setAttribute('aria-pressed',String(sideBySide));
  $$('[data-panel]').forEach(b=>b.setAttribute('aria-pressed',String(open&&b.dataset.panel===panelKind)));
- $('#study-tools').hidden=panelKind!=='study';$('#companion-content').hidden=panelKind==='study';
- $('#study-title').textContent=panelKind==='study'?'अध्ययनसाहाय्यम्':SourceReader.workInfo[panelKind]?.title||'';
- $('#study-close').setAttribute('aria-label','व्याख्यायाः पिधानम्');
- if(panelKind==='vartika')$('#study-location').textContent='स्वतन्त्रः ग्रन्थक्रमः';else if(panelKind==='anandagiri')$('#study-location').textContent='मूलस्रोतस्य सम्बन्धानुसारम्';
+ if($('#study-tools'))$('#study-tools').hidden=panelKind!=='study';if($('#companion-content'))$('#companion-content').hidden=panelKind==='study';
+ if($('#study-title'))$('#study-title').textContent=panelKind==='study'?'अध्ययनसाहाय्यम्':SourceReader.workInfo[panelKind]?.title||'';
+ if($('#study-close'))$('#study-close').setAttribute('aria-label','व्याख्यायाः पिधानम्');
+ if(panelKind==='vartika'&&$('#study-location'))$('#study-location').textContent='स्वतन्त्रः ग्रन्थक्रमः';else if(panelKind==='anandagiri'&&$('#study-location'))$('#study-location').textContent='मूलस्रोतस्य सम्बन्धानुसारम्';
 }
 function updateStudyContext(selected){
  if(!current)return;
@@ -311,24 +313,25 @@ function updateStudyContext(selected){
  const after=(current.bhashya||[]).filter(b=>b.position!=='before-mulam');
  choices=[...(hasMula(current)?[{id:'mula',label:current.workId?'श्लोकः':'मूलम्'}]:[]),...(current.bhashya||[]).map(b=>({id:b.id,label:b.position==='before-mulam'?'अवतारिका':after.length===1?'शाङ्करभाष्यम्':'भाष्यांशः '+deva(after.indexOf(b)+1)}))];
  }
- $('#study-location').textContent=(current.workId?'स्वतन्त्रग्रन्थः':'चतुर्थं ब्राह्मणम्')+' · '+(remotePage?remotePage.sectionTitle:deva(current.nativeId||current.id));
- $('#study-context').innerHTML=choices.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');
- $('#study-context').value=choices.some(c=>c.id===selected)?selected:choices[0]?.id||'';
- renderStudyContent();$('.drawer-legend').hidden=!!current.workId;
+ if($('#study-location'))$('#study-location').textContent=(current.workId?'स्वतन्त्रग्रन्थः':'चतुर्थं ब्राह्मणम्')+' · '+(remotePage?remotePage.sectionTitle:deva(current.nativeId||current.id));
+ if($('#study-context'))$('#study-context').innerHTML=choices.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');
+ if($('#study-context'))$('#study-context').value=choices.some(c=>c.id===selected)?selected:choices[0]?.id||'';
+ renderStudyContent();if($('.drawer-legend'))$('.drawer-legend').hidden=!!current.workId;
 }
 async function renderStudyContent(){
- bankSequence=0;const id=$('#study-context').value;
- if(researchMode){$('#drawer-content').innerHTML='';return;}
+ bankSequence=0;const id=$('#study-context')?.value;
+ if(!unitFor(current)){if($('#drawer-content'))$('#drawer-content').innerHTML='<p class="study-pending-note">अस्य भागस्य अध्ययनसाहाय्यम् शीघ्रम् उपलप्स्यते।</p>';return;}
+ if(researchMode){if($('#drawer-content'))$('#drawer-content').innerHTML='';return;}
  if(remotePage){
   const page=remotePage,block=page.blocks.find(b=>b.id===id),sample=independentWorks.flatMap(w=>w.units).find(u=>u.sourceAnchor===id);
   const authored=data.find(l=>l.hasResearch&&(l.sourceAnchor===id||l.bhashya?.some(b=>b.id===id)));
-  if(sample&&!sample._runtimeLoaded){await ensureLesson(sample);if(remotePage!==page||$('#study-context').value!==id)return;}
-  $('#drawer-content').innerHTML=(block?`<p class="selected-source">${esc(block.text)}</p>`:'')+(authored?`<p><button data-lesson="${esc(authored.id)}">अस्य पाठस्य अध्ययनपृष्ठम् →</button></p>`:sample?layerSet(sample):p('अस्य पाठस्य अध्ययनसाहाय्यम् अद्यापि न रचितम्। उपरि निर्दिष्टः मूलपाठः पठनीयः।'))+referenceDirectory();
+  if(sample&&!sample._runtimeLoaded){await ensureLesson(sample);if(remotePage!==page||$('#study-context')?.value!==id)return;}
+  if($('#drawer-content'))$('#drawer-content').innerHTML=(block?`<p class="selected-source">${esc(block.text)}</p>`:'')+(authored?`<p><button data-lesson="${esc(authored.id)}">अस्य पाठस्य अध्ययनपृष्ठम् →</button></p>`:sample?layerSet(sample):p('अस्य पाठस्य अध्ययनसाहाय्यम् अद्यापि न रचितम्। उपरि निर्दिष्टः मूलपाठः पठनीयः।'))+referenceDirectory();
   return;
  }
  const b=current?.bhashya?.find(b=>b.id===id);
  if(b){showBhashya=true;syncReadingMode();}
- $('#drawer-content').innerHTML=(id==='mula'?layerSet(current):b?bhashyaLayers(b):'')+referenceDirectory();restoreStudyInputs();syncSourceMode();
+ if($('#drawer-content'))$('#drawer-content').innerHTML=(id==='mula'?layerSet(current):b?bhashyaLayers(b):'')+referenceDirectory();restoreStudyInputs();syncSourceMode();
 }
 async function openStudy(context,trigger=$('#study-open')){
  if(researchMode&&current)await select(current.id);
@@ -396,18 +399,18 @@ function legendHTML(){
  const entries=Object.entries(UnitReader.roles).filter(([name])=>u?.bhashyam.text?examples.has(name):['प्रतीकम्','पूर्वपक्षः','सिद्धान्तः'].includes(name));
  return entries.map(([name,[cls]])=>`<div class="legend-definition"><b class="dk-${cls}">${esc(name)}</b><p>${esc(legendDefinitions[name])}</p>${examples.has(name)?`<p class="legend-example"><span>उदाहरणम् — </span>${esc(examples.get(name))}</p>`:''}</div>`).join('')+'<p class="legend-note">पदं स्पृष्ट्वा तस्य व्याकरणं पश्यतु। प्रतीकस्य सम्बद्धं मूलपदम् अपि चिह्न्यते।</p>';
 }
-function renderLegend(){$('#legend').innerHTML=legendHTML();}
+function renderLegend(){if($('#legend'))$('#legend').innerHTML=legendHTML();}
 renderLegend();
-function applyColors(){document.body.classList.toggle('no-colors',!color);$('#color-toggle').textContent=color?'वर्णाः दर्शिताः ✓':'वर्णाः न दर्शिताः';$('#color-toggle').setAttribute('aria-pressed',String(color));$$('[data-colour-switch]').forEach(b=>{b.setAttribute('aria-pressed',String(color));b.textContent=color?'वर्णाः दर्शिताः ✓':'वर्णाः न दर्शिताः';});}
+function applyColors(){document.body.classList.toggle('no-colors',!color);if($('#color-toggle')){$('#color-toggle').textContent=color?'वर्णाः दर्शिताः ✓':'वर्णाः न दर्शिताः';$('#color-toggle').setAttribute('aria-pressed',String(color));}$$('[data-colour-switch]').forEach(b=>{b.setAttribute('aria-pressed',String(color));b.textContent=color?'वर्णाः दर्शिताः ✓':'वर्णाः न दर्शिताः';});}
 function toggleColors(){color=!color;writeStore('colors',color);applyColors();}
-$('#color-toggle').onclick=toggleColors;applyColors();
-$('#bhashya-toggle').onclick=()=>{showBhashya=!showBhashya;syncReadingMode();};
-$('#home-search').oninput=()=>renderHome(false);
-$('#notes-open').onclick=()=>{const d=$('#personal-note details');if(d){setMode('study');d.open=true;d.scrollIntoView();$('#note').focus({preventScroll:true});$('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded',String(!window.matchMedia('(max-width: 900px)').matches&&!document.body.classList.contains('nav-folded')));}};
-$('#bookmarks-open').onclick=()=>showInfo('चिह्निताः पाठाः',marks.length?marks.map(id=>`<button class="lesson-link" data-lesson="${esc(id)}">${deva(allLessons().find(l=>l.id===id)?.nativeId||id)} · ${esc(allLessons().find(l=>l.id===id)?.title||'पाठः')}</button>`).join(''):'<p>पाठस्य पार्श्वे ध्वजचिह्नं स्पृशतु। चिह्नितः पाठः अत्र दृश्यते।</p>');
-$('#method-open').onclick=()=>showInfo('अध्ययनपद्धतिः',`<p>अत्र मूलपाठः तथा शाङ्करभाष्यं प्रथमं पठनीयम्। यत्र अर्थः अस्पष्टः, तत्रैव आवश्यकं विवरणम् उद्घाटनीयम्।</p><p><b>मूलम् → पदच्छेदः → अन्वयः → पदार्थः → व्याकरणपरिचयः → सरलार्थः।</b> व्याख्यासु अध्ययनसाहाय्यम् इति विकल्पं चिनोतु। पार्श्वे इति विकल्पेन तदेव विवरणं पाठस्य दक्षिणभागे दृश्यते। तत्र मूलपाठं वा भाष्यांशं चिनोतु। ततः आवश्यकं विवरणम् उद्घाटयतु। पठनविकल्पेषु पदच्छेदः इति स्पृष्टे मूलस्य भाष्यस्य च सन्धयः विभज्यन्ते। मूलपाठः इति स्पृष्टे पूर्वपाठः पुनः दृश्यते। वर्णसङ्केताः इति विकल्पेन वर्णानां प्रयोजनं ज्ञायते। भाष्यस्य प्रतीकादिवर्णाः इच्छानुसारं दर्शनीयाः।</p><p><b>भाष्यम् → भाष्यपरिचयः → भाष्यसङ्गतिः → भाष्यान्वयः → भाष्यपदव्याकरणपरिचयः → सरलभाष्यव्याख्या → पुनः भाष्यपठनम्।</b> भाष्यव्याकरणपरिचये मूलपाठस्य विवरणे अनुक्तानि कानिचित् भाष्यपदानि विव्रियन्ते। धातुसूत्रसन्दर्भाः इच्छानुसारं पठनीयाः। भाष्यसङ्गतौ सम्बद्धानि कानिचित् वाक्यानि एकत्र पठित्वा तेषां सम्बन्धः ज्ञायते। विस्तृतानि टीकाप्रमाणानि विमर्शे सन्ति।</p><p>सरलविवरणे प्रथमं परिचितैः पदैः अर्थः उच्यते। ततः भाष्यकारस्य पदं परिचाय्यते। अनन्तरं तेन पदेन वाक्यार्थः स्पष्टीक्रियते। एवं पुनः भाष्यपठनं सुकरं भवति।</p><p>अन्वये पूरितानि पदानि [ ] इति चिह्नाभ्यां निर्दिश्यन्ते। मूलभाष्यपाठे तानि न योज्यन्ते। प्रतीकग्रहणम्, पूर्वपक्षः, उत्तरं च अर्थानुसारेण परीक्ष्य चिह्नितानि; केवलं समानशब्ददर्शनात् न चिह्नितानि।</p><p>वार्तिकं स्वकीयक्रमेण आरम्भात् पठनीयम्; मूलमन्त्रेण सह तस्य सम्बन्धः अत्र न कल्प्यते। आनन्दगिरिटीका मूलस्रोते निर्दिष्टसम्बन्धेन एव दृश्यते। अध्ययनसाहाय्यं मुख्यपठनीयग्रन्थस्य एव भवति।</p>`);
-$('#method-open-side').onclick=()=>$('#method-open').click();
-$('#scope-open').onclick=()=>{if(runtimeManifest?.archive_mode){showInfo('अस्य संस्करणस्य स्थितिः',`<p>अत्र मूलपाठः शाङ्करभाष्यं च अद्वैतशारदातः पठनकाले आनीयेते। सविवरणाः पाठाः — ${data.filter(l=>l.reviewStatus!=='source-only').map(l=>deva(l.id)).join(' · ')}। एतेषां विवरणानि प्रारम्भिकरूपेण रचितानि। <b>नूतनविवरणस्य विद्वत्समीक्षा अद्यापि अपेक्षिता।</b></p><p>मूलपाठस्य प्राप्तिस्थानं प्रत्येकं निर्दिष्टम्। अद्वैतशारदायाः पठनविन्यासमनुसृत्य अत्र पठनव्यवस्था निर्मिता। अयं स्वाध्यायप्रयत्नः।</p><p>अध्ययनसाहाय्ये बहुलिपिकं सन्धिसहिष्णुं च अन्वेषणम् उपलब्धम्। सम्पूर्णमूलग्रन्थेषु अन्वेषणार्थम् अद्वैतशारदा द्रष्टव्या।</p>${hasResearch(current)?'<p>'+researchLink(current)+'</p>':''}${(unitFor(current)?.parikshaniya_suchi?.length||unitFor(current)?.review_count)?'<p><a href="#unit-review-list" data-unit-review-list>समीक्षकाणां कृते परीक्षणीयसूची</a></p>':''}`);return;}current?.remoteWork?showInfo('अस्य ग्रन्थस्य स्थितिः',p('अस्य ग्रन्थस्य संगृहीताः पाठाः अत्र स्वकीयग्रन्थक्रमेण पठनीयाः। प्रत्येकस्य पाठस्य मूलस्रोतसि प्रवेशः अपि उपलब्धः।')+p('अध्ययनसाहाय्यं मुख्यपठनीयग्रन्थस्य एव भवति। नूतनविवरणानि क्रमशः रचनीयानि; विद्वत्समीक्षा अपेक्षिता। वार्तिकस्य २.४.८३ इति श्लोकस्य विवरणम् अधुना अभ्यासार्थम् उपलब्धम्।')):current?.workId?showInfo('अस्य ग्रन्थस्य स्थितिः',p('अत्र सुरेश्वराचार्यस्य बृहदारण्यकभाष्यवार्तिकात् अभ्यासार्थम् एकः श्लोकः (२.४.८३) संगृहीतः। पदच्छेदादिविवरणानि प्रारूपाणि; विद्वत्समीक्षा अपेक्षिता।')+p('अस्य ग्रन्थस्य स्वकीयः पाठक्रमः अस्ति। मूलमन्त्रेण सह सम्बन्धः अत्र न निर्दिश्यते। सम्पूर्णपाठः मूलस्रोते पठनीयः।')):showInfo('अस्य संस्करणस्य स्थितिः',`<p>अत्र मूलपाठः शाङ्करभाष्यं च अद्वैतशारदातः पठनकाले आनीयेते। सविवरणाः पाठाः — ${data.filter(l=>l.reviewStatus!=='source-only').map(l=>deva(l.id)).join(' · ')}। एतेषां विवरणानि प्रारम्भिकरूपेण रचितानि। <b>नूतनविवरणस्य विद्वत्समीक्षा अद्यापि अपेक्षिता।</b></p><p>ग्रन्थसङ्ग्रहे अद्वैतशारदायाः ग्रन्थप्रवेशाः सन्ति। अन्यग्रन्थानां मूलपाठाः अद्वैतशारदायां पठनीयाः। तेषां नूतनविवरणानि अद्यापि न रचितानि।</p><p>मूलपाठस्य प्राप्तिस्थानं प्रत्येकं निर्दिष्टम्। अद्वैतशारदायाः पठनविन्यासमनुसृत्य अत्र पठनव्यवस्था निर्मिता। अयं स्वतन्त्रः अध्ययनप्रयत्नः।</p><p>अध्ययनसाहाय्ये बहुलिपिकं सन्धिसहिष्णुं च अन्वेषणम् उपलब्धम्। सम्पूर्णमूलग्रन्थेषु अन्वेषणार्थम् अद्वैतशारदा द्रष्टव्या।</p>${hasResearch(current)?'<p>'+researchLink(current)+'</p>':''}${(unitFor(current)?.parikshaniya_suchi?.length||unitFor(current)?.review_count)?'<p><a href="#unit-review-list" data-unit-review-list>समीक्षकाणां कृते परीक्षणीयसूची</a></p>':''}`);};
+if($('#color-toggle'))$('#color-toggle').onclick=toggleColors;applyColors();
+if($('#bhashya-toggle'))$('#bhashya-toggle').onclick=()=>{showBhashya=!showBhashya;syncReadingMode();};
+if($('#home-search'))$('#home-search').oninput=()=>renderHome(false);
+if($('#notes-open'))$('#notes-open').onclick=()=>{const d=$('#personal-note details');if(d){setMode('study');d.open=true;d.scrollIntoView();$('#note')?.focus({preventScroll:true});if($('#sidebar'))$('#sidebar').classList.remove('open');if($('#menu'))$('#menu').setAttribute('aria-expanded',String(!window.matchMedia('(max-width: 900px)').matches&&!document.body.classList.contains('nav-folded')));}};
+if($('#bookmarks-open'))$('#bookmarks-open').onclick=()=>showInfo('चिह्निताः पाठाः',marks.length?marks.map(id=>`<button class="lesson-link" data-lesson="${esc(id)}">${deva(allLessons().find(l=>l.id===id)?.nativeId||id)} · ${esc(allLessons().find(l=>l.id===id)?.title||'पाठः')}</button>`).join(''):'<p>पाठस्य पार्श्वे ध्वजचिह्नं स्पृशतु। चिह्नितः पाठः अत्र दृश्यते।</p>');
+if($('#method-open'))$('#method-open').onclick=()=>showInfo('अध्ययनपद्धतिः',`<p>अत्र मूलपाठः तथा शाङ्करभाष्यं प्रथमं पठनीयम्। यत्र अर्थः अस्पष्टः, तत्रैव आवश्यकं विवरणम् उद्घाटनीयम्।</p><p><b>मूलम् → पदच्छेदः → अन्वयः → पदार्थः → व्याकरणपरिचयः → सरलार्थः।</b> व्याख्यासु अध्ययनसाहाय्यम् इति विकल्पं चिनोतु। पार्श्वे इति विकल्पेन तदेव विवरणं पाठस्य दक्षिणभागे दृश्यते। तत्र मूलपाठं वा भाष्यांशं चिनोतु। ततः आवश्यकं विवरणम् उद्घाटयतु। पठनविकल्पेषु पदच्छेदः इति स्पृष्टे मूलस्य भाष्यस्य च सन्धयः विभज्यन्ते। मूलपाठः इति स्पृष्टे पूर्वपाठः पुनः दृश्यते। वर्णसङ्केताः इति विकल्पेन वर्णानां प्रयोजनं ज्ञायते। भाष्यस्य प्रतीकादिवर्णाः इच्छानुसारं दर्शनीयाः।</p><p><b>भाष्यम् → भाष्यपरिचयः → भाष्यसङ्गतिः → भाष्यान्वयः → भाष्यपदव्याकरणपरिचयः → सरलभाष्यव्याख्या → पुनः भाष्यपठनम्।</b> भाष्यव्याकरणपरिचये मूलपाठस्य विवरणे अनुक्तानि कानिचित् भाष्यपदानि विव्रियन्ते। धातुसूत्रसन्दर्भाः इच्छानुसारं पठनीयाः। भाष्यसङ्गतौ सम्बद्धानि कानिचित् वाक्यानि एकत्र पठित्वा तेषां सम्बन्धः ज्ञायते। विस्तृतानि टीकाप्रमाणानि विमर्शे सन्ति।</p><p>सरलविवरणे प्रथमं परिचितैः पदैः अर्थः उच्यते। ततः भाष्यकारस्य पदं परिचाय्यते। अनन्तरं तेन पदेन वाक्यार्थः स्पष्टीक्रियते। एवं पुनः भाष्यपठनं सुकरं भवति।</p><p>अन्वये पूरितानि पदानि [ ] इति चिह्नाभ्यां निर्दिश्यन्ते। मूलभाष्यपाठे तानि न योज्यन्ते। प्रतीकग्रहणम्, पूर्वपक्षः, उत्तरं च अर्थानुसारेण परीक्ष्य चिह्नितानि; केवलं समानशब्ददर्शनात् न चिह्नितानि।</p><p>वार्तिकं स्वकीयक्रमेण आरम्भात् पठनीयम्; मूलमन्त्रेण सह तस्य सम्बन्धः अत्र न कल्प्यते। आनन्दगिरिटीका मूलस्रोते निर्दिष्टसम्बन्धेन एव दृश्यते। अध्ययनसाहाय्यं मुख्यपठनीयग्रन्थस्य एव भवति।</p>`);
+if($('#method-open-side'))$('#method-open-side').onclick=()=>$('#method-open')?.click();
+if($('#scope-open'))$('#scope-open').onclick=()=>{if(runtimeManifest?.archive_mode){showInfo('अस्य संस्करणस्य स्थितिः',`<p>अत्र मूलपाठः शाङ्करभाष्यं च अद्वैतशारदातः पठनकाले आनीयेते। सविवरणाः पाठाः — ${data.filter(l=>l.reviewStatus!=='source-only').map(l=>deva(l.id)).join(' · ')}। एतेषां विवरणानि प्रारम्भिकरूपेण रचितानि। <b>नूतनविवरणस्य विद्वत्समीक्षा अद्यापि अपेक्षिता।</b></p><p>मूलपाठस्य प्राप्तिस्थानं प्रत्येकं निर्दिष्टम्। अद्वैतशारदायाः पठनविन्यासमनुसृत्य अत्र पठनव्यवस्था निर्मिता। अयं स्वाध्यायप्रयत्नः।</p><p>अध्ययनसाहाय्ये बहुलिपिकं सन्धिसहिष्णुं च अन्वेषणम् उपलब्धम्। सम्पूर्णमूलग्रन्थेषु अन्वेषणार्थम् अद्वैतशारदा द्रष्टव्या।</p>${hasResearch(current)?'<p>'+researchLink(current)+'</p>':''}${(unitFor(current)?.parikshaniya_suchi?.length||unitFor(current)?.review_count)?'<p><a href="#unit-review-list" data-unit-review-list>समीक्षकाणां कृते परीक्षणीयसूची</a></p>':''}`);return;}current?.remoteWork?showInfo('अस्य ग्रन्थस्य स्थितिः',p('अस्य ग्रन्थस्य संगृहीताः पाठाः अत्र स्वकीयग्रन्थक्रमेण पठनीयाः। प्रत्येकस्य पाठस्य मूलस्रोतसि प्रवेशः अपि उपलब्धः।')+p('अध्ययनसाहाय्यं मुख्यपठनीयग्रन्थस्य एव भवति। नूतनविवरणानि क्रमशः रचनीयानि; विद्वत्समीक्षा अपेक्षिता। वार्तिकस्य २.४.८३ इति श्लोकस्य विवरणम् अधुना अभ्यासार्थम् उपलब्धम्।')):current?.workId?showInfo('अस्य ग्रन्थस्य स्थितिः',p('अत्र सुरेश्वराचार्यस्य बृहदारण्यकभाष्यवार्तिकात् अभ्यासार्थम् एकः श्लोकः (२.४.८३) संगृहीतः। पदच्छेदादिविवरणानि प्रारूपाणि; विद्वत्समीक्षा अपेक्षिता।')+p('अस्य ग्रन्थस्य स्वकीयः पाठक्रमः अस्ति। मूलमन्त्रेण सह सम्बन्धः अत्र न निर्दिश्यते। सम्पूर्णपाठः मूलस्रोते पठनीयः।')):showInfo('अस्य संस्करणस्य स्थितिः',`<p>अत्र मूलपाठः शाङ्करभाष्यं च अद्वैतशारदातः पठनकाले आनीयेते। सविवरणाः पाठाः — ${data.filter(l=>l.reviewStatus!=='source-only').map(l=>deva(l.id)).join(' · ')}। एतेषां विवरणानि प्रारम्भिकरूपेण रचितानि। <b>नूतनविवरणस्य विद्वत्समीक्षा अद्यापि अपेक्षिता।</b></p><p>ग्रन्थसङ्ग्रहे अद्वैतशारदायाः ग्रन्थप्रवेशाः सन्ति। अन्यग्रन्थानां मूलपाठाः अद्वैतशारदायां पठनीयाः। तेषां नूतनविवरणानि अद्यापि न रचितानि।</p><p>मूलपाठस्य प्राप्तिस्थानं प्रत्येकं निर्दिष्टम्। अद्वैतशारदायाः पठनविन्यासमनुसृत्य अत्र पठनव्यवस्था निर्मिता। अयं स्वतन्त्रः अध्ययनप्रयत्नः।</p><p>अध्ययनसाहाय्ये बहुलिपिकं सन्धिसहिष्णुं च अन्वेषणम् उपलब्धम्। सम्पूर्णमूलग्रन्थेषु अन्वेषणार्थम् अद्वैतशारदा द्रष्टव्या।</p>${hasResearch(current)?'<p>'+researchLink(current)+'</p>':''}${(unitFor(current)?.parikshaniya_suchi?.length||unitFor(current)?.review_count)?'<p><a href="#unit-review-list" data-unit-review-list>समीक्षकाणां कृते परीक्षणीयसूची</a></p>':''}`);};
 async function route(scroll=true){
  let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{id='home';}
  if(runtimeManifest?.archive_mode&&(!id||id==='home'))id=runtimeManifest.default_route||'2.4.1';
@@ -481,14 +484,14 @@ async function runSearch(){
  try{await ensureSearch();if(request!==searchRequest)return;searchResults=searchIndex.search(query,{scope:$('#search-scope').value,approximate:true}).results;renderSearchResults();searchStatus({localOnly:true});}
  catch{if(request===searchRequest){$('#search-status').textContent='पाठसूची न प्राप्ता। पुनः प्रयतताम्।';$('#search-results').removeAttribute('aria-busy');}}
 }
-$('#search-submit').onclick=()=>openSearch($('#lesson-search').value);
-$('#search-open').onclick=()=>openSearch($('#lesson-search').value);
-$('#home-text-search').onclick=()=>openSearch($('#home-search').value);
-$('#lesson-search').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();openSearch(e.target.value);}};
-$('#global-search-form').onsubmit=e=>{e.preventDefault();runSearch();};
-$('#global-search').oninput=()=>{cancelSearch();clearTimeout(searchTimer);searchTimer=setTimeout(runSearch,160);};
-$('#search-scope').onchange=runSearch;
-$('#search-dialog').addEventListener('close',()=>{clearTimeout(searchTimer);cancelSearch();});
+if($('#search-submit'))$('#search-submit').onclick=()=>openSearch($('#lesson-search')?.value||'');
+if($('#search-open'))$('#search-open').onclick=()=>openSearch($('#lesson-search')?.value||'');
+if($('#home-text-search'))$('#home-text-search').onclick=()=>openSearch($('#home-search')?.value||'');
+if($('#lesson-search'))$('#lesson-search').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();openSearch(e.target.value);}};
+if($('#global-search-form'))$('#global-search-form').onsubmit=e=>{e.preventDefault();runSearch();};
+if($('#global-search'))$('#global-search').oninput=()=>{cancelSearch();clearTimeout(searchTimer);searchTimer=setTimeout(runSearch,160);};
+if($('#search-scope'))$('#search-scope').onchange=runSearch;
+if($('#search-dialog'))$('#search-dialog').addEventListener('close',()=>{clearTimeout(searchTimer);cancelSearch();});
 async function showUnitLibrary(kind,entry){
  const u=unitFor(current),lesson=current;if(!u)return;
  const title={lexicon:'पारिभाषिकशब्दकोशः',expressions:'शाङ्करवाक्प्रयोगाः',cards:'पुनरावृत्तिः'}[kind];
