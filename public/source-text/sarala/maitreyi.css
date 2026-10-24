@@ -1,0 +1,108 @@
+/* Phase A: a single light reading surface; study help is the only addition. */
+@font-face{font-family:'Gentium Book Plus';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/gentium-book-plus-400-latin.woff2') format('woff2')}
+body.maitreyi{--bg:#faf7f2;--paper:#fff;--ink:#2b2118;--muted:#6b5d4f;--line:#e4dcd0;--accent:#7a1f1f;--tint:#f3e6e0;--font-size:20px;--header-height:54px;--panel-width:42vw;background:var(--bg);font-family:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;line-height:2.05;overflow-wrap:break-word}
+.maitreyi :lang(en){font-family:'Gentium Book Plus',Georgia,serif}
+.maitreyi .topbar{height:var(--header-height);background:#fff;border-bottom:1px solid var(--line)}
+.maitreyi .topbar-inner{padding:8.8px 20px;gap:16px}
+.maitreyi .archive-back{font-size:15.2px;white-space:nowrap}
+.maitreyi .page-name{font-size:15.2px;color:var(--muted)}
+.maitreyi .tools{margin-left:auto;gap:4px;display:flex}
+.maitreyi .tools>button,.maitreyi .tools select,.maitreyi .color-control>button{border:1px solid var(--line);border-radius:5px;background:transparent;padding:2px 8px;min-height:32px;font-size:14px;line-height:1.6;color:var(--ink)}
+.maitreyi .tools button[aria-pressed=true]{border-color:var(--accent);background:var(--tint);color:var(--accent)}
+.maitreyi .menu-button{display:none}
+.maitreyi .color-control{display:flex;align-items:center;position:relative;gap:2px}
+.maitreyi #color-legend summary{color:var(--accent);list-style:none;cursor:pointer;font-size:11px;padding:7px 4px}
+.maitreyi #color-legend summary::-webkit-details-marker{display:none}
+.maitreyi #color-key{position:absolute;right:0;top:calc(100% + 8px);width:240px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 16px;box-shadow:0 4px 12px #2b211814;font-size:14px;z-index:60}
+.maitreyi #color-key p{margin:0 0 5px}
+.maitreyi .layout{grid-template-columns:15rem minmax(0,1fr);max-width:72rem;margin:0 auto;min-height:calc(100vh - var(--header-height))}
+.maitreyi .sidebar{align-self:start;position:sticky;top:var(--header-height);max-height:calc(100vh - var(--header-height));background:color-mix(in srgb,maroon 5%,#faf7f2);border-right:1px solid var(--line);overflow-y:auto}
+.maitreyi .side-inner{position:static;height:auto;padding:24px 16px;font-size:15.2px}
+.maitreyi .side-title{margin:0 0 16px;color:var(--muted);font-size:15.2px;line-height:2.05}
+.maitreyi .lesson-list{grid-template-columns:repeat(6,minmax(0,1fr));gap:4.8px;margin:0 4.8px 8px 9.6px}
+.maitreyi .lesson-link{min-width:2em;min-height:0;border:1px solid var(--line);border-radius:999px;padding:.32px 6.72px;font-size:12.8px;line-height:2.05;color:var(--muted);background:transparent;font-weight:400}
+.maitreyi .lesson-link.active{background:var(--tint);border-color:var(--accent);color:var(--accent);font-weight:700}
+.maitreyi .lesson-link.source-intro{font-size:14px;margin:0 0 8px;padding:3px 10px}
+.maitreyi #reading{max-width:46rem;padding:40px 32px 64px;font-size:var(--font-size);line-height:2.05}
+.maitreyi .brahmana-heading{font-size:20px;font-weight:700;line-height:2.05;text-align:center;color:var(--accent);margin:32px 0 22px;padding:0;border-radius:8px;background:var(--tint)}
+.maitreyi .reading-unit{scroll-margin-top:calc(var(--header-height) + 20px)}
+.maitreyi .original,.maitreyi .reading-bhashya{font-family:inherit;color:var(--ink);font-size:var(--font-size);line-height:2.05;text-align:justify;margin:0 0 1.1em;padding:0;border:0}
+.maitreyi .mula-box{position:relative;margin:1.6em 0;background:transparent;border-radius:0;padding:0;text-align:center}
+.maitreyi .mula{margin:0;padding:0;border-radius:0;background:none;box-shadow:none;border:0;font-family:inherit;font-size:var(--font-size);font-weight:600;line-height:2.05;text-align:center;color:var(--ink)}
+.maitreyi .study-pill{font-size:12.8px;line-height:1.8;border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--muted);background:var(--bg)}
+.maitreyi .mula-box>.study-pill{position:static;display:block;margin:8px 0 0 auto}
+.maitreyi .study-pill:hover,.maitreyi .study-pill[aria-expanded=true]{border-color:var(--accent);color:var(--accent)}
+.maitreyi .intro-study{display:flex;justify-content:flex-end;margin:-8px 0 20px}
+.maitreyi .source-credit{font-size:12px;line-height:1.9;color:var(--muted);margin:28px 0 0}
+.maitreyi .source-credit a{color:inherit}
+.maitreyi .colophon{text-align:center;color:var(--muted);border-bottom:1px solid var(--line);margin:24px 0 40px;padding-bottom:20px;font-size:.9em}
+.maitreyi .source-status{font-size:14px;line-height:1.8;border-left:2px solid var(--line);padding:8px 12px;margin:12px 0}
+.maitreyi .source-status p{margin:0 0 6px}
+.maitreyi .source-status button{border:1px solid var(--line);border-radius:5px;margin-right:10px;padding:2px 8px}
+.maitreyi .study-drawer{position:fixed;inset:var(--header-height) 0 0 auto;width:var(--panel-width);max-width:none;max-height:none;overflow-y:auto;background:var(--bg);border-left:1px solid var(--line);box-shadow:none;z-index:35;transform:none}
+.maitreyi.study-open .layout{max-width:none;margin-left:max(0px,calc((100vw - 72rem)/2));margin-right:var(--panel-width)}
+.maitreyi.study-open #reading{max-width:none;padding:40px 24px 64px}
+.maitreyi .drawer-heading{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.maitreyi .drawer-heading h2{font-size:18px;font-weight:400;margin:0;color:var(--accent);line-height:1.8}
+.maitreyi .drawer-body{padding:16px 22px 32px;font-size:19px;line-height:2.05}
+.maitreyi .study-group{margin:0 0 24px}
+.maitreyi .study-group>h3{font-size:15px;color:var(--muted);margin:0 0 10px}
+.maitreyi .study-section{border:0;border-bottom:1px solid var(--line);margin:0;padding:0}
+.maitreyi .study-section>summary{list-style:none;cursor:pointer;padding:9px 2px;color:var(--accent);font-size:17px;display:flex;justify-content:space-between;gap:8px}
+.maitreyi .study-section>summary::-webkit-details-marker{display:none}
+.maitreyi .study-section>summary:after{content:'+';font-family:Georgia,serif;color:var(--muted)}
+.maitreyi .study-section[open]>summary:after{content:'−'}
+.maitreyi .study-section-content{padding:10px 2px 18px}
+.maitreyi .study-flow{font-size:inherit;line-height:inherit}
+.maitreyi .study-context-note{background:none;border:0;padding:0;margin:0}
+.maitreyi .study-context-note h3{display:none}
+.maitreyi .study-context-note p{font-size:inherit;line-height:inherit}
+.maitreyi .research-link{font-size:14px;margin:24px 0 0}
+.maitreyi .research-back{font-size:14px;margin:0 0 18px;color:var(--accent)}
+.maitreyi .word-choices{font-size:16px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.maitreyi .word-choices button{padding:2px 5px;color:var(--accent)}
+.maitreyi .study-target,.maitreyi .pratika-target{background:#f3dfaa;box-shadow:0 0 0 2px #f3dfaa;border-radius:2px}
+.maitreyi .study-anchor{scroll-margin-top:95px}
+.maitreyi .dk-uddharana{color:#8a5a00}
+.maitreyi .source-citation{font-size:.8em;color:var(--muted)}
+.maitreyi.no-colors #lesson-content [class*=dk-]{color:inherit;border:0;text-decoration:none;background:none}
+.maitreyi #lesson-content [data-grammar-tokens]{cursor:pointer}
+.maitreyi #lesson-content [data-grammar-tokens]:hover{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.maitreyi .research-id,.maitreyi .compound-tree{display:none}
+.maitreyi [data-script=iast] .original,body.maitreyi[data-script=iast] .original{font-family:'Gentium Book Plus',Georgia,serif;text-align:left}
+@media(max-width:1100px) and (min-width:901px){.maitreyi.study-open .layout{grid-template-columns:10rem minmax(0,1fr)}.maitreyi.study-open .side-inner{padding:20px 8px}.maitreyi.study-open .lesson-list{gap:3px;margin-left:0}.maitreyi.study-open #reading{padding-inline:18px}}
+@media(max-width:900px){body.maitreyi{--header-height:86px}.maitreyi .topbar-inner{flex-wrap:wrap;gap:3px 10px;padding:7px 12px;align-content:center}.maitreyi .menu-button{display:inline-flex;width:25px;height:27px}.maitreyi .archive-back,.maitreyi .page-name{font-size:13px}.maitreyi .tools{width:100%;justify-content:flex-end;gap:3px}.maitreyi .tools>button,.maitreyi .tools select,.maitreyi .color-control>button{font-size:12px;padding:2px 6px;min-height:29px}.maitreyi .layout,.maitreyi.study-open .layout{display:block;max-width:none;margin:0}.maitreyi .sidebar{position:fixed;inset:var(--header-height) 25% 0 0;z-index:50;max-height:none;background:var(--paper);transform:translateX(-105%);box-shadow:0 0 24px #0003;transition:transform .18s}.maitreyi .sidebar.open{transform:none}.maitreyi #reading,.maitreyi.study-open #reading{max-width:46rem;margin:auto;padding:24px 20px 48px}.maitreyi .brahmana-heading{font-size:20px}.maitreyi .mula-box{padding:0}.maitreyi .study-drawer{position:fixed;inset:0;width:100%;height:100dvh;z-index:100;border:0}.maitreyi .drawer-heading{padding:12px 18px}.maitreyi .drawer-body{padding:16px 20px 30px}.maitreyi.study-open{overflow:hidden}.maitreyi .side-inner{padding:24px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.maitreyi .sidebar{transition:none}}
+
+body.maitreyi[data-script=iast]{font-family:'Gentium Book Plus',Georgia,serif}
+body.maitreyi[data-script=kannada]{font-family:'Noto Serif Kannada','Kannada MN','Kannada Sangam MN',serif}
+body.maitreyi[data-script=telugu]{font-family:'Noto Serif Telugu','Telugu MN','Telugu Sangam MN',serif}
+body.maitreyi[data-script=tamil]{font-family:'Noto Serif Tamil','Tamil MN','Tamil Sangam MN',serif}
+body.maitreyi[data-script=malayalam]{font-family:'Noto Serif Malayalam','Malayalam MN','Malayalam Sangam MN',serif}
+/* Neutralize legacy single-lesson geometry in the shared study styles. */
+.maitreyi .topbar{min-height:var(--header-height)}
+.maitreyi .topbar-inner{min-height:var(--header-height)}
+.maitreyi .sidebar{display:block}
+.maitreyi .study-drawer{display:block;margin:0;padding:0;border:0;border-left:1px solid var(--line);border-radius:0;height:auto}
+.maitreyi .tools #script{height:32px;width:106px;font-size:14px;padding:2px 5px}
+@media(max-width:900px){.maitreyi .sidebar,.maitreyi .sidebar.open{width:auto;max-width:none;inset:var(--header-height) 25% 0 0}.maitreyi .study-drawer{height:100dvh;border:0}.maitreyi .tools #script{height:29px;width:96px;font-size:12px}.maitreyi .topbar,.maitreyi .topbar-inner{min-height:var(--header-height)}}
+.maitreyi .lesson-link:not(.source-intro){justify-self:start;width:max-content}
+
+/* Advaita Sharada uses the rose box only for the current source anchor (:target). */
+.maitreyi .mula-box.source-target{background:var(--tint);box-shadow:0 0 0 8px var(--tint);border-radius:8px}
+/* व्याकरणपरिचयः sub-sections: सन्धिविवरणम्, समासः, पदविवरणम् */
+.maitreyi .study-subsection{border-left:2px solid var(--line);margin:0 0 6px;padding:0 0 0 12px}
+.maitreyi .study-subsection>summary{list-style:none;cursor:pointer;padding:4px 0;color:var(--ink);font-size:16px;display:flex;justify-content:space-between;gap:8px}
+.maitreyi .study-subsection>summary::-webkit-details-marker{display:none}
+.maitreyi .study-subsection>summary:after{content:'+';font-family:Georgia,serif;color:var(--muted)}
+.maitreyi .study-subsection[open]>summary:after{content:'−'}
+.maitreyi .study-subsection[open]>summary{color:var(--accent)}
+.maitreyi .study-subsection-content{padding:4px 0 12px}
+/* अध्याहृतं पदम्: supplied by the reader, shown lighter, without brackets */
+.maitreyi .adhyahara{color:var(--muted);font-style:italic}
+/* समासः: members + members → compound, then vigraha and rule on the next line */
+.maitreyi .samasa-build{white-space:normal}
+.maitreyi .samasa-build b{color:var(--accent);font-weight:600}
+.maitreyi .samasa-row{margin:0 0 .5em}
+.maitreyi .samasa-row .samasa-detail{margin:0 0 0 1.4em;color:var(--ink);font-size:.95em}
+.maitreyi .samasa-row .samasa-detail .samasa-type{color:var(--accent)}

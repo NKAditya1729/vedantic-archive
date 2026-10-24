@@ -1,0 +1,2321 @@
+{
+  "schema": "maitreyi-commentary-pairs-v1",
+  "scope": "BU.2.4",
+  "work": "anandagiri",
+  "source_url": "https://advaitasharada.sringeri.net/split/brihadaranyaka-bhashya/2/AB/",
+  "source_sha256": "8f62b9b740f07bd2984606ea47b4a777a68ef00d14123bbd1244186abfa36bc3",
+  "pairs": [
+    {
+      "base": "BR_C02_S04_I01",
+      "tika": [
+        "AB_C02_P3068",
+        "AB_C02_P3069",
+        "AB_C02_P3070",
+        "AB_C02_P3071",
+        "AB_C02_P3072",
+        "AB_C02_P3073",
+        "AB_C02_P3074",
+        "AB_C02_P3075",
+        "AB_C02_P3076",
+        "AB_C02_P3077",
+        "AB_C02_P3078",
+        "AB_C02_P3079",
+        "AB_C02_P3080",
+        "AB_C02_P3081",
+        "AB_C02_P3082",
+        "AB_C02_P3083",
+        "AB_C02_P3084",
+        "AB_C02_P3085",
+        "AB_C02_P3086",
+        "AB_C02_P3087",
+        "AB_C02_P3088",
+        "AB_C02_P3089",
+        "AB_C02_P3090",
+        "AB_C02_P3091",
+        "AB_C02_P3092",
+        "AB_C02_P3093",
+        "AB_C02_P3094",
+        "AB_C02_P3095",
+        "AB_C02_P3096",
+        "AB_C02_P3097",
+        "AB_C02_P3098",
+        "AB_C02_P3099",
+        "AB_C02_P3100",
+        "AB_C02_P3101",
+        "AB_C02_P3102",
+        "AB_C02_P3103",
+        "AB_C02_P3104",
+        "AB_C02_P3105",
+        "AB_C02_P3106",
+        "AB_C02_P3107"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V01_B01",
+      "tika": [
+        "AB_C02_P3108",
+        "AB_C02_P3109",
+        "AB_C02_P3110",
+        "AB_C02_P3111",
+        "AB_C02_P3112"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V02_B01",
+      "tika": [
+        "AB_C02_P3113",
+        "AB_C02_P3114",
+        "AB_C02_P3115",
+        "AB_C02_P3116"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V03_B01",
+      "tika": [
+        "AB_C02_P3117"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V04_B01",
+      "tika": [
+        "AB_C02_P3118"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V05_B01",
+      "tika": [
+        "AB_C02_P3119",
+        "AB_C02_P3120",
+        "AB_C02_P3121",
+        "AB_C02_P3122",
+        "AB_C02_P3123",
+        "AB_C02_P3124",
+        "AB_C02_P3125",
+        "AB_C02_P3126",
+        "AB_C02_P3127",
+        "AB_C02_P3128",
+        "AB_C02_P3129",
+        "AB_C02_P3130",
+        "AB_C02_P3131",
+        "AB_C02_P3132",
+        "AB_C02_P3133",
+        "AB_C02_P3134"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V06_B01",
+      "tika": [
+        "AB_C02_P3135",
+        "AB_C02_P3136",
+        "AB_C02_P3137",
+        "AB_C02_P3138",
+        "AB_C02_P3139",
+        "AB_C02_P3140",
+        "AB_C02_P3141",
+        "AB_C02_P3142"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V07_B01",
+      "tika": [
+        "AB_C02_P3143",
+        "AB_C02_P3144",
+        "AB_C02_P3145",
+        "AB_C02_P3146",
+        "AB_C02_P3147",
+        "AB_C02_P3148",
+        "AB_C02_P3149",
+        "AB_C02_P3150",
+        "AB_C02_P3151",
+        "AB_C02_P3152",
+        "AB_C02_P3153"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V08_B01",
+      "tika": [
+        "AB_C02_P3154"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V09_B01",
+      "tika": [
+        "AB_C02_P3155",
+        "AB_C02_P3156",
+        "AB_C02_P3157",
+        "AB_C02_P3158",
+        "AB_C02_P3159"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V10_B01",
+      "tika": [
+        "AB_C02_P3160",
+        "AB_C02_P3161",
+        "AB_C02_P3162",
+        "AB_C02_P3163",
+        "AB_C02_P3164",
+        "AB_C02_P3165",
+        "AB_C02_P3166",
+        "AB_C02_P3167",
+        "AB_C02_P3168",
+        "AB_C02_P3169",
+        "AB_C02_P3170",
+        "AB_C02_P3171",
+        "AB_C02_P3172",
+        "AB_C02_P3173",
+        "AB_C02_P3174"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V11_B01",
+      "tika": [
+        "AB_C02_P3175",
+        "AB_C02_P3176",
+        "AB_C02_P3177",
+        "AB_C02_P3178",
+        "AB_C02_P3179",
+        "AB_C02_P3180",
+        "AB_C02_P3181",
+        "AB_C02_P3182",
+        "AB_C02_P3183",
+        "AB_C02_P3184",
+        "AB_C02_P3185",
+        "AB_C02_P3186",
+        "AB_C02_P3187",
+        "AB_C02_P3188",
+        "AB_C02_P3189",
+        "AB_C02_P3190",
+        "AB_C02_P3191",
+        "AB_C02_P3192",
+        "AB_C02_P3193",
+        "AB_C02_P3194",
+        "AB_C02_P3195",
+        "AB_C02_P3196",
+        "AB_C02_P3197"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V12_I01",
+      "tika": [
+        "AB_C02_P3198",
+        "AB_C02_P3199",
+        "AB_C02_P3200",
+        "AB_C02_P3201",
+        "AB_C02_P3202"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V12_B01",
+      "tika": [
+        "AB_C02_P3203",
+        "AB_C02_P3204",
+        "AB_C02_P3205",
+        "AB_C02_P3206",
+        "AB_C02_P3207",
+        "AB_C02_P3208",
+        "AB_C02_P3209",
+        "AB_C02_P3210",
+        "AB_C02_P3211",
+        "AB_C02_P3212",
+        "AB_C02_P3213",
+        "AB_C02_P3214",
+        "AB_C02_P3215",
+        "AB_C02_P3216",
+        "AB_C02_P3217",
+        "AB_C02_P3218",
+        "AB_C02_P3219",
+        "AB_C02_P3220",
+        "AB_C02_P3221",
+        "AB_C02_P3222",
+        "AB_C02_P3223",
+        "AB_C02_P3224",
+        "AB_C02_P3225",
+        "AB_C02_P3226",
+        "AB_C02_P3227",
+        "AB_C02_P3228",
+        "AB_C02_P3229",
+        "AB_C02_P3230",
+        "AB_C02_P3231",
+        "AB_C02_P3232",
+        "AB_C02_P3233",
+        "AB_C02_P3234",
+        "AB_C02_P3235",
+        "AB_C02_P3236",
+        "AB_C02_P3237",
+        "AB_C02_P3238",
+        "AB_C02_P3239"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V13_B01",
+      "tika": [
+        "AB_C02_P3240",
+        "AB_C02_P3241",
+        "AB_C02_P3242",
+        "AB_C02_P3243",
+        "AB_C02_P3244",
+        "AB_C02_P3245",
+        "AB_C02_P3246",
+        "AB_C02_P3247",
+        "AB_C02_P3248",
+        "AB_C02_P3249",
+        "AB_C02_P3250",
+        "AB_C02_P3251",
+        "AB_C02_P3252",
+        "AB_C02_P3253",
+        "AB_C02_P3254",
+        "AB_C02_P3255",
+        "AB_C02_P3256",
+        "AB_C02_P3257",
+        "AB_C02_P3258"
+      ]
+    },
+    {
+      "base": "BR_C02_S04_V14_B01",
+      "tika": [
+        "AB_C02_P3259",
+        "AB_C02_P3260",
+        "AB_C02_P3261",
+        "AB_C02_P3262",
+        "AB_C02_P3263",
+        "AB_C02_P3264",
+        "AB_C02_P3265",
+        "AB_C02_P3266",
+        "AB_C02_P3267",
+        "AB_C02_P3268",
+        "AB_C02_P3269",
+        "AB_C02_P3270",
+        "AB_C02_P3271",
+        "AB_C02_P3272",
+        "AB_C02_P3273",
+        "AB_C02_P3274",
+        "AB_C02_P3275",
+        "AB_C02_P3276",
+        "AB_C02_P3277",
+        "AB_C02_P3278",
+        "AB_C02_P3279",
+        "AB_C02_P3280",
+        "AB_C02_P3281",
+        "AB_C02_P3282",
+        "AB_C02_P3283",
+        "AB_C02_P3284",
+        "AB_C02_P3285",
+        "AB_C02_P3286",
+        "AB_C02_P3287",
+        "AB_C02_P3288",
+        "AB_C02_P3289",
+        "AB_C02_P3290"
+      ]
+    }
+  ],
+  "presentation": {
+    "AB_C02_P3068": {
+      "sha256": "5fab20fc4a09c5f0dfe3e3ec13b8a30c9065346b2e81ea205df4c1e7f4d4d2e7",
+      "pratikas": [
+        {
+          "start": 39,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3069": {
+      "sha256": "ad3dfebda4ba417ed030d0d18d7efc03be3eaa8bb615eaf93af68f22e91593a1",
+      "pratikas": [
+        {
+          "start": 47,
+          "end": 56
+        }
+      ]
+    },
+    "AB_C02_P3070": {
+      "sha256": "60f935913b2366756b372fa999236086773bdd3c414e1529d558fa4f808917fb",
+      "pratikas": [
+        {
+          "start": 165,
+          "end": 189
+        }
+      ]
+    },
+    "AB_C02_P3071": {
+      "sha256": "a4884a5b3b3f6bf9c794d28226850a6e89097bbc2fbb3c6c6e42ff1de7aa16bd",
+      "pratikas": [
+        {
+          "start": 31,
+          "end": 39
+        }
+      ]
+    },
+    "AB_C02_P3072": {
+      "sha256": "ccb41a78214a93ab1361dcc07e65fda5cdfe74ab5634991c57dc56032451b6ae",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 43
+        }
+      ]
+    },
+    "AB_C02_P3073": {
+      "sha256": "aad0aa9f1ae8c4115b0709f1e16dccb0550ddc92be29c800303c7c2076fb35fd",
+      "pratikas": [
+        {
+          "start": 118,
+          "end": 135
+        }
+      ]
+    },
+    "AB_C02_P3074": {
+      "sha256": "5bcc119d05c7188e9c46677e32d241065aee166c3e4063d1ca6b873cbac9dbb2",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 40
+        }
+      ]
+    },
+    "AB_C02_P3075": {
+      "sha256": "3281fdd14e684c56bfe567d8d17fca18292ccd0cd36f3dbc3117b3973f0a6d6f",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 32
+        }
+      ]
+    },
+    "AB_C02_P3076": {
+      "sha256": "77abaaaf2bd981287cd149d925359b4356477226cdb5c32ba4a638f8c3462ffb",
+      "pratikas": [
+        {
+          "start": 68,
+          "end": 83
+        }
+      ]
+    },
+    "AB_C02_P3077": {
+      "sha256": "0da54e99afd3cb571eba4713daddde7b8f9ecc358eae5db2de99fd44207f6cf6",
+      "pratikas": [
+        {
+          "start": 17,
+          "end": 31
+        }
+      ]
+    },
+    "AB_C02_P3078": {
+      "sha256": "e140ccf61835ae19c63110bc2568f5279ea66b377bc448db5efc65b30d5c017a",
+      "pratikas": [
+        {
+          "start": 76,
+          "end": 88
+        }
+      ]
+    },
+    "AB_C02_P3079": {
+      "sha256": "70ca1a88ed40d4a822a5366c4a7374fcc45b5ac0dd138b493fd2341af71d0396",
+      "pratikas": [
+        {
+          "start": 37,
+          "end": 53
+        }
+      ]
+    },
+    "AB_C02_P3080": {
+      "sha256": "471643003a3be9bcedc1f6ffd81ebbb30dd3da0244697fd1b883c3b4d261e43c",
+      "pratikas": [
+        {
+          "start": 54,
+          "end": 65
+        }
+      ]
+    },
+    "AB_C02_P3081": {
+      "sha256": "1828e39b508c094c14a0d0036ddde5584b414c64e26d9698fa0f200a9b09f8b4",
+      "pratikas": [
+        {
+          "start": 71,
+          "end": 79
+        }
+      ]
+    },
+    "AB_C02_P3082": {
+      "sha256": "35a7e89426161c138e9411eaeebdd58b5a6cd49f9e6c3704c4a89ef11c5e76ac",
+      "pratikas": [
+        {
+          "start": 106,
+          "end": 115
+        }
+      ]
+    },
+    "AB_C02_P3083": {
+      "sha256": "da758f3c75f6ce92456ab3b5169a4838a2eb22e9ac86e717d8af573fe2e9b31b",
+      "pratikas": [
+        {
+          "start": 29,
+          "end": 37
+        }
+      ]
+    },
+    "AB_C02_P3084": {
+      "sha256": "de34165c964bac74dd332ab29a88af3726e22dbf547e536316bc797cf6bab9f6",
+      "pratikas": [
+        {
+          "start": 73,
+          "end": 84
+        }
+      ]
+    },
+    "AB_C02_P3085": {
+      "sha256": "933ca63c62dd7634bba674d6a699e4a2da19e615dd0bc35c6e8ec7c77c4ad1b2",
+      "pratikas": [
+        {
+          "start": 127,
+          "end": 135
+        }
+      ]
+    },
+    "AB_C02_P3086": {
+      "sha256": "c830771f6baad72fb7add58ac0582b3de68a9315536f13346bf1d2a3a6bbd827",
+      "pratikas": [
+        {
+          "start": 69,
+          "end": 86
+        }
+      ]
+    },
+    "AB_C02_P3087": {
+      "sha256": "f90873a53c17fad1947f2bfae06eb511289825a4aa30abf9085cab4a2c7ac043",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 62
+        }
+      ]
+    },
+    "AB_C02_P3088": {
+      "sha256": "632c419beb3fe9151f4de9860126dbe75b54d69bcda259e5d2bb03220bf81ebe",
+      "pratikas": [
+        {
+          "start": 50,
+          "end": 64
+        }
+      ]
+    },
+    "AB_C02_P3089": {
+      "sha256": "69a7769def3170a2911079796bce4bfa7cd0c39e0964d78e527fbe084acf21e2",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3090": {
+      "sha256": "c36b1d8ec9377003c1ee29b7a1494c9f0921dab84123a25de0a490727f5bfc21",
+      "pratikas": [
+        {
+          "start": 76,
+          "end": 85
+        }
+      ]
+    },
+    "AB_C02_P3091": {
+      "sha256": "8842d765fbf67248dad39ea1e4a75aed0d5d302afac2a2a8237e52825925421f",
+      "pratikas": [
+        {
+          "start": 46,
+          "end": 56
+        }
+      ]
+    },
+    "AB_C02_P3092": {
+      "sha256": "0a01657282713463ab9ff435dfcb3776d076ed5e271503b5c8180394671d2dbb",
+      "pratikas": [
+        {
+          "start": 47,
+          "end": 56
+        }
+      ]
+    },
+    "AB_C02_P3093": {
+      "sha256": "8c3a4372daa873fb99d373c74c9ce07b534ecf4a17bf0c5155d12efd55859ae2",
+      "pratikas": [
+        {
+          "start": 32,
+          "end": 42
+        }
+      ]
+    },
+    "AB_C02_P3094": {
+      "sha256": "d44c9a3bc71c35a16c5bc841da0c36bd21ed1f2bbd4b900ebc01e43f8bf6de19",
+      "pratikas": [
+        {
+          "start": 147,
+          "end": 156
+        }
+      ]
+    },
+    "AB_C02_P3095": {
+      "sha256": "3b3a92877ee44b1b6a0a9d263a80b7140c235a505a1f2fd58c25748c1f90e376",
+      "pratikas": [
+        {
+          "start": 39,
+          "end": 50
+        }
+      ]
+    },
+    "AB_C02_P3096": {
+      "sha256": "4f88b0c32f072f616bfeb07559514fceb8abfd1012aff00a4636a0a9c7701fe3",
+      "pratikas": [
+        {
+          "start": 58,
+          "end": 74
+        }
+      ]
+    },
+    "AB_C02_P3097": {
+      "sha256": "5652c639ee789e0a5de8374194a8c432712e01a3ec755e8447a345b4f497be9f",
+      "pratikas": [
+        {
+          "start": 53,
+          "end": 74
+        }
+      ]
+    },
+    "AB_C02_P3098": {
+      "sha256": "5a7a4155bfd18be1d729aca4f487e6f1a6067b5edd48f513c29c320e4b71910c",
+      "pratikas": [
+        {
+          "start": 139,
+          "end": 151
+        }
+      ]
+    },
+    "AB_C02_P3099": {
+      "sha256": "3cd9d0fe408aa808c986feab7a5087414d791be8c60c3c048dba3375495ffff2",
+      "pratikas": [
+        {
+          "start": 23,
+          "end": 39
+        }
+      ]
+    },
+    "AB_C02_P3100": {
+      "sha256": "e40092bfd65ba38e16f1b19241c84600a3391c95f7e9b01089d827a82c428479",
+      "pratikas": [
+        {
+          "start": 23,
+          "end": 40
+        }
+      ]
+    },
+    "AB_C02_P3101": {
+      "sha256": "d7bfff65a4b2309d6c7250f79de1a58a3de5066b152f05c9f6c650d9a2f5639c",
+      "pratikas": [
+        {
+          "start": 22,
+          "end": 32
+        }
+      ]
+    },
+    "AB_C02_P3102": {
+      "sha256": "7995fd150e0a0cd14c18cd93f951a6413043cd40b966dee264a2346ee2d4ed3b",
+      "pratikas": [
+        {
+          "start": 16,
+          "end": 26
+        }
+      ]
+    },
+    "AB_C02_P3103": {
+      "sha256": "6fa331fd509c1c7c016cc26c47618c73dda61a4e9cc715035c05984ffbdfbe05",
+      "pratikas": [
+        {
+          "start": 43,
+          "end": 55
+        }
+      ]
+    },
+    "AB_C02_P3104": {
+      "sha256": "e42a7f9d030f04f923f5343b4b45f96696e4028ee963bd5b29cf13265e7224a9",
+      "pratikas": [
+        {
+          "start": 204,
+          "end": 219
+        }
+      ]
+    },
+    "AB_C02_P3105": {
+      "sha256": "f50e4064da8c5260b3ea480e80e4ab8bb915d010608dcc4dfcb92e7fa4679921",
+      "pratikas": [
+        {
+          "start": 64,
+          "end": 72
+        }
+      ]
+    },
+    "AB_C02_P3106": {
+      "sha256": "05ecb045e8470ea8a10bfc16b332998e0b8804ec91e6c990ca650d46dfde2c67",
+      "pratikas": [
+        {
+          "start": 73,
+          "end": 84
+        }
+      ]
+    },
+    "AB_C02_P3107": {
+      "sha256": "5e5b2eaa54c6e9864f398c266cafe1f8cbf9f1c226bcdd01682f099d561bc67d",
+      "pratikas": [
+        {
+          "start": 112,
+          "end": 123
+        }
+      ]
+    },
+    "AB_C02_P3108": {
+      "sha256": "e3741472460e4159d5d00dbc8de660caec2436fc225d6584107c91e58ee26882",
+      "pratikas": [
+        {
+          "start": 40,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3109": {
+      "sha256": "86830d49dd14c95905bf52b8e053c56ead99d1ea0086c2d6e0fe5660f51b2c44",
+      "pratikas": [
+        {
+          "start": 51,
+          "end": 59
+        }
+      ]
+    },
+    "AB_C02_P3110": {
+      "sha256": "1747511f86708ebd2eab6f5fd1b61708442945b54f3cfda16fe21ef16e8a77b9",
+      "pratikas": [
+        {
+          "start": 22,
+          "end": 32
+        }
+      ]
+    },
+    "AB_C02_P3111": {
+      "sha256": "03faecb98159c0edefbd24b357154abe0d4afcab1c2fc03dc75a5cf150aeb4c1",
+      "pratikas": [
+        {
+          "start": 72,
+          "end": 87
+        }
+      ]
+    },
+    "AB_C02_P3112": {
+      "sha256": "8afb3945e20a2fa6179b8bd73d64e929c9d9c410d6fc4d722d0732a48e1ba0e4",
+      "pratikas": [
+        {
+          "start": 77,
+          "end": 88
+        }
+      ]
+    },
+    "AB_C02_P3113": {
+      "sha256": "2952c8d8182067424e30dfe07ea579734e6a7cb825396d567e3fb474656d24cd",
+      "pratikas": [
+        {
+          "start": 78,
+          "end": 87
+        }
+      ]
+    },
+    "AB_C02_P3114": {
+      "sha256": "9445f11f0a1eadbde50c0ee0bd538a7f1d509a49207663822b065aad07ead71e",
+      "pratikas": [
+        {
+          "start": 43,
+          "end": 51
+        }
+      ]
+    },
+    "AB_C02_P3115": {
+      "sha256": "93c45867ca6b0c249afd2c663ea3079bd09d56acb6da6dd4c4c166a3e54393ff",
+      "pratikas": [
+        {
+          "start": 79,
+          "end": 94
+        }
+      ]
+    },
+    "AB_C02_P3116": {
+      "sha256": "698198ef52d3a8bfc478931bf781e4f5534cd43c40263020d138fe47cb6530db",
+      "pratikas": [
+        {
+          "start": 71,
+          "end": 86
+        }
+      ]
+    },
+    "AB_C02_P3117": {
+      "sha256": "3cd8751ad27bd3b02865f890807395fe2cdc29d0a7ac44919f17ee11894d7f47",
+      "pratikas": [
+        {
+          "start": 144,
+          "end": 155
+        }
+      ]
+    },
+    "AB_C02_P3118": {
+      "sha256": "ea0a857bc5799f6481f6fc27871d64742e82be80b513db86390b86470d13417f",
+      "pratikas": [
+        {
+          "start": 51,
+          "end": 65
+        }
+      ]
+    },
+    "AB_C02_P3119": {
+      "sha256": "480784f8ae979c0f2303c6dfba05a13e4618a78f82706f131d69dbaecd662678",
+      "pratikas": [
+        {
+          "start": 146,
+          "end": 154
+        }
+      ]
+    },
+    "AB_C02_P3120": {
+      "sha256": "6b08d424c94496d014e6142e0f5d47ce820501b2532f79b39c438760852f82bc",
+      "pratikas": [
+        {
+          "start": 124,
+          "end": 134
+        }
+      ]
+    },
+    "AB_C02_P3121": {
+      "sha256": "7adb3e792da6ba5a2bc726f8b22e68c56dc1bf66817bac7c1f1deb2bbafaca33",
+      "pratikas": [
+        {
+          "start": 32,
+          "end": 46
+        }
+      ]
+    },
+    "AB_C02_P3122": {
+      "sha256": "d2ca9465046a9eed05e081292c309dd963baacab5d6ae58d7c8bf84ffa5b190e",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 44
+        }
+      ]
+    },
+    "AB_C02_P3123": {
+      "sha256": "5121a59dfec787aebc12521499113206c112004c02e79e37c3f3d3d4038640e1",
+      "pratikas": [
+        {
+          "start": 15,
+          "end": 24
+        }
+      ]
+    },
+    "AB_C02_P3124": {
+      "sha256": "ad4dfe171c1a7921a231d2e73da658b70a2a8b7f524325597c530c8c3001a754",
+      "pratikas": [
+        {
+          "start": 105,
+          "end": 120
+        }
+      ]
+    },
+    "AB_C02_P3125": {
+      "sha256": "8b8b545d1365303f2caa98cca6d3efa157853bc9a547b3d14417490873ce57e5",
+      "pratikas": [
+        {
+          "start": 42,
+          "end": 53
+        }
+      ]
+    },
+    "AB_C02_P3126": {
+      "sha256": "89e0a60aafb82329185824d54e59402d012df77db4c136ce620aa2fa8b4e236f",
+      "pratikas": [
+        {
+          "start": 85,
+          "end": 95
+        }
+      ]
+    },
+    "AB_C02_P3127": {
+      "sha256": "aedc07e63344c8880cc4f7ee2aeba409b4271f9c528434895cf3f3f5000a7a13",
+      "pratikas": [
+        {
+          "start": 90,
+          "end": 101
+        }
+      ]
+    },
+    "AB_C02_P3128": {
+      "sha256": "baf3fd673a485e8b0f3c01fc6b8ab208d8b5a241742560051da6708184627741",
+      "pratikas": [
+        {
+          "start": 99,
+          "end": 116
+        }
+      ]
+    },
+    "AB_C02_P3129": {
+      "sha256": "f6570202b70bb5260800fd30080aecac36f7d14619116e9eaa336224c8120a37",
+      "pratikas": [
+        {
+          "start": 39,
+          "end": 53
+        }
+      ]
+    },
+    "AB_C02_P3130": {
+      "sha256": "41b8901680df713812528cd489f65b040b30bc05eebd26e83b768b898dbe343b",
+      "pratikas": [
+        {
+          "start": 98,
+          "end": 108
+        }
+      ]
+    },
+    "AB_C02_P3131": {
+      "sha256": "7bc0e7fa5c69f423961cdd7b5dca7823725c542114353078261a82f2db19dd15",
+      "pratikas": [
+        {
+          "start": 150,
+          "end": 157
+        }
+      ]
+    },
+    "AB_C02_P3132": {
+      "sha256": "449ed9aba37abd74847cc464c90875ef8b634da8952fbde6a58ed1daf6f0ec52",
+      "pratikas": [
+        {
+          "start": 30,
+          "end": 43
+        }
+      ]
+    },
+    "AB_C02_P3133": {
+      "sha256": "de810017c0c061f4c1007f279b80092fc0d3dfba085fc60e84ffce6e5eaa9162",
+      "pratikas": [
+        {
+          "start": 65,
+          "end": 76
+        }
+      ]
+    },
+    "AB_C02_P3134": {
+      "sha256": "db53354c01778c5d95e367d87c5a0c80bc991b06caff33d0119eac24f3b16f06",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 67
+        }
+      ]
+    },
+    "AB_C02_P3135": {
+      "sha256": "a36087ecfec0a37e5d7601fb9e5a01cac778c723b571f917c6e5daa5b9df9570",
+      "pratikas": [
+        {
+          "start": 53,
+          "end": 62
+        }
+      ]
+    },
+    "AB_C02_P3136": {
+      "sha256": "17dfb61168aa6b0f1006d6874c8801cf10f3f1b83a0e0037ceafda6902c44f63",
+      "pratikas": [
+        {
+          "start": 25,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3137": {
+      "sha256": "a9f2d9730dee4cca02bd2d2ecf40c5d3efbcf2402281f9182943671bcaa209dd",
+      "pratikas": [
+        {
+          "start": 83,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3138": {
+      "sha256": "5812425ba7de9faa23be965d2729da95cc3bd3d108db978151b186f26e159a64",
+      "pratikas": [
+        {
+          "start": 60,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3139": {
+      "sha256": "c2ae9c062b4adc1a9eef1549eb2ae433a2c45041ac594ae32f1991c27dc978bf",
+      "pratikas": [
+        {
+          "start": 68,
+          "end": 81
+        }
+      ]
+    },
+    "AB_C02_P3140": {
+      "sha256": "1b1753f083e9fd344287d1a937e3d400449a022fc33e50fabca16491eeb317f2",
+      "pratikas": [
+        {
+          "start": 42,
+          "end": 53
+        }
+      ]
+    },
+    "AB_C02_P3141": {
+      "sha256": "064f3072e520c08664688cde0fef0710a3e5e7709783990563d4e068f476ccbd",
+      "pratikas": [
+        {
+          "start": 96,
+          "end": 108
+        }
+      ]
+    },
+    "AB_C02_P3142": {
+      "sha256": "5fee58db1ef6ab47b7fb98d751a6128e7b6747bb2aea3dcaab5fe079b103a1c7",
+      "pratikas": [
+        {
+          "start": 42,
+          "end": 59
+        }
+      ]
+    },
+    "AB_C02_P3143": {
+      "sha256": "efac12ff1ae13f5fe6a570356e6f63facbf9d9432ba48c924cc3f9ac172877ff",
+      "pratikas": [
+        {
+          "start": 90,
+          "end": 103
+        }
+      ]
+    },
+    "AB_C02_P3144": {
+      "sha256": "97dcc2cc2bf8eac7eb71367ff8cc18636996e4423adfa7284ac3220a61297caf",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 66
+        }
+      ]
+    },
+    "AB_C02_P3145": {
+      "sha256": "aff1e956fa7f330b1354801b442f9ca87aaa0a375a2db42d0e795909bd5a04df",
+      "pratikas": [
+        {
+          "start": 42,
+          "end": 51
+        }
+      ]
+    },
+    "AB_C02_P3146": {
+      "sha256": "e39d52ad5e6266822c5ccf22e3c1e50be610fb29057ce505112008b2c09ad336",
+      "pratikas": [
+        {
+          "start": 33,
+          "end": 47
+        }
+      ]
+    },
+    "AB_C02_P3147": {
+      "sha256": "450abff74f86df029b7d4328dae6e9d17a4df63d3e51bdf959dc7dac4396549e",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 67
+        }
+      ]
+    },
+    "AB_C02_P3148": {
+      "sha256": "b1ea74563a3738b5b0ac6f7238c28cf7ed5940948b12793894f2c9ce365c484a",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 36
+        }
+      ]
+    },
+    "AB_C02_P3149": {
+      "sha256": "8b45bd1759f528e42659f349a3dbf564a417be7968deda8692d5bd9ca4c04d25",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 72
+        }
+      ]
+    },
+    "AB_C02_P3150": {
+      "sha256": "4b6098d67aad500d64b8501f9d8c829e8e5f47b006e97771c24d81dbb53710bc",
+      "pratikas": [
+        {
+          "start": 71,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3151": {
+      "sha256": "a4a074d2290244d63f44210b0869883de3e607bddbe47ddd8ea6498805a05d7e",
+      "pratikas": [
+        {
+          "start": 16,
+          "end": 35
+        }
+      ]
+    },
+    "AB_C02_P3152": {
+      "sha256": "74612129557e5e8709f18c066091d9c47edccc551abf51557f4be4ad752e73c2",
+      "pratikas": [
+        {
+          "start": 34,
+          "end": 43
+        }
+      ]
+    },
+    "AB_C02_P3153": {
+      "sha256": "39b3ecad5d5e3a119d6145ebb6cc6231ac84fa8b182dc038019386b833aa94b5",
+      "pratikas": [
+        {
+          "start": 37,
+          "end": 44
+        }
+      ]
+    },
+    "AB_C02_P3154": {
+      "sha256": "8c211328c5d80cec297d758021258200782016339e61db5bfb48d807ad2067a0",
+      "pratikas": [
+        {
+          "start": 151,
+          "end": 165
+        }
+      ]
+    },
+    "AB_C02_P3155": {
+      "sha256": "1d8a2e32523fe7e9ba326f4e73f90e1de45f206b7b649876f887705e72231013",
+      "pratikas": [
+        {
+          "start": 99,
+          "end": 108
+        }
+      ]
+    },
+    "AB_C02_P3156": {
+      "sha256": "397999d2c0986a4a769bdfbbaf13d2a762389d3ed4ae4b9519b6ef816f2a036d",
+      "pratikas": [
+        {
+          "start": 33,
+          "end": 43
+        }
+      ]
+    },
+    "AB_C02_P3157": {
+      "sha256": "a7578e6f499f265ffcac2b4f0abae55b1fafbd781fb8efb7ac4c6935d4dfa7a5",
+      "pratikas": [
+        {
+          "start": 88,
+          "end": 98
+        }
+      ]
+    },
+    "AB_C02_P3158": {
+      "sha256": "9b55f2f11c816c355feeffa9b3716af1ef3bb677bc9b334e966f9e60f51cee7a",
+      "pratikas": [
+        {
+          "start": 221,
+          "end": 233
+        }
+      ]
+    },
+    "AB_C02_P3159": {
+      "sha256": "1a70d0fce8633af1dd905b422ea20ac8adb8d000bac84c13747d95e020ad73d4",
+      "pratikas": [
+        {
+          "start": 63,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3160": {
+      "sha256": "285ef3252a45a02fedffc93a7b72bbd08d86993d3f642f41a4036dd553416a12",
+      "pratikas": [
+        {
+          "start": 56,
+          "end": 70
+        }
+      ]
+    },
+    "AB_C02_P3161": {
+      "sha256": "437bc8c0d242e35889fec6562e026d564035fd3a1126faf6860d864ec9988260",
+      "pratikas": [
+        {
+          "start": 66,
+          "end": 78
+        }
+      ]
+    },
+    "AB_C02_P3162": {
+      "sha256": "875307cc504a6287beb474ec814408f3315a1a05fc95cdb20fadcf26531308d0",
+      "pratikas": [
+        {
+          "start": 38,
+          "end": 45
+        }
+      ]
+    },
+    "AB_C02_P3163": {
+      "sha256": "25237bc5a0a8ad055a01b950b571cd945b22e7f00324d58b27157aba0daf177c",
+      "pratikas": [
+        {
+          "start": 38,
+          "end": 55
+        }
+      ]
+    },
+    "AB_C02_P3164": {
+      "sha256": "c8af5537a74ce03a7a5e411bfc8381814900bca488a4d36e305bc03d0c04ad8b",
+      "pratikas": [
+        {
+          "start": 72,
+          "end": 80
+        }
+      ]
+    },
+    "AB_C02_P3165": {
+      "sha256": "b5f7ff3f773863475b7d0a1983b12a4c90ebec5b745dbcc0640ebd2b86aaa24e",
+      "pratikas": [
+        {
+          "start": 47,
+          "end": 55
+        }
+      ]
+    },
+    "AB_C02_P3166": {
+      "sha256": "ce1885fdaf53a518f892a7aa0d12942a44a05f96d3abf0fc5c8decadd7f918d0",
+      "pratikas": [
+        {
+          "start": 208,
+          "end": 223
+        }
+      ]
+    },
+    "AB_C02_P3167": {
+      "sha256": "72a75979031c31e448a0c7bd17624b140016f9bed190326da75780ec22925432",
+      "pratikas": [
+        {
+          "start": 87,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3168": {
+      "sha256": "3403f81af760987b59dcf8b807890d7b396029f7c1de21d2bb96ca91dc3b99e4",
+      "pratikas": [
+        {
+          "start": 35,
+          "end": 46
+        }
+      ]
+    },
+    "AB_C02_P3169": {
+      "sha256": "2a5d55f282fa29f862df40d4c1948f42fb6f236f7c43aef13bff64f32c9d54c7",
+      "pratikas": [
+        {
+          "start": 146,
+          "end": 154
+        }
+      ]
+    },
+    "AB_C02_P3170": {
+      "sha256": "ffbbc2c0c2a745a347c704226dd2a823b7c48f46990fbc40f4472877a160b33f",
+      "pratikas": [
+        {
+          "start": 185,
+          "end": 199
+        }
+      ]
+    },
+    "AB_C02_P3171": {
+      "sha256": "972985e2817f2b3c20bd6fd5558f13694522e20285ceb51723debdc26a2ca18d",
+      "pratikas": [
+        {
+          "start": 66,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3172": {
+      "sha256": "9d0ec2f6fd51bed2c537e71bfa9b1e1a24deb0920d1e8711db48e44b3ed3644c",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 37
+        }
+      ]
+    },
+    "AB_C02_P3173": {
+      "sha256": "065094ebd1357c34280561ec94581706aa801cd38f608494f98ea982e5b35e8a",
+      "pratikas": [
+        {
+          "start": 48,
+          "end": 62
+        }
+      ]
+    },
+    "AB_C02_P3174": {
+      "sha256": "99b6752e5beca9c83515d046ebc29e92e5dd8279c50bd53b65564226dbb547cc",
+      "pratikas": [
+        {
+          "start": 203,
+          "end": 215
+        }
+      ]
+    },
+    "AB_C02_P3175": {
+      "sha256": "746d85e94be62ffb4f6719f368e07bc25aa3b556fe05da41312a74370843eb7d",
+      "pratikas": [
+        {
+          "start": 67,
+          "end": 82
+        }
+      ]
+    },
+    "AB_C02_P3176": {
+      "sha256": "a4aeed521b1c7dee54601918d263366f35770492354d35883c4fbe74579ef0e6",
+      "pratikas": [
+        {
+          "start": 17,
+          "end": 29
+        }
+      ]
+    },
+    "AB_C02_P3177": {
+      "sha256": "17a021b61b2fe4aee1078e440b0762755aa25b8246aab77cd93469650fc89aeb",
+      "pratikas": [
+        {
+          "start": 34,
+          "end": 41
+        }
+      ]
+    },
+    "AB_C02_P3178": {
+      "sha256": "6701b640d3c2a851bfadc0aa2cdb010384bbff750a19a15c4f6ab5d47db5ed45",
+      "pratikas": [
+        {
+          "start": 64,
+          "end": 75
+        }
+      ]
+    },
+    "AB_C02_P3179": {
+      "sha256": "64c80d84c835b6ccbc0dff366662196ced8b6dbf88e0bb9dc92f48e4512b7c5a",
+      "pratikas": [
+        {
+          "start": 144,
+          "end": 154
+        }
+      ]
+    },
+    "AB_C02_P3180": {
+      "sha256": "47c7ea5dc8a4e1226cf8ad4c5b937ad945172928825bce2f267e3a223ab9cb10",
+      "pratikas": [
+        {
+          "start": 150,
+          "end": 161
+        }
+      ]
+    },
+    "AB_C02_P3181": {
+      "sha256": "f7eb8f01cf1bce313e919b93222810ed95ab21c981ea0023f349b6e2ba904217",
+      "pratikas": [
+        {
+          "start": 96,
+          "end": 107
+        }
+      ]
+    },
+    "AB_C02_P3182": {
+      "sha256": "79b41b2d501ec8b9ea394bc31518053eb509e57c562e0a2bc4b89d0887598cd9",
+      "pratikas": [
+        {
+          "start": 59,
+          "end": 72
+        }
+      ]
+    },
+    "AB_C02_P3183": {
+      "sha256": "22f889d2d5e65b05f0ce4a4194c69ac23abaef0257fe9493fe49cd2f29e462b7",
+      "pratikas": [
+        {
+          "start": 166,
+          "end": 173
+        }
+      ]
+    },
+    "AB_C02_P3184": {
+      "sha256": "4a03058d69c60a0c67bd1bd193653dd9d4ef005e4ee6d6b8ecf196535615c72f",
+      "pratikas": [
+        {
+          "start": 308,
+          "end": 316
+        }
+      ]
+    },
+    "AB_C02_P3185": {
+      "sha256": "6bdd69383f3d20e368798d3a8410635a310e881b8639a497fc19eae2d799b003",
+      "pratikas": [
+        {
+          "start": 105,
+          "end": 127
+        }
+      ]
+    },
+    "AB_C02_P3186": {
+      "sha256": "771c51474f905f50f0e11e423f3d47c403acc4bf2aaddcf34297707f48a9848e",
+      "pratikas": [
+        {
+          "start": 141,
+          "end": 149
+        }
+      ]
+    },
+    "AB_C02_P3187": {
+      "sha256": "a089b519af1af0074006cbf23b79f101c82c73e9d94336771ef8d5b27a39a940",
+      "pratikas": [
+        {
+          "start": 47,
+          "end": 58
+        }
+      ]
+    },
+    "AB_C02_P3188": {
+      "sha256": "ed99842a6e85df6a2a9cf93afcbb7426df9ba97fa98243fc311a1b99100037bf",
+      "pratikas": [
+        {
+          "start": 55,
+          "end": 62
+        }
+      ]
+    },
+    "AB_C02_P3189": {
+      "sha256": "6dcd2372dde42d8ac282b3f047973fbb26b5a782835bd7019464c34c399b728b",
+      "pratikas": [
+        {
+          "start": 44,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3190": {
+      "sha256": "3d60b57b265810d1ac9fc2a088ad50b3722a117f603fe17e20616baf7fd0814a",
+      "pratikas": [
+        {
+          "start": 71,
+          "end": 82
+        }
+      ]
+    },
+    "AB_C02_P3191": {
+      "sha256": "ec2f693d2ca700cd42c709c8d95c49b31615879bca7e119a752ad7abd35393d3",
+      "pratikas": [
+        {
+          "start": 137,
+          "end": 148
+        }
+      ]
+    },
+    "AB_C02_P3192": {
+      "sha256": "a5f428a2bba144e3e2990f5e513521d09f421d641ad1fd97f2d66872d98dae6e",
+      "pratikas": [
+        {
+          "start": 84,
+          "end": 93
+        }
+      ]
+    },
+    "AB_C02_P3193": {
+      "sha256": "c53d048f9adc0315859af0ef4f450c3aae1481242e82580991fd3531dff5e35c",
+      "pratikas": [
+        {
+          "start": 50,
+          "end": 59
+        }
+      ]
+    },
+    "AB_C02_P3194": {
+      "sha256": "03af3c6a4c799b1baf3255ce6e8fae00f876d5c6550472886f63bfb520c28420",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3195": {
+      "sha256": "ede7d093472fdc4e775879a052dc97cb455ff5bd1379b62c1540cda2741e01dc",
+      "pratikas": [
+        {
+          "start": 31,
+          "end": 45
+        }
+      ]
+    },
+    "AB_C02_P3196": {
+      "sha256": "c5280ed5ac99ef425777d6437de5fb4ea2bb1738a9401d883f30c5b6f6ad5135",
+      "pratikas": [
+        {
+          "start": 53,
+          "end": 66
+        }
+      ]
+    },
+    "AB_C02_P3197": {
+      "sha256": "47c7ee49a97ec98b3243280c57aff5d6a2878508a2f7e3714625528612dfe7ab",
+      "pratikas": [
+        {
+          "start": 31,
+          "end": 42
+        }
+      ]
+    },
+    "AB_C02_P3198": {
+      "sha256": "653c3e2672af352aa2de8671e73c60af297f41d17862fd81561567806f535c4b",
+      "pratikas": [
+        {
+          "start": 60,
+          "end": 75
+        }
+      ]
+    },
+    "AB_C02_P3199": {
+      "sha256": "051945437d8d1393a3485ce3550ef6aa27d8f2249a5305c3617425f480778e31",
+      "pratikas": [
+        {
+          "start": 68,
+          "end": 79
+        }
+      ]
+    },
+    "AB_C02_P3200": {
+      "sha256": "3d3be824c86fd7d606fa7a724d7eddf8ecfb48e5f6d320d56ebede04b0306417",
+      "pratikas": [
+        {
+          "start": 75,
+          "end": 90
+        }
+      ]
+    },
+    "AB_C02_P3201": {
+      "sha256": "663fd4a18d73d8371fbbe8ee80f28a1baf964761d048906941a935ca493c91f8",
+      "pratikas": [
+        {
+          "start": 39,
+          "end": 50
+        }
+      ]
+    },
+    "AB_C02_P3202": {
+      "sha256": "a2c20a1389b2af7f9c536d0e48eddddbbf7b08479c5aa5a4087b1615bc5c6e35",
+      "pratikas": [
+        {
+          "start": 61,
+          "end": 72
+        }
+      ]
+    },
+    "AB_C02_P3203": {
+      "sha256": "9a69095f37b2486ca7d20a205d477dcfc3d883e85ef42ecc91f0de79282b9058",
+      "pratikas": [
+        {
+          "start": 86,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3204": {
+      "sha256": "c6b9b5bdeab9edabc82e08df6e7dc2e065cb990551bc395b02fd27fb889826fe",
+      "pratikas": [
+        {
+          "start": 31,
+          "end": 39
+        }
+      ]
+    },
+    "AB_C02_P3205": {
+      "sha256": "7582d9fa2b1e556c6d14dca35556ec9e6681300195737fe99c6678b2d654fa64",
+      "pratikas": [
+        {
+          "start": 50,
+          "end": 67
+        }
+      ]
+    },
+    "AB_C02_P3206": {
+      "sha256": "f9534ac1a6574467c559107aea970feec50407b78f2f0d5fff59dd644c09b02d",
+      "pratikas": [
+        {
+          "start": 35,
+          "end": 52
+        }
+      ]
+    },
+    "AB_C02_P3207": {
+      "sha256": "9c579f0a693e346bc88b02f8d7cffedb8872dd1b0f2c1759c7468d2f99a6c2f0",
+      "pratikas": [
+        {
+          "start": 43,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3208": {
+      "sha256": "c31363ab840e15bfe513af20d0605db50fb9b0bc9088c1aa5978b5df4bce51d8",
+      "pratikas": [
+        {
+          "start": 65,
+          "end": 81
+        }
+      ]
+    },
+    "AB_C02_P3209": {
+      "sha256": "19cb304bba366b8d5ff4db65d805e20a5ca1898fd1959459227ffeb1de337a49",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 37
+        }
+      ]
+    },
+    "AB_C02_P3210": {
+      "sha256": "0198a75aec2e127a761cd252d266929a21c4a8a2e63ffcf982d2af9a93aeafd2",
+      "pratikas": [
+        {
+          "start": 30,
+          "end": 41
+        }
+      ]
+    },
+    "AB_C02_P3211": {
+      "sha256": "5bf4f7a12b9ac2a6acaaf4f311f35907b034829177dfe149389c2648953be8b5",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 36
+        }
+      ]
+    },
+    "AB_C02_P3212": {
+      "sha256": "57a541b2109d33f1d857226897fb24dd9ce9ac0a6bdb95d88c82ca869060929d",
+      "pratikas": [
+        {
+          "start": 59,
+          "end": 70
+        }
+      ]
+    },
+    "AB_C02_P3213": {
+      "sha256": "42542098f6656e68d9063c50dc3dcc0e3bfecb7a55b795d8d467a0235ba4f792",
+      "pratikas": [
+        {
+          "start": 68,
+          "end": 81
+        }
+      ]
+    },
+    "AB_C02_P3214": {
+      "sha256": "83f7e9b5f7352498beab692629a465ee785c05a2609b568773c8c7fa56777d67",
+      "pratikas": [
+        {
+          "start": 18,
+          "end": 27
+        }
+      ]
+    },
+    "AB_C02_P3215": {
+      "sha256": "9745095f9bdc310a5a3678c4023143feff6364814f608defbf4bf0f119282a23",
+      "pratikas": [
+        {
+          "start": 18,
+          "end": 31
+        }
+      ]
+    },
+    "AB_C02_P3216": {
+      "sha256": "95af56e90a70a97d81ebd987a1d6e6dc23711cce0ff862467cb777c5ec8561a2",
+      "pratikas": [
+        {
+          "start": 68,
+          "end": 79
+        }
+      ]
+    },
+    "AB_C02_P3217": {
+      "sha256": "e78d3fa8bba676a5bcd585798d25188faecafa518fe0cc8157e2edd37e2818ad",
+      "pratikas": [
+        {
+          "start": 36,
+          "end": 47
+        }
+      ]
+    },
+    "AB_C02_P3218": {
+      "sha256": "ef306afa814fcbc67f3699bd2afae67f524ccfb821fb39d259d82ca595e2bcdb",
+      "pratikas": [
+        {
+          "start": 86,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3219": {
+      "sha256": "d0d8fedf620dbebabc8a6e98dab5029e1889fcd1faee82d3c6dc3a827336b911",
+      "pratikas": [
+        {
+          "start": 37,
+          "end": 47
+        }
+      ]
+    },
+    "AB_C02_P3220": {
+      "sha256": "e862a507dd890a199150447cbd321c143bd0f25a152580c56908074bd355ee38",
+      "pratikas": [
+        {
+          "start": 63,
+          "end": 79
+        }
+      ]
+    },
+    "AB_C02_P3221": {
+      "sha256": "624fbd5be909347baf6a3b253eef7d20451406d9f70cebcbf599cbaeaf4bfb7d",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 33
+        }
+      ]
+    },
+    "AB_C02_P3222": {
+      "sha256": "f6d277f7d0851aeda1599bb412bf14d3e0253d9c21478bcf49a45b12a90e48f9",
+      "pratikas": [
+        {
+          "start": 43,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3223": {
+      "sha256": "892b4cde0ef2698ddb1afee50c063a2502d9070ca516ab5b28695487befa5bcb",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 34
+        }
+      ]
+    },
+    "AB_C02_P3224": {
+      "sha256": "11e282f8171b96c6f259bf2b2cbb0398ee69dd7b828a1d38f600548142fc9e0a",
+      "pratikas": [
+        {
+          "start": 40,
+          "end": 63
+        }
+      ]
+    },
+    "AB_C02_P3225": {
+      "sha256": "6938a71b7a15d9f9ae5ae2ab1415c734f9670f6da2c75dbbe5d62e2ba6a4617f",
+      "pratikas": [
+        {
+          "start": 32,
+          "end": 41
+        }
+      ]
+    },
+    "AB_C02_P3226": {
+      "sha256": "d5cca01c9b57abafc604b877a81d2989b00bf8fe52807c5db890ff878fed72ca",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 41
+        }
+      ]
+    },
+    "AB_C02_P3227": {
+      "sha256": "d6725b50a860e9e1da717343017a57bb7c24900163791643ad1db8fc23d01502",
+      "pratikas": [
+        {
+          "start": 89,
+          "end": 99
+        }
+      ]
+    },
+    "AB_C02_P3228": {
+      "sha256": "08a1178f53ea289d3be2f9f0ae2d29fb99b761ad69d7f00439c393f12b9629ce",
+      "pratikas": [
+        {
+          "start": 91,
+          "end": 98
+        }
+      ]
+    },
+    "AB_C02_P3229": {
+      "sha256": "16e7267bdcd6346bb0617011862ec8261d791c12586062919a363760f992b70e",
+      "pratikas": [
+        {
+          "start": 24,
+          "end": 41
+        }
+      ]
+    },
+    "AB_C02_P3230": {
+      "sha256": "ce5ba4f1f3f7376d61956183c93f1a4c01446b365b508ba954b403d6b29a35f3",
+      "pratikas": [
+        {
+          "start": 79,
+          "end": 88
+        }
+      ]
+    },
+    "AB_C02_P3231": {
+      "sha256": "b5fbed469eb0908c035be7d03632b2d2148b6bdf2d01f5c26edf523cf3cbdb33",
+      "pratikas": [
+        {
+          "start": 100,
+          "end": 111
+        }
+      ]
+    },
+    "AB_C02_P3232": {
+      "sha256": "7750eae7e62282e8ae84699c0331c94a589ffbaf9a5cb88b4712adb529babef6",
+      "pratikas": [
+        {
+          "start": 23,
+          "end": 36
+        }
+      ]
+    },
+    "AB_C02_P3233": {
+      "sha256": "d000eb1188f2e683913e06de08e959cca2d3d6f9eaaec980381dc7f3efde513b",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 37
+        }
+      ]
+    },
+    "AB_C02_P3234": {
+      "sha256": "cee4bc3a2e5321d66748f3144285f66ec9167d43362f02da3d005dc8e30ce5ed",
+      "pratikas": [
+        {
+          "start": 33,
+          "end": 45
+        }
+      ]
+    },
+    "AB_C02_P3235": {
+      "sha256": "8d8db457055f1a83fd9989b6dbbee46f7e0a3cd363da4f80a6009cb9e23341e5",
+      "pratikas": [
+        {
+          "start": 31,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3236": {
+      "sha256": "0274620f74e1efc70acbd49d2ef2e41a10b552a93f0d77d854c1bbc5f3f97885",
+      "pratikas": [
+        {
+          "start": 99,
+          "end": 108
+        }
+      ]
+    },
+    "AB_C02_P3237": {
+      "sha256": "08810258684586328a056e85d2c64ad0514fe93010512b9712535b44404ad3f7",
+      "pratikas": [
+        {
+          "start": 62,
+          "end": 69
+        }
+      ]
+    },
+    "AB_C02_P3238": {
+      "sha256": "5ddbbc437b5c40da4ae8895211ba2e85068c6e6da7a4dc621a10fc4a1abb1902",
+      "pratikas": [
+        {
+          "start": 51,
+          "end": 61
+        }
+      ]
+    },
+    "AB_C02_P3239": {
+      "sha256": "79f2b9e3399a93a8c4f1e50cbdb4eedd8a21c21385d65cb221eac40e417797bb",
+      "pratikas": [
+        {
+          "start": 63,
+          "end": 87
+        }
+      ]
+    },
+    "AB_C02_P3240": {
+      "sha256": "51921bcf3c1b6a28b3bcf471c4d0b950518464bf231f83d846aeefcedcad0ed8",
+      "pratikas": [
+        {
+          "start": 45,
+          "end": 53
+        }
+      ]
+    },
+    "AB_C02_P3241": {
+      "sha256": "5b48216ded13b4a4d5fd6b00935471ea24e19163214fc7b4ea537bd0e30b53da",
+      "pratikas": [
+        {
+          "start": 60,
+          "end": 68
+        }
+      ]
+    },
+    "AB_C02_P3242": {
+      "sha256": "1c59c06c96a734fe71c0bfdc885ce7d8671cb484562648a330bdf6c5803734fc",
+      "pratikas": [
+        {
+          "start": 76,
+          "end": 84
+        }
+      ]
+    },
+    "AB_C02_P3243": {
+      "sha256": "d78e41fba3bceda5fadcf4ea2f6e3cb01ea87a6f9b9499e597a516abb0536153",
+      "pratikas": [
+        {
+          "start": 25,
+          "end": 33
+        }
+      ]
+    },
+    "AB_C02_P3244": {
+      "sha256": "c53ea18c841d954d097a1fb9dabb090c9f3e4b36e61f8c68536f69c17328ce21",
+      "pratikas": [
+        {
+          "start": 38,
+          "end": 46
+        }
+      ]
+    },
+    "AB_C02_P3245": {
+      "sha256": "4f8d579265e1007a4fe303d4304f96a4cce706e8e7f1f9fe7fbe489783a82a41",
+      "pratikas": [
+        {
+          "start": 41,
+          "end": 50
+        }
+      ]
+    },
+    "AB_C02_P3246": {
+      "sha256": "cd3eb9dbd3f159a113b5f7b205030a39d2e8bec733f91748d4ab489f0a670128",
+      "pratikas": [
+        {
+          "start": 11,
+          "end": 20
+        }
+      ]
+    },
+    "AB_C02_P3247": {
+      "sha256": "1bc07d68bccc5dc0a1c550fd5113800e257a7b895cdf77359d2c71bcaf5d086a",
+      "pratikas": [
+        {
+          "start": 85,
+          "end": 96
+        }
+      ]
+    },
+    "AB_C02_P3248": {
+      "sha256": "87739896d5f72234e231225fdaa698984d8e2c1b6005f34c5970b5ee23f6dcbe",
+      "pratikas": [
+        {
+          "start": 35,
+          "end": 47
+        }
+      ]
+    },
+    "AB_C02_P3249": {
+      "sha256": "5d663de103c6f5cffdcf6c09e1d83d44d1d0de3cc39601ce54523ef8c658ff3d",
+      "pratikas": [
+        {
+          "start": 76,
+          "end": 87
+        }
+      ]
+    },
+    "AB_C02_P3250": {
+      "sha256": "2c0feef3131cc844ffc65ca5ed62a9cb342c3f520b233b92cfc4be4163c98f05",
+      "pratikas": [
+        {
+          "start": 71,
+          "end": 78
+        }
+      ]
+    },
+    "AB_C02_P3251": {
+      "sha256": "cb8dabc4937b5cbb5967ba17fe9fd2999ce7ac6871b228ed60a30ce69d271a86",
+      "pratikas": [
+        {
+          "start": 36,
+          "end": 45
+        }
+      ]
+    },
+    "AB_C02_P3252": {
+      "sha256": "2ffd01f846b2ed85abdac5dc4e51280c9db667bec85e9c125cedc219ca709225",
+      "pratikas": [
+        {
+          "start": 48,
+          "end": 59
+        }
+      ]
+    },
+    "AB_C02_P3253": {
+      "sha256": "ddd23d6a05cc221da6ea7d0a0e91162bfe8adecc5de4d9d0c7415fa80cc34072",
+      "pratikas": [
+        {
+          "start": 45,
+          "end": 62
+        }
+      ]
+    },
+    "AB_C02_P3254": {
+      "sha256": "e487683a92e98815982f5f01dff54b984f3465b16e8af3681cddea8d8c127057",
+      "pratikas": [
+        {
+          "start": 70,
+          "end": 82
+        }
+      ]
+    },
+    "AB_C02_P3255": {
+      "sha256": "158fa2da5880224d48fb58402cac59649ea180cd7e64dff66a62cf568fa3c0c9",
+      "pratikas": [
+        {
+          "start": 27,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3256": {
+      "sha256": "04024bf0a46b386893af3cda3f313f00ec34a9392274a329d6df8b60a15f2ecb",
+      "pratikas": [
+        {
+          "start": 18,
+          "end": 26
+        }
+      ]
+    },
+    "AB_C02_P3257": {
+      "sha256": "1b759f9297e99b659dfc3268cdc71b3247082b4910cffc5c844a13bc965f4e54",
+      "pratikas": [
+        {
+          "start": 62,
+          "end": 69
+        }
+      ]
+    },
+    "AB_C02_P3258": {
+      "sha256": "0a752e526e4b40cf7d44ddfef8716d3711d7e56da127945fcd0f3f9b6a91d0fd",
+      "pratikas": [
+        {
+          "start": 42,
+          "end": 52
+        }
+      ]
+    },
+    "AB_C02_P3259": {
+      "sha256": "bb3cb21bad363616bee429726fb60ef3bbf71875dea734c1beaae029d7128bc0",
+      "pratikas": [
+        {
+          "start": 79,
+          "end": 87
+        }
+      ]
+    },
+    "AB_C02_P3260": {
+      "sha256": "166eee12de191c2052fe28cc796872985e7ccf29b017e190928d05ebb4d08e28",
+      "pratikas": [
+        {
+          "start": 95,
+          "end": 105
+        }
+      ]
+    },
+    "AB_C02_P3261": {
+      "sha256": "8406e72e16a8fc3894788ede3d260836d047c55cf92c6092647bb2a654ccb58c",
+      "pratikas": [
+        {
+          "start": 41,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3262": {
+      "sha256": "f46b759ff7c378186e4073a28cacdaae59b5b0b60cba596e139aaa8ce5e2f312",
+      "pratikas": [
+        {
+          "start": 45,
+          "end": 54
+        }
+      ]
+    },
+    "AB_C02_P3263": {
+      "sha256": "27a4a692039da9862ad941fd5655892a25fe40fd42f63a87fc6c6850168a7a6f",
+      "pratikas": [
+        {
+          "start": 81,
+          "end": 100
+        }
+      ]
+    },
+    "AB_C02_P3264": {
+      "sha256": "02afc0dcf46dc5d452b731d4d679b4b401f73840dc85a7780288f24e42653bc2",
+      "pratikas": [
+        {
+          "start": 69,
+          "end": 84
+        }
+      ]
+    },
+    "AB_C02_P3265": {
+      "sha256": "a8b35ddee95788d65321cd66354e221bcdc2e0e346218c620ee66990974957c1",
+      "pratikas": [
+        {
+          "start": 28,
+          "end": 43
+        }
+      ]
+    },
+    "AB_C02_P3266": {
+      "sha256": "b0606b07161a0647322c6054f9ed5f9e3d1661b0a67673ee26c524d4e5faaad0",
+      "pratikas": [
+        {
+          "start": 103,
+          "end": 112
+        }
+      ]
+    },
+    "AB_C02_P3267": {
+      "sha256": "643eebfac2b2f5b1714a3d2847f132ab8266627e411789603ef1d4a76fe333a0",
+      "pratikas": [
+        {
+          "start": 51,
+          "end": 58
+        }
+      ]
+    },
+    "AB_C02_P3268": {
+      "sha256": "868732692f9d17f11bcbefaea4057733987363f8fef0ba96c769194d4b428622",
+      "pratikas": [
+        {
+          "start": 75,
+          "end": 85
+        }
+      ]
+    },
+    "AB_C02_P3269": {
+      "sha256": "ef13aa13b2873a94eeeb52aa699e9fc1737f4b6ac6b5a1e125a9491e76f85608",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 61
+        }
+      ]
+    },
+    "AB_C02_P3270": {
+      "sha256": "7d600337362a64f76bdf2708f259b47ec9e921c93c122a0443e1928fd8e3e005",
+      "pratikas": [
+        {
+          "start": 149,
+          "end": 159
+        }
+      ]
+    },
+    "AB_C02_P3271": {
+      "sha256": "b56cad803e17e1f90d37c0f78e38ec2fbd0ead9afef11fbb5f079d53ae7fd044",
+      "pratikas": [
+        {
+          "start": 43,
+          "end": 51
+        }
+      ]
+    },
+    "AB_C02_P3272": {
+      "sha256": "b22f355d8e817ac6dff604d0ec18a311480feda00bf665dae68004e501fa60a2",
+      "pratikas": [
+        {
+          "start": 46,
+          "end": 59
+        }
+      ]
+    },
+    "AB_C02_P3273": {
+      "sha256": "81e0acbb804594512f5f88adc4b62895bb7f1d3d145ab221624604bb6186d219",
+      "pratikas": [
+        {
+          "start": 37,
+          "end": 46
+        }
+      ]
+    },
+    "AB_C02_P3274": {
+      "sha256": "1b5e57f2d259f1c7857b54048b923cc1c0e9d820f1ce22625fd1cea950c4db8c",
+      "pratikas": [
+        {
+          "start": 22,
+          "end": 34
+        }
+      ]
+    },
+    "AB_C02_P3275": {
+      "sha256": "7e7b8360255c745a25065894deee510830fffb4b06e3d9b498db3649c0420ca2",
+      "pratikas": [
+        {
+          "start": 26,
+          "end": 38
+        }
+      ]
+    },
+    "AB_C02_P3276": {
+      "sha256": "06e5bb1e62d96aaf702a97f65d2b8193434618cf552b39f805462fbea4262dbd",
+      "pratikas": [
+        {
+          "start": 36,
+          "end": 50
+        }
+      ]
+    },
+    "AB_C02_P3277": {
+      "sha256": "f42912222a5d87a47a7724239fdb3bd8a4a1474ca96dcb38af731d19b1e99805",
+      "pratikas": [
+        {
+          "start": 70,
+          "end": 84
+        }
+      ]
+    },
+    "AB_C02_P3278": {
+      "sha256": "8438883417758a71cc13c9b2fecf7d280f2ca463bf9cd9f6017fe06b83dd3431",
+      "pratikas": [
+        {
+          "start": 83,
+          "end": 91
+        }
+      ]
+    },
+    "AB_C02_P3279": {
+      "sha256": "d639e1a7a211a51891825830451c480d6a04ede83df2dbdcbdad4135d67b3eac",
+      "pratikas": [
+        {
+          "start": 60,
+          "end": 71
+        }
+      ]
+    },
+    "AB_C02_P3280": {
+      "sha256": "9f66f4ef75c04ccb85b106d3a7befcb39ca7b15d2539b7f73fd7217fb545936a",
+      "pratikas": [
+        {
+          "start": 41,
+          "end": 64
+        }
+      ]
+    },
+    "AB_C02_P3281": {
+      "sha256": "e8044a21de84254c676dbd6ab31fb8cd37c66d0febf7bb19583952ceaeeac800",
+      "pratikas": [
+        {
+          "start": 102,
+          "end": 110
+        }
+      ]
+    },
+    "AB_C02_P3282": {
+      "sha256": "ecf0f1536f0f41d6997e7329baa491970f45a35079ae3676a7b341fefc7b7cf5",
+      "pratikas": [
+        {
+          "start": 114,
+          "end": 122
+        }
+      ]
+    },
+    "AB_C02_P3283": {
+      "sha256": "a7337389396bcc6070c23ff7a97e9237891814775a50ad61b0955790ace259db",
+      "pratikas": [
+        {
+          "start": 44,
+          "end": 55
+        }
+      ]
+    },
+    "AB_C02_P3284": {
+      "sha256": "3c6c6c7466c6376c01424f2b3f1ed42d36396a44eeeb4100ed9ef22d7084e216",
+      "pratikas": [
+        {
+          "start": 143,
+          "end": 154
+        }
+      ]
+    },
+    "AB_C02_P3285": {
+      "sha256": "859fd63742bed9ffd26374849cae77dcdf6089a24ca069072457f623afc422f8",
+      "pratikas": [
+        {
+          "start": 103,
+          "end": 111
+        }
+      ]
+    },
+    "AB_C02_P3286": {
+      "sha256": "3dbdc48c65576f2df556329161d2750007d8e44d5a599dd721b58c6b655d98e5",
+      "pratikas": [
+        {
+          "start": 65,
+          "end": 78
+        }
+      ]
+    },
+    "AB_C02_P3287": {
+      "sha256": "e47dba737f66744845cd7863bd2a848b1287737438d5e0dd5c983ace1ab027b1",
+      "pratikas": [
+        {
+          "start": 65,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3288": {
+      "sha256": "147b3d33c12b390250787644626415a8a243ddbd54df7ec1ceb3dafffa092125",
+      "pratikas": [
+        {
+          "start": 19,
+          "end": 33
+        }
+      ]
+    },
+    "AB_C02_P3289": {
+      "sha256": "f2d96325fc0c0ab144bc8e792facb2be3810e3b0e3d529ca139f3c9c79a1c270",
+      "pratikas": [
+        {
+          "start": 62,
+          "end": 73
+        }
+      ]
+    },
+    "AB_C02_P3290": {
+      "sha256": "eea358f8370f9d8146cc354670879ce17dda914aa79b4c4322d40ea1bf772d14",
+      "pratikas": [
+        {
+          "start": 52,
+          "end": 64
+        }
+      ]
+    }
+  }
+}
