@@ -1,0 +1,42 @@
+.vy-chips{position:sticky;top:54px;z-index:4;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6.4px;padding:8px 0;border-bottom:1px solid #e4dcd0;background:#faf7f2;font-family:"Tiro Devanagari Sanskrit","Noto Serif Devanagari",serif}.vy-chips[hidden]{display:none}.vy-chips>span{font-size:17px;color:#6b5d4f}.vy-chips button{border:1px solid #e4dcd0;border-radius:999px;color:#009688;font-size:16px;padding:3.84px 12.8px .96px;background:transparent}.vy-chips button[aria-pressed=true]{background:#009688;color:#faf7f2}.vy-chips .parshve{background:white;border:1px solid #7a1f1f;border-radius:8px;color:#7a1f1f;font-size:17px;font-weight:bold;padding:4.48px 14.4px}.vy-block{margin:7.2px 0 19.8px 16px;padding-left:16px;border-left:3px solid #009688;font-size:18px;line-height:36.9px;color:#2b2118}.vy-block summary{font-size:16.2px;font-weight:600;color:#26408b;cursor:pointer}.vy-unit{margin-bottom:1em}.commentary-verse{font-size:20px;line-height:41px;text-align:justify;margin-bottom:22px}.commentary-nav{display:grid;gap:12px;margin:20px 0}.commentary-nav a{color:inherit}.commentary-split .b1-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.study-open .commentary-split .b1-pair{display:block}.study-open .commentary-split .vy-block{display:none}#commentary-view h1{text-align:center;color:#7a1f1f;font-size:26px}.chapter-head{text-align:center}@media(max-width:900px){.commentary-split .b1-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.vy-chips{top:54px}.vy-chips button{max-width:100%}.vy-block{overflow-wrap:anywhere}}
+
+.vy-chips .parshve[aria-pressed=true]{background:#7a1f1f;color:#faf7f2}
+
+.vy-unit .pratika{color:#26408b;font-weight:600}
+/* Matched to current publisher computed styles, 2026-10-16. */
+.vy-chips{margin:-20px 0 24px}.vy-chips button{line-height:normal}.vy-chips button[aria-pressed=true]{border-color:#009688}.vy-chips .parshve{margin-left:9.6px;line-height:normal}.vy-chips .parshve[aria-pressed=true]{border-color:#7a1f1f}.vy-block summary{line-height:2.05}
+
+/* Measured on Advaita Sharada 2026-10-16 from a clean state (as-prefs cleared). */
+.commentary-split .vy-block{font-size:17.2px;line-height:35.26px;margin:0}.commentary-split .vy-block summary{font-size:15.48px;line-height:31.734px}.commentary-split .vy-unit .pratika{margin:1.72px 0}
+@media(max-width:900px){.commentary-split .b1-pair{display:block}.commentary-split .vy-block{font-size:20px;line-height:41px;margin:8px 0 22px 16px}.commentary-split .vy-block summary{font-size:18px;line-height:36.9px}.commentary-split .vy-unit .pratika{margin:2px 0}}
+@media(min-width:901px){#reading.commentary-split{max-width:none;padding-right:476px}.commentary-split .vy-chips{margin-right:-202px}.commentary-split .b1-pair{grid-template-columns:minmax(0,1fr) 437.75px;gap:0 38.25px;margin-right:-476px;align-items:start}.study-open #reading.commentary-split{max-width:736px;padding-right:32px}.study-open .commentary-split .b1-pair,.study-open .commentary-split .vy-chips{margin-right:0}}
+/* अध्ययनसाहाय्यम् chip (same chip style as the commentaries) and our labelled ṭīkā explanation. */
+.vy-chips .study-chip[aria-pressed=true]{background:#009688;color:#faf7f2;border-color:#009688}
+.tika-sarala{margin:-0.4em 0 1em;padding:6px 10px;border-left:3px solid #c8b89a;background:#fbf8f1;font-size:.92em;line-height:1.9;color:#3d3328}
+.tika-sarala-label{display:inline-block;margin-right:.4em;padding:0 .45em;border-radius:4px;background:#efe6d6;color:#7a1f1f;font-size:.85em}
+.vartika-study-pill{display:block;margin:-14px auto 22px}
+.study-section-content .verse-mark{color:#7a1f1f;font-weight:600;margin:.6em 0 .2em}
+.study-section-content .main-sentence{margin-bottom:.6em}
+.study-section-content .tika-basis{color:#6b5d4f;font-size:.9em;margin-top:.6em}
+.study-section-content .adhyahara{color:#6b5d4f}
+.study-section-content .prakriya-step{margin:.1em 0 .1em 1.2em;font-size:.93em}
+
+/* मूलम् | भाष्यम् tabs at the top of the study panel */
+.study-tabs{display:flex;gap:6px;margin:0 0 14px;border-bottom:1px solid #e4dcd0}
+.study-tabs button{border:1px solid #e4dcd0;border-bottom:0;border-radius:8px 8px 0 0;background:#faf7f2;color:#6b5d4f;padding:5px 16px;font-size:16px;cursor:pointer}
+.study-tabs button[aria-selected=true]{background:#fff;color:#7a1f1f;font-weight:600}
+.pada-view{line-height:2.1}
+.commentary-nav a.active{color:#7a1f1f;font-weight:600}
+#color-legend summary{font-size:13px;color:#7a1f1f;cursor:pointer}
+/* Verse at the head of the Vārtika study panel */
+.study-verse-box{border-bottom:1px solid var(--line,#e4dcd0);margin:0 0 6px;padding:2px 0 10px}
+.study-verse-box .study-verse{margin:0;font-size:1.02em;line-height:1.9}
+
+/* One mantra per page (Aditya, 2026-10-24): the sidebar or the arrows below choose the mantra. */
+.paged-reading .reading-unit:not(.is-current){display:none}
+.unit-pager{display:flex;justify-content:space-between;gap:12px;margin:28px 0 8px;padding-top:14px;border-top:1px solid #e4dcd0;font-size:17px}
+.unit-pager a{color:#7a1f1f;text-decoration:none}.unit-pager a:hover{text-decoration:underline}
+/* The study panel scrolls by itself and never carries the page on to the next mantra. */
+#study-dialog,#drawer-content{overscroll-behavior:contain}
+.study-group[data-part="tika"] .vy-unit{font-size:18px;line-height:1.95;margin-bottom:.5em}
+.study-group[data-part="tika"] .source-credit{font-size:14px;margin-top:1em}

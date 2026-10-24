@@ -9,7 +9,10 @@ const base=new URL('.',document.currentScript.src), cache=new Map(), studies=new
 const panelLayers=new Map();
 const media=matchMedia('(max-width:900px)');
 let sourceClient=LiveSource,storedClient=null,commentaries=null;
-let manifest,reading,results=[],active='2.4.0',panelId=null,panelResearch=false,panelRequest=0,routeRequest=0,sourceBusy=false,pada=false,spy=null,scrollFrame=0;
+// The page's brāhmaṇa (BU 2.4 unless the shell says otherwise): its lessons, heading and colophon anchors.
+const SCOPE=document.body.dataset.scope||'2.4',HEAD=document.body.dataset.heading||'BR_C02_S04',COLOPHON=document.body.dataset.colophon||'BR_C02_S04_E010',INTRO=SCOPE+'.0';
+const UNIT=SCOPE.replace('.','\\.')+'\\.(?:'+(SCOPE==='2.4'?'1[0-4]':'1[0-9]')+'|[0-9])';
+let manifest,reading,results=[],active=INTRO,panelId=null,panelResearch=false,panelRequest=0,routeRequest=0,sourceBusy=false,pada=false,spy=null,scrollFrame=0;
 let lastFocus=null,ready=false,studyPart='mula';
 const getStore=(k,f)=>{try{return JSON.parse(localStorage.getItem('vp-'+k))??f;}catch{return f;}};
 const setStore=(k,v)=>{try{localStorage.setItem('vp-'+k,JSON.stringify(v));}catch{}};
@@ -20,7 +23,7 @@ const section=id=>document.getElementById('unit-'+id);
 const record=id=>reading?.units.find(x=>x.id===id);
 const meta=id=>manifest?.lessons.find(x=>x.id===id);
 const live=id=>loaded.get(id);
-const unitName=id=>id==='2.4.0'?'सम्बन्धभाष्यम्':'मन्त्रः '+deva(id.split('.').at(-1));
+const unitName=id=>id===INTRO?'सम्बन्धभाष्यम्':'मन्त्रः '+deva(id.split('.').at(-1));
 const hasStudy=id=>!!meta(id)?.runtime?.learner&&!!record(id)?.unit;
 function notice(message){$('#source-status').innerHTML=message?`<div class="source-status"><p>${esc(message)}</p></div>`:'';}
 function routeURL(id,view='',anchor=''){return '#'+id+(view?'/'+view:'')+(anchor?'/at/'+encodeURIComponent(anchor):'');}
@@ -29,18 +32,17 @@ function markActive(id){active=id;$$('.lesson-link').forEach(a=>{const current=a
 function readingTop(){const chips=$('.vy-chips');return Math.max($('.topbar').getBoundingClientRect().bottom,chips&&!chips.hidden?chips.getBoundingClientRect().bottom:0);}
 function scrollToUnit(id){const el=section(id);if(el){markActive(id);const offset=readingTop()+20;window.scrollTo({top:window.scrollY+el.getBoundingClientRect().top-offset,behavior:'instant'});}}
 function preservePosition(change){const el=section(active),offset=el?.getBoundingClientRect().top;change();if(el&&offset!=null){const next=section(active);window.scrollBy({top:next.getBoundingClientRect().top-offset,behavior:'instant'});}}
-function nav(){ $('#lesson-list').innerHTML=reading.units.map(r=>`<a class="lesson-link${r.id==='2.4.0'?' source-intro':''}" href="#${esc(r.id)}" data-lesson="${esc(r.id)}" aria-label="${esc(unitName(r.id))}">${r.id==='2.4.0'?'सम्बन्धभाष्यम्':deva(r.id.split('.').at(-1))}</a>`).join('');markActive(active);}
+function nav(){ $('#lesson-list').innerHTML=reading.units.map(r=>`<a class="lesson-link${r.id===INTRO?' source-intro':''}" href="#${esc(r.id)}" data-lesson="${esc(r.id)}" aria-label="${esc(unitName(r.id))}">${r.id===INTRO?'सम्बन्धभाष्यम्':deva(r.id.split('.').at(-1))}</a>`).join('');markActive(active);}
 function sourceAttributes(r){return `data-live-status="${esc(r.status)}" data-source-id="${esc(r.anchor)}" data-source-hash="${esc(r.actualHash||'')}" data-source-expected="${esc(r.expectedHash||'')}" data-source-request="${esc(r.request_url||'')}" data-source-response="${esc(r.response_url||'')}" data-source-origin="${r.origin_verified===true}" data-source-credentials="${esc(r.credentials||'')}"`;}
 function sourceWarning(r){return r.status==='matched'?'':`<p class="source-status">${r.rawText?'मूलस्रोतसि पाठभेदः दृश्यते। अस्य अंशस्य वर्णसङ्केताः पदच्छेदश्च न दर्श्यन्ते।':'अस्य अंशस्य पाठः अधुना न प्राप्तः।'} <a href="${esc(r.source_url)}" target="_blank" rel="noopener">मूलस्रोते पठतु ↗</a></p>`;}
 function pill(id,part='mula'){return hasStudy(id)?`<button class="study-pill" data-open-study="${esc(id)}" data-study-part="${part}" aria-controls="study-dialog" aria-expanded="${panelId===id}">अध्ययनसाहाय्यम् · ${part==='mula'?'मूलम्':'भाष्यम्'}</button>`:'';}
-function bhashyaHTML(u,anchor,split){
+function bhashyaHTML(u,split,intro){
  const html=UnitReader.bhashyaSource(u,split,{sourceOnly:true}),t=document.createElement('template');t.innerHTML=html;
- const intro=/_I\d+$/.test(anchor)&&anchor.includes('_V');
  return (intro?t.content.querySelector('.reading-intro'):t.content.querySelector('.reading-bhashya:not(.reading-intro)'))?.outerHTML||'';
 }
 function renderUnit(input,result){
  const u=result?.payload?.unit, ranks=new Map((input.lesson?.bhashya||[]).map(b=>[b.id,b.position==='before-mulam'?0:2]));
- const descriptors=(input.source_paragraphs||[]).filter(d=>!['BR_C02_S04','BR_C02_S04_E010'].includes(d.anchor)).sort((a,b)=>(a.target?.kind==='mula'?1:ranks.get(a.anchor)??2)-(b.target?.kind==='mula'?1:ranks.get(b.anchor)??2));
+ const descriptors=(input.source_paragraphs||[]).filter(d=>![HEAD,COLOPHON].includes(d.anchor)).sort((a,b)=>(a.target?.kind==='mula'?1:ranks.get(a.anchor)??2)-(b.target?.kind==='mula'?1:ranks.get(b.anchor)??2));
  const records=new Map((result?.paragraphs||[]).map(r=>[r.id,r]));
  let html='';
  for(const d of descriptors){
@@ -51,7 +53,7 @@ function renderUnit(input,result){
   if(isMula){
    body=`<div class="mula-box" id="${esc(d.anchor)}"><p class="mula" ${sourceAttributes(r)}>${matched&&u?.mula?UnitReader.mulaSource(u,pada,{sourceOnly:true}):esc(r.rawText||'')}</p>${pill(input.id)}</div>`;
   }else{
-   const prose=matched&&u?.bhashyam?bhashyaHTML(u,d.anchor,pada):`<p class="original reading-bhashya">${esc(r.rawText||'')}</p>`;
+   const prose=matched&&u?.bhashyam?bhashyaHTML(u,pada,ranks.get(d.anchor)===0):`<p class="original reading-bhashya">${esc(r.rawText||'')}</p>`;
    body=`<div class="source-paragraph" id="${esc(d.anchor)}" ${sourceAttributes(r)}>${prose}</div>`;
   }
   html+=body+sourceWarning(r);
@@ -98,7 +100,7 @@ async function loadSource(force=false){
   results=await sourceClient.loadMany([...reading.units,{source_paragraphs:[reading.closing]}],{force});
   loaded.clear();reading.units.forEach((r,i)=>loaded.set(r.id,results[i]));
   const any=results.some(r=>r.paragraphs.some(p=>p.rawText));
-  if(!any){$('#source-status').innerHTML='<div class="source-status"><p>मूलस्रोतस्य पाठः अधुना न प्राप्तः।</p><button data-source-retry>पुनः प्रयत्नः</button><a href="https://advaitasharada.sringeri.net/read/brihadaranyaka-bhashya/2/#BR_C02_S04" target="_blank" rel="noopener">अद्वैतशारदायां पठतु ↗</a></div>';return false;}
+  if(!any){$('#source-status').innerHTML='<div class="source-status"><p>मूलस्रोतस्य पाठः अधुना न प्राप्तः।</p><button data-source-retry>पुनः प्रयत्नः</button><a href="https://advaitasharada.sringeri.net/read/brihadaranyaka-bhashya/2/#'+HEAD+'" target="_blank" rel="noopener">अद्वैतशारदायां पठतु ↗</a></div>';return false;}
   await mountReading();notice('');return true;
  }finally{sourceBusy=false;}
 }
@@ -155,7 +157,7 @@ async function openLexicon(id,{push=true}={}){
 function panelMode(){const modal=!!panelId&&media.matches;$('#study-dialog').setAttribute('role',modal?'dialog':'region');if(modal)$('#study-dialog').setAttribute('aria-modal','true');else $('#study-dialog').removeAttribute('aria-modal');$('.layout').inert=modal;$('.topbar').inert=modal;}
 function openFrame(id,asResearch){
  const sourceTop=section(id)?.getBoundingClientRect().top;if(!panelId||!$('#study-dialog').contains(document.activeElement))lastFocus=document.activeElement;panelId=id;panelResearch=asResearch;document.body.classList.add('study-open');$('#study-dialog').hidden=false;if(sourceTop!=null&&!media.matches)window.scrollBy({top:section(id).getBoundingClientRect().top-sourceTop,behavior:'instant'});
- $('#study-title').textContent=unitName(id)+' · '+(asResearch?'विमर्शः':(studyPart==='tika'?'आनन्दगिरिटीका':id!=='2.4.0'&&studyPart==='mula'?'मूलम्':'भाष्यम्')+' · अध्ययनसाहाय्यम्');
+ $('#study-title').textContent=unitName(id)+' · '+(asResearch?'विमर्शः':(studyPart==='tika'?'आनन्दगिरिटीका':id!==INTRO&&studyPart==='mula'?'मूलम्':'भाष्यम्')+' · अध्ययनसाहाय्यम्');
  $$('.study-pill').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.openStudy===id)));panelMode();
 }
 async function openStudy(id,{asResearch=false,anchor='',push=true,scroll=false,part=null}={}){
@@ -209,10 +211,10 @@ function applySize(){document.body.style.setProperty('--font-size',size+'px');}
 async function route({scroll=true}={}){
  const request=++routeRequest;let value;try{value=decodeURIComponent(location.hash.slice(1))||document.body.dataset.unitRoute||'';}catch{value='';}
  if(commentaries&&await commentaries.route(value))return;
- const match=/^(?:BU\.)?(2\.4\.(?:1[0-4]|[0-9]))(?:\/(adhyayanam|vimarshah))?(?:\/at\/(.+))?$/.exec(value);
- const cross=/^(2\.4\.(?:1[0-4]|[0-9]))\/((?:BU|LEX|VP)\..+)$/.exec(value);
- const stable=/^BU\.(2\.4\.(?:1[0-4]|[0-9]))\..+$/.exec(value);
- const id=match?.[1]||cross?.[1]||stable?.[1]||(value.startsWith('BR_C02_S04_V')?'2.4.'+Number(value.match(/_V(\d+)/)?.[1]):'2.4.0');
+ const match=new RegExp('^(?:BU\\.)?('+UNIT+')(?:\\/(adhyayanam|vimarshah))?(?:\\/at\\/(.+))?$').exec(value);
+ const cross=new RegExp('^('+UNIT+')\\/((?:BU|LEX|VP)\\..+)$').exec(value);
+ const stable=new RegExp('^BU\\.('+UNIT+')\\..+$').exec(value);
+ const id=match?.[1]||cross?.[1]||stable?.[1]||(value.startsWith(HEAD+'_V')?SCOPE+'.'+Number(value.match(/_V(\d+)/)?.[1]):INTRO);
  if(!record(id))return;
  if(match?.[2]||cross||stable){await openStudy(id,{asResearch:match?.[2]==='vimarshah',anchor:match?.[3]||cross?.[2]||(stable?value:''),push:false,scroll});}
  else{if(panelId)closeStudy({push:false,focus:false});setRoute(id);if(scroll)scrollToUnit(id);}
