@@ -40,3 +40,9 @@
 #study-dialog,#drawer-content{overscroll-behavior:contain}
 .study-group[data-part="tika"] .vy-unit{font-size:18px;line-height:1.95;margin-bottom:.5em}
 .study-group[data-part="tika"] .source-credit{font-size:14px;margin-top:1em}
+/* R-021 (R1-014): on a phone the व्याख्याः chips stay in one scrollable row and never cover the heading */
+@media(max-width:480px){.vy-chips{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:6px 8px;gap:5px;max-height:48px}.vy-chips::-webkit-scrollbar{display:none}.vy-chips>*{flex:0 0 auto}.vy-chips button{font-size:14px;padding:2px 10px 0}.vy-chips>span{font-size:14px}}
+/* R-021 (R1-025): the verse whose Vārtika the panel shows */
+.vy-current{outline:2px solid #c8b89a;outline-offset:4px;border-radius:4px}
+/* R-021 (R1-014): the bar sits under the header at every width (the header is taller on phones) */
+.maitreyi .vy-chips{top:var(--header-height,54px)}

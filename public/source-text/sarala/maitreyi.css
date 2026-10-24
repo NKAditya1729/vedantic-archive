@@ -106,3 +106,19 @@ body.maitreyi[data-script=malayalam]{font-family:'Noto Serif Malayalam','Malayal
 .maitreyi .samasa-row{margin:0 0 .5em}
 .maitreyi .samasa-row .samasa-detail{margin:0 0 0 1.4em;color:var(--ink);font-size:.95em}
 .maitreyi .samasa-row .samasa-detail .samasa-type{color:var(--accent)}
+/* R-021 review fixes */
+.maitreyi .legend-button{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:5px;padding:2px 8px;min-height:32px;font-size:14px;color:var(--ink);list-style:none;cursor:pointer}
+.maitreyi .legend-swatch{width:12px;height:12px;border-radius:50%;background:conic-gradient(#26408b 0 25%,#7a1f1f 0 50%,#00796b 0 75%,#8a5a00 0)}
+.maitreyi #color-legend .discourse-mark{margin-left:4px}
+.maitreyi .discourse-mark{font-size:.5em;line-height:0;vertical-align:super;margin-left:1px;opacity:.85}
+.maitreyi.no-colors .discourse-mark{display:none}
+.maitreyi .certainty-chip{font-size:.68em;border:1px solid var(--line);border-radius:999px;padding:0 .5em;margin-left:.35em;color:var(--muted);vertical-align:.15em;white-space:nowrap}
+.maitreyi .certainty-chip[data-certainty=p]{color:#8a5a00;border-color:#d9c08a}
+.maitreyi .ashanka-notice{display:block;margin:.3em 0 .7em;padding:6px 10px;border-left:3px solid #00796b;background:#f2f7f6;font-size:.9em;line-height:1.9}
+.maitreyi .learner-anvaya .anvaya-number{color:var(--muted);font-size:.8em;margin-right:.35em}
+.maitreyi .grammar-full{margin:-.4em 0 .8em}
+.maitreyi .grammar-full summary{color:var(--accent);cursor:pointer;font-size:.88em}
+.maitreyi .print-credit{margin-top:10px}
+.maitreyi .lesson-link{min-height:32px;display:inline-flex;align-items:center;justify-content:center}
+.maitreyi .brahmana-heading,.maitreyi .mula-box,.maitreyi [id^=BR_C02]{scroll-margin-top:calc(var(--header-height) + 64px)}
+@media(max-width:900px){.maitreyi .lesson-link{min-height:44px;font-size:14px}}
