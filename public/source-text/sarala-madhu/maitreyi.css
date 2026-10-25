@@ -98,6 +98,28 @@ body.maitreyi[data-script=malayalam]{font-family:'Noto Serif Malayalam','Malayal
 .maitreyi .study-subsection[open]>summary:after{content:'−'}
 .maitreyi .study-subsection[open]>summary{color:var(--accent)}
 .maitreyi .study-subsection-content{padding:4px 0 12px}
+/* R-023 अष्टाध्यायीदृष्टिः */
+.maitreyi .drishti-word{border-bottom:1px solid var(--line);padding:4px 0}
+.maitreyi .drishti-word>summary{cursor:pointer;list-style:none}
+.maitreyi .drishti-word>summary::-webkit-details-marker{display:none}
+.maitreyi .drishti-word[open]>summary b{color:var(--accent)}
+.maitreyi .drishti-decision{border-left:3px solid var(--line);padding-left:10px;margin:8px 0}
+.maitreyi .drishti-decision h5{margin:6px 0 2px;font-size:15px;color:var(--accent);font-weight:600}
+.maitreyi .drishti-steps{list-style:none;margin:2px 0;padding:0}
+.maitreyi .drishti-steps>li{padding:3px 0;border-bottom:1px dashed var(--line)}
+.maitreyi .drishti-n{font-weight:600;margin-right:6px}
+.maitreyi .drishti-t,.maitreyi .drishti-sk,.maitreyi .drishti-lex,.maitreyi .drishti-fold{color:var(--muted)}
+.maitreyi .drishti-sk,.maitreyi .drishti-fold{font-size:.85em;margin:0}
+.maitreyi .drishti-chg{margin-left:8px}
+.maitreyi .drishti-neg,.maitreyi .drishti-comp{color:var(--accent)}
+.maitreyi .drishti-comp{font-size:.92em}
+.maitreyi .drishti-role{color:var(--accent);margin:0 4px}
+.maitreyi .drishti-rivals>summary{cursor:pointer;color:var(--muted);font-size:.9em}
+.maitreyi .drishti-sum{font-size:.85em;color:var(--accent);margin:0 6px}
+.maitreyi .drishti-nof{font-size:.9em;color:var(--muted);font-style:italic;margin:6px 0}
+.maitreyi .drishti-guide{border:1px solid var(--line);border-radius:6px;padding:4px 10px;margin:0 0 10px;font-size:.92em}
+.maitreyi .drishti-guide-h{margin:2px 0;font-weight:600;color:var(--accent)}
+.maitreyi .drishti-guide ol{margin:4px 0 2px;padding-left:22px}
 /* अध्याहृतं पदम्: supplied by the reader, shown lighter, without brackets */
 .maitreyi .adhyahara{color:var(--muted);font-style:italic}
 /* समासः: members + members → compound, then vigraha and rule on the next line */

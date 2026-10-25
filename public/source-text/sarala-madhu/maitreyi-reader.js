@@ -233,6 +233,9 @@ $('#study-close').onclick=()=>{commentaries?.studyOff?.();closeStudy();};
 $('#menu').onclick=()=>{const open=$('#sidebar').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String(open));};
 media.addEventListener('change',panelMode);addEventListener('scroll',requestScrollSpy,{passive:true});addEventListener('popstate',()=>{if(ready)route();});addEventListener('hashchange',()=>{if(ready)route();});
 document.addEventListener('toggle',e=>{if(e.target.matches('details[data-lazy-study]')&&e.target.open)fillStudySection(e.target);},true);
+// R-023: अष्टाध्यायीदृष्टिः is fetched the first time its sub-section opens.
+async function fillDrishti(slot){const file=meta(slot.dataset.sutraDrishti.replace(/^BU\./u,''))?.runtime?.sutra_drishti;if(!file||slot.dataset.rendered)return;slot.dataset.rendered='pending';try{const data=await json(file);slot.innerHTML=UnitReader.sutraDrishti(data,slot.dataset.side)||'<p>—</p>';slot.dataset.rendered='true';window.ScriptDisplay?.apply();}catch{slot.dataset.rendered='';slot.insertAdjacentHTML('beforeend','<p>विवरणम् अधुना न प्राप्तम्; पुनः उद्घाटयतु।</p>');}}
+document.addEventListener('toggle',e=>{if(e.target.matches('details.study-subsection')&&e.target.open){const slot=e.target.querySelector(':scope>.study-subsection-content>[data-sutra-drishti]');if(slot)fillDrishti(slot);}},true);
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){if(panelId){e.preventDefault();closeStudy();}else{$('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');$('#color-legend').open=false;}}
  if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-grammar-tokens],[data-mula-targets]')){e.preventDefault();e.target.click();}

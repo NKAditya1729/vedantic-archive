@@ -167,10 +167,35 @@ function sangatiProse(u,padaccheda=false){return list(u.bhashyam.sangatih).map(g
 function presentLayers(u,rows,lazy){return rows.map(([name,render])=>lazy?{name,render:()=>{useUnit(u);return render();}}:{name,content:render()}).filter(i=>lazy||i.content);}
 // व्याकरणपरिचयः holds सन्धिविवरणम्, समासः and पदविवरणम् as sub-sections, in the order a learner reaches them.
 const subsection=(name,html)=>html?`<details class="study-subsection"><summary>${esc(name)}</summary><div class="study-subsection-content">${html}</div></details>`:'';
+/* R-023: अष्टाध्यायीदृष्टिः — each word read back from its meaning: the decisions it fixes, each in its prakaraṇa,
+   the sūtras that apply (definitions folded), and the rules that compete and lose. Its data is a separate file per
+   unit, fetched when the sub-section is opened; the slot is empty for units without one. */
+const DRISHTI_GUIDE=`<div class="drishti-guide"><p class="drishti-guide-h">कथम् पठनीयम्</p><ol>
+<li>पदे स्पृष्टे तस्य विवरणम् प्रकटीभवति। प्रथमम् अर्थः सम्बन्धः च, भाष्यानुसारम्।</li>
+<li>ततः ये निर्णयाः तम् अर्थम् साधयन्ति — विभक्तिः, प्रकृतिः, प्रत्ययः, रूपसिद्धिः — ते क्रमेण, प्रत्येकः स्वस्य प्रकरणेन सह।</li>
+<li>प्रत्येकस्याम् पङ्क्तौ एकम् प्रवृत्तम् सूत्रम्। ‘क → ख’ इति तेन सूत्रेण कृतः विकारः।</li>
+<li>सूत्रस्य अधः लघ्वक्षरैः संज्ञासूत्राणि परिभाषासूत्राणि च, यानि तत् कार्यम् साधयन्ति।</li>
+<li>‘✕’ इति चिह्नितम् सूत्रम् प्राप्तम् अपि अत्र न प्रवर्तते; कारणम् अपि लिखितम्।</li>
+<li>सूत्रसङ्ख्याम् स्पृष्ट्वा अष्टाध्याय्याः जालपुटे तत् सूत्रम् द्रष्टुम् शक्यते।</li>
+</ol></div>`;
+const drishtiSlot=(u,side)=>u.sutra_drishti?`<div class="sutra-drishti" data-sutra-drishti="${esc(u.unit_id)}" data-side="${side}">${DRISHTI_GUIDE}</div>`:'';
+function sutraDrishti(data,side){
+ const S=data.sutras||{},sl=c=>`<a href="https://ashtadhyayi.com/sutraani/${esc(c.replace(/\./g,'/'))}" target="_blank" rel="noopener" title="${esc(S[c]||'')}">${deva(c)}</a>`;
+ const fold=items=>list(items).map(([label,c,t])=>c?`${esc(label)} ${sl(c)}`:`${esc(label)}: ${esc(t)}`).join(' · ');
+ const comp=rows=>list(rows).map(([c,t])=>`<div class="drishti-comp">✕ ${sl(c)} ${esc(S[c]||'')} — ${esc(t)}</div>`).join('');
+ const row=r=>{let head='';
+  if(r.v)head=`<span class="drishti-n">वार्त्तिकम्</span> <span class="drishti-t">${esc(r.v)}</span>`;
+  else if('j' in r)head=`<b>${esc(r.j)}</b> `+list(r.ss).map(c=>`<span class="drishti-n">${sl(c)}</span> <span class="drishti-t">${esc(S[c]||'')}</span>`).join(' · ');
+  else if(r.s){const chg=r.neg?`<span class="drishti-neg">निषेधः — ${esc(r.neg.join(' · '))} न</span>`:r.chg?(r.chg[0]?`${esc(r.chg[0])} → <b>${esc(r.chg[1])}</b>`:`<b>${esc(r.chg[1])}</b>`):'';head=`<span class="drishti-n">${sl(r.s)}</span> <span class="drishti-t">${esc(S[r.s]||'')}</span> <span class="drishti-chg">${chg}</span>`;}
+  return `<li>${r.pre?.length?`<div class="drishti-fold">${fold(r.pre)} →</div>`:''}${head}${r.fold?.length?`<div class="drishti-fold">${fold(r.fold)}</div>`:''}${comp(r.comp)}</li>`;};
+ const decision=d=>`<section class="drishti-decision"><h5>${esc(d.name)}${d.pk?' — '+esc(d.pk):''}</h5>${d.head?`<p><b>${rich(d.head[0])}</b>${d.head[1]?' '+rich(d.head[1]):''}</p>`:''}${d.sk?.length?`<p class="drishti-sk">सिद्धान्तकौमुद्याम् एतानि सूत्राणि एषु प्रकरणेषु व्याख्यातानि — ${esc(d.sk.join(' · '))}</p>`:''}<ol class="drishti-steps">${list(d.rows).map(row).join('')}</ol>${d.rivals?.length?`<details class="drishti-rivals"><summary>अस्मिन् कारकगणे अन्यानि सूत्राणि — अत्र न प्रवर्तन्ते (${deva(d.rivals.length)})</summary><ol class="drishti-steps">${d.rivals.map(([c,role,t])=>`<li>${sl(c)} <span class="drishti-role">${esc(role)}</span> ${esc(t)}</li>`).join('')}</ol></details>`:''}</section>`;
+ const words=list(data[side]);if(!words.length)return '';
+ return DRISHTI_GUIDE+words.map(w=>`<details class="drishti-word" id="${esc(w.ids[0])}.drishti"><summary><b>${esc(w.padam)}</b>${w.sum?` <span class="drishti-sum">${esc(w.sum)}</span>`:''} <span class="drishti-t">${rich(w.artha)}</span></summary><p><b>अर्थः —</b> ${rich(w.artha)}। <b>सम्बन्धः —</b> ${rich(w.sambandha)}</p>${w.lex?.length?`<p class="drishti-lex">${w.lex.map(([a,b])=>`${esc(a)} ${esc(b)}`).join(' · ')}</p>`:''}${list(w.dec).map(decision).join('')}${w.nof?'<p class="drishti-nof">अस्य पदस्य रूपसिद्धेः सूत्रक्रमः पश्चात् योजयिष्यते; अत्र अर्थः, विभक्तिः, सन्धिः च दर्शिताः।</p>':''}</details>`).join('');
+}
 function mulaLayers(u,{lazy=false}={}){useUnit(u);const m=u?.mula;if(!m)return [];return presentLayers(u,[
  ['अन्वयः',()=>clauseProse(m.anvayah)],
  ['पदार्थः',()=>glossaryProse(m.padarthah)],
- ['व्याकरणपरिचयः',()=>subsection('सन्धिविवरणम्',m.sandhi_groups?.length||m.sandhi?.length||m.padacchedah_alternatives?.length?(m.sandhi_groups?sandhiGroups(m.sandhi_groups):sandhiProse(m.sandhi,m.padacchedah_alternatives)):'')+subsection('समासः',samasaCards(u,'mula'))+subsection('पदविवरणम्',grammarProse(m.vyakaranam,m.samasah))],
+ ['व्याकरणपरिचयः',()=>subsection('सन्धिविवरणम्',m.sandhi_groups?.length||m.sandhi?.length||m.padacchedah_alternatives?.length?(m.sandhi_groups?sandhiGroups(m.sandhi_groups):sandhiProse(m.sandhi,m.padacchedah_alternatives)):'')+subsection('समासः',samasaCards(u,'mula'))+subsection('पदविवरणम्',grammarProse(m.vyakaranam,m.samasah))+subsection('अष्टाध्यायीदृष्टिः',drishtiSlot(u,'mula'))],
  ['सरलार्थः',()=>(m.saralartha_main_sentence?`<p class="study-flow teaching-main">${rich(m.saralartha_main_sentence)}</p>`:'')+groupedParagraphs(m.saralarthah,m.saralartha_groups)]
  ],lazy);}
 function sentenceWork(u,field){const rows=u.bhashyam.vakyavibhagah||[];return rows.map(r=>{const s=u.bhashyam.sentences.find(s=>s.id===(r.sentence_id||r.id));let content='';
@@ -185,7 +210,7 @@ function bhashyaLayers(u,{padaccheda=false,lazy=false}={}){useUnit(u);const b=u.
  ['भाष्यपरिचयः',()=>glossaryProse([...list(b.parichayah),...list(b.smartavyah)])],
  ...(b.sangatih?.length?[['भाष्यसङ्गतिः',()=>sangatiProse(u,padaccheda)]]:[]),
  ['भाष्यान्वयः',()=>learnerAnvaya(u)],
- ['भाष्यपदव्याकरणपरिचयः',()=>subsection('सन्धिविवरणम्',b.sandhi_groups?.length||sandhis.length?(b.sandhi_groups?sandhiGroups(b.sandhi_groups):sandhiProse(sandhis)):'')+subsection('समासः',samasaCards(u,'bhashyam'))+subsection('पदविवरणम्','<p class="grammar-reuse-notice">मूले पूर्वत्र च विवृतानां पदानाम् अत्र अस्य वाक्यस्य अन्वयः दर्श्यते; ‘पूर्णम् विवरणम्’ इति स्पृष्ट्वा सम्पूर्णम् विवरणम् द्रष्टुम् शक्यते।</p>'+grammarProse(newBhashyaGrammar(u),b.samasah))],
+ ['भाष्यपदव्याकरणपरिचयः',()=>subsection('सन्धिविवरणम्',b.sandhi_groups?.length||sandhis.length?(b.sandhi_groups?sandhiGroups(b.sandhi_groups):sandhiProse(sandhis)):'')+subsection('समासः',samasaCards(u,'bhashyam'))+subsection('पदविवरणम्','<p class="grammar-reuse-notice">मूले पूर्वत्र च विवृतानां पदानाम् अत्र अस्य वाक्यस्य अन्वयः दर्श्यते; ‘पूर्णम् विवरणम्’ इति स्पृष्ट्वा सम्पूर्णम् विवरणम् द्रष्टुम् शक्यते।</p>'+grammarProse(newBhashyaGrammar(u),b.samasah))+subsection('अष्टाध्यायीदृष्टिः',drishtiSlot(u,'bhashyam'))],
  ['सरलभाष्यव्याख्या',()=>saralaBhashya(u,padaccheda)+`<button class="reread-button" data-unit-reread>पुनः भाष्यपाठः ↑</button>`]
  ],lazy);}
 function sangatiQuestionEvidence(u,g){return list(g.question_evidence).map(q=>{
@@ -257,5 +282,5 @@ function researchSource(u){useUnit(u);
 function lexicon(u){useUnit(u);return list(u.lexicon_updates).map(r=>`<article class="unit-note" id="${esc(r.id)}"><h3>${esc(r.shabdah)} ${flag(r)}</h3><p>${rich(r.saralah_arthah)}</p>${r.shankara_lakshanam?`<p class="subtle-note">${esc(r.shankara_lakshanam.kind||'भाष्ये प्रयोगः')}</p><blockquote>${esc(text(r.shankara_lakshanam))}</blockquote>`:''}${r.vyutpattih?`<details><summary>व्युत्पत्तिः</summary><p>${rich(text(r.vyutpattih))}</p></details>`:''}${evidence(r)}<p>${list(r.sarve_prayogah).map((id,i)=>`<button class="text-link" data-unit-jump="${esc(id)}">प्रयोगः ${deva(i+1)}</button>`).join(' · ')}</p></article>`).join('');}
 function expressions(u){return list(u.vakprayoga_updates).map(r=>`<article class="unit-note" id="${esc(r.id)}"><h3>${esc(r.expression||r.vakprayogah||r.shabdah||'')} ${flag(r)}</h3><p>${rich(r.explanation||r.function||r.arthah||'')}</p>${list(r.occurrences||r.occurrence_ids).map((id,i)=>`<button class="text-link" data-unit-jump="${esc(id)}">प्रयोगः ${deva(i+1)}</button>`).join(' · ')}</article>`).join('')||'<p>त्रिषु स्थानेषु प्रमाणितः नूतनः वाक्प्रयोगः अत्र न संगृहीतः।</p>';}
 function cards(u){return list(u.review_cards).map((r,i)=>`<article class="review-card" id="${esc(r.id)}" data-card="${esc(r.id)}"><p class="unit-kicker">${esc(r.prakarah)} · ${deva(i+1)} ${flag(r)}</p><p>${rich(r.purobhagah)}</p><details><summary>उत्तरं पश्यतु</summary><p>${rich(text(r.prishthabhagah))}</p>${r.note_id?`<button class="text-link" data-unit-jump="${esc(r.note_id)}">विवरणम् →</button>`:''}</details><button class="text-link" data-card-known aria-pressed="false">स्मृतम् ✓</button></article>`).join('');}
-return {setPadaSplits,referenceTitle,resolveToken,resolveAnchor,grammarEntry,bhashyaQuotation,prasanga,samasaCards,arrowProcess,mulaLayers,bhashyaLayers,mulaSource,bhashyaSource,researchSource,researchStudy,canPadaccheda,lexicon,expressions,cards,reviewList,roles,flag};
+return {setPadaSplits,referenceTitle,sutraDrishti,resolveToken,resolveAnchor,grammarEntry,bhashyaQuotation,prasanga,samasaCards,arrowProcess,mulaLayers,bhashyaLayers,mulaSource,bhashyaSource,researchSource,researchStudy,canPadaccheda,lexicon,expressions,cards,reviewList,roles,flag};
 });
