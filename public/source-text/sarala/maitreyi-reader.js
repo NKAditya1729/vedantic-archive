@@ -224,7 +224,9 @@ async function route({scroll=true}={}){
 $('#color-toggle').onclick=()=>{colors=!colors;setStore('colors',colors);applyColors();};
 if($('#color-legend summary'))$('#color-legend summary').textContent='सङ्केताः';
 $('#color-key').innerHTML=Object.entries(UnitReader.roles).filter(([name])=>name!=='समाधानम्').map(([name,[cls,mark]])=>`<p><span class="dk-${esc(cls)}">${esc(name)}</span>${mark?`<sup class="discourse-mark">${esc(mark)}</sup>`:''}</p>`).join('');
-$('#padaccheda-toggle').onclick=()=>{pada=!pada;$('#padaccheda-toggle').setAttribute('aria-pressed',String(pada));commentaries?.setPada(pada);if(commentaries?.active)return;preservePosition(renderReading);if(panelId&&panelId!=='custom')openStudy(panelId,{asResearch:panelResearch,push:false});};
+/* R-022: the compound splits are loaded the first time पदच्छेदः is switched on */
+ let splitsLoad=null;async function loadSplits(){splitsLoad??=fetch('runtime/pada-splits.json').then(r=>r.ok?r.json():{}).catch(()=>({}));const m=await splitsLoad;UnitReader.setPadaSplits(m);commentaries?.setPadaSplits?.(m);}
+ $('#padaccheda-toggle').onclick=async()=>{pada=!pada;if(pada)await loadSplits();$('#padaccheda-toggle').setAttribute('aria-pressed',String(pada));commentaries?.setPada(pada);if(commentaries?.active)return;preservePosition(renderReading);if(panelId&&panelId!=='custom')openStudy(panelId,{asResearch:panelResearch,push:false});};
 $('#size-down').onclick=()=>{size=Math.max(16,size-2);setStore('size',size);preservePosition(applySize);};
 $('#size-up').onclick=()=>{size=Math.min(32,size+2);setStore('size',size);preservePosition(applySize);};
 $('#study-close').onclick=()=>{commentaries?.studyOff?.();closeStudy();};

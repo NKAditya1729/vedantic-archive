@@ -27,8 +27,11 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
  if(presentation){if(presentation.sha256!==row.sha256)throw Error('Presentation/source mismatch');for(const range of presentation.pratikas){if(!Number.isInteger(range.start)||!Number.isInteger(range.end)||range.start<cursor||range.end<=range.start||range.end>row.text.length)throw Error('Invalid publisher span');append(p,row.text.slice(cursor,range.start));const span=document.createElement('span');span.className='pratika';append(span,row.text.slice(range.start,range.end));p.append(span);cursor=range.end;}}
  append(p,row.text.slice(cursor));return p;}
  // पदच्छेदः of a ṭīkā paragraph: one split line per printed line; a pratīka line stays marked (Aditya, 2026-10-24).
+ /* R-022: compounds in the ṭīkā and Vārtika पदच्छेदः show their members joined by hyphens */
+ let padaSplits={};function setPadaSplits(m){padaSplits=m&&typeof m==='object'?m:{};}
+ function splitText(t){return String(t).replace(/[^\s—।॥]+/gu,w=>{const core=w.replace(/^[‘“(]+|[’”),;:!?.]+$/gu,'');const sp=padaSplits[core];return sp?w.replace(core,sp):w;});}
  function tikaSplit(row){const p=document.createElement('div');p.className='vy-unit pada-view';p.id=row.id;p.dataset.sourceId=row.id;p.dataset.sourceHash=row.sha256;const starts=new Set((pairs.presentation?.[row.id]?.pratikas||[]).map(r=>r.start)),split=tikaPada[row.id];let pos=0,k=0;
-  for(const line of row.text.split('\n')){const start=pos;pos+=line.length+1;if(!line.replace(/\u00ad/g,'').trim())continue;if(k)p.append(document.createElement('br'));const text=split[k++]??line;if(starts.has(start)){const s=document.createElement('span');s.className='pratika';s.textContent=text;p.append(s);}else p.append(document.createTextNode(text));}return p;}
+  for(const line of row.text.split('\n')){const start=pos;pos+=line.length+1;if(!line.replace(/\u00ad/g,'').trim())continue;if(k)p.append(document.createElement('br'));const text=split[k]!=null?splitText(split[k++]):(k++,line);if(starts.has(start)){const s=document.createElement('span');s.className='pratika';s.textContent=text;p.append(s);}else p.append(document.createTextNode(text));}return p;}
  // Our simple-Sanskrit explanation sits under its ṭīkā paragraph, labelled so it is never read as Ānandagiri's words.
  function saralaNote(id){const n=tikaSarala?.[id];if(!n)return null;const d=document.createElement('div');d.className='tika-sarala';d.innerHTML=`<span class="tika-sarala-label">सरलव्याख्या</span> ${n.html}`;return d;}
  function block(title,rows,verse=false){const d=document.createElement('details');d.className='vy-block b1-commentary';const s=document.createElement('summary');s.textContent=title;d.append(s);for(const r of rows){d.append(paragraph(r,verse));const note=!verse&&saralaNote(r.id);if(note)d.append(note);}return d;}
@@ -71,7 +74,7 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
  }
  // पदच्छेदः for a verse: the split words of each printed verse in it, from its study unit.
  function verseNode(row){if(!pada||!vartikaPada[row.id])return paragraph(row,true);const p=document.createElement('p');p.className='unit commentary-verse pada-view';p.id=row.id;p.dataset.sourceId=row.id;
-  const nums=[...row.text.matchAll(/।।\s*([०-९]+)\s*(?:।।|$)/g)].map(m=>m[1]);vartikaPada[row.id].forEach((halves,i)=>{halves.forEach((h,j)=>{if(i||j)p.append(document.createElement('br'));p.append(document.createTextNode(h+(j<halves.length-1?' ॥':(nums[i]?` ॥ ${nums[i]} ॥`:' ॥'))));});});return p;}
+  const nums=[...row.text.matchAll(/।।\s*([०-९]+)\s*(?:।।|$)/g)].map(m=>m[1]);vartikaPada[row.id].forEach((halves,i)=>{halves.forEach((h,j)=>{if(i||j)p.append(document.createElement('br'));p.append(document.createTextNode(splitText(h)+(j<halves.length-1?' ॥':(nums[i]?` ॥ ${nums[i]} ॥`:' ॥'))));});});return p;}
  function setPada(v){pada=v;if(view!=='vartikam')return;for(const [id,row]of verseRows){const old=document.getElementById(id);if(old)old.replaceWith(verseNode(row));}if(lastStudy&&document.querySelector('.study-group[data-part="vartika"]'))openVartikaStudy(lastStudy.unit,lastStudy.verseLabel);window.ScriptDisplay?.apply();}
  // With the study chip on, the panel follows the verse at the top of the reading area.
  function followVerse(){if(!study||view!=='vartikam'||followFrame)return;followFrame=requestAnimationFrame(()=>{followFrame=0;const top=(q('.topbar')?.getBoundingClientRect().bottom||0)+(bar.getBoundingClientRect().height||0)+12;
@@ -87,5 +90,5 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
  async function tikaFor(unit){const pack=await stored.load('anandagiri');if(!tikaSarala)tikaSarala=await getJSON('runtime/tika-sarala.json').catch(()=>({}));if(pada&&!tikaPada)tikaPada=await getJSON('runtime/tika-padaccheda.json').catch(()=>({}));const byId=new Map(pack.paragraphs.map(r=>[r.id,r])),box=document.createElement('div');
   for(const pr of tikaPairsFor(unit))for(const id of pr.tika){const row=byId.get(id);if(!row)continue;const n=paragraph(row);n.removeAttribute('id');n.classList.add('study-tika');box.append(n);const note=saralaNote(id);if(note)box.append(note);}box.append(credit(pack));return box.innerHTML;}
  function studyOff(){study=false;savePrefs();studyChip.setAttribute('aria-pressed','false');}
- return {route,refresh,onActive,setPada,studyOff,hasTika,tikaFor,get active(){return !!view;}};
+ return {route,refresh,onActive,setPada,setPadaSplits,studyOff,hasTika,tikaFor,get active(){return !!view;}};
 }};
