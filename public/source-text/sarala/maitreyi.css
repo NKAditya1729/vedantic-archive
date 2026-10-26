@@ -144,3 +144,5 @@ body.maitreyi[data-script=malayalam]{font-family:'Noto Serif Malayalam','Malayal
 .maitreyi .lesson-link{min-height:32px;display:inline-flex;align-items:center;justify-content:center}
 .maitreyi .brahmana-heading,.maitreyi .mula-box,.maitreyi [id^=BR_C02]{scroll-margin-top:calc(var(--header-height) + 64px)}
 @media(max-width:900px){.maitreyi .lesson-link{min-height:44px;font-size:14px}}
+.maitreyi .lesson-group{grid-column:1/-1;margin:10px 0 2px;font-size:13px;color:var(--muted);font-weight:600}
+body[data-unit-prefix="MK"] .mula,body[data-unit-prefix="MK"] .reading-bhashya{white-space:pre-line}

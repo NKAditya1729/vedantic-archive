@@ -140,7 +140,10 @@ function hydrateParagraph(payload,d,raw,index){
       for(const [field,value]of Object.entries(sentence))stage(original,field,value);
      }
      if(position!==map.normalized.length)throw fault('SOURCE_RANGE','Sentence ranges do not cover the verified paragraph.');
-     stage(b,isMulti&&originals[0]?.id?.includes('.B.i')?'intro_text':'text',raw);
+     // Māṇḍūkya MK.1.0: several main bhāṣya paragraphs; keep each, and the joined text in sentence order.
+     const anchorOf=x=>String(x.source_url||'').split('#')[1],mains=[...new Set(list(b.sentences).filter(x=>!x.id.includes('.B.i')).map(anchorOf))];
+     if(isMulti&&mains.length>1&&!originals[0]?.id?.includes('.B.i')){const texts={...(b.paragraph_texts||{}),[target.bhashya_id]:raw};stage(b,'paragraph_texts',texts);stage(b,'text',mains.map(a=>texts[a]??'').join(''));}
+     else stage(b,isMulti&&originals[0]?.id?.includes('.B.i')?'intro_text':'text',raw);
     }
    }
   }
