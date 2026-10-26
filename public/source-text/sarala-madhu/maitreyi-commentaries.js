@@ -7,7 +7,9 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
  // Like Advaita Sharada's as-prefs: remember the chosen commentary, पार्श्वे layout and study chip.
  try{const saved=JSON.parse(localStorage.getItem('vp-commentary-prefs')||'{}');if(['anandagiri','vartika'].includes(saved.selected))selected=saved.selected;split=saved.split===true&&!!selected;study=saved.study===true;}catch{}
  const savePrefs=()=>{try{localStorage.setItem('vp-commentary-prefs',JSON.stringify({selected,split,study}));}catch{}};
- const names={anandagiri:'आनन्दगिरिटीका',vartika:'बृहदारण्यकोपनिषद्भाष्यवार्तिकम्'};
+ // Māṇḍūkya pages (R-024): Ānandagiri only — Sureśvara wrote no Vārtika on this Upaniṣad.
+ const MK=document.body.dataset.unitPrefix==='MK';if(MK&&selected==='vartika')selected=null;
+ const names=MK?{anandagiri:'आनन्दगिरिटीका'}:{anandagiri:'आनन्दगिरिटीका',vartika:'बृहदारण्यकोपनिषद्भाष्यवार्तिकम्'};
  const bar=document.createElement('nav');bar.className='vy-chips';bar.setAttribute('aria-label','व्याख्याः');
  const label=document.createElement('span');label.textContent='व्याख्याः —';bar.append(label);
  const buttons={};for(const [work,name]of Object.entries(names)){const b=document.createElement('button');b.textContent=name;b.dataset.commentary=work;b.setAttribute('aria-pressed','false');b.onclick=()=>{selected=selected===work?null:work;refresh();};buttons[work]=b;bar.append(b);}
@@ -17,7 +19,7 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
  const dialog=q('#study-dialog');if(dialog)new MutationObserver(()=>studyChip.setAttribute('aria-pressed',String(!dialog.hidden))).observe(dialog,{attributes:true,attributeFilter:['hidden']});
  const side=document.createElement('button');side.className='parshve';side.textContent='पार्श्वे';side.setAttribute('aria-pressed','false');side.onclick=()=>{split=!split;if(split&&!selected&&!study)selected='anandagiri';refresh();};bar.append(side);main.prepend(bar);
  const independent=document.createElement('section');independent.id='commentary-view';independent.hidden=true;main.append(independent);
- const nav=document.createElement('nav');nav.className='commentary-nav';for(const [hash,name] of [['vartikam','भाष्यवार्तिकम्']]){const a=document.createElement('a');a.href='#'+hash;a.textContent=name;nav.append(a);}q('#lesson-list').after(nav);
+ const nav=document.createElement('nav');nav.className='commentary-nav';for(const [hash,name] of MK?[]:[['vartikam','भाष्यवार्तिकम्']]){const a=document.createElement('a');a.href='#'+hash;a.textContent=name;nav.append(a);}q('#lesson-list').after(nav);
  function cleanup(){main.querySelectorAll('.b1-pair').forEach(w=>{w.before(w.firstElementChild);w.remove();});main.querySelectorAll('.b1-commentary').forEach(e=>e.remove());}
  function credit(pack){const p=document.createElement('p');p.className='source-credit';const a=document.createElement('a');a.textContent=pack.credit+' ↗';a.href=pack.paragraphs[0].source_url;a.target='_blank';a.rel='noopener';p.append(a);return p;}
  function paragraph(row,verse=false){if(!verse&&pada&&tikaPada?.[row.id])return tikaSplit(row);const p=document.createElement(verse?'p':'div');p.className=verse?'unit commentary-verse':'vy-unit';p.id=row.id;p.dataset.sourceId=row.id;p.dataset.sourceHash=row.sha256;
@@ -56,7 +58,7 @@ window.MaitreyiCommentaries={create({stored,pairs,closeStudy,openStudy,openPanel
   const html=`<section class="study-group" data-part="vartika">${back}${verse?`<div class="study-verse-box">${verse}</div>`:''}${u.sections.filter(s=>s.name!=='पदच्छेदः').map((s,i)=>`<details class="study-section"${i===0?' open':''}><summary>${s.name}</summary><div class="study-section-content">${shape(s.html)}</div></details>`).join('')}</section>`;
   openPanel(`भाष्यवार्तिकम् · ${verseLabel} · अध्ययनसाहाय्यम्`,html);
  }
- async function route(hash){const next=hash==='vartikam'?hash:'';
+ async function route(hash){const next=hash==='vartikam'&&!MK?hash:'';
  // Vārtikasāra is withheld until proofread (Aditya, 2026-10-16).
  if(!next&&!view)return false;
  ++generation;cleanup();view=next;closeStudy();if(view&&location.hash!=='#'+view)history.replaceState(null,'','#'+view);bar.hidden=false;for(const b of [...Object.values(buttons),side])b.hidden=!!view;independent.hidden=!view;for(const e of [...main.children])if(e!==bar&&e!==independent)e.hidden=!!view;

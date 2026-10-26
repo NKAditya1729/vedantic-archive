@@ -11,7 +11,9 @@ const media=matchMedia('(max-width:900px)');
 let sourceClient=LiveSource,storedClient=null,commentaries=null;
 // The page's brāhmaṇa (BU 2.4 unless the shell says otherwise): its lessons, heading and colophon anchors.
 const SCOPE=document.body.dataset.scope||'2.4',HEAD=document.body.dataset.heading||'BR_C02_S04',COLOPHON=document.body.dataset.colophon||'BR_C02_S04_E010',INTRO=SCOPE+'.0';
-const UNIT=SCOPE.replace('.','\\.')+'\\.(?:'+(SCOPE==='2.4'?'1[0-4]':'1[0-9]')+'|[0-9])';
+// Māṇḍūkya prakaraṇa pages (R-024): units 1.0 (उपोद्घातः), 1.V01 … (मन्त्राः), 1.K01 … (कारिकाः), 4.Z.
+const MK=document.body.dataset.unitPrefix==='MK',MAIN='https://advaitasharada.sringeri.net/read/'+(document.body.dataset.mainPage||'brihadaranyaka-bhashya/2/');
+const UNIT=MK?SCOPE+'\\.(?:0|Z|[VK]\\d{2,3})':SCOPE.replace('.','\\.')+'\\.(?:'+(SCOPE==='2.4'?'1[0-4]':'1[0-9]')+'|[0-9])';
 let manifest,reading,results=[],active=INTRO,panelId=null,panelResearch=false,panelRequest=0,routeRequest=0,sourceBusy=false,pada=false,spy=null,scrollFrame=0;
 let lastFocus=null,ready=false,studyPart='mula';
 const getStore=(k,f)=>{try{return JSON.parse(localStorage.getItem('vp-'+k))??f;}catch{return f;}};
@@ -23,7 +25,7 @@ const section=id=>document.getElementById('unit-'+id);
 const record=id=>reading?.units.find(x=>x.id===id);
 const meta=id=>manifest?.lessons.find(x=>x.id===id);
 const live=id=>loaded.get(id);
-const unitName=id=>id===INTRO?'सम्बन्धभाष्यम्':'मन्त्रः '+deva(id.split('.').at(-1));
+const unitName=id=>{if(!MK)return id===INTRO?'सम्बन्धभाष्यम्':'मन्त्रः '+deva(id.split('.').at(-1));const x=id.split('.').at(-1);return x==='0'?'उपोद्घातः':x==='Z'?'अन्त्यमङ्गलम्':(x[0]==='V'?'मन्त्रः ':'कारिका ')+deva(+x.slice(1));};
 const hasStudy=id=>!!meta(id)?.runtime?.learner&&!!record(id)?.unit;
 function notice(message){$('#source-status').innerHTML=message?`<div class="source-status"><p>${esc(message)}</p></div>`:'';}
 function routeURL(id,view='',anchor=''){return '#'+id+(view?'/'+view:'')+(anchor?'/at/'+encodeURIComponent(anchor):'');}
@@ -32,12 +34,17 @@ function markActive(id){active=id;$$('.lesson-link').forEach(a=>{const current=a
 function readingTop(){const chips=$('.vy-chips');return Math.max($('.topbar').getBoundingClientRect().bottom,chips&&!chips.hidden?chips.getBoundingClientRect().bottom:0);}
 function scrollToUnit(id){const el=section(id);if(el){markActive(id);const offset=readingTop()+20;let top=window.scrollY+el.getBoundingClientRect().top-offset;/* R-021 (R1-014): in paged reading the brāhmaṇa heading stays in view above the mantra */const h=$('.brahmana-heading');if(h&&!h.hidden){const gap=el.getBoundingClientRect().top-h.getBoundingClientRect().bottom;if(gap>=0&&gap<120)top=window.scrollY+h.getBoundingClientRect().top-(readingTop()+8);}window.scrollTo({top,behavior:'instant'});}}
 function preservePosition(change){const el=section(active),offset=el?.getBoundingClientRect().top;change();if(el&&offset!=null){const next=section(active);window.scrollBy({top:next.getBoundingClientRect().top-offset,behavior:'instant'});}}
-function nav(){ $('#lesson-list').innerHTML=reading.units.map(r=>`<a class="lesson-link${r.id===INTRO?' source-intro':''}" href="#${esc(r.id)}" data-lesson="${esc(r.id)}" aria-label="${esc(unitName(r.id))}">${r.id===INTRO?'सम्बन्धभाष्यम्':deva(r.id.split('.').at(-1))}</a>`).join('');markActive(active);}
+function nav(){
+ if(MK){/* as on Advaita Sharada: the upodghāta, then the mantras, then the kārikās, each a row of numbered circles */
+  const link=r=>`<a class="lesson-link${['0','Z'].includes(r.id.split('.').at(-1))?' source-intro':''}" href="#${esc(r.id)}" data-lesson="${esc(r.id)}" aria-label="${esc(unitName(r.id))}">${['0','Z'].includes(r.id.split('.').at(-1))?esc(unitName(r.id)):deva(+r.id.split('.').at(-1).slice(1))}</a>`;
+  const of=k=>reading.units.filter(r=>r.id.split('.').at(-1)[0]===k);
+  $('#lesson-list').innerHTML=of('0').map(link).join('')+(of('V').length?`<p class="lesson-group">मन्त्राः</p>`+of('V').map(link).join(''):'')+(of('K').length?`<p class="lesson-group">कारिकाः</p>`+of('K').map(link).join(''):'')+of('Z').map(link).join('');markActive(active);return;}
+ $('#lesson-list').innerHTML=reading.units.map(r=>`<a class="lesson-link${r.id===INTRO?' source-intro':''}" href="#${esc(r.id)}" data-lesson="${esc(r.id)}" aria-label="${esc(unitName(r.id))}">${r.id===INTRO?'सम्बन्धभाष्यम्':deva(r.id.split('.').at(-1))}</a>`).join('');markActive(active);}
 function sourceAttributes(r){return `data-live-status="${esc(r.status)}" data-source-id="${esc(r.anchor)}" data-source-hash="${esc(r.actualHash||'')}" data-source-expected="${esc(r.expectedHash||'')}" data-source-request="${esc(r.request_url||'')}" data-source-response="${esc(r.response_url||'')}" data-source-origin="${r.origin_verified===true}" data-source-credentials="${esc(r.credentials||'')}"`;}
 function sourceWarning(r){return r.status==='matched'?'':`<p class="source-status">${r.rawText?'मूलस्रोतसि पाठभेदः दृश्यते। अस्य अंशस्य वर्णसङ्केताः पदच्छेदश्च न दर्श्यन्ते।':'अस्य अंशस्य पाठः अधुना न प्राप्तः।'} <a href="${esc(r.source_url)}" target="_blank" rel="noopener">मूलस्रोते पठतु ↗</a></p>`;}
 function pill(id,part='mula'){return hasStudy(id)?`<button class="study-pill" data-open-study="${esc(id)}" data-study-part="${part}" aria-controls="study-dialog" aria-expanded="${panelId===id}">अध्ययनसाहाय्यम् · ${part==='mula'?'मूलम्':'भाष्यम्'}</button>`:'';}
-function bhashyaHTML(u,split,intro){
- const html=UnitReader.bhashyaSource(u,split,{sourceOnly:true}),t=document.createElement('template');t.innerHTML=html;
+function bhashyaHTML(u,split,intro,anchor){
+ const html=UnitReader.bhashyaSource(u,split,{sourceOnly:true,anchor}),t=document.createElement('template');t.innerHTML=html;
  return (intro?t.content.querySelector('.reading-intro'):t.content.querySelector('.reading-bhashya:not(.reading-intro)'))?.outerHTML||'';
 }
 function renderUnit(input,result){
@@ -53,7 +60,7 @@ function renderUnit(input,result){
   if(isMula){
    body=`<div class="mula-box" id="${esc(d.anchor)}"><p class="mula" ${sourceAttributes(r)}>${matched&&u?.mula?UnitReader.mulaSource(u,pada,{sourceOnly:true}):esc(r.rawText||'')}</p>${pill(input.id)}</div>`;
   }else{
-   const prose=matched&&u?.bhashyam?bhashyaHTML(u,pada,ranks.get(d.anchor)===0):`<p class="original reading-bhashya">${esc(r.rawText||'')}</p>`;
+   const prose=(matched&&u?.bhashyam&&bhashyaHTML(u,pada,ranks.get(d.anchor)===0,d.anchor))||`<p class="original reading-bhashya">${esc(r.rawText||'')}</p>`;
    body=`<div class="source-paragraph" id="${esc(d.anchor)}" ${sourceAttributes(r)}>${prose}</div>`;
   }
   html+=body+sourceWarning(r);
@@ -87,7 +94,7 @@ async function mountReading(){
 function annotateCitations(){
  // Typography only: the exact text nodes remain unchanged when joined.
  for(const p of $$('.reading-bhashya')){const walk=document.createTreeWalker(p,NodeFilter.SHOW_TEXT),nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
-  for(const node of nodes){const text=node.nodeValue;if(!/\((?:बृ\.|छा\.|तै\.|कौ\.|शत\.|मो\.)/.test(text))continue;const re=/\((?:बृ\.|छा\.|तै\.|कौ\.|शत\.|मो\.)[^)]*\)/gu,frag=document.createDocumentFragment();let start=0;for(const m of text.matchAll(re)){frag.append(text.slice(start,m.index));const span=document.createElement('span');span.className='source-citation';span.textContent=m[0];frag.append(span);start=m.index+m[0].length;}frag.append(text.slice(start));node.replaceWith(frag);}
+  for(const node of nodes){const text=node.nodeValue;if(!(MK?/\((?:[\u0900-\u097F]{1,4}\.\s*){1,3}[^)]*[०-९]/u:/\((?:बृ\.|छा\.|तै\.|कौ\.|शत\.|मो\.)/).test(text))continue;const re=MK?/\((?:[\u0900-\u097F]{1,4}\.\s*){1,3}[^)]*[०-९][^)]*\)/gu:/\((?:बृ\.|छा\.|तै\.|कौ\.|शत\.|मो\.)[^)]*\)/gu,frag=document.createDocumentFragment();let start=0;for(const m of text.matchAll(re)){frag.append(text.slice(start,m.index));const span=document.createElement('span');span.className='source-citation';span.textContent=m[0];frag.append(span);start=m.index+m[0].length;}frag.append(text.slice(start));node.replaceWith(frag);}
  }
 }
 function watchSections(){
@@ -100,7 +107,7 @@ async function loadSource(force=false){
   results=await sourceClient.loadMany([...reading.units,{source_paragraphs:[reading.closing]}],{force});
   loaded.clear();reading.units.forEach((r,i)=>loaded.set(r.id,results[i]));
   const any=results.some(r=>r.paragraphs.some(p=>p.rawText));
-  if(!any){$('#source-status').innerHTML='<div class="source-status"><p>मूलस्रोतस्य पाठः अधुना न प्राप्तः।</p><button data-source-retry>पुनः प्रयत्नः</button><a href="https://advaitasharada.sringeri.net/read/brihadaranyaka-bhashya/2/#'+HEAD+'" target="_blank" rel="noopener">अद्वैतशारदायां पठतु ↗</a></div>';return false;}
+  if(!any){$('#source-status').innerHTML='<div class="source-status"><p>मूलस्रोतस्य पाठः अधुना न प्राप्तः।</p><button data-source-retry>पुनः प्रयत्नः</button><a href="'+MAIN+'#'+HEAD+'" target="_blank" rel="noopener">अद्वैतशारदायां पठतु ↗</a></div>';return false;}
   await mountReading();notice('');return true;
  }finally{sourceBusy=false;}
 }
@@ -212,10 +219,11 @@ function applySize(){document.body.style.setProperty('--font-size',size+'px');}
 async function route({scroll=true}={}){
  const request=++routeRequest;let value;try{value=decodeURIComponent(location.hash.slice(1))||document.body.dataset.unitRoute||'';}catch{value='';}
  if(commentaries&&await commentaries.route(value))return;
- const match=new RegExp('^(?:BU\\.)?('+UNIT+')(?:\\/(adhyayanam|vimarshah))?(?:\\/at\\/(.+))?$').exec(value);
- const cross=new RegExp('^('+UNIT+')\\/((?:BU|LEX|VP)\\..+)$').exec(value);
- const stable=new RegExp('^BU\\.('+UNIT+')\\..+$').exec(value);
- const id=match?.[1]||cross?.[1]||stable?.[1]||(value.startsWith(HEAD+'_V')?SCOPE+'.'+Number(value.match(/_V(\d+)/)?.[1]):INTRO);
+ const match=new RegExp('^(?:BU\\.|MK\\.)?('+UNIT+')(?:\\/(adhyayanam|vimarshah))?(?:\\/at\\/(.+))?$').exec(value);
+ const cross=new RegExp('^('+UNIT+')\\/((?:BU|MK|LEX|VP)\\..+)$').exec(value);
+ const stable=new RegExp('^(?:BU|MK)\\.('+UNIT+')\\..+$').exec(value);
+ const asAnchor=MK?reading?.units.find(r=>(r.source_paragraphs||[]).some(d=>d.anchor===value||value.startsWith(d.anchor+'_')))?.id:null;
+ const id=match?.[1]||cross?.[1]||stable?.[1]||asAnchor||(!MK&&value.startsWith(HEAD+'_V')?SCOPE+'.'+Number(value.match(/_V(\d+)/)?.[1]):INTRO);
  if(!record(id))return;
  if(match?.[2]||cross||stable){await openStudy(id,{asResearch:match?.[2]==='vimarshah',anchor:match?.[3]||cross?.[2]||(stable?value:''),push:false,scroll});}
  else{if(panelId)closeStudy({push:false,focus:false});setRoute(id);if(scroll)scrollToUnit(id);}
@@ -234,7 +242,7 @@ $('#menu').onclick=()=>{const open=$('#sidebar').classList.toggle('open');$('#me
 media.addEventListener('change',panelMode);addEventListener('scroll',requestScrollSpy,{passive:true});addEventListener('popstate',()=>{if(ready)route();});addEventListener('hashchange',()=>{if(ready)route();});
 document.addEventListener('toggle',e=>{if(e.target.matches('details[data-lazy-study]')&&e.target.open)fillStudySection(e.target);},true);
 // R-023: अष्टाध्यायीदृष्टिः is fetched the first time its sub-section opens.
-async function fillDrishti(slot){const file=meta(slot.dataset.sutraDrishti.replace(/^BU\./u,''))?.runtime?.sutra_drishti;if(!file||slot.dataset.rendered)return;slot.dataset.rendered='pending';try{const data=await json(file);slot.innerHTML=UnitReader.sutraDrishti(data,slot.dataset.side)||'<p>—</p>';slot.dataset.rendered='true';window.ScriptDisplay?.apply();}catch{slot.dataset.rendered='';slot.insertAdjacentHTML('beforeend','<p>विवरणम् अधुना न प्राप्तम्; पुनः उद्घाटयतु।</p>');}}
+async function fillDrishti(slot){const file=meta(slot.dataset.sutraDrishti.replace(/^(?:BU|MK)\./u,''))?.runtime?.sutra_drishti;if(!file||slot.dataset.rendered)return;slot.dataset.rendered='pending';try{const data=await json(file);slot.innerHTML=UnitReader.sutraDrishti(data,slot.dataset.side)||'<p>—</p>';slot.dataset.rendered='true';window.ScriptDisplay?.apply();}catch{slot.dataset.rendered='';slot.insertAdjacentHTML('beforeend','<p>विवरणम् अधुना न प्राप्तम्; पुनः उद्घाटयतु।</p>');}}
 document.addEventListener('toggle',e=>{if(e.target.matches('details.study-subsection')&&e.target.open){const slot=e.target.querySelector(':scope>.study-subsection-content>[data-sutra-drishti]');if(slot)fillDrishti(slot);}},true);
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){if(panelId){e.preventDefault();closeStudy();}else{$('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');$('#color-legend').open=false;}}
