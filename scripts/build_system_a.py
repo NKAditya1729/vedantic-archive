@@ -17,7 +17,7 @@ Dev panel = as-is; IAST panel = transliterate Devanagari only. Remember to bump
 import re, subprocess, os, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MAITREYI_MASTER = "/Users/aditya_nistala/Downloads/Brhad_Upa_Class_Notes/Class Coverage Notes/मैत्रेयी ब्राह्मणाम् - भाष्यम् ‍+ वार्तिक Notes.rtf"
+MAITREYI_MASTER = "/Users/aditya_nistala/Documents/Mac Mini Downloads/Brhad_Upa_Class_Notes/Class Coverage Notes/मैत्रेयी ब्राह्मणाम् - भाष्यम् ‍+ वार्तिक Notes.rtf"
 MASTERS = {
     'maitreyi': dict(rtf=MAITREYI_MASTER, page='src/pages/source-text.astro', heading_fixes={}),
     'madhu': dict(
@@ -29,7 +29,7 @@ MASTERS = {
     ),
 }
 CONF = MASTERS[sys.argv[1] if len(sys.argv) > 1 else 'maitreyi']
-MASTER = CONF['rtf']
+MASTER = os.environ.get('MASTER_RTF', CONF['rtf'])   # override, e.g. a local copy of an iCloud file
 
 html = subprocess.run(['textutil', '-convert', 'html', '-stdout', MASTER],
                       capture_output=True, text=True).stdout
