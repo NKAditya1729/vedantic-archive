@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="sa">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>मन्त्रः २.४.६ — अध्ययनपत्रम्</title>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="style.css">
+<style>
+/* R-032 pilot preview — not linked from the site; for review only. */
+body{background:var(--bg)}
+.pv{max-width:880px;margin:0 auto;padding:28px 18px 80px;font-size:18px;line-height:1.85}
+.pv h1{color:var(--accent);font-size:28px;margin:0 0 4px;font-weight:600}
+.pv .sub{color:var(--muted);font-size:15px;margin:0 0 22px}
+.pv nav.toc{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 16px;margin:0 0 26px;font-size:16px}
+.pv nav.toc a{display:inline-block;margin:2px 14px 2px 0}
+.pv section{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin:0 0 26px;box-shadow:0 2px 10px #2b211810}
+.pv section>h2{color:var(--accent);font-size:23px;margin:0 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.pv .num{color:var(--saffron);font-weight:600;margin-right:6px}
+.pv .mula{background:var(--mula-bg);border-radius:6px;padding:12px 16px;font-size:20px}
+.pv ol.bh{padding-left:0;list-style:none;margin:0}
+.pv ol.bh li{padding:4px 0;border-bottom:1px dotted var(--line)}
+.pv .tag{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:0 8px;margin-left:6px}
+.pv details{border:1px solid var(--line);border-radius:6px;margin:12px 0;background:#fffdf9}
+.pv details>summary{cursor:pointer;padding:9px 14px;font-weight:600;color:var(--ink);list-style:none}
+.pv details>summary::before{content:'▸ ';color:var(--accent)}
+.pv details[open]>summary::before{content:'▾ '}
+.pv details>.in{padding:4px 16px 14px}
+.pv .patha{background:var(--mula-bg);border-radius:6px;padding:10px 14px;font-size:20px;margin:6px 0}
+.pv .lbl{color:var(--accent);font-weight:600;margin:12px 0 2px;font-size:16px}
+.pv .gist{font-weight:600;border-left:3px solid var(--saffron);padding:4px 10px;margin:10px 0;background:var(--tint)}
+.pv .note{font-size:15px;color:#6b3f1f;background:#fbf2e6;border-radius:4px;padding:6px 10px;margin:6px 0}
+.pv table{border-collapse:collapse;width:100%;font-size:16px;margin:4px 0}
+.pv td,.pv th{border:1px solid var(--line);padding:4px 8px;vertical-align:top;text-align:left}
+.pv th{background:var(--tint);font-weight:600}
+.pv .viv p{margin:6px 0}
+.pv .viv b.l{color:var(--saffron)}
+.pv .gr{border-left:3px solid var(--line);padding:2px 12px;margin:8px 0;font-size:16px}
+.pv .gr q{display:block;font-size:17px;quotes:none;margin:2px 0}
+.pv .ref{color:var(--muted);font-size:13px;white-space:nowrap}
+.pv .rev{color:#1f6a3a;font-size:13px;margin-left:6px}
+.pv .sw p{margin:5px 0}
+.pv .sw h3{font-size:19px;color:var(--ink);margin:16px 0 4px}
+.pv .sw .pr{color:var(--muted);font-size:16px}
+.pv .k-bhashya,.pv .k-tika{background:#f6f2fb;border-radius:4px;padding:2px 8px}
+.pv .missing{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<main class="pv" id="pv"><p class="missing">अध्ययनपत्रम् आनीयते…</p></main>
+<script>
+(async()=>{
+const el=document.getElementById('pv');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/⟨([^⟩]+)⟩/g,'<span class="ref">⟨$1⟩</span>');
+let d;try{d=await (await fetch('runtime-preview/BU.2.4.6/r032.json',{cache:'reload'})).json();}catch(e){el.innerHTML='<p>पत्रम् न लब्धम्।</p>';return;}
+const bh={};(d.bhashya||[]).forEach(b=>bh[b.n]=b.text);
+const S=[];const toc=[];
+const sec=(id,n,title,html)=>{toc.push(`<a href="#${id}"><span class="num">${n}</span>${title}</a>`);S.push(`<section id="${id}"><h2><span class="num">${n}</span>${title}</h2>${html}</section>`);};
+const viv=list=>`<div class="viv">${(list||[]).map(v=>`<p><b class="l">${esc(v.label)} —</b> ${md(v.text)}</p>`).join('')}</div>`;
+const gr=list=>(list&&list.length)?`<div class="lbl">ग्रन्थान्तरसन्दर्भाः</div>`+list.map(g=>`<div class="gr"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.grantha)} ${esc(g.sthanam)} ↗</a><q>‘${esc(g.text)}’</q>${md(g.sambandhah)}</div>`).join(''):'';
+const sam=list=>(list&&list.length)?`<div class="lbl">समासाः</div><table><tr><th>पदम्</th><th>विग्रहः</th><th>प्रकारः</th><th>अर्थः</th></tr>${list.map(s=>`<tr><td>${esc(s.padam)}</td><td>${esc(s.vigrahah)}</td><td>${esc(s.prakarah)}</td><td>${esc(s.arthah)}</td></tr>`).join('')}</table>`:'';
+const notes=list=>(list||[]).map(t=>`<div class="note">टिप्पणी — ${md(t)}</div>`).join('');
+
+// मन्त्रः + भाष्यम्
+sec('mula','','मन्त्रः',`<div class="mula">${esc(d.mula)}</div>`);
+sec('bhashya','७','भाष्यम् — वाक्यशः',`<ol class="bh">${(d.bhashya||[]).map(b=>`<li><span class="num">भा.${b.n}</span>${esc(b.text)}<span class="tag">${esc(b.role)}</span></li>`).join('')}</ol>`);
+
+// सङ्गतिः
+if(d.sangatih){const g=d.sangatih;sec('sangati','९','भाष्यसङ्गतिः',
+ `<div class="lbl">पूर्वसम्बन्धः</div><p>${md(g.purva)}</p><div class="lbl">भाष्यस्य क्रमः</div><table><tr><th>क्रमः</th><th>भाष्यम्</th><th>टीकायाम्</th><th>विषयः</th></tr>${g.krama.map(k=>`<tr><td>${esc(k.label)}</td><td>${k.bhashya.map(n=>'भा.'+n).join(', ')}</td><td>${esc(k.tika)}</td><td>${md(k.text)}</td></tr>`).join('')}</table><div class="lbl">उत्तरसम्बन्धः</div><p>${md(g.uttara)}</p>`);}
+
+// अन्वयः
+sec('anvaya','१०','भाष्यान्वयः',(d.anvayah||[]).map(a=>`<p><span class="num">वाक्यम् ${a.n}</span>${md(a.text)}${a.revised?`<span class="rev">● टीकानुसारं शोधितम्</span><br><span class="ref">${md(a.pramanam)}</span>`:''}</p>`).join(''));
+
+// व्याकरणम्
+sec('vyakarana','११','भाष्यपदव्याकरणपरिचयः',`<p>स्तरः १ (पदपरिचयः) स्तरः २ (निष्पत्तिः, सूत्रैः सह) च — प्रत्येकस्य पदस्य पत्रम्। <a href="${esc(d.grammar_url)}" target="_blank" rel="noopener">व्याकरणपत्राणि उद्घाटयतु ↗</a></p>`);
+
+// स्वामिविवरणम्
+if(d.swami){sec('swami','१२',esc(d.swami.title||'स्वामिविवरणम्'),`<div class="sw">${(d.swami.blocks||[]).map(b=>`<h3>${esc(b.heading)}</h3>${b.pratika?`<div class="pr">‘${esc(b.pratika)}’ ${(b.bhashya_ids||[]).map(x=>esc(x)).join(', ')}</div>`:''}${(b.paras||[]).map(p=>`<p class="k-${esc(p.kind)}">${md(p.text)} ${(p.refs||[]).map(r=>`<span class="ref">${md(r)}</span>`).join(' ')}</p>`).join('')}`).join('')}</div>`);}
+else sec('swami','१२','स्वामिविवरणम्','<p class="missing">सज्जीक्रियते।</p>');
+
+// टीका
+if(d.tika){const t=d.tika;sec('tika','१३','आनन्दगिरिटीकाविवरणम्',
+ `${t.intro.map(p=>`<p>${md(p)}</p>`).join('')}`+t.paras.map((p,i)=>`<details ${i===0?'open':''}><summary><span class="num">${esc(p.n)}</span>${esc(p.saralarthah)}</summary><div class="in">
+ <div class="lbl">टीकापाठः <a class="ref" href="${esc(p.url)}" target="_blank" rel="noopener">अद्वैतशारदा ↗</a></div><div class="patha">${esc(p.patha)}</div>
+ <div class="lbl">पदच्छेदः</div><div>${esc(p.padacchedah)}</div>${notes(p.tippani)}${sam(p.samasah)}
+ ${(p.padani&&p.padani.length)?`<div class="lbl">पदपरिचयः</div>${p.padani.map(x=>`<p><strong>${esc(x.padam)}</strong> — ${md(x.parichayah)}</p>`).join('')}`:''}
+ <div class="lbl">सम्बद्धं भाष्यम्</div>${p.bhashya.map(n=>`<p><span class="num">भा.${n}</span>${esc(bh[n]||'')}</p>`).join('')}
+ <div class="gist">${md(p.saralarthah)}</div><div class="lbl">विवरणम्</div>${viv(p.vivaranam)}${gr(p.granthantaram)}</div></details>`).join(''));}
+
+// वार्तिकम्
+if(d.vartika&&d.vartika.length){sec('vartika','१४','वार्तिकविवरणम्',`<p>सुरेश्वराचार्यकृते बृहदारण्यकोपनिषद्भाष्यवार्तिके अस्य मन्त्रस्य विवरणम् — श्लोकाः २४० तः २६२ पर्यन्तम्; श्लोकः २३९ प्रस्तावनारूपः।</p>${d.vartika_status?`<div class="note">${esc(d.vartika_status)}</div>`:''}`+d.vartika.map((v,i)=>`<details ${i===0?'open':''}><summary><span class="num">${esc(v.num)}</span>${esc(v.saralarthah)}</summary><div class="in">
+ <div class="lbl">श्लोकः ${v.role?`<span class="tag">${esc(v.role)}</span>`:''}</div><div class="patha">${esc(v.shlokah)}</div>${notes(v.patha_tippani)}
+ <div class="lbl">पदच्छेदः</div><div>${esc(v.padacchedah)}</div>${sam(v.samasah)}
+ <div class="lbl">अन्वयः</div><div>${md(v.anvayah)}</div>
+ <div class="lbl">सम्बद्धं मूलम् / भाष्यम्</div><p>${v.sambaddham?.mula?`मूले — ‘${esc(v.sambaddham.mula)}’ `:''}${(v.sambaddham?.bhashya||[]).map(esc).join(' · ')}</p>
+ ${(v.tikadharah||[]).length?`<div class="lbl">टीकाधारः (आनन्दगिरिः, वार्तिकटीका)</div>${v.tikadharah.map(t=>`<div class="gr"><q>‘${esc(t.quote)}’</q>${md(t.vivaranam)}</div>`).join('')}`:''}
+ ${(v.vartikasarah||[]).length?`<div class="lbl">वार्तिकसारः (विद्यारण्यः)</div>${v.vartikasarah.map(t=>`<div class="gr"><span class="num">${esc(t.num)}</span><q>‘${esc(t.text)}’</q>${md(t.vivaranam)}</div>`).join('')}`:''}
+ <div class="gist">${md(v.saralarthah)}</div><div class="lbl">विवरणम्</div>${viv(v.vivaranam)}${gr(v.granthantaram)}</div></details>`).join(''));}
+else sec('vartika','१४','वार्तिकविवरणम्','<p class="missing">सज्जीक्रियते।</p>');
+
+el.innerHTML=`<h1>${esc(d.title)}</h1><p class="sub">परीक्षणार्थम् प्रारूपम् — मूलपाठः, भाष्यम्, टीका, वार्तिकम् च अद्वैतशारदातः (दक्षिणाम्नाय श्रीशारदापीठम्, शृङ्गेरी)।</p><nav class="toc">${toc.join('')}</nav>`+S.join('');
+if(location.hash)document.querySelector(location.hash)?.scrollIntoView();
+})();
+</script>
+</body>
+</html>
