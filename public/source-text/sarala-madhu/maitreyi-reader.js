@@ -191,6 +191,7 @@ async function openStudy(id,{asResearch=false,anchor='',push=true,scroll=false,p
 async function fillTika(id,request){const box=$('#drawer-content .study-group[data-part="tika"]');if(!box)return;try{const html=await commentaries.tikaFor(id);if(request!==panelRequest)return;box.innerHTML=html;window.ScriptDisplay?.apply();}catch{if(request===panelRequest)box.innerHTML='<p class="source-status">टीका अधुना न प्राप्ता।</p>';}}
 // Vārtika units and other non-mantra study open in the same right-hand panel (Aditya, 2026-10-23).
 function openCustomPanel(title,html){if(!panelId)lastFocus=document.activeElement;++panelRequest;panelId='custom';panelResearch=false;document.body.classList.add('study-open');$('#study-dialog').hidden=false;$('#study-title').textContent=title;$('#drawer-content').innerHTML=html;panelMode();window.ScriptDisplay?.apply();$('#study-dialog').scrollTop=0;}
+window.PadaPatram?.init({openPanel:(t,h)=>openCustomPanel(t,h),back:id=>openStudy(id,{push:false}),unit:()=>panelId&&panelId!=='custom'?panelId:active});
 function closeStudy({push=true,focus=true}={}){const id=panelId;if(!id)return;if(id==='custom'){++panelRequest;panelId=null;document.body.classList.remove('study-open');$('#study-dialog').hidden=true;panelMode();if(focus&&lastFocus?.isConnected)lastFocus.focus({preventScroll:true});return;}const sourceTop=section(id)?.getBoundingClientRect().top;++panelRequest;panelId=null;panelResearch=false;document.body.classList.remove('study-open');$('#study-dialog').hidden=true;panelMode();if(sourceTop!=null&&!media.matches)window.scrollBy({top:section(id).getBoundingClientRect().top-sourceTop,behavior:'instant'});$$('.study-pill').forEach(b=>b.setAttribute('aria-expanded','false'));setRoute(id,'','',push);markActive(id);if(focus){const target=lastFocus?.isConnected?lastFocus:section(id)?.querySelector('.study-pill');target?.focus({preventScroll:true});}}
 async function jumpStudy(id,{push=true}={}){
  let u=await studyUnit(panelId,panelResearch);id=UnitReader.resolveAnchor(u,id);
@@ -212,6 +213,7 @@ async function openWord(element){
  const mulaIds=(element.dataset.mulaTargets||'').split(' ').filter(Boolean);
  $$('[data-mula-ids]').forEach(el=>el.classList.toggle('pratika-target',el.closest('[data-lesson]')?.dataset.lesson===id&&el.dataset.mulaIds.split(' ').some(t=>mulaIds.includes(t))));
  if(!tokenIds.length)return;
+ if(window.PadaPatram&&await PadaPatram.covers(id)&&await PadaPatram.openToken(id,tokenIds))return;
  await openStudy(id,{push:true});if(panelId!==id)return;
  const u=await studyUnit(id),tokens=[...(u.mula?.tokens||[]),...u.bhashyam.sentences.flatMap(s=>s.tokens||[])];
  const choices=tokenIds.map(t=>({id:t,token:tokens.find(x=>x.id===UnitReader.resolveToken(u,t)),row:UnitReader.grammarEntry(u,t)}));

@@ -1,0 +1,62 @@
+/* भाष्यपदव्याकरणपरिचयः v2 — grammar cards (R-029) */
+.gv-card{font-size:calc(var(--font-size,20px)*.9);line-height:1.75}
+.gv-head{border-bottom:1px solid var(--line,#ddd);padding-bottom:8px;margin-bottom:10px}
+.gv-word{font-size:1.45em;margin:0 0 4px;font-weight:700}
+.gv-gist{margin:2px 0 6px;font-size:1.02em;line-height:1.6}
+.gv-loc{margin:0;color:var(--muted,#666);font-size:.88em}
+.gv-loc b{color:var(--ink,inherit)}
+.gv-flagline{margin:4px 0 0;font-size:.85em;color:var(--muted,#666)}
+.gv-flag{font-weight:600;margin-right:4px}
+.gv-flag-n{color:#2e7d32}.gv-flag-s{color:#b26a00}.gv-flag-p{color:#c62828}
+.gv-level{border:1px solid var(--line,#ddd);border-radius:6px;margin:10px 0;background:var(--paper,transparent)}
+.gv-level>summary{list-style:none;cursor:pointer;padding:7px 12px;font-weight:600}
+.gv-level>summary::-webkit-details-marker{display:none}
+.gv-level[open]>summary{border-bottom:1px solid var(--line,#ddd)}
+.gv-level>:not(summary){margin:8px 10px;width:auto;max-width:calc(100% - 20px);box-sizing:border-box}
+.gv-level>table{width:calc(100% - 20px)}
+.gv-slots{width:100%;border-collapse:collapse}
+.gv-slots th{width:8.5em;text-align:left;vertical-align:top;font-weight:600;color:var(--muted,#555);padding:5px 8px 5px 0;white-space:normal}
+.gv-slots td{padding:5px 0;vertical-align:top;overflow-wrap:anywhere}
+.gv-slots tr+tr th,.gv-slots tr+tr td{border-top:1px dotted var(--line,#e3e3e3)}
+.gv-l3{width:100%;border-collapse:collapse;font-size:.92em}
+.gv-l3 th{text-align:left;border-bottom:1px solid var(--line,#ccc);padding:4px 6px}
+.gv-l3 td{border-bottom:1px dotted var(--line,#e3e3e3);padding:4px 6px;vertical-align:top;overflow-wrap:anywhere}
+.gv-l3 td:first-child{white-space:nowrap;font-weight:600}
+.gv-card a,.gv-indices a,.gv-pari a,.gv-sub a{color:var(--link,#1a5fb4);text-decoration:none}
+.gv-card a:hover{text-decoration:underline}
+.gv-src{color:var(--muted,#666);font-size:.92em}
+.gv-adh{color:var(--muted,#666)}
+.gv-more,.gv-note{font-size:.9em;color:var(--muted,#555)}
+.gv-foot{margin-top:14px;padding-top:8px;border-top:1px solid var(--line,#ddd);font-size:.85em}
+.gv-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.gv-nav button,.gv-choices button{font:inherit;font-size:.85em;padding:3px 10px;border:1px solid var(--line,#ccc);border-radius:14px;background:var(--paper,#fff);color:inherit;cursor:pointer}
+.gv-choices{margin-bottom:8px}
+.gv-sent-head{font-weight:600;margin:0}
+.gv-sent-text{margin:4px 0 8px;line-height:2}
+.gv-tokens{line-height:2.1}
+.gv-ix{margin:4px 0}.gv-ix>summary{cursor:pointer}
+.gv-inline{display:inline}.gv-inline[open]{display:block}
+.gv-ix-group{margin:8px 0}.gv-ix-group>summary{cursor:pointer;font-weight:600}
+.gv-pari dl{margin:6px 0}.gv-pari dt{font-weight:600;margin-top:6px}.gv-pari dd{margin:0 0 0 1em}
+.gv-pilcrow{font:inherit;font-size:.7em;vertical-align:super;border:0;background:none;color:var(--muted,#999);cursor:pointer;padding:0 2px;margin:0 2px;opacity:.55}
+.gv-pilcrow:hover,.gv-pilcrow:focus{opacity:1;color:var(--link,#1a5fb4)}
+body.no-colors .gv-pilcrow{opacity:.35}
+.gv-marked{outline:2px solid #e0b000;outline-offset:1px;border-radius:2px}
+@media(max-width:900px){
+ .gv-slots th{width:6.5em}
+ .gv-l3 td:first-child{white-space:normal}
+ body.study-open .gv-card{font-size:calc(var(--font-size,20px)*.85)}
+}
+.gv-wait{color:var(--muted,#777);font-size:.9em}
+.gv-retry{font:inherit;font-size:.9em;border:1px solid var(--line,#ccc);border-radius:12px;background:none;color:var(--link,#1a5fb4);cursor:pointer;padding:1px 8px}
+.gv-word:focus{outline:2px solid var(--link,#1a5fb4);outline-offset:3px}
+.gv-grip{display:none}
+/* mobile: a bottom sheet — header and स्तरः १ visible, the reading above (TASKS R-030 D3) */
+@media(max-width:480px){
+ body.gv-sheet .study-drawer{inset:auto 0 0 0!important;top:auto!important;height:78dvh;max-height:96dvh;border-radius:14px 14px 0 0;border-top:1px solid var(--line,#ccc);box-shadow:0 -6px 24px #0003;overflow-y:auto}
+ body.gv-sheet.study-open{overflow:auto}
+ body.gv-sheet .gv-grip{display:block;position:sticky;top:0;height:22px;margin:-10px -20px 6px;background:var(--bg,#fff);cursor:ns-resize;touch-action:none;z-index:2}
+ body.gv-sheet .gv-grip:after{content:"";display:block;width:44px;height:5px;border-radius:3px;background:var(--line,#bbb);margin:9px auto 0}
+ .gv-pilcrow{padding:14px 16px;margin:0 -12px;min-width:44px}
+ .gv-choices button,.gv-nav button{min-height:44px;min-width:44px;padding:6px 14px}
+}
