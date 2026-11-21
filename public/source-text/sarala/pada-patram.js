@@ -39,7 +39,7 @@ function prepare(u){
 }
 function locLine(u,oid){const o=u.occ[oid],toks=u.order[o.sent],i=toks.indexOf(oid),lo=Math.max(0,i-3),hi=Math.min(toks.length,i+4);
  const q=(lo?'…':'')+toks.slice(lo,hi).map(t=>t===oid?`<b>${esc(u.occ[t].pada)}</b>`:esc(u.occ[t].pada)).join(' ')+(hi<toks.length?'…':'');
- return `${esc(u.label)} · ${o.side}, वाक्यम् ${deva(+o.sent.match(/s(\d+)$/)[1])} · ‘${q}’`;}
+ return `${esc(u.label)} · ${o.side}, ${sentLabel(o.sent)} · ‘${q}’`;}
 const lemma=(u,lid)=>json('lemmas/'+u.lemma1[lid].file);
 const sentences=uid=>json(manifest.units[uid]+'sentences.json');
 const junctions=uid=>json(manifest.units[uid]+'junctions.json');
@@ -57,7 +57,8 @@ const table=rows=>`<table class="gv-slots"><tbody>${rows.join('')}</tbody></tabl
 function level(key,title,body,open,fill=''){const s=get('lv-'+key);const o=s==null?open:s;return `<details class="gv-level" data-gv-level="${key}"${fill?` data-gv-fill="${fill}"`:''}${o?' open':''}><summary>${o?'▾':'▸'} ${esc(title)}</summary><div class="gv-body">${body}</div></details>`;}
 const flagBadge=f=>`<span class="gv-flag gv-flag-${f==='निश्चितम्'?'n':f==='सम्भाव्यम्'?'s':'p'}">[${esc(f)}]</span>`;
 const occLink=(oid,label)=>`<a href="#" class="gv-o" data-gv-occ="${esc(oid)}">${esc(label)}</a>`;
-const sentNo=sid=>deva(+sid.match(/s(\d+)$/)[1]);
+const sentNo=sid=>{const m=sid.match(/([si])(\d+)$/);return (m[1]==='i'?'अवतरणम् ':'')+deva(+m[2]);};
+const sentLabel=sid=>{const m=sid.match(/([si])(\d+)$/);return (m[1]==='i'?'अवतरणवाक्यम् ':'वाक्यम् ')+deva(+m[2]);};
 function quoteLine(u,sid,oid){return (u.order[sid]||[]).map(t=>t===oid?`<b>${esc(u.occ[t].pada)}</b>`:occLink(t,u.occ[t].pada)).join(' ');}
 function junctionLine(J,jid){const j=J[jid];if(!j)return '';
  let printed='';if(j.status==='विसन्धिः')printed=` — विसन्धिः (मुद्रणे); सन्धौ ‘${esc(j.joined)}’`;else if(j.status==='विकल्पः')printed=' — मुद्रणे वैकल्पिकम् रूपम्';
@@ -112,7 +113,7 @@ function fillOpen(el){for(const d of el.querySelectorAll('details[data-gv-fill][
 
 // ---------------------------------------------------------------- वाक्यरचनापत्रम् (§7)
 function sentenceBody(u,Sall,sid,oid){const S=Sall[sid];if(!S)return '<p>—</p>';
- return `<p class="gv-sent-head">${esc(u.label)} · ${sid.includes('.M.')?'मूलम्':'भाष्यम्'}, वाक्यम् ${sentNo(sid)}</p><p class="gv-sent-text">${quoteLine(u,sid,oid)}</p>${table([row('क्रियापदम् किम्?',rich(S.kriya)),...S.rows.filter(([q])=>!q.startsWith('क्रियापदम्')).map(([q,a])=>row(q.replace(/<[^>]+>/g,''),rich(a))),row('पूर्ववाक्यसम्बन्धः',S.purva?rich(S.purva):'—'),row('दण्डान्वयः',rich(S.anvaya).replace(/\[([^\]]+)\]/g,'<span class="gv-adh">[$1]</span>')),row('वाक्यस्य भूमिका',`${esc(S.role)}${S.role_note?' — '+rich(S.role_note):''}`),row('रचनाप्रकाराः',(S.pat||[]).length?S.pat.map(p=>`<a href="#" data-gv-pattern="${esc(p)}">[${esc(common.patterns[p]?.name||p)}]</a>`).join(' · '):'—')])}<p class="gv-flagline">${flagBadge(S.flag)}</p>`;}
+ return `<p class="gv-sent-head">${esc(u.label)} · ${sid.includes('.M.')?'मूलम्':'भाष्यम्'}, ${sentLabel(sid)}</p><p class="gv-sent-text">${quoteLine(u,sid,oid)}</p>${table([row('क्रियापदम् किम्?',rich(S.kriya)),...S.rows.filter(([q])=>!q.startsWith('क्रियापदम्')).map(([q,a])=>row(q.replace(/<[^>]+>/g,''),rich(a))),row('पूर्ववाक्यसम्बन्धः',S.purva?rich(S.purva):'—'),row('दण्डान्वयः',rich(S.anvaya).replace(/\[([^\]]+)\]/g,'<span class="gv-adh">[$1]</span>')),row('वाक्यस्य भूमिका',`${esc(S.role)}${S.role_note?' — '+rich(S.role_note):''}`),row('रचनाप्रकाराः',(S.pat||[]).length?S.pat.map(p=>`<a href="#" data-gv-pattern="${esc(p)}">[${esc(common.patterns[p]?.name||p)}]</a>`).join(' · '):'—')])}<p class="gv-flagline">${flagBadge(S.flag)}</p>`;}
 
 // ---------------------------------------------------------------- सन्धिपत्रम् (§4.7)
 function junctionHTML(u,J,jid){const j=J[jid];if(!j)return '<p>—</p>';
