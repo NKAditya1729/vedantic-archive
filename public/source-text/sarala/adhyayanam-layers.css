@@ -1,0 +1,55 @@
+/* अध्ययनसाहाय्यम् — दृष्टयः (R-033 preview). Uses the site's tokens from style.css. */
+.study-tabs{flex-wrap:wrap;row-gap:4px}
+.study-tabs button[data-study-part-tab^="nava-"]{border-top:2px solid var(--saffron)}
+.nv-root{font-size:inherit;line-height:2}
+.nv-root p{margin:.45rem 0;overflow-wrap:anywhere}
+.nv-lbl{margin:1rem 0 .2rem;color:var(--accent);font-size:.82em;font-weight:600;letter-spacing:.02em}
+.nv-lbl-in{color:var(--muted);font-size:.8em;margin-right:.3em}
+.nv-num{display:inline-block;min-width:2.6em;color:var(--saffron);font-weight:600;font-size:.86em}
+.nv-ref{color:var(--muted);font-size:.84em}
+.nv-status{background:var(--tint);border-left:3px solid var(--saffron);padding:.4rem .7rem;font-size:.88em;border-radius:4px}
+.nv-note{background:var(--tint);padding:.3rem .6rem;border-radius:4px;font-size:.92em}
+.nv-patha,.nv-verse{background:var(--mula-bg);padding:.45rem .7rem;border-radius:6px;white-space:pre-line}
+.nv-verse{font-weight:600}
+.nv-pratika{color:var(--accent)}
+.nv-kind{font-size:.78em;color:var(--paper);background:var(--muted);border-radius:3px;padding:0 .35em;vertical-align:.1em}
+.nv-block{border-bottom:1px solid var(--line);padding:.35rem 0}
+.nv-block>summary{cursor:pointer;list-style:none;line-height:1.8;padding:.25rem 0}
+.nv-block>summary::-webkit-details-marker{display:none}
+.nv-block>summary:before{content:'▸ ';color:var(--muted)}
+.nv-block[open]>summary:before{content:'▾ '}
+.nv-in{padding:0 .2rem .6rem 1rem;border-left:2px solid var(--line)}
+.nv-swami h3{font-size:1em;color:var(--accent);margin:.9rem 0 .2rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:baseline}
+.nv-viv p{margin:.35rem 0}
+.nv-viv b{color:var(--accent);font-weight:600}
+.nv-gr{margin:.4rem 0;padding:.3rem .6rem;border-left:2px solid var(--saffron)}
+.nv-gr q{display:block;quotes:none;font-weight:600}
+.nv-table{overflow-x:auto}
+.nv-table table{border-collapse:collapse;font-size:.88em;min-width:100%}
+.nv-table td,.nv-table th{border:1px solid var(--line);padding:.2rem .4rem;text-align:left;vertical-align:top}
+.nv-tag{font-size:.78em;border:1px solid var(--line);border-radius:3px;padding:0 .3em;color:var(--muted)}
+.nv-chip{font:inherit;font-size:.78em;line-height:1.5;border:1px solid var(--line);background:var(--paper);color:var(--accent);border-radius:999px;padding:.05rem .6rem;margin:.1rem .25rem .1rem 0;cursor:pointer}
+.nv-chip[aria-expanded="true"]{background:var(--tint);border-color:var(--saffron)}
+.nv-back{color:var(--saffron)}
+.nv-bha{display:inline-flex;flex-wrap:wrap;gap:.2rem}
+.nv-lensbar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;background:var(--paper);padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.86em}
+.nv-lensbar>span{color:var(--muted);margin-right:.2rem}
+.nv-lens{font:inherit;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px;padding:.1rem .65rem;cursor:pointer}
+.nv-lens[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.nv-sent{padding:.6rem 0;border-bottom:1px solid var(--line);scroll-margin-top:3.2rem}
+.nv-stext{font-weight:600}
+.nv-anvaya{color:var(--ink)}
+.nv-rev{color:var(--saffron);font-size:.78em;font-weight:400;cursor:help}
+.nv-chips{margin:.1rem 0}
+.nv-under{margin:.4rem 0 .4rem .4rem;padding:.3rem .7rem;border-left:3px solid var(--saffron);background:color-mix(in srgb,var(--tint) 55%,transparent);border-radius:0 6px 6px 0}
+.nv-under-lbl{font-size:.78em;color:var(--saffron);font-weight:600}
+.nv-under hr{border:0;border-top:1px dashed var(--line);margin:.5rem 0}
+.nv-under .nv-swami h3{margin-top:.3rem}
+.nv-inline-head{font-size:.95em}
+.nv-more{font:inherit;font-size:.8em;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}
+.nv-cross{font-size:.88em;color:var(--muted)}
+.nv-krama li{margin:.35rem 0}
+.nv-flash{animation:nvflash 1.6s ease-out}
+@keyframes nvflash{from{background:color-mix(in srgb,var(--saffron) 25%,transparent)}to{background:transparent}}
+@media(max-width:760px){.nv-in{padding-left:.6rem}.nv-under{margin-left:0}}
+.nv-repeat>summary{cursor:pointer;color:var(--muted);font-size:.86em}

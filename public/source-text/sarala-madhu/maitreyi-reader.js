@@ -15,7 +15,7 @@ const SCOPE=document.body.dataset.scope||'2.4',HEAD=document.body.dataset.headin
 const MK=document.body.dataset.unitPrefix==='MK',MAIN='https://advaitasharada.sringeri.net/read/'+(document.body.dataset.mainPage||'brihadaranyaka-bhashya/2/');
 const UNIT=MK?SCOPE+'\\.(?:0|Z|[VK]\\d{2,3})':SCOPE.replace('.','\\.')+'\\.(?:'+(SCOPE==='2.4'?'1[0-4]':'1[0-9]')+'|[0-9])';
 let manifest,reading,results=[],active=INTRO,panelId=null,panelResearch=false,panelRequest=0,routeRequest=0,sourceBusy=false,pada=false,spy=null,scrollFrame=0;
-let lastFocus=null,ready=false,studyPart='mula';
+let lastFocus=null,ready=false,studyPart='mula',navaPack=null;const NAVA=window.AdhyayanaLayers;
 const getStore=(k,f)=>{try{return JSON.parse(localStorage.getItem('vp-'+k))??f;}catch{return f;}};
 const setStore=(k,v)=>{try{localStorage.setItem('vp-'+k,JSON.stringify(v));}catch{}};
 let colors=getStore('colors',true)!==false,size=Number(getStore('size',20));
@@ -135,17 +135,22 @@ function hydrated(id){return results[reading.units.findIndex(x=>x.id===id)]?.pay
 // The panel shows one part at a time; the tabs say whether the mūla or the bhāṣya is being studied.
 function studyBody(u){
  panelLayers.clear();const hu=hydrated(panelId),hasMula=!!u.mula,hasTika=!!commentaries?.hasTika?.(panelId);if(!hasMula&&studyPart==='mula')studyPart='bhashya';if(!hasTika&&studyPart==='tika')studyPart='bhashya';
- const tabList=[...(hasMula?[['mula','मूलम्']]:[]),['bhashya','भाष्यम्'],...(hasTika?[['tika','आनन्दगिरिटीका']]:[])];
+ const navaTabs=navaPack&&NAVA?NAVA.tabs(navaPack):[],navaTika=navaTabs.some(([k])=>k==='nava-tika');if(studyPart.startsWith('nava-')&&!navaTabs.some(([k])=>k===studyPart))studyPart='bhashya';if(navaTika&&studyPart==='tika')studyPart='nava-tika';
+ const tabList=[...(hasMula?[['mula','मूलम्']]:[]),['bhashya','भाष्यम्'],...navaTabs,...(hasTika&&!navaTika?[['tika','आनन्दगिरिटीका']]:[])];
  const tabs=tabList.length>1?`<div class="study-tabs" role="tablist">${tabList.map(([k,n])=>`<button role="tab" data-study-part-tab="${k}" aria-selected="${studyPart===k}">${n}</button>`).join('')}</div>`:'';
  let html=tabs;
  if(studyPart==='mula'){const layers=UnitReader.mulaLayers(u,{lazy:true}),context=UnitReader.prasanga(u,'panel');
   if(context)layers.unshift({name:'प्रसङ्गः',content:context});
   html+=`<section class="study-group" data-part="mula">${layers.map((l,i)=>studySection(l,i,'mula-study')).join('')}</section>`;}
+ else if(studyPart.startsWith('nava-'))html+=`<section class="study-group" data-part="${esc(studyPart)}">${NAVA.part(navaPack,studyPart)}</section>`;
  else if(studyPart==='tika')html+=`<section class="study-group" data-part="tika"><p class="study-flow">टीका आनीयते…</p></section>`;
- else{const layers=UnitReader.bhashyaLayers(u,{padaccheda:pada,lazy:true}),context=UnitReader.prasanga(u,'panel-bhashya');
+ else{let layers=UnitReader.bhashyaLayers(u,{padaccheda:pada,lazy:true});const context=UnitReader.prasanga(u,'panel-bhashya');let navaOpen=-1;
+  if(navaPack&&NAVA){layers=layers.filter(l=>l.name!=='सरलभाष्यव्याख्या').map(l=>l.name==='भाष्यसङ्गतिः'&&navaPack.sangatih?{name:l.name,content:NAVA.sangati(navaPack)}:l.name==='भाष्यान्वयः'?{name:'भाष्यान्वयः · दृष्टयः',content:NAVA.sentenceView(navaPack)}:l);
+   if(navaPack.sangatih&&!layers.some(l=>l.name==='भाष्यसङ्गतिः'))layers.splice(1,0,{name:'भाष्यसङ्गतिः',content:NAVA.sangati(navaPack)});navaOpen=layers.findIndex(l=>l.name==='भाष्यान्वयः · दृष्टयः');}
   if(context)layers.unshift({name:hasMula?'प्रसङ्गः (मूलम्-पटले उक्तः)':'प्रसङ्गः',content:context});
   /* R-021 (R1-069): the मूलम् tab already opened प्रसङ्गः; the भाष्यम् tab starts at its first own section */
-  html+=`<section class="study-group" data-part="bhashya">${layers.map((l,i)=>studySection(l,i,'bhashya-study',context&&hasMula?1:0)).join('')}</section>`;}
+  if(context)navaOpen=navaOpen<0?-1:navaOpen+1;
+  html+=`<section class="study-group" data-part="bhashya">${layers.map((l,i)=>studySection(l,i,'bhashya-study',navaOpen>=0?navaOpen:context&&hasMula?1:0)).join('')}</section>`;}
  return html+`<p class="research-link"><a href="${routeURL(panelId,'vimarshah')}" data-open-research="${esc(panelId)}">विमर्शः (पाठभेदाः, प्रमाणानि) ↗</a></p>`;
 }
 function researchBody(u){panelLayers.clear();const owner=panelId;const layers=UnitReader.researchStudy(u,{lazy:true}).map(item=>({name:item.name,render:async()=>{const full=await studyUnit(owner,true,true);return UnitReader.researchStudy(full,{lazy:true}).find(x=>x.name===item.name)?.render()||'';}}));return `<button class="research-back" data-return-study>← अध्ययनसाहाय्यम्</button>${UnitReader.researchSource(u)}<section class="research-study"><h2>अध्ययनविवरणस्य प्रमाणानि</h2>${layers.map((l,i)=>studySection(l,i+1,'research-study')).join('')}</section>`;}
@@ -165,12 +170,12 @@ async function openLexicon(id,{push=true}={}){
 function panelMode(){const modal=!!panelId&&media.matches;$('#study-dialog').setAttribute('role',modal?'dialog':'region');if(modal)$('#study-dialog').setAttribute('aria-modal','true');else $('#study-dialog').removeAttribute('aria-modal');$('.layout').inert=modal;$('.topbar').inert=modal;}
 function openFrame(id,asResearch){
  const sourceTop=section(id)?.getBoundingClientRect().top;if(!panelId||!$('#study-dialog').contains(document.activeElement))lastFocus=document.activeElement;panelId=id;panelResearch=asResearch;document.body.classList.add('study-open');$('#study-dialog').hidden=false;if(sourceTop!=null&&!media.matches)window.scrollBy({top:section(id).getBoundingClientRect().top-sourceTop,behavior:'instant'});
- $('#study-title').textContent=unitName(id)+' · '+(asResearch?'विमर्शः':(studyPart==='tika'?'आनन्दगिरिटीका':id!==INTRO&&studyPart==='mula'?'मूलम्':'भाष्यम्')+' · अध्ययनसाहाय्यम्');
+ $('#study-title').textContent=unitName(id)+' · '+(asResearch?'विमर्शः':(studyPart==='tika'?'आनन्दगिरिटीका':studyPart.startsWith('nava-')?(NAVA?.NAME[studyPart.slice(5)]||''):id!==INTRO&&studyPart==='mula'?'मूलम्':'भाष्यम्')+' · अध्ययनसाहाय्यम्');
  $$('.study-pill').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.openStudy===id)));panelMode();
 }
 async function openStudy(id,{asResearch=false,anchor='',push=true,scroll=false,part=null}={}){
  if(!hasStudy(id))return;if(part)studyPart=part;
- const request=++panelRequest,was=panelId===id;openFrame(id,asResearch);setRoute(id,asResearch?'vimarshah':'adhyayanam',anchor,push);
+ const request=++panelRequest,was=panelId===id;navaPack=NAVA&&!asResearch?await NAVA.load(id).catch(()=>null):null;if(request!==panelRequest)return;openFrame(id,asResearch);setRoute(id,asResearch?'vimarshah':'adhyayanam',anchor,push);
  if(scroll&&!media.matches)scrollToUnit(id);
  $('#drawer-content').innerHTML='<p class="study-flow">अध्ययनसाहाय्यम् आनीयते…</p>';
  try{const u=await studyUnit(id,asResearch);if(request!==panelRequest)return;
@@ -274,4 +279,6 @@ applyColors();applySize();
   await route({scroll:!!initialHash||!!document.body.dataset.unitRoute});requestScrollSpy();
  }catch{notice('पाठः न प्राप्तः। कृपया पृष्ठं पुनः उद्घाटयतु।');}
 })();
+// R-033 preview: lens links inside the drawer reopen it on another tab of the same mantra.
+window.AdhyayanaLayers?.setOpener(async(part)=>{if(panelId&&panelId!=='custom')await openStudy(panelId,{part,push:false});});
 })();
